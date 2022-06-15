@@ -9,8 +9,9 @@ export const Nav = styled.nav`
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease-in;
-    border-bottom: 1px solid ${Color.border};
-    position: absolute;
+    border-bottom: ${(props) =>
+        props.active ? ` 1px solid ${Color.border};` : 'none'};
+    position: fixed;
     z-index: 2;
     width: 100%;
     top: 0;
@@ -34,6 +35,7 @@ export const Nav = styled.nav`
 `;
 
 export const Menu = styled.div`
+    display: ${(props) => (props.active ? `block` : 'none')};
     height: 50px;
     width: 100%;
     padding: 0 120px;
@@ -42,7 +44,7 @@ export const Menu = styled.div`
     justify-content: space-between;
     background-color: ${(props) =>
         props.active ? `${Color.activeMenu}` : 'transparent'};
-    position: absolute;
+    position: fixed;
     transition: all 0.3s ease-in;
     z-index: 2;
     top: 100px;

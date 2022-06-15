@@ -12,6 +12,7 @@ export default createGlobalStyle`
 
     body{
         color: #fff;
+        scroll-behavior: smooth;
     }
 
     html,body,#root{

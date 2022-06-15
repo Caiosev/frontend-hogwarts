@@ -1,19 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import { useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 // import { FaHome, FaSignInAlt, FaUserAlt } from 'react-icons/fa';
 import * as S from './styled';
 
 export default function Header() {
-    const [active, setActive] = React.useState(false);
+    const active =
+        useSelector((state) => state.scrollReducer.ativar_nav) || false;
 
     return (
         <header>
-            <S.Nav
-                onMouseEnter={() => setActive(true)}
-                onMouseLeave={() => setActive(false)}
-                active={active}
-            >
+            <S.Nav active={active}>
                 <img src="/images/logo.png" alt="" id="logo-header" srcSet="" />
                 <Link to="login" className="link-chapeu">
                     <img
@@ -24,16 +21,14 @@ export default function Header() {
                     />
                 </Link>
             </S.Nav>
-            <S.Menu
-                onMouseEnter={() => setActive(true)}
-                onMouseLeave={() => setActive(false)}
-                active={active}
-            >
-                <a href="/">Nossa História</a>
-                <a href="/">Staff</a>
-                <a href="/">Materiais</a>
-                <a href="/">Como Chegar</a>
-            </S.Menu>
+            {active ? (
+                <S.Menu active={active}>
+                    <a href="/">Nossa História</a>
+                    <a href="/">Staff</a>
+                    <a href="/">Materiais</a>
+                    <a href="/">Como Chegar</a>
+                </S.Menu>
+            ) : null}
         </header>
     );
 }
