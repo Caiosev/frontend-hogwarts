@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { FaMagic } from 'react-icons/fa';
+import { gsap } from 'gsap';
 import Particles from '../../components/Particles';
 import * as S from './styled';
 import * as scrollActions from '../../store/modules/scroll/actions';
@@ -20,6 +22,15 @@ export default function Home() {
         if (offset >= 180) dispatch(scrollActions.ativaNav());
     }, [offset, dispatch]);
 
+    useEffect(() => {
+        gsap.timeline()
+            .to('.divWand', { scale: 1, duration: 2 })
+            .to('.divWand', { y: 100, duration: 2 })
+            .to('.divWand', { scale: 0, duration: 2 })
+            .to('.divWand', { y: -100, duration: 2 })
+            .repeat(-1, 0);
+    }, []);
+
     return (
         <S.Container>
             <S.BgParticles>
@@ -29,6 +40,9 @@ export default function Home() {
             <S.HomeText>
                 <h1>Hogwarts</h1>
                 <h2>Escola de Magia e Bruxaria</h2>
+                <div className="divWand">
+                    <FaMagic />
+                </div>
             </S.HomeText>
         </S.Container>
     );

@@ -52,4 +52,9 @@ export const HomeText = styled.div`
     h2 {
         font-size: 16px;
     }
+    .divWand {
+        position: absolute;
+        bottom: 0px;
+        transform: scale(0);
+    }
 `;

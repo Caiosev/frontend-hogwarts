@@ -18,11 +18,12 @@ export const Nav = styled.nav`
     #logo-header {
         width: 65px;
         height: 70px;
+        left: ${(props) => (props.active ? `50px` : 'auto')};
+        position: ${(props) => (props.active ? `absolute` : 'none')};
     }
     .link-chapeu {
         position: absolute;
-        right: 0;
-        margin: 0 50px;
+        right: 50px;
         width: 40px;
         img {
             width: 100%;
@@ -37,17 +38,15 @@ export const Nav = styled.nav`
 export const Menu = styled.div`
     display: ${(props) => (props.active ? `block` : 'none')};
     height: 50px;
-    width: 100%;
+    width: 70%;
     padding: 0 120px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: ${(props) =>
         props.active ? `${Color.activeMenu}` : 'transparent'};
-    position: fixed;
     transition: all 0.3s ease-in;
     z-index: 2;
-    top: 100px;
     font-family: 'SofiaPro';
     a {
         text-decoration: none;
