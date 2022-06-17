@@ -14,7 +14,7 @@ export const Container = styled.div`
             background-color: transparent;
         }
     }
-    padding-top: 50px;
+    padding-top: 10px;
 
     .news1 {
         margin: auto;

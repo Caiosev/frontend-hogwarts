@@ -1,18 +1,37 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import React from 'react';
+import React, { useEffect } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import PropTypes from 'prop-types';
 import * as S from './styled';
 
-export default function SliderElement() {
+export default function SliderElement({ setNews }) {
     const settings = {
-        dots: true,
+        dots: false,
         infinite: true,
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
     };
+    useEffect(() => {
+        document.querySelector('.slick-prev').addEventListener('click', () => {
+            setTimeout(() => {
+                const currentNode = document.querySelector('.slick-current');
+                const news = currentNode.dataset.index;
+                setNews(news);
+            }, 500);
+        });
+
+        document.querySelector('.slick-next').addEventListener('click', () => {
+            setTimeout(() => {
+                const currentNode = document.querySelector('.slick-current');
+                const news = currentNode.dataset.index;
+                setNews(news);
+            }, 500);
+        });
+    });
+
     return (
         <S.Container>
             <Slider {...settings}>
@@ -62,7 +81,7 @@ export default function SliderElement() {
                         </h3>
                     </div>
                 </div>
-                <div className="news1">
+                <div className="news3">
                     <div className="img-titulo">
                         <div className="foto" />
                         <h2>3Boas vindas a todos nossos novos estudantes!</h2>
@@ -73,7 +92,7 @@ export default function SliderElement() {
                         <h3>Lorem ipsum dolor, sit amet consectetur</h3>
                     </div>
                 </div>
-                <div className="news1">
+                <div className="news4">
                     <div className="img-titulo">
                         <div className="foto" />
                         <h2>4Boas vindas a todos nossos novos estudantes!</h2>
@@ -84,7 +103,7 @@ export default function SliderElement() {
                         <h3>Lorem ipsum dolor, sit amet consectetur</h3>
                     </div>
                 </div>
-                <div className="news1">
+                <div className="news5">
                     <div className="img-titulo">
                         <div className="foto" />
                         <h2>5Boas vindas a todos nossos novos estudantes!</h2>
@@ -95,7 +114,7 @@ export default function SliderElement() {
                         <h3>Lorem ipsum dolor, sit amet consectetur</h3>
                     </div>
                 </div>
-                <div className="news1">
+                <div className="news6">
                     <div className="img-titulo">
                         <div className="foto" />
                         <h2>6Boas vindas a todos nossos novos estudantes!</h2>
@@ -110,3 +129,7 @@ export default function SliderElement() {
         </S.Container>
     );
 }
+
+SliderElement.propTypes = {
+    setNews: PropTypes.func.isRequired,
+};
