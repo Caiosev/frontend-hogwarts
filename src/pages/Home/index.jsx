@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { FaMagic } from 'react-icons/fa';
 import { gsap } from 'gsap';
+import Slider from '../../components/Slider';
 import Particles from '../../components/Particles';
 import * as S from './styled';
 import * as scrollActions from '../../store/modules/scroll/actions';
@@ -24,10 +25,10 @@ export default function Home() {
 
     useEffect(() => {
         gsap.timeline()
-            .to('.divWand', { scale: 1, duration: 2 })
-            .to('.divWand', { y: 100, duration: 2 })
-            .to('.divWand', { scale: 0, duration: 2 })
-            .to('.divWand', { y: -100, duration: 2 })
+            .to('.divWand', { scale: 1 })
+            .to('.divWand', { y: 100, duration: 1 })
+            .to('.divWand', { scale: 0, duration: 1 })
+            .to('.divWand', { y: -100 })
             .repeat(-1, 0);
     }, []);
 
@@ -44,6 +45,11 @@ export default function Home() {
                     <FaMagic />
                 </div>
             </S.HomeText>
+            <S.SecNews>
+                <h1>Ultimas Noticias</h1>
+                <Slider />
+                <hr className="line" />
+            </S.SecNews>
         </S.Container>
     );
 }

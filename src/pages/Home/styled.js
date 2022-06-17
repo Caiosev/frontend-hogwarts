@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const Container = styled.div`
     width: 100%;
     height: 100%;
-    height: 200vh;
 `;
 
 export const BgParticles = styled.div`
@@ -16,7 +15,6 @@ export const BgParticles = styled.div`
 export const HomeBg = styled.section`
     width: 100%;
     height: 100vh;
-    background-color: red;
     background-image: url('/images/bg-hogwarts.jpg');
     background-position: center;
     background-repeat: no-repeat;
@@ -56,5 +54,21 @@ export const HomeText = styled.div`
         position: absolute;
         bottom: 0px;
         transform: scale(0);
+    }
+`;
+
+export const SecNews = styled.section`
+    width: 100%;
+    height: 80vh;
+    font-family: 'BluuNext', sans-serif;
+    h1 {
+        font-size: 3rem;
+        text-align: center;
+        padding-top: 100px;
+    }
+    .line {
+        width: 70vw;
+        margin: 5px auto;
+        border: 1px solid #696b78;
     }
 `;
