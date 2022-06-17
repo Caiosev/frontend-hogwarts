@@ -1,20 +1,24 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import * as S from './styled';
 
 export default function History() {
     gsap.registerPlugin(ScrollTrigger);
-    gsap.to('#texto', {
-        scrollTrigger: {
-            trigger: '#foto',
-            start: 'top center',
-            end: 'center center',
-        },
-        marginTop: 0,
-        duration: 1,
-        ease: 'power3.out',
+
+    useEffect(() => {
+        gsap.to('#texto', {
+            scrollTrigger: {
+                trigger: '#foto',
+                start: 'top center',
+                end: 'center center',
+            },
+            marginTop: 0,
+            duration: 1,
+            ease: 'power3.out',
+        });
     });
+
     // ScrollTrigger.create({
     //     animation: a,
     //     trigger: '#texto',

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const SecHistory = styled.section`
     width: 100%;
-    height: 200vh;
+    height: 100vh;
     display: flex;
     flex-direction: row;
     justify-content: center;

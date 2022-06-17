@@ -7,6 +7,7 @@ import Particles from '../../components/Particles';
 import * as S from './styled';
 import * as scrollActions from '../../store/modules/scroll/actions';
 import History from '../../components/History';
+import Staff from '../../components/Staff';
 
 export default function Home() {
     const [offset, setOffset] = useState(0);
@@ -107,7 +108,10 @@ export default function Home() {
                 <Slider setNews={setSelectedNews} />
                 <hr className="line" />
             </S.SecNews>
+
             <History />
+
+            <Staff />
         </S.Container>
     );
 }
