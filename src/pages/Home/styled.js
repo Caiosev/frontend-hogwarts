@@ -59,7 +59,7 @@ export const HomeText = styled.div`
 
 export const SecNews = styled.section`
     width: 100%;
-    height: 80vh;
+    height: 120vh;
     font-family: 'BluuNext', sans-serif;
     h1 {
         font-size: 3rem;
