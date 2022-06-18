@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Sec = styled.section`
-    height: 80vh;
+    height: 150vh;
     width: 100%;
     padding-top: 50px;
     display: flex;

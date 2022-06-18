@@ -49,6 +49,7 @@ export const Container = styled.div`
         }
         h3 {
             text-align: justify;
+            font-size: 18px;
         }
         .titulo-texto {
             display: flex;

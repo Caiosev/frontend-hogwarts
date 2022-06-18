@@ -13,7 +13,7 @@ export default function History() {
                 start: 'top center',
                 end: 'center center',
             },
-            marginTop: 0,
+            marginTop: 50,
             duration: 1,
             ease: 'power3.out',
         });

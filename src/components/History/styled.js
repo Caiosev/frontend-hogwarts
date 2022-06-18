@@ -19,14 +19,14 @@ export const SecHistory = styled.section`
         background-repeat: no-repeat;
     }
     #texto {
-        background-color: #464184;
-        margin-left: -20px;
-        margin-top: 150px;
+        background-color: #a18f5c;
+        margin-left: -100px;
+        margin-top: 250px;
         h3 {
-            font-size: 1.6rem;
+            font-size: 1.3rem;
         }
 
-        padding: 20px;
+        padding: 50px;
         font-family: 'SofiaPro';
     }
 `;
