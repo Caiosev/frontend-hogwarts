@@ -1,6 +1,5 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { Container } from '../../styles/GlobalStyles';
 import * as S from './styled';
 import * as exampleActions from '../../store/modules/example/actions';
 
@@ -13,13 +12,13 @@ export default function Login() {
         dispatch(exampleActions.clicaBotaoRequest());
     }
     return (
-        <Container>
+        <S.Container>
             <S.Title>login</S.Title>
             <S.Paragrafo>Lorem ipsum, dolor sit amet consectetur.</S.Paragrafo>
 
             <button type="button" onClick={handleClick}>
                 Enviar
             </button>
-        </Container>
+        </S.Container>
     );
 }

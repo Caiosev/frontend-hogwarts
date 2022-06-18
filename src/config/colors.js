@@ -5,6 +5,7 @@ export const activeMenu = '#0A181F';
 export const border = '#242633';
 export const line = '#353643';
 export const roxo = '#9990ea';
+export const gold = '#a18f5c';
 
 export const successColor = '#0197F6';
 export const infoColor = '#0197F6';

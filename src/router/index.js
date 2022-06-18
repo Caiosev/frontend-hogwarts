@@ -3,10 +3,11 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import Home from '../pages/Home';
+import Login from '../pages/login';
 import Page404 from '../pages/Page404';
 
 function PrivateRoute({ children }) {
-    const isLoggedIn = true;
+    const isLoggedIn = false;
     return isLoggedIn ? children : <Navigate to="/login" />;
 }
 
@@ -19,6 +20,7 @@ export default function MainRoutes() {
     return (
         <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
             <Route
                 path="/quit"
                 element={

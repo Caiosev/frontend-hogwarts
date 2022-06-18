@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import * as Color from '../../config/colors';
 
 export const Container = styled.section`
     padding-top: 50px;
@@ -60,7 +61,7 @@ export const Container = styled.section`
         width: 100px;
         height: 100px;
         border-radius: 50%;
-        background-color: #242633;
+        background-color: ${Color.activeNav};
         display: flex;
         flex-direction: column;
         align-items: center;

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import * as Color from '../../config/colors';
 
 export const SecHistory = styled.section`
     width: 100%;
@@ -19,7 +20,7 @@ export const SecHistory = styled.section`
         background-repeat: no-repeat;
     }
     #texto {
-        background-color: #a18f5c;
+        background-color: ${Color.gold};
         margin-left: -100px;
         margin-top: 250px;
         h3 {
