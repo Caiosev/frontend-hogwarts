@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Sec = styled.section`
-    height: 150vh;
+    height: 1150px;
     width: 100%;
     padding-top: 50px;
     display: flex;
@@ -53,10 +53,12 @@ export const Sec = styled.section`
         .grid-image img {
             width: 180px;
             height: 250px;
+            opacity: 0;
         }
         .grid-image-dumbledore img {
             width: 250px;
             height: 350px;
+            opacity: 0;
         }
     }
     .card-head {

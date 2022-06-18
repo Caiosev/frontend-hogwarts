@@ -6,7 +6,7 @@ export default function Materiais() {
         <S.Container>
             <h1>O que preciso levar?</h1>
             <div className="foto-texto">
-                <img src="/images/diagon_Alley.jpg" alt="" />
+                <div className="image" />
                 <div className="texto">
                     <h2>
                         Tudo que você precisa pode ser encontrado no Beco

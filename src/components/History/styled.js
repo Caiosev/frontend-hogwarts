@@ -2,14 +2,14 @@ import styled from 'styled-components';
 
 export const SecHistory = styled.section`
     width: 100%;
-    height: 100vh;
+    height: 680px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     #foto,
     #texto {
         width: 30%;
-        height: 90vh;
+        max-height: 668px;
     }
     #foto {
         background: url('images/Hogwarts-Historia.jpg');

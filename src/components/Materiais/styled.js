@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.section`
     padding-top: 50px;
     width: 100%;
-    height: 70vh;
+    height: 650px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -24,12 +24,29 @@ export const Container = styled.section`
         h2 {
             font-size: 2.3rem;
         }
-        img {
-            width: 30%;
+        .image {
+            width: 500px;
+            height: 300px;
+            background-image: url('images/diagon_Alley.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            -webkit-mask-image: -webkit-gradient(
+                linear,
+                left top,
+                right bottom,
+                from(rgba(0, 0, 0, 1)),
+                to(rgba(0, 0, 0, 0))
+            );
+            mask-image: linear-gradient(
+                to right,
+                rgba(, 0, 0, 1),
+                rgba(0, 0, 0, 0)
+            );
         }
         .texto {
             width: 50%;
-            padding: 0 30px;
+            margin-left: -30px;
         }
     }
     .items {
