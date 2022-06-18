@@ -32,7 +32,6 @@ export const Nav = styled.nav`
 `;
 
 export const Menu = styled.div`
-    /* display: ${(props) => (props.active ? `block` : 'none')}; */
     display: none;
     height: 50px;
     width: 70%;

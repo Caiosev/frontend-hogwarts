@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { FaMagic } from 'react-icons/fa';
 import { gsap } from 'gsap';
-
+import Header from '../../components/Header';
 import Particles from '../../components/Particles';
 import * as S from './styled';
 import * as scrollActions from '../../store/modules/scroll/actions';
@@ -38,23 +38,26 @@ export default function Home() {
     }, []);
 
     return (
-        <S.Container>
-            <S.BgParticles>
-                <Particles />
-            </S.BgParticles>
-            <S.HomeBg />
-            <S.HomeText>
-                <h1>Hogwarts</h1>
-                <h2>Escola de Magia e Bruxaria</h2>
-                <div className="divWand">
-                    <FaMagic />
-                </div>
-            </S.HomeText>
-            <News />
-            <History />
-            <Staff />
-            <Materiais />
-            <Local />
-        </S.Container>
+        <>
+            <Header />
+            <S.Container>
+                <S.BgParticles>
+                    <Particles />
+                </S.BgParticles>
+                <S.HomeBg id="home" />
+                <S.HomeText>
+                    <h1>Hogwarts</h1>
+                    <h2>Escola de Magia e Bruxaria</h2>
+                    <div className="divWand">
+                        <FaMagic />
+                    </div>
+                </S.HomeText>
+                <News />
+                <History />
+                <Staff />
+                <Materiais />
+                <Local />
+            </S.Container>
+        </>
     );
 }

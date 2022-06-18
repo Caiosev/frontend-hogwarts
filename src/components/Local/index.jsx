@@ -3,7 +3,7 @@ import * as S from './styled';
 
 export default function Local() {
     return (
-        <S.Container>
+        <S.Container id="local">
             <h1>Como Chegar?</h1>
             <div className="img-text">
                 <div className="image" />

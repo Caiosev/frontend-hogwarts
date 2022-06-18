@@ -29,7 +29,14 @@ export default function Header() {
     return (
         <header>
             <S.Nav active={active}>
-                <img src="/images/logo.png" alt="" id="logo-header" srcSet="" />
+                <a href="/#home">
+                    <img
+                        src="/images/logo.png"
+                        alt=""
+                        id="logo-header"
+                        srcSet=""
+                    />
+                </a>
                 <Link to="login" className="link-chapeu">
                     <img
                         src="/images/chapeu-seletor.png"
@@ -39,10 +46,10 @@ export default function Header() {
                     />
                 </Link>
                 <S.Menu active={active} className="menu">
-                    <a href="/">Nossa História</a>
-                    <a href="/">Staff</a>
-                    <a href="/">Materiais</a>
-                    <a href="/">Como Chegar</a>
+                    <a href="/#news">Nossa História</a>
+                    <a href="/#staff">Staff</a>
+                    <a href="/#materiais">Materiais</a>
+                    <a href="/#local">Como Chegar</a>
                 </S.Menu>
             </S.Nav>
         </header>

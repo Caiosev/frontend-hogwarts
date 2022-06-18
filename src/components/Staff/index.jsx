@@ -34,7 +34,7 @@ export default function Staff() {
             },
             opacity: 1,
             duration: 0.5,
-            delay: 1,
+            delay: 0.5,
         });
         gsap.to('#filius', {
             scrollTrigger: {
@@ -44,7 +44,7 @@ export default function Staff() {
             },
             opacity: 1,
             duration: 0.5,
-            delay: 2,
+            delay: 1,
         });
         gsap.to('#snape', {
             scrollTrigger: {
@@ -54,12 +54,12 @@ export default function Staff() {
             },
             opacity: 1,
             duration: 0.5,
-            delay: 3,
+            delay: 1.5,
         });
     });
 
     return (
-        <S.Sec>
+        <S.Sec id="staff">
             <h1>Staff</h1>
             <div className="card-head">
                 <div className="grid-frame">

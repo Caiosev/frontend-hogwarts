@@ -19,18 +19,8 @@ export default function History() {
         });
     });
 
-    // ScrollTrigger.create({
-    //     animation: a,
-    //     trigger: '#texto',
-    //     start: 'top center',
-    //     end: 'bottom bottom',
-    //     scrub: true,
-    //     pin: true,
-    //     anticipatePin: 1,
-    //     markers: true,
-    // });
     return (
-        <S.SecHistory>
+        <S.SecHistory id="news">
             <div id="foto" />
             <div id="texto">
                 <h3>
