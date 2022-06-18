@@ -1,24 +1,42 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 import * as S from './styled';
-import * as exampleActions from '../../store/modules/example/actions';
 
 export default function Login() {
-    const dispatch = useDispatch();
-
-    function handleClick(e) {
-        e.preventDefault();
-
-        dispatch(exampleActions.clicaBotaoRequest());
-    }
     return (
         <S.Container>
-            <S.Title>login</S.Title>
-            <S.Paragrafo>Lorem ipsum, dolor sit amet consectetur.</S.Paragrafo>
+            <Link to="/">
+                <button id="back" type="submit">
+                    Voltar
+                </button>
+            </Link>
+            <div className="options">
+                <div className="option">
+                    <img src="/images/books.png" alt="" />
+                    <p>Alunos</p>
+                </div>
+                <div className="option">
+                    <img src="/images/wand.png" alt="" />
+                    <p>Professores</p>
+                </div>
+            </div>
+            <div className="login-container">
+                <img src="/images/logo.png" id="#logo" alt="" />
+                <form action="">
+                    <label htmlFor="#username">
+                        Username
+                        <input type="text" id="username" />
+                    </label>
 
-            <button type="button" onClick={handleClick}>
-                Enviar
-            </button>
+                    <label htmlFor="#senha">
+                        Senha
+                        <input type="text" id="senha" />
+                    </label>
+                    <button id="next" type="submit">
+                        Continuar
+                    </button>
+                </form>
+            </div>
         </S.Container>
     );
 }

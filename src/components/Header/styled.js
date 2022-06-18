@@ -29,6 +29,12 @@ export const Nav = styled.nav`
             cursor: pointer;
         }
     }
+    #login {
+        display: ${(props) => (props.active ? `flex` : 'none')};
+        font-family: 'SofiaPro';
+        font-weight: 700;
+        color: #fff;
+    }
 `;
 
 export const Menu = styled.div`

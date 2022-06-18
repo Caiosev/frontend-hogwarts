@@ -38,6 +38,9 @@ export default function Materiais() {
                 <div className="item">
                     <img src="/images/Logo_télescope.png" alt="" />
                 </div>
+                <div className="item">
+                    <img src="/images/books.png" alt="" />
+                </div>
             </div>
         </S.Container>
     );

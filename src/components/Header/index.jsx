@@ -44,6 +44,7 @@ export default function Header() {
                         alt="chapeu-seletor"
                         srcSet=""
                     />
+                    <span id="login">Login</span>
                 </Link>
                 <S.Menu active={active} className="menu">
                     <a href="/#news">Nossa História</a>

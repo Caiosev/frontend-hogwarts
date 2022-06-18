@@ -1,5 +1,4 @@
 import styled, { createGlobalStyle } from 'styled-components';
-import { primaryColor } from '../config/colors';
 import 'react-toastify/dist/ReactToastify.css';
 
 export default createGlobalStyle`
@@ -27,21 +26,10 @@ export default createGlobalStyle`
         }
     }
 
-    button{
-        cursor:pointer;
-        background: ${primaryColor};
-        border: none;
-        color:none;
-        padding: 10px 20px;
-        border-radius:4px;
-        font-weight:700;
-    }
     ul{
         list-style:none;
     }
 
-
-   :
 `;
 
 export const Container = styled.section`
