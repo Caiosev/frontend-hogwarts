@@ -1,3 +1,4 @@
+/* eslint-disable default-param-last */
 import * as types from '../types';
 
 const initalState = {
@@ -7,7 +8,7 @@ const initalState = {
     isLoading: false,
 };
 
-export default function (action, state = initalState) {
+export default function (state = initalState, action) {
     switch (action.type) {
         case types.LOGIN_SUCCESS: {
             const newState = { ...state };

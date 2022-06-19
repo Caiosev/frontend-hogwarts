@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux';
 import Home from '../pages/Home';
 import Login from '../pages/login';
 import Page404 from '../pages/Page404';
+import Dashboard from '../pages/Dashboard';
 
 function PrivateRoute({ children }) {
     const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
@@ -22,10 +23,10 @@ export default function MainRoutes() {
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route
-                path="/quit"
+                path="/dashboard"
                 element={
                     <PrivateRoute>
-                        <Home />
+                        <Dashboard />
                     </PrivateRoute>
                 }
             />
