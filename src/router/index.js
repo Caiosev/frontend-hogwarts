@@ -1,13 +1,13 @@
 import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
-
+import { useSelector } from 'react-redux';
 import Home from '../pages/Home';
 import Login from '../pages/login';
 import Page404 from '../pages/Page404';
 
 function PrivateRoute({ children }) {
-    const isLoggedIn = false;
+    const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
     return isLoggedIn ? children : <Navigate to="/login" />;
 }
 
@@ -25,7 +25,7 @@ export default function MainRoutes() {
                 path="/quit"
                 element={
                     <PrivateRoute>
-                        <Page404 />
+                        <Home />
                     </PrivateRoute>
                 }
             />

@@ -18,6 +18,7 @@ export const Nav = styled.nav`
         height: 70px;
     }
     .link-chapeu {
+        display: ${(props) => (props.isLoggedIn ? `none` : 'inline')};
         position: absolute;
         right: 50px;
         width: 40px;
@@ -30,7 +31,8 @@ export const Nav = styled.nav`
         }
     }
     #login {
-        display: ${(props) => (props.active ? `flex` : 'none')};
+        display: ${(props) =>
+            props.active && !props.isLoggedIn ? `flex` : 'none'};
         font-family: 'SofiaPro';
         font-weight: 700;
         color: #fff;

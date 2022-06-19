@@ -4,9 +4,9 @@ import { persistReducer } from 'redux-persist';
 export default (reducers) => {
     const persistedReducer = persistReducer(
         {
-            key: 'react-base',
+            key: 'hogwarts',
             storage,
-            whitelist: ['exampleReducer'],
+            whitelist: ['auth'],
         },
         reducers
     );

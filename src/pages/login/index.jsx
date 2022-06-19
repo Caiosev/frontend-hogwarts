@@ -1,8 +1,32 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 import * as S from './styled';
+import * as actions from '../../store/modules/auth/actions';
 
 export default function Login() {
+    const dispatch = useDispatch();
+    const [login, setLogin] = useState('');
+    const [password, setPassword] = useState('');
+    const [options, setOptions] = useState(false);
+    const navigate = useNavigate();
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (options === 'prof') {
+            dispatch(
+                actions.loginRequest({ login, senha: password, navigate })
+            );
+        }
+    };
+    const handleKeyPress = (e) => {
+        if (e.key === 'p') {
+            setOptions('prof');
+        }
+        if (e.key === 'a') {
+            setOptions('aluno');
+        }
+    };
     return (
         <S.Container>
             <Link to="/">
@@ -11,26 +35,59 @@ export default function Login() {
                 </button>
             </Link>
             <div className="options">
-                <div className="option">
-                    <img src="/images/books.png" alt="" />
-                    <p>Alunos</p>
+                <div
+                    className="option"
+                    onClick={() => {
+                        setOptions('aluno');
+                        document.querySelector('#aluno-img').style.opacity =
+                            '1';
+                        document.querySelector('#prof-img').style.opacity =
+                            '0.5';
+                    }}
+                    onKeyPress={handleKeyPress}
+                    role="button"
+                    tabIndex="0"
+                >
+                    <img src="/images/books.png" id="aluno-img" alt="" />
+                    <p>Aluno</p>
                 </div>
-                <div className="option">
-                    <img src="/images/wand.png" alt="" />
-                    <p>Professores</p>
+                <div
+                    className="option"
+                    onClick={() => {
+                        setOptions('prof');
+                        document.querySelector('#prof-img').style.opacity = '1';
+                        document.querySelector('#aluno-img').style.opacity =
+                            '0.5';
+                    }}
+                    onKeyPress={handleKeyPress}
+                    role="button"
+                    tabIndex="-1"
+                >
+                    <img src="/images/wand.png" id="prof-img" alt="" />
+                    <p>Professor</p>
                 </div>
             </div>
             <div className="login-container">
                 <img src="/images/logo.png" id="#logo" alt="" />
-                <form action="">
+                <form onSubmit={handleSubmit}>
                     <label htmlFor="#username">
                         Username
-                        <input type="text" id="username" />
+                        <input
+                            type="text"
+                            onChange={(e) => setLogin(e.target.value)}
+                            value={login}
+                            id="username"
+                        />
                     </label>
 
                     <label htmlFor="#senha">
                         Senha
-                        <input type="text" id="senha" />
+                        <input
+                            type="password"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                            id="senha"
+                        />
                     </label>
                     <button id="next" type="submit">
                         Continuar

@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux';
 
-import exampleReducer from './example/reducer';
+import auth from './auth/reducer';
 import scrollReducer from './scroll/reducer';
 
 export default combineReducers({
-    exampleReducer,
+    auth,
     scrollReducer,
 });

@@ -7,6 +7,7 @@ import * as S from './styled';
 export default function Header() {
     const active =
         useSelector((state) => state.scrollReducer.ativar_nav) || false;
+    const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
 
     useEffect(() => {
         if (active) {
@@ -28,7 +29,7 @@ export default function Header() {
 
     return (
         <header>
-            <S.Nav active={active}>
+            <S.Nav active={active} isLoggedIn={isLoggedIn}>
                 <a href="/#home">
                     <img
                         src="/images/logo.png"

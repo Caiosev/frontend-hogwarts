@@ -11,7 +11,7 @@ export default function Staff() {
             scrollTrigger: {
                 trigger: '.grid-image-dumbledore',
                 start: 'top center',
-                end: 'center center',
+                end: 'bottom center',
             },
             opacity: 1,
             duration: 2,
@@ -21,7 +21,7 @@ export default function Staff() {
             scrollTrigger: {
                 trigger: '#minerva',
                 start: 'top center',
-                end: 'bottom center',
+                end: 'bottom top',
             },
             opacity: 1,
             duration: 0.5,
@@ -30,7 +30,7 @@ export default function Staff() {
             scrollTrigger: {
                 trigger: '#pomona',
                 start: 'top center',
-                end: 'bottom center',
+                end: 'bottom top',
             },
             opacity: 1,
             duration: 0.5,
@@ -40,7 +40,7 @@ export default function Staff() {
             scrollTrigger: {
                 trigger: '#filius',
                 start: 'top center',
-                end: 'bottom center',
+                end: 'bottom top',
             },
             opacity: 1,
             duration: 0.5,
@@ -50,7 +50,7 @@ export default function Staff() {
             scrollTrigger: {
                 trigger: '#snape',
                 start: 'top center',
-                end: 'bottom center',
+                end: 'bottom top',
             },
             opacity: 1,
             duration: 0.5,
