@@ -30,6 +30,15 @@ export const Nav = styled.nav`
             cursor: pointer;
         }
     }
+    #out {
+        position: absolute;
+        right: 50px;
+        width: 40px;
+        color: white;
+        &:hover {
+            cursor: pointer;
+        }
+    }
     #login {
         display: ${(props) =>
             props.active && !props.isLoggedIn ? `flex` : 'none'};

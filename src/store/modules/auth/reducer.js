@@ -7,8 +7,7 @@ const initalState = {
     isLoading: false,
 };
 
-// eslint-disable-next-line default-param-last
-export default function (state = initalState, action) {
+export default function (action, state = initalState) {
     switch (action.type) {
         case types.LOGIN_SUCCESS: {
             const newState = { ...state };
@@ -18,7 +17,7 @@ export default function (state = initalState, action) {
             return newState;
         }
         case types.LOGIN_FAILURE: {
-            const newState = { ...state };
+            const newState = { ...initalState };
             return newState;
         }
         default: {
