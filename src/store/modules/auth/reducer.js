@@ -1,5 +1,6 @@
 /* eslint-disable default-param-last */
 import * as types from '../types';
+import axios from '../../../services/axios';
 
 const initalState = {
     isLoggedIn: false,
@@ -18,7 +19,9 @@ export default function (state = initalState, action) {
             return newState;
         }
         case types.LOGIN_FAILURE: {
+            console.log('AAAAAAAAAAAA');
             const newState = { ...initalState };
+            delete axios.defaults.headers.Authorization;
             return newState;
         }
         default: {

@@ -11,7 +11,6 @@ function* loginRequest({ payload }) {
         const { data } = yield call(axios.post, '/tokens', { login, senha });
         yield put(actions.loginSuccess(data));
         toast.success('Login realizado com sucesso!');
-        axios.defaults.headers.Authorization = `Bearer ${data.token}`;
         payload.navigate('/dashboard');
     } catch (error) {
         toast.error('Usuario ou senha incorretos');

@@ -1,5 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { FaSignOutAlt, FaUserAlt, FaPlusCircle, FaEdit } from 'react-icons/fa';
+import {
+    FaSignOutAlt,
+    FaUserAlt,
+    FaPlusCircle,
+    FaEdit,
+    FaUserMinus,
+} from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import * as S from './styled';
@@ -14,6 +20,8 @@ export default function Dashboard() {
     const [loading, setLoading] = useState(true);
     const [alunos, setAlunos] = useState([]);
     const [todosalunos, setTodosAlunos] = useState([]);
+    const [deleteAluno, setDeleteAluno] = useState(false);
+
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
@@ -90,6 +98,18 @@ export default function Dashboard() {
         dispatch(actions.loginFailure());
         navigate('/');
     };
+    const handleClickAluno = async (e, id) => {
+        console.log();
+        if (deleteAluno) {
+            setLoading(true);
+            try {
+                await axios.delete(`/alunos/${id}`);
+                e.parentElement.parentElement.remove();
+            } catch (error) {
+                console.log(error);
+            }
+        }
+    };
 
     return (
         <S.Container>
@@ -100,6 +120,12 @@ export default function Dashboard() {
                     <div className="options">
                         <FaPlusCircle size={25} />
                         <FaEdit size={25} />
+                        <FaUserMinus
+                            size={28}
+                            onClick={() => setDeleteAluno(!deleteAluno)}
+                            opacity={deleteAluno ? 1 : 0.5}
+                            color={deleteAluno ? 'red' : '#fff'}
+                        />
                         <FaUserAlt size={25} />
                         <FaSignOutAlt size={25} onClick={handleLogout} />
                     </div>
@@ -107,7 +133,16 @@ export default function Dashboard() {
                 <S.ListContainer>
                     {alunos.map((aluno) => {
                         return (
-                            <div className="aluno" key={String(aluno.id)}>
+                            <div
+                                className="aluno"
+                                key={String(aluno.id)}
+                                onClick={(e) =>
+                                    handleClickAluno(e.target, aluno.id)
+                                }
+                                onKeyDown={() => handleClickAluno(aluno.id)}
+                                role="button"
+                                tabIndex="0"
+                            >
                                 <div className="grid-frame">
                                     <span className="grid-border" />
                                     <span className="square tl" />
@@ -116,7 +151,11 @@ export default function Dashboard() {
                                     <span className="square br" />
                                     <img
                                         className="foto-aluno"
-                                        src={aluno['aluno-foto'][0].url}
+                                        src={
+                                            aluno['aluno-foto'].length > 0
+                                                ? aluno['aluno-foto'][0].url
+                                                : 'images/user.png'
+                                        }
                                         alt=""
                                     />
                                 </div>
@@ -133,3 +172,14 @@ export default function Dashboard() {
         </S.Container>
     );
 }
+
+// {
+// 	"nome":"Teste",
+// 	"sobrenome":"Teste",
+// 	"idade":10,
+// 	"sangue_status":"Puro",
+// 	"varinha":"TEste",
+// 	"patrono":"teste",
+// 	"sala_id":2,
+// 	"casa_id":3
+// }
