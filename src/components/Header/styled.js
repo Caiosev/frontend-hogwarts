@@ -39,6 +39,15 @@ export const Nav = styled.nav`
             cursor: pointer;
         }
     }
+    #dashboard {
+        position: absolute;
+        right: 100px;
+        width: 40px;
+        color: white;
+        &:hover {
+            cursor: pointer;
+        }
+    }
     #login {
         display: ${(props) =>
             props.active && !props.isLoggedIn ? `flex` : 'none'};

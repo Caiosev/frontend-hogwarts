@@ -25,6 +25,16 @@ export const Header = styled.div`
         width: 50px;
     }
     border-bottom: 1px solid ${Color.line};
+    .options {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        svg {
+            cursor: pointer;
+        }
+    }
 `;
 
 export const ListContainer = styled.div`

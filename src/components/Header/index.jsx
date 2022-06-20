@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { gsap } from 'gsap';
-import { FaSignOutAlt } from 'react-icons/fa';
+import { FaSignOutAlt, FaColumns } from 'react-icons/fa';
 import * as S from './styled';
 import * as actions from '../../store/modules/auth/actions';
 
@@ -57,9 +57,14 @@ export default function Header() {
                         <span id="login">Login</span>
                     </Link>
                 ) : (
-                    <Link to="/" id="out" onClick={handleLogout}>
-                        <FaSignOutAlt size={24} />
-                    </Link>
+                    <>
+                        <Link to="/" id="out" onClick={handleLogout}>
+                            <FaSignOutAlt size={24} />
+                        </Link>
+                        <Link to="/dashboard" id="dashboard">
+                            <FaColumns size={24} />
+                        </Link>
+                    </>
                 )}
 
                 <S.Menu active={active} className="menu">

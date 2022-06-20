@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { FaSignOutAlt, FaUserAlt } from 'react-icons/fa';
+import { FaSignOutAlt, FaUserAlt, FaPlusCircle, FaEdit } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 import * as S from './styled';
 import Sidebar from '../../components/Sidebar';
 import axios from '../../services/axios';
+import * as actions from '../../store/modules/auth/actions';
 
 export default function Dashboard() {
     const [house, setHouse] = useState('hogwarts');
@@ -11,6 +14,8 @@ export default function Dashboard() {
     const [loading, setLoading] = useState(true);
     const [alunos, setAlunos] = useState([]);
     const [todosalunos, setTodosAlunos] = useState([]);
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     useEffect(() => {
         switch (house) {
@@ -81,15 +86,22 @@ export default function Dashboard() {
         loadAlunos();
     }, []);
 
+    const handleLogout = () => {
+        dispatch(actions.loginFailure());
+        navigate('/');
+    };
+
     return (
         <S.Container>
             <Sidebar setHouse={setHouse} />
             <S.Content>
                 <S.Header house={house} color={color}>
                     <img src={logo} alt="" />
-                    <div className="">
-                        <FaUserAlt size={25} style={{ marginRight: '20px' }} />
-                        <FaSignOutAlt size={25} />
+                    <div className="options">
+                        <FaPlusCircle size={25} />
+                        <FaEdit size={25} />
+                        <FaUserAlt size={25} />
+                        <FaSignOutAlt size={25} onClick={handleLogout} />
                     </div>
                 </S.Header>
                 <S.ListContainer>
