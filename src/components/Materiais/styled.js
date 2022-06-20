@@ -47,7 +47,7 @@ export const Container = styled.section`
         }
         .texto {
             width: 50%;
-            margin-left: -30px;
+            padding-left: 20px;
         }
     }
     .items {

@@ -29,7 +29,7 @@ export default function Login() {
     };
     return (
         <S.Container>
-            <Link to="/">
+            <Link to="/" id="link-back">
                 <button id="back" type="submit">
                     Voltar
                 </button>

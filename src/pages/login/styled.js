@@ -7,10 +7,13 @@ export const Container = styled.section`
     background-color: ${Colors.activeNav};
     display: grid;
     grid-template-columns: 30% 40% 30%;
-    grid-template-rows: 20% 80%;
-    #back {
+    grid-template-rows: 15% 85%;
+    #back,
+    #link-back {
         grid-column: 1 / 2;
         grid-row: 1 / 2;
+        width: 120px;
+        height: 35px;
     }
     .options {
         grid-column: 2 / 3;
@@ -18,11 +21,11 @@ export const Container = styled.section`
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 50px;
+        gap: 60px;
         img {
-            width: 50px;
+            width: 75px;
             cursor: pointer;
-            height: 50px;
+            height: 75px;
             opacity: 0.5;
             &:hover {
                 opacity: 1;
@@ -49,6 +52,8 @@ export const Container = styled.section`
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                flex-direction: column;
+                width: 100%;
                 margin-bottom: 10px;
 
                 input {

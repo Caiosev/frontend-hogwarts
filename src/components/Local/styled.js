@@ -24,7 +24,7 @@ export const Container = styled.div`
         justify-content: center;
         .text {
             width: 40%;
-            margin-left: -20px;
+            padding-left: 20px;
         }
     }
     .image {

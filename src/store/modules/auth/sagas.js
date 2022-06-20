@@ -12,7 +12,7 @@ function* loginRequest({ payload }) {
         yield put(actions.loginSuccess(data));
         toast.success('Login realizado com sucesso!');
         axios.defaults.headers.Authorization = `Bearer ${data.token}`;
-        payload.navigate('/');
+        payload.navigate('/dashboard');
     } catch (error) {
         toast.error('Usuario ou senha incorretos');
         yield put(actions.loginFailure());
