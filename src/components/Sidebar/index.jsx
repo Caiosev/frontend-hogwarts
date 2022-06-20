@@ -22,7 +22,7 @@ export default function Sidebar({ setHouse }) {
             <div
                 role="button"
                 onClick={() => {
-                    setHouse('grifinoria');
+                    setHouse('Grifinória');
                 }}
                 onKeyPress={() => {}}
                 tabIndex="0"
@@ -37,7 +37,7 @@ export default function Sidebar({ setHouse }) {
                 className=""
                 role="button"
                 onClick={() => {
-                    setHouse('corvinal');
+                    setHouse('Corvinal');
                 }}
                 onKeyPress={() => {}}
                 tabIndex="0"
@@ -52,7 +52,7 @@ export default function Sidebar({ setHouse }) {
                 className=""
                 role="button"
                 onClick={() => {
-                    setHouse('lufa-lufa');
+                    setHouse('Lufa-lufa');
                 }}
                 onKeyPress={() => {}}
                 tabIndex="0"
@@ -67,7 +67,7 @@ export default function Sidebar({ setHouse }) {
                 className=""
                 role="button"
                 onClick={() => {
-                    setHouse('sonserina');
+                    setHouse('Sonserina');
                 }}
                 onKeyPress={() => {}}
                 tabIndex="0"
