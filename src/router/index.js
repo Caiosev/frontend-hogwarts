@@ -7,6 +7,7 @@ import Login from '../pages/login';
 import Page404 from '../pages/Page404';
 import Dashboard from '../pages/Dashboard';
 import CadastroAluno from '../pages/CadastroAluno';
+import User from '../pages/User';
 
 function PrivateRoute({ children }) {
     const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
@@ -44,6 +45,14 @@ export default function MainRoutes() {
                 element={
                     <PrivateRoute>
                         <CadastroAluno />
+                    </PrivateRoute>
+                }
+            />
+            <Route
+                path="/user/"
+                element={
+                    <PrivateRoute>
+                        <User />
                     </PrivateRoute>
                 }
             />
