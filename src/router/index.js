@@ -32,7 +32,15 @@ export default function MainRoutes() {
                 }
             />
             <Route
-                path="/cadastroAluno"
+                path="/cadastroAluno/:id"
+                element={
+                    <PrivateRoute>
+                        <CadastroAluno />
+                    </PrivateRoute>
+                }
+            />
+            <Route
+                path="/cadastroAluno/"
                 element={
                     <PrivateRoute>
                         <CadastroAluno />

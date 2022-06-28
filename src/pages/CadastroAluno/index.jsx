@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { get } from 'lodash';
 import { toast } from 'react-toastify';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import * as S from './styled';
 import axios from '../../services/axios';
 
 export default function CadastroAluno() {
+    const { id } = useParams();
     const [nome, setNome] = useState('');
     const [sobrenome, setSobrenome] = useState('');
     const [idade, setIdade] = useState('');
@@ -18,8 +20,32 @@ export default function CadastroAluno() {
     const [preview, setPreview] = useState(undefined);
     const [imgLogo, setImgLogo] = useState('');
     const [foto, setFoto] = useState(undefined);
-    // const [aluno, setAluno] = useState({});
     const navigate = useNavigate();
+
+    useEffect(() => {
+        if (!id) return;
+
+        async function getData() {
+            try {
+                const { data } = await axios.get(`/alunos/${id}`);
+                setNome(data.nome);
+                setSobrenome(data.sobrenome);
+                setIdade(data.idade);
+                setSangue(data.sangue_status);
+                setVarinha(data.varinha);
+                setPatrono(data.patrono);
+                setHouse(data.casa_id);
+                setSala(data.sala_id);
+                setPreview(data['aluno-foto'][0].url);
+                setFoto(data['aluno-foto'][0].url);
+                console.log(data);
+            } catch (error) {
+                console.log('Erro ao buscar aluno');
+            }
+        }
+        getData();
+    }, []);
+
     useEffect(() => {
         switch (house) {
             case 1:
@@ -56,38 +82,57 @@ export default function CadastroAluno() {
     const handleSubmit = async (element) => {
         element.preventDefault();
 
-        try {
-            const { data } = await axios.post('/alunos', {
-                nome,
-                sobrenome,
-                idade,
-                sangue_status: sangue,
-                varinha,
-                patrono,
-                casa_id: house,
-                sala_id: sala,
-            });
-            const { id } = data;
-            const formData = new FormData();
-            formData.append('aluno_id', id);
-            formData.append('foto', foto);
+        if (!id) {
             try {
-                await axios.post('/fotosAlunos', formData, {
-                    headers: {
-                        'Content-Type': 'multipart/form-data',
-                    },
+                const { data } = await axios.post('/alunos', {
+                    nome,
+                    sobrenome,
+                    idade,
+                    sangue_status: sangue,
+                    varinha,
+                    patrono,
+                    casa_id: house,
+                    sala_id: sala,
                 });
-            } catch (error) {
-                toast.error('Erro ao cadastrar foto');
-                console.log('erro na foto');
+                const { iddata } = data;
+                const formData = new FormData();
+                formData.append('aluno_id', iddata);
+                formData.append('foto', foto);
+                try {
+                    await axios.post('/fotosAlunos', formData, {
+                        headers: {
+                            'Content-Type': 'multipart/form-data',
+                        },
+                    });
+                } catch (error) {
+                    toast.error('Erro ao cadastrar foto');
+                    console.log('erro na foto');
+                }
+                toast.success('Cadastrado com sucesso');
+                navigate('/dashboard');
+            } catch (e) {
+                toast.error('Erro ao cadastrar aluno');
+                const errors = get(e, 'response.data.errors', []);
+                errors.map((error) => toast.error(error));
             }
-            console.log(data);
-            toast.success('Cadastrado com sucesso');
-            navigate('/dashboard');
-        } catch (e) {
-            toast.error('Erro ao cadastrar aluno');
-            const errors = get(e, 'response.data.errors', []);
-            errors.map((error) => toast.error(error));
+        } else {
+            try {
+                await axios.put(`/alunos/${id}`, {
+                    nome,
+                    sobrenome,
+                    idade,
+                    sangue_status: sangue,
+                    varinha,
+                    patrono,
+                    casa_id: house,
+                    sala_id: sala,
+                });
+                navigate('/dashboard');
+            } catch (e) {
+                toast.error('Erro ao editar aluno');
+                const errors = get(e, 'response.data.errors', []);
+                errors.map((error) => toast.error(error));
+            }
         }
     };
 
@@ -112,6 +157,7 @@ export default function CadastroAluno() {
                 </S.Foto>
                 <hr />
                 <S.Infos className="infos">
+                    <h1>{id ? 'Editar aluno' : 'Novo Aluno'}</h1>
                     <form action="">
                         <div className="">
                             <label htmlFor="nome">
@@ -121,6 +167,7 @@ export default function CadastroAluno() {
                                     onChange={(e) => setNome(e.target.value)}
                                     id="nome"
                                     name="Nome"
+                                    value={nome}
                                 />
                             </label>
                             <label htmlFor="sobrenome">
@@ -132,6 +179,7 @@ export default function CadastroAluno() {
                                         setSobrenome(e.target.value)
                                     }
                                     name="Sobrenome"
+                                    value={sobrenome}
                                 />
                             </label>
                         </div>
@@ -145,6 +193,7 @@ export default function CadastroAluno() {
                                         setIdade(Number(e.target.value))
                                     }
                                     name="Idade"
+                                    value={idade}
                                 />
                             </label>
                             <label htmlFor="sangue">
@@ -154,6 +203,7 @@ export default function CadastroAluno() {
                                     id="sangue"
                                     onChange={(e) => setSangue(e.target.value)}
                                     name="Sangue"
+                                    value={sangue}
                                 />
                             </label>
                         </div>
@@ -165,6 +215,7 @@ export default function CadastroAluno() {
                                     id="varinha"
                                     onChange={(e) => setVarinha(e.target.value)}
                                     name="Varinha"
+                                    value={varinha}
                                 />
                             </label>
                             <label htmlFor="Patrono">
@@ -174,6 +225,7 @@ export default function CadastroAluno() {
                                     id="patrono"
                                     onChange={(e) => setPatrono(e.target.value)}
                                     name="patrono"
+                                    value={patrono}
                                 />
                             </label>
                         </div>
@@ -186,6 +238,7 @@ export default function CadastroAluno() {
                                         setHouse(Number(e.target.value))
                                     }
                                     name="Casa"
+                                    value={house}
                                 >
                                     <option value="0"> </option>
                                     <option value="1">Grifinoria</option>
@@ -202,6 +255,7 @@ export default function CadastroAluno() {
                                         setSala(Number(e.target.value))
                                     }
                                     name="Sala"
+                                    value={sala}
                                 >
                                     <option value="0"> </option>
                                     <option value="1">Primeiro ano</option>
@@ -223,3 +277,7 @@ export default function CadastroAluno() {
         </S.Container>
     );
 }
+
+CadastroAluno.propTypes = {
+    match: PropTypes.shape({}),
+}.isRequired;

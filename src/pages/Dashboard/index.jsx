@@ -21,6 +21,8 @@ export default function Dashboard() {
     const [alunos, setAlunos] = useState([]);
     const [todosalunos, setTodosAlunos] = useState([]);
     const [deleteAluno, setDeleteAluno] = useState(false);
+    const [addAluno, setaddAluno] = useState(true);
+    const [editAluno, seteditAluno] = useState(false);
 
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -98,16 +100,23 @@ export default function Dashboard() {
         dispatch(actions.loginFailure());
         navigate('/');
     };
-    const handleClickAluno = async (e, id) => {
-        console.log();
+
+    const deleteData = async (e, id) => {
+        try {
+            await axios.delete(`/alunos/${id}`);
+            e.parentElement.parentElement.remove();
+        } catch (error) {
+            console.log(error);
+        }
+    };
+
+    const handleClickAluno = (e, id) => {
         if (deleteAluno) {
-            setLoading(true);
-            try {
-                await axios.delete(`/alunos/${id}`);
-                e.parentElement.parentElement.remove();
-            } catch (error) {
-                console.log(error);
-            }
+            deleteData(e, id);
+        }
+        if (editAluno) {
+            console.log('hogwarts');
+            navigate(`/cadastroAluno/${id}`);
         }
     };
 
@@ -119,13 +128,34 @@ export default function Dashboard() {
                     <img src={logo} alt="" />
                     <div className="options">
                         <Link to="/cadastroAluno">
-                            <FaPlusCircle size={25} />
+                            <FaPlusCircle
+                                size={25}
+                                onClick={() => {
+                                    setaddAluno(true);
+                                    seteditAluno(false);
+                                    setDeleteAluno(false);
+                                }}
+                                opacity={addAluno ? 1 : 0.5}
+                            />
                         </Link>
 
-                        <FaEdit size={25} />
+                        <FaEdit
+                            size={25}
+                            onClick={() => {
+                                setaddAluno(false);
+                                seteditAluno(true);
+                                setDeleteAluno(false);
+                            }}
+                            opacity={editAluno ? 1 : 0.5}
+                            color={editAluno ? 'blue' : '#fff'}
+                        />
                         <FaUserMinus
                             size={28}
-                            onClick={() => setDeleteAluno(!deleteAluno)}
+                            onClick={() => {
+                                setaddAluno(false);
+                                seteditAluno(false);
+                                setDeleteAluno(true);
+                            }}
                             opacity={deleteAluno ? 1 : 0.5}
                             color={deleteAluno ? 'red' : '#fff'}
                         />
