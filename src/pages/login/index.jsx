@@ -13,7 +13,7 @@ export default function Login() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (options === 'prof') {
+        if (options === 'prof' || options === 'aluno') {
             dispatch(
                 actions.loginRequest({ login, senha: password, navigate })
             );

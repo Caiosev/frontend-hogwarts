@@ -11,6 +11,8 @@ export default function CadastroAluno() {
     const [nome, setNome] = useState('');
     const [sobrenome, setSobrenome] = useState('');
     const [idade, setIdade] = useState('');
+    const [login, setLogin] = useState('');
+    const [senha, setSenha] = useState('');
     const [sangue, setSangue] = useState('');
     const [varinha, setVarinha] = useState('');
     const [patrono, setPatrono] = useState('');
@@ -126,6 +128,8 @@ export default function CadastroAluno() {
                     patrono,
                     casa_id: house,
                     sala_id: sala,
+                    login,
+                    senha,
                 });
                 navigate('/dashboard');
             } catch (e) {
@@ -226,6 +230,26 @@ export default function CadastroAluno() {
                                     onChange={(e) => setPatrono(e.target.value)}
                                     name="patrono"
                                     value={patrono}
+                                />
+                            </label>
+                            <label htmlFor="Login">
+                                Login
+                                <input
+                                    type="text"
+                                    id="login"
+                                    onChange={(e) => setLogin(e.target.value)}
+                                    name="login"
+                                    value={login}
+                                />
+                            </label>
+                            <label htmlFor="senha">
+                                Senha
+                                <input
+                                    type="text"
+                                    id="senha"
+                                    onChange={(e) => setSenha(e.target.value)}
+                                    name="senha"
+                                    value={senha}
                                 />
                             </label>
                         </div>
