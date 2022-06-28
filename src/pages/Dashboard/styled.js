@@ -105,3 +105,11 @@ export const ListContainer = styled.div`
         padding-top: 5px;
     }
 `;
+
+export const Points = styled.div`
+    display: ${(props) => (props.points === -1 ? 'none' : 'flex')};
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+`;

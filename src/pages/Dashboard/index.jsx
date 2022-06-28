@@ -23,6 +23,8 @@ export default function Dashboard() {
     const [deleteAluno, setDeleteAluno] = useState(false);
     const [addAluno, setaddAluno] = useState(true);
     const [editAluno, seteditAluno] = useState(false);
+    const [points, setPoints] = useState(-1);
+    const [allPoints, setallPoints] = useState([-1]);
 
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -33,6 +35,7 @@ export default function Dashboard() {
                 setLogo('/images/logo.png');
                 setColor('#242633');
                 setAlunos(todosalunos);
+                setPoints(allPoints[0]);
                 break;
 
             case 'Grifinória':
@@ -45,6 +48,7 @@ export default function Dashboard() {
                         (aluno) => aluno['aluno-casa'].nome === 'Grifinória'
                     )
                 );
+                setPoints(allPoints[1]);
                 break;
 
             case 'Corvinal':
@@ -57,6 +61,7 @@ export default function Dashboard() {
                         (aluno) => aluno['aluno-casa'].nome === 'Corvinal'
                     )
                 );
+                setPoints(allPoints[4]);
                 break;
 
             case 'Lufa-lufa':
@@ -69,6 +74,7 @@ export default function Dashboard() {
                         (aluno) => aluno['aluno-casa'].nome === 'Lufa-lufa'
                     )
                 );
+                setPoints(allPoints[3]);
                 break;
 
             case 'Sonserina':
@@ -81,6 +87,7 @@ export default function Dashboard() {
                         (aluno) => aluno['aluno-casa'].nome === 'Sonserina'
                     )
                 );
+                setPoints(allPoints[2]);
                 break;
             default:
                 break;
@@ -93,7 +100,18 @@ export default function Dashboard() {
             setTodosAlunos(response.data);
             setLoading(false);
         }
+        async function loadPoints() {
+            const { data } = await axios.get('/casas');
+            setallPoints([
+                ...allPoints,
+                data[0].nota_total,
+                data[1].nota_total,
+                data[2].nota_total,
+                data[3].nota_total,
+            ]);
+        }
         loadAlunos();
+        loadPoints();
     }, []);
 
     const handleLogout = () => {
@@ -116,9 +134,13 @@ export default function Dashboard() {
         }
         if (editAluno) {
             console.log('hogwarts');
-            navigate(`/cadastroAluno/${id}`);
+            navigate(`/aluno/${id}`);
         }
     };
+
+    useEffect(() => {
+        if (!editAluno && !deleteAluno) setaddAluno(true);
+    }, [editAluno, deleteAluno]);
 
     return (
         <S.Container>
@@ -127,7 +149,7 @@ export default function Dashboard() {
                 <S.Header house={house} color={color}>
                     <img src={logo} alt="" />
                     <div className="options">
-                        <Link to="/cadastroAluno">
+                        <Link to="/aluno">
                             <FaPlusCircle
                                 size={25}
                                 onClick={() => {
@@ -143,7 +165,7 @@ export default function Dashboard() {
                             size={25}
                             onClick={() => {
                                 setaddAluno(false);
-                                seteditAluno(true);
+                                seteditAluno(!editAluno);
                                 setDeleteAluno(false);
                             }}
                             opacity={editAluno ? 1 : 0.5}
@@ -154,7 +176,7 @@ export default function Dashboard() {
                             onClick={() => {
                                 setaddAluno(false);
                                 seteditAluno(false);
-                                setDeleteAluno(true);
+                                setDeleteAluno(!deleteAluno);
                             }}
                             opacity={deleteAluno ? 1 : 0.5}
                             color={deleteAluno ? 'red' : '#fff'}
@@ -163,6 +185,9 @@ export default function Dashboard() {
                         <FaSignOutAlt size={25} onClick={handleLogout} />
                     </div>
                 </S.Header>
+                <S.Points points={points} className="points">
+                    <h4>Pontos:{points}</h4>
+                </S.Points>
                 <S.ListContainer>
                     {alunos.map((aluno) => {
                         return (

@@ -32,7 +32,7 @@ export default function MainRoutes() {
                 }
             />
             <Route
-                path="/cadastroAluno/:id"
+                path="/aluno/:id"
                 element={
                     <PrivateRoute>
                         <CadastroAluno />
@@ -40,7 +40,7 @@ export default function MainRoutes() {
                 }
             />
             <Route
-                path="/cadastroAluno/"
+                path="/aluno/"
                 element={
                     <PrivateRoute>
                         <CadastroAluno />
