@@ -6,7 +6,7 @@ import {
     FaEdit,
     FaUserMinus,
 } from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import * as S from './styled';
 import Sidebar from '../../components/Sidebar';
@@ -118,7 +118,10 @@ export default function Dashboard() {
                 <S.Header house={house} color={color}>
                     <img src={logo} alt="" />
                     <div className="options">
-                        <FaPlusCircle size={25} />
+                        <Link to="/cadastroAluno">
+                            <FaPlusCircle size={25} />
+                        </Link>
+
                         <FaEdit size={25} />
                         <FaUserMinus
                             size={28}

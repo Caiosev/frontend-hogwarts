@@ -6,6 +6,10 @@ export const Container = styled.div`
     height: 100vh;
     background-color: ${Color.activeNav};
     display: flex;
+    a {
+        text-decoration: none;
+        color: white;
+    }
 `;
 
 export const Content = styled.div`
@@ -13,7 +17,7 @@ export const Content = styled.div`
     height: 100vh;
 `;
 
-export const Header = styled.div`
+export const Header = styled.header`
     width: 100%;
     height: 10%;
     display: flex;

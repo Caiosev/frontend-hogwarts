@@ -6,13 +6,14 @@ import * as types from '../types';
 import axios from '../../../services/axios';
 
 function* loginRequest({ payload }) {
-    const { login, senha } = payload;
     try {
-        const { data } = yield call(axios.post, '/tokens', { login, senha });
-        yield put(actions.loginSuccess(data));
+        const response = yield call(axios.post, '/tokens', payload);
+        yield put(actions.loginSuccess({ ...response.data }));
+        axios.defaults.headers.Authorization = `Bearer ${response.data.token}`;
         toast.success('Login realizado com sucesso!');
         payload.navigate('/dashboard');
     } catch (error) {
+        console.log(error);
         toast.error('Usuario ou senha incorretos');
         yield put(actions.loginFailure());
     }
