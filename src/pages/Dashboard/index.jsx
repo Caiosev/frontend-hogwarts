@@ -121,7 +121,8 @@ export default function Dashboard() {
 
     const deleteData = async (e, id) => {
         try {
-            await axios.delete(`/alunos/${id}`);
+            const res = await axios.delete(`/alunos/${id}`);
+            console.log(res);
             e.parentElement.parentElement.remove();
         } catch (error) {
             console.log(error);

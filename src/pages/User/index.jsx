@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { FaArrowAltCircleLeft } from 'react-icons/fa';
 import { useSelector } from 'react-redux';
 import { get } from 'lodash';
+import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import { useNavigate } from 'react-router-dom';
 import axios from '../../services/axios';
 import * as S from './styled';
 
@@ -57,7 +57,9 @@ export default function User() {
             ) : (
                 <>
                     <S.Header>
-                        <FaArrowAltCircleLeft size={30} />
+                        <Link to="/dashboard">
+                            <FaArrowAltCircleLeft size={30} />
+                        </Link>
                         <img src="/images/logo.png" alt="" />
                     </S.Header>
                     <S.Card>

@@ -19,6 +19,9 @@ export const Header = styled.header`
         width: 50px;
     }
     border-bottom: 1px solid ${Color.line};
+    a {
+        color: white;
+    }
 `;
 
 export const Card = styled.div`
