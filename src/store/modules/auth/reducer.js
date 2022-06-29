@@ -7,6 +7,7 @@ const initalState = {
     token: false,
     user: {},
     isLoading: false,
+    loggedAs: false,
 };
 
 export default function (state = initalState, action) {
@@ -16,6 +17,7 @@ export default function (state = initalState, action) {
             newState.isLoggedIn = true;
             newState.token = action.payload.token;
             newState.user = action.payload.user;
+            newState.loggedAs = action.payload.options;
             return newState;
         }
         case types.LOGIN_FAILURE: {

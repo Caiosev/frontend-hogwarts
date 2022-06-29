@@ -15,7 +15,12 @@ export default function Login() {
         e.preventDefault();
         if (options === 'prof' || options === 'aluno') {
             dispatch(
-                actions.loginRequest({ login, senha: password, navigate })
+                actions.loginRequest({
+                    login,
+                    senha: password,
+                    navigate,
+                    options,
+                })
             );
         }
     };
