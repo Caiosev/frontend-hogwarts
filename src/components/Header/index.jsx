@@ -10,6 +10,7 @@ export default function Header() {
     const active =
         useSelector((state) => state.scrollReducer.ativar_nav) || false;
     const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
+    const loggedAs = useSelector((state) => state.auth.loggedAs);
     const navigate = useNavigate();
     const dispatch = useDispatch();
     useEffect(() => {
@@ -61,9 +62,15 @@ export default function Header() {
                         <Link to="/" id="out" onClick={handleLogout}>
                             <FaSignOutAlt size={24} />
                         </Link>
-                        <Link to="/dashboard" id="dashboard">
-                            <FaColumns size={24} />
-                        </Link>
+                        {loggedAs === 'prof' ? (
+                            <Link to="/dashboard" id="dashboard">
+                                <FaColumns size={24} />
+                            </Link>
+                        ) : (
+                            <Link to="/provas" id="dashboard">
+                                <FaColumns size={24} />
+                            </Link>
+                        )}
                     </>
                 )}
 
