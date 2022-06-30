@@ -2,8 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { FaSignOutAlt, FaUserAlt } from 'react-icons/fa';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
+import Modal from 'react-modal';
 import * as actions from '../../store/modules/auth/actions';
 import axios from '../../services/axios';
+import Aritmancia from '../../components/modals/Aritmancia';
 import * as S from './styled';
 
 export default function Provas() {
@@ -16,9 +18,19 @@ export default function Provas() {
     const [notprovas, setNotProvas] = useState([
         1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,
     ]);
+    const [aritmanciaIsOpen, setAritmanciaIsOpen] = useState(false);
+    const [valor, setValor] = useState(undefined);
+    const [idProf, setIdProf] = useState(undefined);
     const navigate = useNavigate();
     const dispatch = useDispatch();
-
+    const modalStyle = {
+        content: {
+            width: '60vw',
+            height: '90vh',
+            backgroundColor: '#0A181F',
+            margin: 'auto',
+        },
+    };
     useEffect(() => {
         try {
             axios.get(`/provas/${id}`).then((res) => {
@@ -36,7 +48,6 @@ export default function Provas() {
     };
 
     useEffect(() => {
-        console.log(provas);
         if (provas === undefined) return;
         provas.forEach((e) => {
             console.log(e);
@@ -47,23 +58,31 @@ export default function Provas() {
                 setNotProvas([...newArr]);
             }
         });
-    }, [loading === false]);
+    }, [provas]);
 
-    const handleSubmitProva = (e) => {
-        const profId = e.target.name;
+    useEffect(() => {
+        if (valor === undefined) return;
+
+        const profId = idProf;
 
         function submitProva() {
             axios
                 .post(`/provas/`, {
-                    valor: '10',
+                    valor,
                     prof_id: profId,
                     aluno_id: id,
                 })
                 .then(setLoading(true));
         }
         submitProva();
-    };
+    }, [valor]);
 
+    const handleOpenaritmancia = () => {
+        setAritmanciaIsOpen(true);
+    };
+    const handleClosearitmancia = () => {
+        setAritmanciaIsOpen(false);
+    };
     return (
         <S.Container>
             {!loading && (
@@ -110,30 +129,59 @@ export default function Provas() {
                                     <h1>Provas não Enviadas</h1>
                                     <div className="provas">
                                         {notprovas.includes(1) && (
-                                            <div
-                                                className="prova"
-                                                tabIndex="0"
-                                                name="1"
-                                                onClick={handleSubmitProva}
-                                                role="button"
-                                                onKeyUp={handleSubmitProva}
-                                            >
-                                                <img
-                                                    src="/images/materias/math.png"
-                                                    alt=""
+                                            <>
+                                                <div
+                                                    className="prova"
+                                                    tabIndex="0"
                                                     name="1"
-                                                />
-                                                <h2 name="1">Aritmancia</h2>
-                                            </div>
+                                                    onClick={
+                                                        handleOpenaritmancia
+                                                    }
+                                                    role="button"
+                                                    onKeyUp={
+                                                        handleOpenaritmancia
+                                                    }
+                                                >
+                                                    <img
+                                                        src="/images/materias/math.png"
+                                                        alt=""
+                                                        name="1"
+                                                    />
+                                                    <h2 name="1">Aritmancia</h2>
+                                                </div>
+                                                <Modal
+                                                    isOpen={aritmanciaIsOpen}
+                                                    onRequestClose={
+                                                        handleClosearitmancia
+                                                    }
+                                                    style={modalStyle}
+                                                >
+                                                    <button
+                                                        type="button"
+                                                        onClick={
+                                                            handleClosearitmancia
+                                                        }
+                                                    >
+                                                        X
+                                                    </button>
+                                                    <Aritmancia
+                                                        setValor={setValor}
+                                                        setIdProf={setIdProf}
+                                                        close={
+                                                            handleClosearitmancia
+                                                        }
+                                                    />
+                                                </Modal>
+                                            </>
                                         )}
                                         {notprovas.includes(2) && (
                                             <div
                                                 className="prova"
                                                 tabIndex="-1"
                                                 name="2"
-                                                onClick={handleSubmitProva}
+                                                onClick={handleOpenaritmancia}
                                                 role="button"
-                                                onKeyUp={handleSubmitProva}
+                                                onKeyUp={handleOpenaritmancia}
                                             >
                                                 <img
                                                     src="/images/materias/astronomy.png"
@@ -148,9 +196,9 @@ export default function Provas() {
                                                 className="prova"
                                                 tabIndex="-2"
                                                 name="3"
-                                                onClick={handleSubmitProva}
+                                                onClick={handleOpenaritmancia}
                                                 role="button"
-                                                onKeyUp={handleSubmitProva}
+                                                onKeyUp={handleOpenaritmancia}
                                             >
                                                 <img
                                                     src="/images/materias/dragon.png"
@@ -167,9 +215,9 @@ export default function Provas() {
                                                 className="prova"
                                                 tabIndex="-3"
                                                 name="4"
-                                                onClick={handleSubmitProva}
+                                                onClick={handleOpenaritmancia}
                                                 role="button"
-                                                onKeyUp={handleSubmitProva}
+                                                onKeyUp={handleOpenaritmancia}
                                             >
                                                 <img
                                                     src="/images/materias/magic-wand.png"
@@ -184,9 +232,9 @@ export default function Provas() {
                                                 className="prova"
                                                 tabIndex="-4"
                                                 name="5"
-                                                onClick={handleSubmitProva}
+                                                onClick={handleOpenaritmancia}
                                                 role="button"
-                                                onKeyUp={handleSubmitProva}
+                                                onKeyUp={handleOpenaritmancia}
                                             >
                                                 <img
                                                     src="/images/materias/shield.png"
@@ -204,9 +252,9 @@ export default function Provas() {
                                                 className="prova"
                                                 tabIndex="-5"
                                                 name="6"
-                                                onClick={handleSubmitProva}
+                                                onClick={handleOpenaritmancia}
                                                 role="button"
-                                                onKeyUp={handleSubmitProva}
+                                                onKeyUp={handleOpenaritmancia}
                                             >
                                                 <img
                                                     src="/images/materias/divination.png"
@@ -221,9 +269,9 @@ export default function Provas() {
                                                 className="prova"
                                                 tabIndex="-6"
                                                 name="7"
-                                                onClick={handleSubmitProva}
+                                                onClick={handleOpenaritmancia}
                                                 role="button"
-                                                onKeyUp={handleSubmitProva}
+                                                onKeyUp={handleOpenaritmancia}
                                             >
                                                 <img
                                                     src="/images/materias/witch.png"
@@ -238,9 +286,9 @@ export default function Provas() {
                                                 className="prova"
                                                 tabIndex="-7"
                                                 name="8"
-                                                onClick={handleSubmitProva}
+                                                onClick={handleOpenaritmancia}
                                                 role="button"
-                                                onKeyUp={handleSubmitProva}
+                                                onKeyUp={handleOpenaritmancia}
                                             >
                                                 <img
                                                     src="/images/materias/sapling.png"
@@ -255,9 +303,9 @@ export default function Provas() {
                                                 className="prova"
                                                 tabIndex="-8"
                                                 name="9"
-                                                onClick={handleSubmitProva}
+                                                onClick={handleOpenaritmancia}
                                                 role="button"
-                                                onKeyUp={handleSubmitProva}
+                                                onKeyUp={handleOpenaritmancia}
                                             >
                                                 <img
                                                     src="/images/materias/history.png"
@@ -274,9 +322,9 @@ export default function Provas() {
                                                 className="prova"
                                                 tabIndex="-9"
                                                 name="10"
-                                                onClick={handleSubmitProva}
+                                                onClick={handleOpenaritmancia}
                                                 role="button"
-                                                onKeyUp={handleSubmitProva}
+                                                onKeyUp={handleOpenaritmancia}
                                             >
                                                 <img
                                                     src="/images/materias/anatomy.png"
@@ -293,9 +341,9 @@ export default function Provas() {
                                                 className="prova"
                                                 tabIndex="-10"
                                                 name="11"
-                                                onClick={handleSubmitProva}
+                                                onClick={handleOpenaritmancia}
                                                 role="button"
-                                                onKeyUp={handleSubmitProva}
+                                                onKeyUp={handleOpenaritmancia}
                                             >
                                                 <img
                                                     src="/images/materias/serum.png"
@@ -310,9 +358,9 @@ export default function Provas() {
                                                 className="prova"
                                                 tabIndex="-11"
                                                 name="12"
-                                                onClick={handleSubmitProva}
+                                                onClick={handleOpenaritmancia}
                                                 role="button"
-                                                onKeyUp={handleSubmitProva}
+                                                onKeyUp={handleOpenaritmancia}
                                             >
                                                 <img
                                                     src="/images/materias/runes.png"
@@ -329,9 +377,9 @@ export default function Provas() {
                                                 className="prova"
                                                 tabIndex="-12"
                                                 name="13"
-                                                onClick={handleSubmitProva}
+                                                onClick={handleOpenaritmancia}
                                                 role="button"
-                                                onKeyUp={handleSubmitProva}
+                                                onKeyUp={handleOpenaritmancia}
                                             >
                                                 <img
                                                     src="/images/materias/cat.png"
