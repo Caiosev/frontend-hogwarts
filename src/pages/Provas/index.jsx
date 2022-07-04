@@ -10,6 +10,7 @@ import Astronomia from '../../components/modals/Astronomia';
 import CriaturasMagicas from '../../components/modals/CriaturasMagicas';
 import Feiticos from '../../components/modals/Feiticos';
 import Defesa from '../../components/modals/Defesa';
+import Advinhacao from '../../components/modals/Advinhacao';
 import * as S from './styled';
 
 export default function Provas() {
@@ -27,6 +28,7 @@ export default function Provas() {
     const [criaturasMagicasIsOpen, setCriaturasMagicasIsOpen] = useState(false);
     const [feiticosIsOpen, setFeiticosIsOpen] = useState(false);
     const [defesaIsOpen, setDefesaIsOpen] = useState(false);
+    const [advinhaIsOpen, setAdvinhaIsOpen] = useState(false);
     const [valor, setValor] = useState(undefined);
     const [idProf, setIdProf] = useState(undefined);
     const navigate = useNavigate();
@@ -113,6 +115,12 @@ export default function Provas() {
     };
     const handleClosedefesa = () => {
         setDefesaIsOpen(false);
+    };
+    const handleOpenadvinha = () => {
+        setAdvinhaIsOpen(true);
+    };
+    const handleCloseadvinha = () => {
+        setAdvinhaIsOpen(false);
     };
     return (
         <S.Container>
@@ -390,21 +398,46 @@ export default function Provas() {
                                             </>
                                         )}
                                         {notprovas.includes(6) && (
-                                            <div
-                                                className="prova"
-                                                tabIndex="-5"
-                                                name="6"
-                                                onClick={handleOpenaritmancia}
-                                                role="button"
-                                                onKeyUp={handleOpenaritmancia}
-                                            >
-                                                <img
-                                                    src="/images/materias/divination.png"
-                                                    alt=""
+                                            <>
+                                                <div
+                                                    className="prova"
+                                                    tabIndex="-1"
                                                     name="6"
-                                                />
-                                                <h2 name="6">Advinhação</h2>
-                                            </div>
+                                                    onClick={handleOpenadvinha}
+                                                    role="button"
+                                                    onKeyUp={handleOpenadvinha}
+                                                >
+                                                    <img
+                                                        src="/images/materias/divination.png"
+                                                        alt=""
+                                                        name="6"
+                                                    />
+                                                    <h2 name="6">Advinhação</h2>
+                                                </div>
+                                                <Modal
+                                                    isOpen={advinhaIsOpen}
+                                                    onRequestClose={
+                                                        handleCloseadvinha
+                                                    }
+                                                    style={modalStyle}
+                                                >
+                                                    <button
+                                                        type="button"
+                                                        onClick={
+                                                            handleCloseadvinha
+                                                        }
+                                                    >
+                                                        X
+                                                    </button>
+                                                    <Advinhacao
+                                                        setValor={setValor}
+                                                        setIdProf={setIdProf}
+                                                        close={
+                                                            handleCloseadvinha
+                                                        }
+                                                    />
+                                                </Modal>
+                                            </>
                                         )}
                                         {notprovas.includes(7) && (
                                             <div
