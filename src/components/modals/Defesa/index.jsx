@@ -3,7 +3,7 @@ import { toast } from 'react-toastify';
 import PropTypes from 'prop-types';
 import * as S from './styled';
 
-export default function CriaturasMagicas({ setValor, setIdProf, close }) {
+export default function Defesa({ setValor, setIdProf, close }) {
     const [pontos, setPontos] = useState(undefined);
     const [q1, setQ1] = useState(undefined);
     const [q2, setQ2] = useState(undefined);
@@ -11,7 +11,7 @@ export default function CriaturasMagicas({ setValor, setIdProf, close }) {
     const [q4, setQ4] = useState(undefined);
     const [q5, setQ5] = useState(undefined);
     const [nota, setNota] = useState(undefined);
-    const res = ['1', '4', '3', '3', '4'];
+    const res = ['4', '3', '2', '4', '2'];
 
     const handleSubmit = () => {
         if (
@@ -65,7 +65,7 @@ export default function CriaturasMagicas({ setValor, setIdProf, close }) {
 
     return (
         <S.Container>
-            <h1>Prova de Feitiços</h1>
+            <h1>Prova de Defesa Contra as Artes das Trevas</h1>
             <h2>Questões</h2>
             <form action="">
                 <label
@@ -74,23 +74,29 @@ export default function CriaturasMagicas({ setValor, setIdProf, close }) {
                     onChange={(e) => setQ1(e.target.value)}
                 >
                     {' '}
-                    1 - O feitiço Expelliarmus serve para:
+                    1 - Se você balançar sua varinha em um movimento circular
+                    sobre a cabeça enquanto diz lentamente Verdimillious ,
+                    mirando apenas em ar rarefeito, qual será o efeito?
                     <div className="options">
                         <div className="">
                             <input type="radio" name="q1" id="" value="1" />
-                            Jogar a varinha do alvo para trás
+                            Faiscas apareceram no ar, na cor vermelha, emitindo
+                            uma luz cegante
                         </div>
                         <div className="">
                             <input type="radio" name="q1" id="" value="2" />
-                            Repar objetos
+                            Faiscas apareceram no ar, na cor verde, emitindo um
+                            som ensurdecedor
                         </div>
                         <div className="">
                             <input type="radio" name="q1" id="" value="3" />
-                            Controlar a mente do alvo
+                            Uma orbe aparecerá no ar, na cor vermelha, emitindo
+                            som ensurdecedor
                         </div>
                         <div className="">
                             <input type="radio" name="q1" id="" value="4" />
-                            Trazer objetos para suas mãos
+                            Uma orbe aparecerá no ar, na cor verde, emitindo uma
+                            luz cegante
                         </div>
                     </div>
                 </label>
@@ -100,25 +106,23 @@ export default function CriaturasMagicas({ setValor, setIdProf, close }) {
                     onChange={(e) => setQ2(e.target.value)}
                 >
                     {' '}
-                    2 - O feitiço Alorromora permite abrir trancas desde que:
+                    2 - Qual o movimento utilizado para executar o Flipendo?
                     <div className="options">
                         <div className="">
-                            <input type="radio" name="q2" id="" value="1" /> As
-                            trancas sejam fabricadas por trouxas
+                            <input type="radio" name="q2" id="" value="1" />{' '}
+                            Movimento Circular
                         </div>
                         <div className="">
                             <input type="radio" name="q2" id="" value="2" />
-                            As trancas sejam fabricadas por bruxos
+                            Movimento Oval
                         </div>
                         <div className="">
                             <input type="radio" name="q2" id="" value="3" />
-                            As trancas não estejam dentro de um local protegido
-                            por outros feitiços
+                            Movimento de Aceno
                         </div>
                         <div className="">
                             <input type="radio" name="q2" id="" value="4" />
-                            As trancas não estejam protegidas por outros
-                            feitiços
+                            Movimento em U
                         </div>
                     </div>
                 </label>
@@ -128,23 +132,23 @@ export default function CriaturasMagicas({ setValor, setIdProf, close }) {
                     onChange={(e) => setQ3(e.target.value)}
                 >
                     {' '}
-                    3 - Qual o efeito do feitiço Arresto Momentum ?
+                    3 - O feitiço Riddikulus é utilizado para:
                     <div className="options">
                         <div className="">
                             <input type="radio" name="q3" id="" value="1" />
-                            Congela o alvo no tempo
+                            Se defender de vampiros
                         </div>
                         <div className="">
                             <input type="radio" name="q3" id="" value="2" />
-                            Deixa o alvo estatico
+                            Se defender do bicho-papão
                         </div>
                         <div className="">
                             <input type="radio" name="q3" id="" value="3" />
-                            Diminui a velocidade do alvo
+                            Se defender de diabretes
                         </div>
                         <div className="">
                             <input type="radio" name="q3" id="" value="4" />
-                            Petrifica o alvo
+                            Matar diabretes
                         </div>
                     </div>
                 </label>
@@ -154,24 +158,24 @@ export default function CriaturasMagicas({ setValor, setIdProf, close }) {
                     onChange={(e) => setQ4(e.target.value)}
                 >
                     {' '}
-                    4 - Existe um encantamento utilizado para descobrir todos
-                    feitiços conjurados por uma varinha, qual seu nome?
+                    4 - Como você pode se defender de um Kappa?
                     <div className="options">
                         <div className="">
                             <input type="radio" name="q4" id="" value="1" />
-                            Priori Incantatem
+                            Dando um banana para ele
                         </div>
                         <div className="">
                             <input type="radio" name="q4" id="" value="2" />
-                            Cave Inimicum
+                            Faze-lo perder o equilibrio
                         </div>
                         <div className="">
                             <input type="radio" name="q4" id="" value="3" />
-                            Prior Incantato
+                            Você deve ficar de ponta cabeça
                         </div>
                         <div className="">
                             <input type="radio" name="q4" id="" value="4" />
-                            Piertotum Locomotor
+                            Jogar um pepino com o seu nome gravado à faca para
+                            ele
                         </div>
                     </div>
                 </label>
@@ -181,23 +185,24 @@ export default function CriaturasMagicas({ setValor, setIdProf, close }) {
                     onChange={(e) => setQ5(e.target.value)}
                 >
                     {' '}
-                    5 - Qual o significado do nome Wingardium Leviosa ?
+                    5 - Como podemos indentificar um vampiro ?
                     <div className="options">
                         <div className="">
                             <input type="radio" name="q5" id="" value="1" />
-                            Levitar
+                            Musculosos palidos altos com presas e noturnos
                         </div>
                         <div className="">
                             <input type="radio" name="q5" id="" value="2" />
-                            Levitar Alto
+                            Magros palidos altos com presas e noturnos
                         </div>
                         <div className="">
                             <input type="radio" name="q5" id="" value="3" />
-                            Levantar
+                            Magros palidos altos com presas e diurnos
                         </div>
                         <div className="">
                             <input type="radio" name="q5" id="" value="4" />
-                            Levantar Alto
+                            Não conseguimos identificar até que ele mostre sua
+                            verdadeira forma
                         </div>
                     </div>
                 </label>
@@ -213,7 +218,7 @@ export default function CriaturasMagicas({ setValor, setIdProf, close }) {
     );
 }
 
-CriaturasMagicas.propTypes = {
+Defesa.propTypes = {
     setValor: PropTypes.func,
     setIdProf: PropTypes.func,
     close: PropTypes.func,

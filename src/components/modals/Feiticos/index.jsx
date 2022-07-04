@@ -3,7 +3,7 @@ import { toast } from 'react-toastify';
 import PropTypes from 'prop-types';
 import * as S from './styled';
 
-export default function CriaturasMagicas({ setValor, setIdProf, close }) {
+export default function Feiticos({ setValor, setIdProf, close }) {
     const [pontos, setPontos] = useState(undefined);
     const [q1, setQ1] = useState(undefined);
     const [q2, setQ2] = useState(undefined);
@@ -213,7 +213,7 @@ export default function CriaturasMagicas({ setValor, setIdProf, close }) {
     );
 }
 
-CriaturasMagicas.propTypes = {
+Feiticos.propTypes = {
     setValor: PropTypes.func,
     setIdProf: PropTypes.func,
     close: PropTypes.func,

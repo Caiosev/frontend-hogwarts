@@ -9,6 +9,7 @@ import Aritmancia from '../../components/modals/Aritmancia';
 import Astronomia from '../../components/modals/Astronomia';
 import CriaturasMagicas from '../../components/modals/CriaturasMagicas';
 import Feiticos from '../../components/modals/Feiticos';
+import Defesa from '../../components/modals/Defesa';
 import * as S from './styled';
 
 export default function Provas() {
@@ -25,6 +26,7 @@ export default function Provas() {
     const [astronomiaIsOpen, setAstronomiaIsOpen] = useState(false);
     const [criaturasMagicasIsOpen, setCriaturasMagicasIsOpen] = useState(false);
     const [feiticosIsOpen, setFeiticosIsOpen] = useState(false);
+    const [defesaIsOpen, setDefesaIsOpen] = useState(false);
     const [valor, setValor] = useState(undefined);
     const [idProf, setIdProf] = useState(undefined);
     const navigate = useNavigate();
@@ -105,6 +107,12 @@ export default function Provas() {
     };
     const handleClosefeiticos = () => {
         setFeiticosIsOpen(false);
+    };
+    const handleOpendefesa = () => {
+        setDefesaIsOpen(true);
+    };
+    const handleClosedefesa = () => {
+        setDefesaIsOpen(false);
     };
     return (
         <S.Container>
@@ -342,9 +350,9 @@ export default function Provas() {
                                                     className="prova"
                                                     tabIndex="-1"
                                                     name="5"
-                                                    onClick={handleOpenfeiticos}
+                                                    onClick={handleOpendefesa}
                                                     role="button"
-                                                    onKeyUp={handleOpenfeiticos}
+                                                    onKeyUp={handleOpendefesa}
                                                 >
                                                     <img
                                                         src="/images/materias/shield.png"
@@ -357,25 +365,25 @@ export default function Provas() {
                                                     </h2>
                                                 </div>
                                                 <Modal
-                                                    isOpen={feiticosIsOpen}
+                                                    isOpen={defesaIsOpen}
                                                     onRequestClose={
-                                                        handleClosefeiticos
+                                                        handleClosedefesa
                                                     }
                                                     style={modalStyle}
                                                 >
                                                     <button
                                                         type="button"
                                                         onClick={
-                                                            handleClosefeiticos
+                                                            handleClosedefesa
                                                         }
                                                     >
                                                         X
                                                     </button>
-                                                    <Feiticos
+                                                    <Defesa
                                                         setValor={setValor}
                                                         setIdProf={setIdProf}
                                                         close={
-                                                            handleClosefeiticos
+                                                            handleClosedefesa
                                                         }
                                                     />
                                                 </Modal>
