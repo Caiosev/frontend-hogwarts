@@ -7,6 +7,7 @@ import * as actions from '../../store/modules/auth/actions';
 import axios from '../../services/axios';
 import Aritmancia from '../../components/modals/Aritmancia';
 import Astronomia from '../../components/modals/Astronomia';
+import CriaturasMagicas from '../../components/modals/CriaturasMagicas';
 import * as S from './styled';
 
 export default function Provas() {
@@ -21,6 +22,7 @@ export default function Provas() {
     ]);
     const [aritmanciaIsOpen, setAritmanciaIsOpen] = useState(false);
     const [astronomiaIsOpen, setAstronomiaIsOpen] = useState(false);
+    const [criaturasMagicasIsOpen, setCriaturasMagicasIsOpen] = useState(false);
     const [valor, setValor] = useState(undefined);
     const [idProf, setIdProf] = useState(undefined);
     const navigate = useNavigate();
@@ -89,6 +91,12 @@ export default function Provas() {
     };
     const handleCloseastronomia = () => {
         setAstronomiaIsOpen(false);
+    };
+    const handleOpencriaturasmagicas = () => {
+        setCriaturasMagicasIsOpen(true);
+    };
+    const handleClosecriaturasmagicas = () => {
+        setCriaturasMagicasIsOpen(false);
     };
     return (
         <S.Container>
@@ -232,45 +240,47 @@ export default function Provas() {
                                                 <div
                                                     className="prova"
                                                     tabIndex="-1"
-                                                    name="2"
+                                                    name="3"
                                                     onClick={
-                                                        handleOpenastronomia
+                                                        handleOpencriaturasmagicas
                                                     }
                                                     role="button"
                                                     onKeyUp={
-                                                        handleOpenastronomia
+                                                        handleOpencriaturasmagicas
                                                     }
                                                 >
                                                     <img
                                                         src="/images/materias/dragon.png"
                                                         alt=""
-                                                        name="2"
+                                                        name="3"
                                                     />
-                                                    <h2 name="2">
+                                                    <h2 name="3">
                                                         Trato das Criaturaas
                                                         Magicas
                                                     </h2>
                                                 </div>
                                                 <Modal
-                                                    isOpen={astronomiaIsOpen}
+                                                    isOpen={
+                                                        criaturasMagicasIsOpen
+                                                    }
                                                     onRequestClose={
-                                                        handleCloseastronomia
+                                                        handleClosecriaturasmagicas
                                                     }
                                                     style={modalStyle}
                                                 >
                                                     <button
                                                         type="button"
                                                         onClick={
-                                                            handleCloseastronomia
+                                                            handleClosecriaturasmagicas
                                                         }
                                                     >
                                                         X
                                                     </button>
-                                                    <Astronomia
+                                                    <CriaturasMagicas
                                                         setValor={setValor}
                                                         setIdProf={setIdProf}
                                                         close={
-                                                            handleCloseastronomia
+                                                            handleClosecriaturasmagicas
                                                         }
                                                     />
                                                 </Modal>
