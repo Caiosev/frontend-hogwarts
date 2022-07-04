@@ -8,6 +8,7 @@ import axios from '../../services/axios';
 import Aritmancia from '../../components/modals/Aritmancia';
 import Astronomia from '../../components/modals/Astronomia';
 import CriaturasMagicas from '../../components/modals/CriaturasMagicas';
+import Feiticos from '../../components/modals/Feiticos';
 import * as S from './styled';
 
 export default function Provas() {
@@ -23,6 +24,7 @@ export default function Provas() {
     const [aritmanciaIsOpen, setAritmanciaIsOpen] = useState(false);
     const [astronomiaIsOpen, setAstronomiaIsOpen] = useState(false);
     const [criaturasMagicasIsOpen, setCriaturasMagicasIsOpen] = useState(false);
+    const [feiticosIsOpen, setFeiticosIsOpen] = useState(false);
     const [valor, setValor] = useState(undefined);
     const [idProf, setIdProf] = useState(undefined);
     const navigate = useNavigate();
@@ -97,6 +99,12 @@ export default function Provas() {
     };
     const handleClosecriaturasmagicas = () => {
         setCriaturasMagicasIsOpen(false);
+    };
+    const handleOpenfeiticos = () => {
+        setFeiticosIsOpen(true);
+    };
+    const handleClosefeiticos = () => {
+        setFeiticosIsOpen(false);
     };
     return (
         <S.Container>
@@ -287,41 +295,91 @@ export default function Provas() {
                                             </>
                                         )}
                                         {notprovas.includes(4) && (
-                                            <div
-                                                className="prova"
-                                                tabIndex="-3"
-                                                name="4"
-                                                onClick={handleOpenaritmancia}
-                                                role="button"
-                                                onKeyUp={handleOpenaritmancia}
-                                            >
-                                                <img
-                                                    src="/images/materias/magic-wand.png"
-                                                    alt=""
+                                            <>
+                                                <div
+                                                    className="prova"
+                                                    tabIndex="-1"
                                                     name="4"
-                                                />
-                                                <h2 name="4">Feitiços</h2>
-                                            </div>
+                                                    onClick={handleOpenfeiticos}
+                                                    role="button"
+                                                    onKeyUp={handleOpenfeiticos}
+                                                >
+                                                    <img
+                                                        src="/images/materias/magic-wand.png"
+                                                        alt=""
+                                                        name="4"
+                                                    />
+                                                    <h2 name="4">Feitiços</h2>
+                                                </div>
+                                                <Modal
+                                                    isOpen={feiticosIsOpen}
+                                                    onRequestClose={
+                                                        handleClosefeiticos
+                                                    }
+                                                    style={modalStyle}
+                                                >
+                                                    <button
+                                                        type="button"
+                                                        onClick={
+                                                            handleClosefeiticos
+                                                        }
+                                                    >
+                                                        X
+                                                    </button>
+                                                    <Feiticos
+                                                        setValor={setValor}
+                                                        setIdProf={setIdProf}
+                                                        close={
+                                                            handleClosefeiticos
+                                                        }
+                                                    />
+                                                </Modal>
+                                            </>
                                         )}
                                         {notprovas.includes(5) && (
-                                            <div
-                                                className="prova"
-                                                tabIndex="-4"
-                                                name="5"
-                                                onClick={handleOpenaritmancia}
-                                                role="button"
-                                                onKeyUp={handleOpenaritmancia}
-                                            >
-                                                <img
-                                                    src="/images/materias/shield.png"
-                                                    alt=""
+                                            <>
+                                                <div
+                                                    className="prova"
+                                                    tabIndex="-1"
                                                     name="5"
-                                                />
-                                                <h2 name="5">
-                                                    Defesa Contra as Artes das
-                                                    Trevas
-                                                </h2>
-                                            </div>
+                                                    onClick={handleOpenfeiticos}
+                                                    role="button"
+                                                    onKeyUp={handleOpenfeiticos}
+                                                >
+                                                    <img
+                                                        src="/images/materias/shield.png"
+                                                        alt=""
+                                                        name="5"
+                                                    />
+                                                    <h2 name="5">
+                                                        Defesa Contra as Artes
+                                                        das Trvas
+                                                    </h2>
+                                                </div>
+                                                <Modal
+                                                    isOpen={feiticosIsOpen}
+                                                    onRequestClose={
+                                                        handleClosefeiticos
+                                                    }
+                                                    style={modalStyle}
+                                                >
+                                                    <button
+                                                        type="button"
+                                                        onClick={
+                                                            handleClosefeiticos
+                                                        }
+                                                    >
+                                                        X
+                                                    </button>
+                                                    <Feiticos
+                                                        setValor={setValor}
+                                                        setIdProf={setIdProf}
+                                                        close={
+                                                            handleClosefeiticos
+                                                        }
+                                                    />
+                                                </Modal>
+                                            </>
                                         )}
                                         {notprovas.includes(6) && (
                                             <div
