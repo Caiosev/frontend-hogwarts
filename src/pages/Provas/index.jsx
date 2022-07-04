@@ -12,6 +12,7 @@ import Feiticos from '../../components/modals/Feiticos';
 import Defesa from '../../components/modals/Defesa';
 import Advinhacao from '../../components/modals/Advinhacao';
 import Voo from '../../components/modals/Voo';
+import Herbo from '../../components/modals/Herbo';
 
 import * as S from './styled';
 
@@ -32,6 +33,8 @@ export default function Provas() {
     const [defesaIsOpen, setDefesaIsOpen] = useState(false);
     const [advinhaIsOpen, setAdvinhaIsOpen] = useState(false);
     const [vooIsOpen, setVooIsOpen] = useState(false);
+    const [herboIsOpen, setHerboIsOpen] = useState(false);
+
     const [valor, setValor] = useState(undefined);
     const [idProf, setIdProf] = useState(undefined);
     const navigate = useNavigate();
@@ -130,6 +133,12 @@ export default function Provas() {
     };
     const handleClosevoo = () => {
         setVooIsOpen(false);
+    };
+    const handleOpenherbo = () => {
+        setHerboIsOpen(true);
+    };
+    const handleCloseherbo = () => {
+        setHerboIsOpen(false);
     };
     return (
         <S.Container>
@@ -487,21 +496,44 @@ export default function Provas() {
                                             </>
                                         )}
                                         {notprovas.includes(8) && (
-                                            <div
-                                                className="prova"
-                                                tabIndex="-7"
-                                                name="8"
-                                                onClick={handleOpenaritmancia}
-                                                role="button"
-                                                onKeyUp={handleOpenaritmancia}
-                                            >
-                                                <img
-                                                    src="/images/materias/sapling.png"
-                                                    alt=""
+                                            <>
+                                                <div
+                                                    className="prova"
+                                                    tabIndex="-1"
                                                     name="8"
-                                                />
-                                                <h2 name="8">Herbologia</h2>
-                                            </div>
+                                                    onClick={handleOpenherbo}
+                                                    role="button"
+                                                    onKeyUp={handleOpenherbo}
+                                                >
+                                                    <img
+                                                        src="/images/materias/sapling.png"
+                                                        alt=""
+                                                        name="8"
+                                                    />
+                                                    <h2 name="8">Herbologia</h2>
+                                                </div>
+                                                <Modal
+                                                    isOpen={herboIsOpen}
+                                                    onRequestClose={
+                                                        handleCloseherbo
+                                                    }
+                                                    style={modalStyle}
+                                                >
+                                                    <button
+                                                        type="button"
+                                                        onClick={
+                                                            handleCloseherbo
+                                                        }
+                                                    >
+                                                        X
+                                                    </button>
+                                                    <Herbo
+                                                        setValor={setValor}
+                                                        setIdProf={setIdProf}
+                                                        close={handleCloseherbo}
+                                                    />
+                                                </Modal>
+                                            </>
                                         )}
                                         {notprovas.includes(9) && (
                                             <div
