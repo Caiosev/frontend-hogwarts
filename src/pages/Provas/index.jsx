@@ -11,6 +11,8 @@ import CriaturasMagicas from '../../components/modals/CriaturasMagicas';
 import Feiticos from '../../components/modals/Feiticos';
 import Defesa from '../../components/modals/Defesa';
 import Advinhacao from '../../components/modals/Advinhacao';
+import Voo from '../../components/modals/Voo';
+
 import * as S from './styled';
 
 export default function Provas() {
@@ -29,6 +31,7 @@ export default function Provas() {
     const [feiticosIsOpen, setFeiticosIsOpen] = useState(false);
     const [defesaIsOpen, setDefesaIsOpen] = useState(false);
     const [advinhaIsOpen, setAdvinhaIsOpen] = useState(false);
+    const [vooIsOpen, setVooIsOpen] = useState(false);
     const [valor, setValor] = useState(undefined);
     const [idProf, setIdProf] = useState(undefined);
     const navigate = useNavigate();
@@ -121,6 +124,12 @@ export default function Provas() {
     };
     const handleCloseadvinha = () => {
         setAdvinhaIsOpen(false);
+    };
+    const handleOpenvoo = () => {
+        setVooIsOpen(true);
+    };
+    const handleClosevoo = () => {
+        setVooIsOpen(false);
     };
     return (
         <S.Container>
@@ -440,21 +449,42 @@ export default function Provas() {
                                             </>
                                         )}
                                         {notprovas.includes(7) && (
-                                            <div
-                                                className="prova"
-                                                tabIndex="-6"
-                                                name="7"
-                                                onClick={handleOpenaritmancia}
-                                                role="button"
-                                                onKeyUp={handleOpenaritmancia}
-                                            >
-                                                <img
-                                                    src="/images/materias/witch.png"
-                                                    alt=""
+                                            <>
+                                                <div
+                                                    className="prova"
+                                                    tabIndex="-1"
                                                     name="7"
-                                                />
-                                                <h2 name="7">Voô</h2>
-                                            </div>
+                                                    onClick={handleOpenvoo}
+                                                    role="button"
+                                                    onKeyUp={handleOpenvoo}
+                                                >
+                                                    <img
+                                                        src="/images/materias/witch.png"
+                                                        alt=""
+                                                        name="7"
+                                                    />
+                                                    <h2 name="7">Voo</h2>
+                                                </div>
+                                                <Modal
+                                                    isOpen={vooIsOpen}
+                                                    onRequestClose={
+                                                        handleClosevoo
+                                                    }
+                                                    style={modalStyle}
+                                                >
+                                                    <button
+                                                        type="button"
+                                                        onClick={handleClosevoo}
+                                                    >
+                                                        X
+                                                    </button>
+                                                    <Voo
+                                                        setValor={setValor}
+                                                        setIdProf={setIdProf}
+                                                        close={handleClosevoo}
+                                                    />
+                                                </Modal>
+                                            </>
                                         )}
                                         {notprovas.includes(8) && (
                                             <div
