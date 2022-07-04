@@ -6,6 +6,7 @@ import Modal from 'react-modal';
 import * as actions from '../../store/modules/auth/actions';
 import axios from '../../services/axios';
 import Aritmancia from '../../components/modals/Aritmancia';
+import Astronomia from '../../components/modals/Astronomia';
 import * as S from './styled';
 
 export default function Provas() {
@@ -19,6 +20,7 @@ export default function Provas() {
         1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,
     ]);
     const [aritmanciaIsOpen, setAritmanciaIsOpen] = useState(false);
+    const [astronomiaIsOpen, setAstronomiaIsOpen] = useState(false);
     const [valor, setValor] = useState(undefined);
     const [idProf, setIdProf] = useState(undefined);
     const navigate = useNavigate();
@@ -50,7 +52,6 @@ export default function Provas() {
     useEffect(() => {
         if (provas === undefined) return;
         provas.forEach((e) => {
-            console.log(e);
             const position = notprovas.indexOf(e.prof_id);
             if (position !== -1) {
                 const newArr = [...notprovas];
@@ -82,6 +83,12 @@ export default function Provas() {
     };
     const handleClosearitmancia = () => {
         setAritmanciaIsOpen(false);
+    };
+    const handleOpenastronomia = () => {
+        setAstronomiaIsOpen(true);
+    };
+    const handleCloseastronomia = () => {
+        setAstronomiaIsOpen(false);
     };
     return (
         <S.Container>
@@ -175,40 +182,99 @@ export default function Provas() {
                                             </>
                                         )}
                                         {notprovas.includes(2) && (
-                                            <div
-                                                className="prova"
-                                                tabIndex="-1"
-                                                name="2"
-                                                onClick={handleOpenaritmancia}
-                                                role="button"
-                                                onKeyUp={handleOpenaritmancia}
-                                            >
-                                                <img
-                                                    src="/images/materias/astronomy.png"
-                                                    alt=""
+                                            <>
+                                                <div
+                                                    className="prova"
+                                                    tabIndex="-1"
                                                     name="2"
-                                                />
-                                                <h2 name="2">Astronomia</h2>
-                                            </div>
+                                                    onClick={
+                                                        handleOpenastronomia
+                                                    }
+                                                    role="button"
+                                                    onKeyUp={
+                                                        handleOpenastronomia
+                                                    }
+                                                >
+                                                    <img
+                                                        src="/images/materias/astronomy.png"
+                                                        alt=""
+                                                        name="2"
+                                                    />
+                                                    <h2 name="2">Astronomia</h2>
+                                                </div>
+                                                <Modal
+                                                    isOpen={astronomiaIsOpen}
+                                                    onRequestClose={
+                                                        handleCloseastronomia
+                                                    }
+                                                    style={modalStyle}
+                                                >
+                                                    <button
+                                                        type="button"
+                                                        onClick={
+                                                            handleCloseastronomia
+                                                        }
+                                                    >
+                                                        X
+                                                    </button>
+                                                    <Astronomia
+                                                        setValor={setValor}
+                                                        setIdProf={setIdProf}
+                                                        close={
+                                                            handleCloseastronomia
+                                                        }
+                                                    />
+                                                </Modal>
+                                            </>
                                         )}
                                         {notprovas.includes(3) && (
-                                            <div
-                                                className="prova"
-                                                tabIndex="-2"
-                                                name="3"
-                                                onClick={handleOpenaritmancia}
-                                                role="button"
-                                                onKeyUp={handleOpenaritmancia}
-                                            >
-                                                <img
-                                                    src="/images/materias/dragon.png"
-                                                    alt=""
-                                                    name="3"
-                                                />
-                                                <h2 name="3">
-                                                    Trato das Criaturas Magicas
-                                                </h2>
-                                            </div>
+                                            <>
+                                                <div
+                                                    className="prova"
+                                                    tabIndex="-1"
+                                                    name="2"
+                                                    onClick={
+                                                        handleOpenastronomia
+                                                    }
+                                                    role="button"
+                                                    onKeyUp={
+                                                        handleOpenastronomia
+                                                    }
+                                                >
+                                                    <img
+                                                        src="/images/materias/dragon.png"
+                                                        alt=""
+                                                        name="2"
+                                                    />
+                                                    <h2 name="2">
+                                                        Trato das Criaturaas
+                                                        Magicas
+                                                    </h2>
+                                                </div>
+                                                <Modal
+                                                    isOpen={astronomiaIsOpen}
+                                                    onRequestClose={
+                                                        handleCloseastronomia
+                                                    }
+                                                    style={modalStyle}
+                                                >
+                                                    <button
+                                                        type="button"
+                                                        onClick={
+                                                            handleCloseastronomia
+                                                        }
+                                                    >
+                                                        X
+                                                    </button>
+                                                    <Astronomia
+                                                        setValor={setValor}
+                                                        setIdProf={setIdProf}
+                                                        close={
+                                                            handleCloseastronomia
+                                                        }
+                                                    />
+                                                </Modal>
+                                            </>
                                         )}
                                         {notprovas.includes(4) && (
                                             <div
