@@ -31,7 +31,7 @@ export default function Defesa({ setValor, setIdProf, close }) {
             }
         });
         setPontos(soma);
-        setIdProf(1);
+        setIdProf(5);
     };
 
     useEffect(() => {

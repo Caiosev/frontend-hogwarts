@@ -31,7 +31,7 @@ export default function Runas({ setValor, setIdProf, close }) {
             }
         });
         setPontos(soma);
-        setIdProf(1);
+        setIdProf(12);
     };
 
     useEffect(() => {

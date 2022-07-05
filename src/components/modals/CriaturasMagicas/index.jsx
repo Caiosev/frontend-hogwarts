@@ -31,7 +31,7 @@ export default function CriaturasMagicas({ setValor, setIdProf, close }) {
             }
         });
         setPontos(soma);
-        setIdProf(1);
+        setIdProf(3);
     };
 
     useEffect(() => {

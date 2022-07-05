@@ -31,7 +31,7 @@ export default function HisT({ setValor, setIdProf, close }) {
             }
         });
         setPontos(soma);
-        setIdProf(1);
+        setIdProf(10);
     };
 
     useEffect(() => {

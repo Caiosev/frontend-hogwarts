@@ -31,7 +31,7 @@ export default function Pocoes({ setValor, setIdProf, close }) {
             }
         });
         setPontos(soma);
-        setIdProf(1);
+        setIdProf(11);
     };
 
     useEffect(() => {

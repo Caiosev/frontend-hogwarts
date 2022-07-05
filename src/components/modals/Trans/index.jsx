@@ -31,7 +31,7 @@ export default function Trans({ setValor, setIdProf, close }) {
             }
         });
         setPontos(soma);
-        setIdProf(1);
+        setIdProf(13);
     };
 
     useEffect(() => {

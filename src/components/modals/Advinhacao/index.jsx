@@ -31,7 +31,7 @@ export default function Advinhacao({ setValor, setIdProf, close }) {
             }
         });
         setPontos(soma);
-        setIdProf(1);
+        setIdProf(6);
     };
 
     useEffect(() => {

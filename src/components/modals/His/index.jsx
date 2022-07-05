@@ -31,7 +31,7 @@ export default function His({ setValor, setIdProf, close }) {
             }
         });
         setPontos(soma);
-        setIdProf(1);
+        setIdProf(9);
     };
 
     useEffect(() => {

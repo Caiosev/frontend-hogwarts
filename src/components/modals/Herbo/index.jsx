@@ -31,7 +31,7 @@ export default function Herbo({ setValor, setIdProf, close }) {
             }
         });
         setPontos(soma);
-        setIdProf(1);
+        setIdProf(8);
     };
 
     useEffect(() => {

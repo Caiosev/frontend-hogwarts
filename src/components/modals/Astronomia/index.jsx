@@ -31,7 +31,7 @@ export default function Astronomia({ setValor, setIdProf, close }) {
             }
         });
         setPontos(soma);
-        setIdProf(1);
+        setIdProf(2);
     };
 
     useEffect(() => {

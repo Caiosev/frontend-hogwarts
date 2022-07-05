@@ -31,7 +31,7 @@ export default function Voo({ setValor, setIdProf, close }) {
             }
         });
         setPontos(soma);
-        setIdProf(1);
+        setIdProf(7);
     };
 
     useEffect(() => {
