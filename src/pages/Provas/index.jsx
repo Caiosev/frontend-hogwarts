@@ -17,6 +17,7 @@ import His from '../../components/modals/His';
 import HisT from '../../components/modals/HisT';
 import Pocoes from '../../components/modals/Pocoes';
 import Runas from '../../components/modals/Runas';
+import Trans from '../../components/modals/Trans';
 
 import * as S from './styled';
 
@@ -42,6 +43,7 @@ export default function Provas() {
     const [histIsOpen, setHistIsOpen] = useState(false);
     const [pocoesIsOpen, setPocoesIsOpen] = useState(false);
     const [runasIsOpen, setRunasIsOpen] = useState(false);
+    const [transIsOpen, setTransIsOpen] = useState(false);
 
     const [valor, setValor] = useState(undefined);
     const [idProf, setIdProf] = useState(undefined);
@@ -171,6 +173,12 @@ export default function Provas() {
     };
     const handleCloserunas = () => {
         setRunasIsOpen(false);
+    };
+    const handleOpentrans = () => {
+        setTransIsOpen(true);
+    };
+    const handleClosetrans = () => {
+        setTransIsOpen(false);
     };
     return (
         <S.Container>
@@ -734,23 +742,46 @@ export default function Provas() {
                                             </>
                                         )}
                                         {notprovas.includes(13) && (
-                                            <div
-                                                className="prova"
-                                                tabIndex="-12"
-                                                name="13"
-                                                onClick={handleOpenaritmancia}
-                                                role="button"
-                                                onKeyUp={handleOpenaritmancia}
-                                            >
-                                                <img
-                                                    src="/images/materias/cat.png"
-                                                    alt=""
+                                            <>
+                                                <div
+                                                    className="prova"
+                                                    tabIndex="-1"
                                                     name="13"
-                                                />
-                                                <h2 name="13">
-                                                    Transfiguração
-                                                </h2>
-                                            </div>
+                                                    onClick={handleOpentrans}
+                                                    role="button"
+                                                    onKeyUp={handleOpentrans}
+                                                >
+                                                    <img
+                                                        src="/images/materias/cat.png"
+                                                        alt=""
+                                                        name="13"
+                                                    />
+                                                    <h2 name="13">
+                                                        Transfiguração
+                                                    </h2>
+                                                </div>
+                                                <Modal
+                                                    isOpen={transIsOpen}
+                                                    onRequestClose={
+                                                        handleClosetrans
+                                                    }
+                                                    style={modalStyle}
+                                                >
+                                                    <button
+                                                        type="button"
+                                                        onClick={
+                                                            handleClosetrans
+                                                        }
+                                                    >
+                                                        X
+                                                    </button>
+                                                    <Trans
+                                                        setValor={setValor}
+                                                        setIdProf={setIdProf}
+                                                        close={handleClosetrans}
+                                                    />
+                                                </Modal>
+                                            </>
                                         )}
                                     </div>
                                 </div>
