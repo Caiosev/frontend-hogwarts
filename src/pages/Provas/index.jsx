@@ -16,6 +16,7 @@ import Herbo from '../../components/modals/Herbo';
 import His from '../../components/modals/His';
 import HisT from '../../components/modals/HisT';
 import Pocoes from '../../components/modals/Pocoes';
+import Runas from '../../components/modals/Runas';
 
 import * as S from './styled';
 
@@ -40,6 +41,7 @@ export default function Provas() {
     const [hisIsOpen, setHisIsOpen] = useState(false);
     const [histIsOpen, setHistIsOpen] = useState(false);
     const [pocoesIsOpen, setPocoesIsOpen] = useState(false);
+    const [runasIsOpen, setRunasIsOpen] = useState(false);
 
     const [valor, setValor] = useState(undefined);
     const [idProf, setIdProf] = useState(undefined);
@@ -163,6 +165,12 @@ export default function Provas() {
     };
     const handleClosepocoes = () => {
         setPocoesIsOpen(false);
+    };
+    const handleOpenrunas = () => {
+        setRunasIsOpen(true);
+    };
+    const handleCloserunas = () => {
+        setRunasIsOpen(false);
     };
     return (
         <S.Container>
@@ -684,23 +692,46 @@ export default function Provas() {
                                             </>
                                         )}
                                         {notprovas.includes(12) && (
-                                            <div
-                                                className="prova"
-                                                tabIndex="-11"
-                                                name="12"
-                                                onClick={handleOpenaritmancia}
-                                                role="button"
-                                                onKeyUp={handleOpenaritmancia}
-                                            >
-                                                <img
-                                                    src="/images/materias/runes.png"
-                                                    alt=""
+                                            <>
+                                                <div
+                                                    className="prova"
+                                                    tabIndex="-1"
                                                     name="12"
-                                                />
-                                                <h2 name="12">
-                                                    Estudo de Runas Antigas
-                                                </h2>
-                                            </div>
+                                                    onClick={handleOpenrunas}
+                                                    role="button"
+                                                    onKeyUp={handleOpenrunas}
+                                                >
+                                                    <img
+                                                        src="/images/materias/runes.png"
+                                                        alt=""
+                                                        name="12"
+                                                    />
+                                                    <h2 name="12">
+                                                        Estudo de Runas Antigas
+                                                    </h2>
+                                                </div>
+                                                <Modal
+                                                    isOpen={runasIsOpen}
+                                                    onRequestClose={
+                                                        handleCloserunas
+                                                    }
+                                                    style={modalStyle}
+                                                >
+                                                    <button
+                                                        type="button"
+                                                        onClick={
+                                                            handleCloserunas
+                                                        }
+                                                    >
+                                                        X
+                                                    </button>
+                                                    <Runas
+                                                        setValor={setValor}
+                                                        setIdProf={setIdProf}
+                                                        close={handleCloserunas}
+                                                    />
+                                                </Modal>
+                                            </>
                                         )}
                                         {notprovas.includes(13) && (
                                             <div
