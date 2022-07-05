@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Sec = styled.section`
-    height: 1150px;
+    height: 700px;
     width: 100%;
     padding-top: 50px;
     display: flex;
@@ -51,13 +51,13 @@ export const Sec = styled.section`
             right: -10px;
         }
         .grid-image img {
-            width: 180px;
-            height: 250px;
+            width: 150px;
+            height: 220px;
             opacity: 0;
         }
         .grid-image-dumbledore img {
-            width: 250px;
-            height: 350px;
+            width: 180px;
+            height: 250px;
             opacity: 0;
         }
     }

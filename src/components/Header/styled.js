@@ -14,8 +14,8 @@ export const Nav = styled.nav`
     width: 100%;
     top: 0;
     #logo-header {
-        width: 65px;
-        height: 70px;
+        width: 60px;
+        height: 65px;
     }
     .link-chapeu {
         display: ${(props) => (props.isLoggedIn ? `none` : 'inline')};

@@ -17,6 +17,9 @@ export const Container = styled.div`
     h2 {
         font-size: 2.5rem;
     }
+    p {
+        font-size: 1.5rem;
+    }
     .img-text {
         display: flex;
         flex-direction: row;

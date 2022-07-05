@@ -14,7 +14,7 @@ export default function Staff() {
                 end: 'bottom center',
             },
             opacity: 1,
-            duration: 2,
+            duration: 0.5,
         });
 
         gsap.to('#minerva', {
@@ -25,6 +25,7 @@ export default function Staff() {
             },
             opacity: 1,
             duration: 0.5,
+            delay: 0.5,
         });
         gsap.to('#pomona', {
             scrollTrigger: {
@@ -34,7 +35,7 @@ export default function Staff() {
             },
             opacity: 1,
             duration: 0.5,
-            delay: 0.5,
+            delay: 1,
         });
         gsap.to('#filius', {
             scrollTrigger: {
@@ -44,7 +45,7 @@ export default function Staff() {
             },
             opacity: 1,
             duration: 0.5,
-            delay: 1,
+            delay: 1.5,
         });
         gsap.to('#snape', {
             scrollTrigger: {
@@ -54,32 +55,14 @@ export default function Staff() {
             },
             opacity: 1,
             duration: 0.5,
-            delay: 1.5,
+            delay: 2,
         });
     });
 
     return (
         <S.Sec id="staff">
             <h1>Staff</h1>
-            <div className="card-head">
-                <div className="grid-frame">
-                    <span className="grid-border" />
-                    <span className="square tl" />
-                    <span className="square tr" />
-                    <span className="square bl" />
-                    <span className="square br" />
-                    <div className="grid-image-dumbledore">
-                        <img
-                            src="/images/dumbledore.jpg"
-                            alt=""
-                            id="dumbledorePhoto"
-                            srcSet=""
-                        />
-                    </div>
-                </div>
-                <h2>Alvo Dumbledore</h2>
-                <h3>Headmaster</h3>
-            </div>
+
             <div className="heads">
                 <div className="card">
                     <div className="grid-frame">
@@ -118,6 +101,25 @@ export default function Staff() {
                     </div>
                     <h2>Pomona Sprout</h2>
                     <h3>Head Lufa-Lufa</h3>
+                </div>
+                <div className="card-head">
+                    <div className="grid-frame">
+                        <span className="grid-border" />
+                        <span className="square tl" />
+                        <span className="square tr" />
+                        <span className="square bl" />
+                        <span className="square br" />
+                        <div className="grid-image-dumbledore">
+                            <img
+                                src="/images/dumbledore.jpg"
+                                alt=""
+                                id="dumbledorePhoto"
+                                srcSet=""
+                            />
+                        </div>
+                    </div>
+                    <h2>Alvo Dumbledore</h2>
+                    <h3>Headmaster</h3>
                 </div>
                 <div className="card">
                     <div className="grid-frame">

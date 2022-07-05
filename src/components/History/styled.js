@@ -3,13 +3,13 @@ import * as Color from '../../config/colors';
 
 export const SecHistory = styled.section`
     width: 100%;
-    height: 680px;
+    height: 600px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     #foto,
     #texto {
-        width: 30%;
+        width: 28%;
         max-height: 668px;
     }
     #foto {

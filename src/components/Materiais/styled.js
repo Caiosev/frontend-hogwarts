@@ -12,6 +12,7 @@ export const Container = styled.section`
     justify-content: center;
     font-family: 'SofiaPro';
     font-weight: bold;
+
     h1 {
         font-size: 3rem;
         text-align: center;
@@ -23,7 +24,8 @@ export const Container = styled.section`
         align-items: flex-start;
         justify-content: center;
         h2 {
-            font-size: 2.3rem;
+            font-size: 2.5rem;
+            padding-bottom: 10px;
         }
         .image {
             width: 500px;
@@ -48,6 +50,9 @@ export const Container = styled.section`
         .texto {
             width: 50%;
             padding-left: 20px;
+            p {
+                font-size: 1.4rem;
+            }
         }
     }
     .items {
@@ -64,6 +69,7 @@ export const Container = styled.section`
         background-color: ${Color.activeNav};
         display: flex;
         flex-direction: column;
+        cursor: pointer;
         align-items: center;
         justify-content: center;
         img {

@@ -10,11 +10,17 @@ export default function Local() {
                 <div className="text">
                     <h2>A Plataforma 9 3/4</h2>
                     <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing
-                        elit. Dolorum placeat omnis repudiandae veniam atque aut
-                        inventore libero totam deleniti harum. Corporis nemo
-                        suscipit aut facilis dolore molestias soluta distinctio
-                        ipsa!
+                        A Plataforma Nove e Meia ou Plataforma Nove e Três
+                        Quartos é uma plataforma da Estação Kings Cross em
+                        Londres. Magicamente escondida atrás da barreira antre
+                        as plataformas trouxas Nove e Dez, esta plataforma é
+                        onde os alunos da Escola de Magia e Bruxaria de Hogwarts
+                        abordam o Expresso de Hogwarts no dia 1º de setembro
+                        para chegarem na escola. Para se chegar na Plataforma
+                        Nove e Meia, deve se andar diretamente à barreira que
+                        divide as plataformas 9 e 10. Há um guarda fora da
+                        entrada que supervisiona as entradas e saídas da
+                        plataforma.
                     </p>
                 </div>
             </div>
