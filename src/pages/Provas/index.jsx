@@ -13,6 +13,8 @@ import Defesa from '../../components/modals/Defesa';
 import Advinhacao from '../../components/modals/Advinhacao';
 import Voo from '../../components/modals/Voo';
 import Herbo from '../../components/modals/Herbo';
+import His from '../../components/modals/His';
+import HisT from '../../components/modals/HisT';
 
 import * as S from './styled';
 
@@ -35,6 +37,7 @@ export default function Provas() {
     const [vooIsOpen, setVooIsOpen] = useState(false);
     const [herboIsOpen, setHerboIsOpen] = useState(false);
     const [hisIsOpen, setHisIsOpen] = useState(false);
+    const [histIsOpen, setHistIsOpen] = useState(false);
 
     const [valor, setValor] = useState(undefined);
     const [idProf, setIdProf] = useState(undefined);
@@ -146,6 +149,12 @@ export default function Provas() {
     };
     const handleClosehis = () => {
         setHisIsOpen(false);
+    };
+    const handleOpenhist = () => {
+        setHistIsOpen(true);
+    };
+    const handleClosehist = () => {
+        setHistIsOpen(false);
     };
     return (
         <S.Container>
@@ -583,23 +592,46 @@ export default function Provas() {
                                             </>
                                         )}
                                         {notprovas.includes(10) && (
-                                            <div
-                                                className="prova"
-                                                tabIndex="-9"
-                                                name="10"
-                                                onClick={handleOpenaritmancia}
-                                                role="button"
-                                                onKeyUp={handleOpenaritmancia}
-                                            >
-                                                <img
-                                                    src="/images/materias/anatomy.png"
-                                                    alt=""
+                                            <>
+                                                <div
+                                                    className="prova"
+                                                    tabIndex="-1"
                                                     name="10"
-                                                />
-                                                <h2 name="10">
-                                                    Estudo Trouxas
-                                                </h2>
-                                            </div>
+                                                    onClick={handleOpenhist}
+                                                    role="button"
+                                                    onKeyUp={handleOpenhist}
+                                                >
+                                                    <img
+                                                        src="/images/materias/anatomy.png"
+                                                        alt=""
+                                                        name="10"
+                                                    />
+                                                    <h2 name="10">
+                                                        Estudo Trouxa
+                                                    </h2>
+                                                </div>
+                                                <Modal
+                                                    isOpen={histIsOpen}
+                                                    onRequestClose={
+                                                        handleClosehist
+                                                    }
+                                                    style={modalStyle}
+                                                >
+                                                    <button
+                                                        type="button"
+                                                        onClick={
+                                                            handleClosehist
+                                                        }
+                                                    >
+                                                        X
+                                                    </button>
+                                                    <HisT
+                                                        setValor={setValor}
+                                                        setIdProf={setIdProf}
+                                                        close={handleClosehist}
+                                                    />
+                                                </Modal>
+                                            </>
                                         )}
                                         {notprovas.includes(11) && (
                                             <div
