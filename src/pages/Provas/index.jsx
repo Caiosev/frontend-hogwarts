@@ -34,6 +34,7 @@ export default function Provas() {
     const [advinhaIsOpen, setAdvinhaIsOpen] = useState(false);
     const [vooIsOpen, setVooIsOpen] = useState(false);
     const [herboIsOpen, setHerboIsOpen] = useState(false);
+    const [hisIsOpen, setHisIsOpen] = useState(false);
 
     const [valor, setValor] = useState(undefined);
     const [idProf, setIdProf] = useState(undefined);
@@ -139,6 +140,12 @@ export default function Provas() {
     };
     const handleCloseherbo = () => {
         setHerboIsOpen(false);
+    };
+    const handleOpenhis = () => {
+        setHisIsOpen(true);
+    };
+    const handleClosehis = () => {
+        setHisIsOpen(false);
     };
     return (
         <S.Container>
@@ -536,23 +543,44 @@ export default function Provas() {
                                             </>
                                         )}
                                         {notprovas.includes(9) && (
-                                            <div
-                                                className="prova"
-                                                tabIndex="-8"
-                                                name="9"
-                                                onClick={handleOpenaritmancia}
-                                                role="button"
-                                                onKeyUp={handleOpenaritmancia}
-                                            >
-                                                <img
-                                                    src="/images/materias/history.png"
-                                                    alt=""
+                                            <>
+                                                <div
+                                                    className="prova"
+                                                    tabIndex="-1"
                                                     name="9"
-                                                />
-                                                <h2 name="9">
-                                                    Historia da Magia
-                                                </h2>
-                                            </div>
+                                                    onClick={handleOpenhis}
+                                                    role="button"
+                                                    onKeyUp={handleOpenhis}
+                                                >
+                                                    <img
+                                                        src="/images/materias/history.png"
+                                                        alt=""
+                                                        name="9"
+                                                    />
+                                                    <h2 name="9">
+                                                        Historia da Magia
+                                                    </h2>
+                                                </div>
+                                                <Modal
+                                                    isOpen={hisIsOpen}
+                                                    onRequestClose={
+                                                        handleClosehis
+                                                    }
+                                                    style={modalStyle}
+                                                >
+                                                    <button
+                                                        type="button"
+                                                        onClick={handleClosehis}
+                                                    >
+                                                        X
+                                                    </button>
+                                                    <His
+                                                        setValor={setValor}
+                                                        setIdProf={setIdProf}
+                                                        close={handleClosehis}
+                                                    />
+                                                </Modal>
+                                            </>
                                         )}
                                         {notprovas.includes(10) && (
                                             <div
