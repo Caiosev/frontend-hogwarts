@@ -3,7 +3,7 @@ import { toast } from 'react-toastify';
 import PropTypes from 'prop-types';
 import * as S from './styled';
 
-export default function HisT({ setValor, setIdProf, close }) {
+export default function Pocoes({ setValor, setIdProf, close }) {
     const [pontos, setPontos] = useState(undefined);
     const [q1, setQ1] = useState(undefined);
     const [q2, setQ2] = useState(undefined);
@@ -11,7 +11,7 @@ export default function HisT({ setValor, setIdProf, close }) {
     const [q4, setQ4] = useState(undefined);
     const [q5, setQ5] = useState(undefined);
     const [nota, setNota] = useState(undefined);
-    const res = ['3', '1', '2', '1', '3'];
+    const res = ['2', '1', '3', '2', '1'];
 
     const handleSubmit = () => {
         if (
@@ -65,7 +65,7 @@ export default function HisT({ setValor, setIdProf, close }) {
 
     return (
         <S.Container>
-            <h1>Prova de Historia da Magia</h1>
+            <h1>Prova de Poções</h1>
             <h2>Questões</h2>
             <form action="">
                 <label
@@ -74,24 +74,23 @@ export default function HisT({ setValor, setIdProf, close }) {
                     onChange={(e) => setQ1(e.target.value)}
                 >
                     {' '}
-                    1 - A Lampada é um objeto utilizado por trouxas para
-                    iluminar o ambiente, qual o nome de seu criador?
+                    1 - Qual o vegetal mais basico para a criação de poções?
                     <div className="options">
                         <div className="">
                             <input type="radio" name="q1" id="" value="1" />
-                            Benjamin franklin
+                            Solanaceae
                         </div>
                         <div className="">
                             <input type="radio" name="q1" id="" value="2" />
-                            Abraham lincoln
+                            Belladonna
                         </div>
                         <div className="">
                             <input type="radio" name="q1" id="" value="3" />
-                            Thomas Édison
+                            Hyoscyamus niger
                         </div>
                         <div className="">
                             <input type="radio" name="q1" id="" value="4" />
-                            Nikola tesla
+                            Datura stramonium
                         </div>
                     </div>
                 </label>
@@ -101,25 +100,24 @@ export default function HisT({ setValor, setIdProf, close }) {
                     onChange={(e) => setQ2(e.target.value)}
                 >
                     {' '}
-                    2 - O método científico é um conjunto de regras para a
-                    obtenção do conhecimento durante a investigação científica.
-                    Quem foi o primeiro a definir o metodo cientifico?
+                    2 - Existem varios tipos de poções do amor, dentre eles,
+                    qual é o ingrediente mais utilizado?
                     <div className="options">
                         <div className="">
                             <input type="radio" name="q2" id="" value="1" />{' '}
-                            René Descartes
+                            Ovos de Cinzal
                         </div>
                         <div className="">
                             <input type="radio" name="q2" id="" value="2" />
-                            Immanuel Kant
+                            Ovos de Unicornio
                         </div>
                         <div className="">
                             <input type="radio" name="q2" id="" value="3" />
-                            John Locke
+                            Ovos de Dodo
                         </div>
                         <div className="">
                             <input type="radio" name="q2" id="" value="4" />
-                            Francis Bacon
+                            Ovos de Galinha
                         </div>
                     </div>
                 </label>
@@ -129,25 +127,24 @@ export default function HisT({ setValor, setIdProf, close }) {
                     onChange={(e) => setQ3(e.target.value)}
                 >
                     {' '}
-                    3 - O _____ é um objeto colocado na parede em casas de
-                    Trouxas, ele controla a passagem de corrente eletrica, na
-                    maioria das vezes é utilizado para acender a luz
+                    3 - A Poção Ellayse é uma poção usada, entre outros meios,
+                    para fazer quem a beba entender fluentemente:
                     <div className="options">
                         <div className="">
                             <input type="radio" name="q3" id="" value="1" />
-                            Controlador de carga eletrica
+                            Animais
                         </div>
                         <div className="">
                             <input type="radio" name="q3" id="" value="2" />
-                            Interruptor
+                            Galego
                         </div>
                         <div className="">
                             <input type="radio" name="q3" id="" value="3" />
-                            Estabilizador
+                            Português
                         </div>
                         <div className="">
                             <input type="radio" name="q3" id="" value="4" />
-                            Controle Remoto
+                            Russo
                         </div>
                     </div>
                 </label>
@@ -157,24 +154,26 @@ export default function HisT({ setValor, setIdProf, close }) {
                     onChange={(e) => setQ4(e.target.value)}
                 >
                     {' '}
-                    4 - O jogo Pedra, papel e tesoura tem sua origem em qual
-                    país?
+                    4 - A Poção do ódio é uma poção que:
                     <div className="options">
                         <div className="">
                             <input type="radio" name="q4" id="" value="1" />
-                            Japão
+                            Faz com que o bebedor odeie mortalmente a primeria
+                            pessoa que ele ver após tomar a poção
                         </div>
                         <div className="">
                             <input type="radio" name="q4" id="" value="2" />
-                            China
+                            Revela os piores traços e hábitos de uma pessoa em
+                            particular para o bebedor
                         </div>
                         <div className="">
                             <input type="radio" name="q4" id="" value="3" />
-                            Tailandia
+                            Faz com que o bebedor sinta odio de si mesmo
                         </div>
                         <div className="">
                             <input type="radio" name="q4" id="" value="4" />
-                            Russia
+                            Revela os piores traços e hábitos do bebedor para a
+                            primeria pessoa que ele ver após tomar a poção
                         </div>
                     </div>
                 </label>
@@ -184,23 +183,23 @@ export default function HisT({ setValor, setIdProf, close }) {
                     onChange={(e) => setQ5(e.target.value)}
                 >
                     {' '}
-                    5 - Quem é responsavel pela teoria da evolução?
+                    5 - A poção emebelezadora se caracteriza por emitir:
                     <div className="options">
                         <div className="">
                             <input type="radio" name="q5" id="" value="1" />
-                            Fred Mercury
+                            Bolhas multicolor
                         </div>
                         <div className="">
                             <input type="radio" name="q5" id="" value="2" />
-                            Alan Turing
+                            Um brilho intenso na cor amarela
                         </div>
                         <div className="">
                             <input type="radio" name="q5" id="" value="3" />
-                            Charles Darwin
+                            Um brilho intenso na cor azul
                         </div>
                         <div className="">
                             <input type="radio" name="q5" id="" value="4" />
-                            Tom Cruise
+                            Um cheiro insuportavel
                         </div>
                     </div>
                 </label>
@@ -216,7 +215,7 @@ export default function HisT({ setValor, setIdProf, close }) {
     );
 }
 
-HisT.propTypes = {
+Pocoes.propTypes = {
     setValor: PropTypes.func,
     setIdProf: PropTypes.func,
     close: PropTypes.func,

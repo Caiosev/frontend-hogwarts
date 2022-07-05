@@ -15,6 +15,7 @@ import Voo from '../../components/modals/Voo';
 import Herbo from '../../components/modals/Herbo';
 import His from '../../components/modals/His';
 import HisT from '../../components/modals/HisT';
+import Pocoes from '../../components/modals/Pocoes';
 
 import * as S from './styled';
 
@@ -38,6 +39,7 @@ export default function Provas() {
     const [herboIsOpen, setHerboIsOpen] = useState(false);
     const [hisIsOpen, setHisIsOpen] = useState(false);
     const [histIsOpen, setHistIsOpen] = useState(false);
+    const [pocoesIsOpen, setPocoesIsOpen] = useState(false);
 
     const [valor, setValor] = useState(undefined);
     const [idProf, setIdProf] = useState(undefined);
@@ -155,6 +157,12 @@ export default function Provas() {
     };
     const handleClosehist = () => {
         setHistIsOpen(false);
+    };
+    const handleOpenpocoes = () => {
+        setPocoesIsOpen(true);
+    };
+    const handleClosepocoes = () => {
+        setPocoesIsOpen(false);
     };
     return (
         <S.Container>
@@ -634,21 +642,46 @@ export default function Provas() {
                                             </>
                                         )}
                                         {notprovas.includes(11) && (
-                                            <div
-                                                className="prova"
-                                                tabIndex="-10"
-                                                name="11"
-                                                onClick={handleOpenaritmancia}
-                                                role="button"
-                                                onKeyUp={handleOpenaritmancia}
-                                            >
-                                                <img
-                                                    src="/images/materias/serum.png"
-                                                    alt=""
+                                            <>
+                                                <div
+                                                    className="prova"
+                                                    tabIndex="-1"
                                                     name="11"
-                                                />
-                                                <h2 name="11">Poçoes</h2>
-                                            </div>
+                                                    onClick={handleOpenpocoes}
+                                                    role="button"
+                                                    onKeyUp={handleOpenpocoes}
+                                                >
+                                                    <img
+                                                        src="/images/materias/serum.png"
+                                                        alt=""
+                                                        name="11"
+                                                    />
+                                                    <h2 name="11">Poções</h2>
+                                                </div>
+                                                <Modal
+                                                    isOpen={pocoesIsOpen}
+                                                    onRequestClose={
+                                                        handleClosepocoes
+                                                    }
+                                                    style={modalStyle}
+                                                >
+                                                    <button
+                                                        type="button"
+                                                        onClick={
+                                                            handleClosepocoes
+                                                        }
+                                                    >
+                                                        X
+                                                    </button>
+                                                    <Pocoes
+                                                        setValor={setValor}
+                                                        setIdProf={setIdProf}
+                                                        close={
+                                                            handleClosepocoes
+                                                        }
+                                                    />
+                                                </Modal>
+                                            </>
                                         )}
                                         {notprovas.includes(12) && (
                                             <div
