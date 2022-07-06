@@ -4,7 +4,7 @@ import * as Color from '../../config/colors';
 export const Container = styled.section`
     padding-top: 50px;
     width: 100%;
-    height: 650px;
+    height: 1500px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -20,15 +20,15 @@ export const Container = styled.section`
     }
     .foto-texto {
         display: flex;
-        flex-direction: row;
-        align-items: flex-start;
+        flex-direction: column;
+        align-items: center;
         justify-content: center;
         h2 {
             font-size: 2.5rem;
             padding-bottom: 10px;
         }
         .image {
-            width: 500px;
+            width: 80%;
             height: 300px;
             background-image: url('images/diagon_Alley.jpg');
             background-position: center;
@@ -48,7 +48,6 @@ export const Container = styled.section`
             );
         }
         .texto {
-            width: 50%;
             padding-left: 20px;
             p {
                 font-size: 1.4rem;
@@ -61,6 +60,8 @@ export const Container = styled.section`
         align-items: center;
         justify-content: center;
         gap: 60px;
+        flex-wrap: wrap;
+        width: 90vw;
     }
     .item {
         width: 100px;

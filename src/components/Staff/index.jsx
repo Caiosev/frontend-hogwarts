@@ -7,55 +7,51 @@ export default function Staff() {
     gsap.registerPlugin(ScrollTrigger);
 
     useEffect(() => {
-        gsap.to('#dumbledorePhoto', {
+        gsap.to('.alvo', {
             scrollTrigger: {
-                trigger: '.grid-image-dumbledore',
+                trigger: '.alvo',
                 start: 'top center',
                 end: 'bottom center',
             },
             opacity: 1,
-            duration: 0.5,
+            duration: 1,
         });
 
-        gsap.to('#minerva', {
+        gsap.to('.minerva', {
             scrollTrigger: {
-                trigger: '#minerva',
+                trigger: '.minerva',
                 start: 'top center',
-                end: 'bottom top',
+                end: 'bottom center',
             },
             opacity: 1,
-            duration: 0.5,
-            delay: 0.5,
+            duration: 1,
         });
-        gsap.to('#pomona', {
+        gsap.to('.pomona', {
             scrollTrigger: {
-                trigger: '#pomona',
+                trigger: '.pomona',
                 start: 'top center',
-                end: 'bottom top',
+                end: 'bottom center',
             },
             opacity: 1,
-            duration: 0.5,
-            delay: 1,
+            duration: 1,
         });
-        gsap.to('#filius', {
+        gsap.to('.filius', {
             scrollTrigger: {
-                trigger: '#filius',
+                trigger: '.filius',
                 start: 'top center',
-                end: 'bottom top',
+                end: 'bottom center',
             },
             opacity: 1,
-            duration: 0.5,
-            delay: 1.5,
+            duration: 1,
         });
-        gsap.to('#snape', {
+        gsap.to('.snape', {
             scrollTrigger: {
-                trigger: '#snape',
+                trigger: '.snape',
                 start: 'top center',
-                end: 'bottom top',
+                end: 'bottom center',
             },
             opacity: 1,
-            duration: 0.5,
-            delay: 2,
+            duration: 1,
         });
     });
 
@@ -64,7 +60,7 @@ export default function Staff() {
             <h1>Staff</h1>
 
             <div className="heads">
-                <div className="card">
+                <div className="card minerva">
                     <div className="grid-frame">
                         <span className="grid-border" />
                         <span className="square tl" />
@@ -83,7 +79,7 @@ export default function Staff() {
                     <h2>Minerva McGonagall</h2>
                     <h3>Head Grifinoria</h3>
                 </div>
-                <div className="card">
+                <div className="card pomona">
                     <div className="grid-frame">
                         <span className="grid-border" />
                         <span className="square tl" />
@@ -102,7 +98,7 @@ export default function Staff() {
                     <h2>Pomona Sprout</h2>
                     <h3>Head Lufa-Lufa</h3>
                 </div>
-                <div className="card-head">
+                <div className="card-head alvo">
                     <div className="grid-frame">
                         <span className="grid-border" />
                         <span className="square tl" />
@@ -121,7 +117,7 @@ export default function Staff() {
                     <h2>Alvo Dumbledore</h2>
                     <h3>Headmaster</h3>
                 </div>
-                <div className="card">
+                <div className="card filius">
                     <div className="grid-frame">
                         <span className="grid-border" />
                         <span className="square tl" />
@@ -140,7 +136,7 @@ export default function Staff() {
                     <h2>Filius Flitwick</h2>
                     <h3>Head Corvinal</h3>
                 </div>
-                <div className="card">
+                <div className="card snape">
                     <div className="grid-frame">
                         <span className="grid-border" />
                         <span className="square tl" />

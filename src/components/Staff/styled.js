@@ -1,13 +1,20 @@
 import styled from 'styled-components';
 
 export const Sec = styled.section`
-    height: 700px;
-    width: 100%;
+    height: 2250px;
+    width: 100vw;
     padding-top: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
 
+    .pomona,
+    .alvo,
+    .minerva,
+    .filius,
+    .snape {
+        opacity: 0;
+    }
     h1 {
         font-size: 3rem;
         text-align: center;
@@ -19,8 +26,9 @@ export const Sec = styled.section`
     .heads {
         display: flex;
         text-align: center;
+        flex-direction: column;
         gap: 50px;
-        flex-direction: row;
+        /* flex-direction: row; */
         padding-top: 50px;
     }
     .grid-frame {
@@ -53,12 +61,12 @@ export const Sec = styled.section`
         .grid-image img {
             width: 150px;
             height: 220px;
-            opacity: 0;
+            @media (max-width: 1024px) {
+            }
         }
         .grid-image-dumbledore img {
             width: 180px;
             height: 250px;
-            opacity: 0;
         }
     }
     .card-head {

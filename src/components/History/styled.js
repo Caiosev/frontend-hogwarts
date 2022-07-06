@@ -7,9 +7,10 @@ export const SecHistory = styled.section`
     display: flex;
     flex-direction: row;
     justify-content: center;
+    padding-top: 80px;
     #foto,
     #texto {
-        width: 28%;
+        width: 40%;
         max-height: 668px;
     }
     #foto {
@@ -21,13 +22,13 @@ export const SecHistory = styled.section`
     }
     #texto {
         background-color: ${Color.gold};
-        margin-left: -100px;
+        margin-left: -20px;
         margin-top: 250px;
         h3 {
-            font-size: 1.3rem;
+            font-size: 13px;
         }
 
-        padding: 50px;
+        padding: 20px;
         font-family: 'SofiaPro';
     }
 `;

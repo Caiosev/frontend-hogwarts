@@ -2,12 +2,12 @@ import styled from 'styled-components';
 
 export const SecNews = styled.section`
     width: 100%;
-    height: 800px;
+    height: 1200px;
     font-family: 'BluuNext', sans-serif;
     h1 {
         font-size: 3rem;
         text-align: center;
-        padding-top: 100px;
+        padding-top: 150px;
     }
     .line {
         width: 70vw;

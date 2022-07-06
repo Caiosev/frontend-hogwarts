@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    width: 100%;
+    width: 100vw;
     height: 100%;
 `;
 
@@ -13,8 +13,8 @@ export const BgParticles = styled.div`
 `;
 
 export const HomeBg = styled.section`
-    width: 100%;
-    height: 100vh;
+    width: 100vw;
+    height: 90vh;
     background-image: url('/images/bg-hogwarts.jpg');
     background-position: center;
     background-repeat: no-repeat;

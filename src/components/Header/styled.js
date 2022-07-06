@@ -2,58 +2,61 @@ import styled from 'styled-components';
 import * as Color from '../../config/colors';
 
 export const Nav = styled.nav`
-    background-color: ${(props) =>
-        props.active ? `${Color.activeNav}` : 'transparent'};
-    display: flex;
-    height: 100px;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease-in;
-    position: fixed;
-    z-index: 2;
-    width: 100%;
-    top: 0;
-    #logo-header {
-        width: 60px;
-        height: 65px;
-    }
-    .link-chapeu {
-        display: ${(props) => (props.isLoggedIn ? `none` : 'inline')};
-        position: absolute;
-        right: 50px;
-        width: 40px;
-        img {
-            width: 100%;
-            height: 100%;
+    display: none;
+    @media (min-width: 600px) {
+        background-color: ${(props) =>
+            props.active ? `${Color.activeNav}` : 'transparent'};
+        display: flex;
+        height: 100px;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease-in;
+        position: fixed;
+        z-index: 2;
+        width: 100vw;
+        top: 0;
+        #logo-header {
+            width: 60px;
+            height: 65px;
         }
-        &:hover {
-            cursor: pointer;
+        .link-chapeu {
+            display: ${(props) => (props.isLoggedIn ? `none` : 'inline')};
+            position: absolute;
+            right: 50px;
+            width: 40px;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+            &:hover {
+                cursor: pointer;
+            }
         }
-    }
-    #out {
-        position: absolute;
-        right: 50px;
-        width: 40px;
-        color: white;
-        &:hover {
-            cursor: pointer;
+        #out {
+            position: absolute;
+            right: 50px;
+            width: 40px;
+            color: white;
+            &:hover {
+                cursor: pointer;
+            }
         }
-    }
-    #dashboard {
-        position: absolute;
-        right: 100px;
-        width: 40px;
-        color: white;
-        &:hover {
-            cursor: pointer;
+        #dashboard {
+            position: absolute;
+            right: 100px;
+            width: 40px;
+            color: white;
+            &:hover {
+                cursor: pointer;
+            }
         }
-    }
-    #login {
-        display: ${(props) =>
-            props.active && !props.isLoggedIn ? `flex` : 'none'};
-        font-family: 'SofiaPro';
-        font-weight: 700;
-        color: #fff;
+        #login {
+            display: ${(props) =>
+                props.active && !props.isLoggedIn ? `flex` : 'none'};
+            font-family: 'SofiaPro';
+            font-weight: 700;
+            color: #fff;
+        }
     }
 `;
 

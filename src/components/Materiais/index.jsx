@@ -38,8 +38,8 @@ export default function Materiais() {
 
     const modalStyle = {
         content: {
-            width: '40vw',
-            height: '50vh',
+            width: '70vw',
+            height: '40vh',
             backgroundColor: '#0A181F',
             margin: 'auto',
         },

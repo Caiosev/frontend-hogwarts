@@ -15,7 +15,7 @@ export default function ParticleElement() {
                         value: '#10141B',
                     },
                 },
-                fpsLimit: 120,
+                fpsLimit: 60,
                 interactivity: {
                     events: {
                         onClick: {

@@ -22,12 +22,11 @@ export const Container = styled.div`
     }
     .img-text {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
         .text {
-            width: 40%;
-            padding-left: 20px;
+            padding: 40px;
         }
     }
     .image {
