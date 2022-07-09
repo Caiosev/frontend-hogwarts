@@ -36,4 +36,10 @@ export const SecNews = styled.section`
         color: #d1af5a;
         transform: scale(1.2);
     }
+    @media (min-width: 900px) and (max-width: 1200px) {
+        height: 900px;
+    }
+    @media (min-width: 1200px) and (max-width: 1800px) {
+        height: 900px;
+    }
 `;

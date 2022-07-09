@@ -12,6 +12,18 @@ export const Container = styled.section`
     justify-content: center;
     font-family: 'SofiaPro';
     font-weight: bold;
+    @media (min-width: 900px) and (max-width: 1200px) {
+        height: 900px;
+        justify-content: flex-start;
+    }
+    @media (min-width: 1200px) and (max-width: 1800px) {
+        justify-content: flex-start;
+        height: 800px;
+    }
+    @media (min-width: 1800px) {
+        font-size: 4rem;
+        height: 1200px;
+    }
 
     h1 {
         font-size: 3rem;
@@ -48,9 +60,30 @@ export const Container = styled.section`
             );
         }
         .texto {
-            padding-left: 20px;
+            padding: 20px;
             p {
                 font-size: 1.4rem;
+            }
+        }
+        @media (min-width: 900px) and (max-width: 1200px) {
+            flex-direction: row;
+            .image,
+            .texto {
+                width: 450px;
+            }
+        }
+        @media (min-width: 1200px) and (max-width: 1800px) {
+            flex-direction: row;
+            .image,
+            .texto {
+                width: 550px;
+            }
+        }
+        @media (min-width: 1800px) {
+            flex-direction: row;
+            .image,
+            .texto {
+                width: 750px;
             }
         }
     }
@@ -76,6 +109,13 @@ export const Container = styled.section`
         img {
             width: 60px;
             overflow: hidden;
+            @media (min-width: 1800px) {
+                width: 90px;
+            }
+        }
+        @media (min-width: 1800px) {
+            width: 150px;
+            height: 150px;
         }
     }
 `;

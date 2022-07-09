@@ -13,12 +13,21 @@ export const Container = styled.div`
         font-size: 3.5rem;
         text-align: center;
         margin-bottom: 50px;
+        @media (min-width: 1800px) {
+            font-size: 4rem;
+        }
     }
     h2 {
         font-size: 2.5rem;
+        @media (min-width: 1800px) {
+            font-size: 3rem;
+        }
     }
     p {
         font-size: 1.5rem;
+        @media (min-width: 1800px) {
+            font-size: 2rem;
+        }
     }
     .img-text {
         display: flex;
@@ -27,6 +36,24 @@ export const Container = styled.div`
         justify-content: center;
         .text {
             padding: 40px;
+            @media (min-width: 900px) and (max-width: 1200px) {
+                width: 50%;
+            }
+            @media (min-width: 1200px) and (max-width: 1800px) {
+                width: 55%;
+            }
+            @media (min-width: 1800px) {
+                width: 65%;
+            }
+        }
+        @media (min-width: 900px) and (max-width: 1200px) {
+            flex-direction: row;
+        }
+        @media (min-width: 1200px) and (max-width: 1800px) {
+            flex-direction: row;
+        }
+        @media (min-width: 1800px) {
+            flex-direction: row;
         }
     }
     .image {

@@ -20,7 +20,7 @@ export default function History() {
     });
 
     return (
-        <S.SecHistory id="news">
+        <S.SecHistory id="history">
             <div id="foto" />
             <div id="texto">
                 <h3>

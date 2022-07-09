@@ -24,6 +24,8 @@ export default createGlobalStyle`
         font-family: 'SofiaPro';
         src:  url('fonts/sofiapro-light.otf');
         }
+        overflow-x: clip;
+        width:100vw;
     }
 
     ul{

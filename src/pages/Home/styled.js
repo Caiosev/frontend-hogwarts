@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    width: 100vw;
-    height: 100%;
+    width: 100%;
 `;
 
 export const BgParticles = styled.div`
@@ -10,11 +9,15 @@ export const BgParticles = styled.div`
     top: 0;
     left: 0;
     z-index: -1;
+    width: 100vw;
 `;
 
 export const HomeBg = styled.section`
-    width: 100vw;
+    width: 100%;
     height: 90vh;
+    @media (min-width: 1800px) {
+        height: 95vh;
+    }
     background-image: url('/images/bg-hogwarts.jpg');
     background-position: center;
     background-repeat: no-repeat;
@@ -38,7 +41,7 @@ export const HomeText = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 100vw;
     height: 95vh;
     flex-direction: column;
     position: absolute;

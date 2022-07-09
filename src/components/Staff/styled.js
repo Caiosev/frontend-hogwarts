@@ -2,11 +2,23 @@ import styled from 'styled-components';
 
 export const Sec = styled.section`
     height: 2250px;
-    width: 100vw;
+    width: 100%;
     padding-top: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    @media (min-width: 600px) and (max-width: 900px) {
+        height: 2500px;
+    }
+    @media (min-width: 900px) and (max-width: 1200px) {
+        height: 600px;
+    }
+    @media (min-width: 1200px) and (max-width: 1800px) {
+        height: 600px;
+    }
+    @media (min-width: 1800px) {
+        height: 600px;
+    }
 
     .pomona,
     .alvo,
@@ -22,14 +34,26 @@ export const Sec = styled.section`
     }
     h2 {
         padding-top: 30px;
+        @media (min-width: 1200px) and (max-width: 1800px) {
+            font-size: 20px;
+        }
     }
     .heads {
         display: flex;
         text-align: center;
         flex-direction: column;
         gap: 50px;
-        /* flex-direction: row; */
         padding-top: 50px;
+        @media (min-width: 900px) and (max-width: 1200px) {
+            flex-direction: row;
+            width: 90%;
+        }
+        @media (min-width: 1200px) and (max-width: 1800px) {
+            flex-direction: row;
+        }
+        @media (min-width: 1800px) {
+            flex-direction: row;
+        }
     }
     .grid-frame {
         padding: 28px;
@@ -61,12 +85,30 @@ export const Sec = styled.section`
         .grid-image img {
             width: 150px;
             height: 220px;
-            @media (max-width: 1024px) {
+            @media (min-width: 600px) and (max-width: 900px) {
+                width: 200px;
+                height: 270px;
+            }
+            @media (min-width: 900px) and (max-width: 1200px) {
+                width: 60px;
+                height: 130px;
+            }
+            @media (min-width: 1200px) and (max-width: 1800px) {
+                width: 100px;
+                height: 170px;
             }
         }
         .grid-image-dumbledore img {
             width: 180px;
             height: 250px;
+            @media (min-width: 600px) and (max-width: 900px) {
+                width: 230px;
+                height: 300px;
+            }
+            @media (min-width: 900px) and (max-width: 1200px) {
+                width: 80px;
+                height: 150px;
+            }
         }
     }
     .card-head {

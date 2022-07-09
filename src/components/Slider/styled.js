@@ -40,10 +40,16 @@ export const Container = styled.div`
             margin: 5px;
             text-transform: uppercase;
             font-weight: bold;
+            @media (min-width: 1800px) {
+                font-size: 24px;
+            }
         }
         h3 {
             text-align: justify;
             font-size: 18px;
+            @media (min-width: 1800px) {
+                font-size: 22px;
+            }
         }
         @media (min-width: 600px) {
             margin: auto;
@@ -72,6 +78,17 @@ export const Container = styled.div`
                 padding: 0 10px;
                 margin-left: 15px;
             }
+        }
+        @media (min-width: 600px) and (max-width: 900px) {
+            .img-texto {
+                height: 600px;
+            }
+        }
+        @media (min-width: 900px) and (max-width: 1200px) {
+            height: 600px;
+        }
+        @media (min-width: 1200px) and (max-width: 1800px) {
+            height: 600px;
         }
     }
 
@@ -107,11 +124,17 @@ export const Container = styled.div`
             text-transform: uppercase;
             font-weight: bold;
             text-align: center;
+            @media (min-width: 1800px) {
+                font-size: 26px;
+            }
         }
         h3 {
             text-align: justify;
             width: 200px;
             border: 2px solid ${Color.line};
+            @media (min-width: 1800px) {
+                font-size: 24px;
+            }
         }
         .titulo-texto {
             display: flex;
