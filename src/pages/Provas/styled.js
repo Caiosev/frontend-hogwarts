@@ -11,22 +11,25 @@ export const Container = styled.div`
     }
 `;
 export const SideBar = styled.div`
-    position: fixed;
-    left: ${(props) => (props.menuMobile ? '0' : '-200%')};
-    width: 60vw;
-    height: 100vh;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.9);
-    .buttons {
-        padding-top: 100px;
-        display: flex;
-        flex-direction: column;
-        gap: 50px;
-        button {
+    @media (min-width: 300px) and (max-width: 899px) {
+        position: fixed;
+        left: ${(props) => (props.menuMobile ? '0' : '-200%')};
+        width: 60vw;
+        height: 100vh;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.9);
+        .buttons {
+            padding-top: 100px;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            button {
+            }
         }
     }
-    @media (min-width: 900px) and (max-width: 1200px) {
-        width: 20vw;
+
+    @media (min-width: 900px) {
+        width: 30vw;
         padding: 40px 20px;
         text-align: center;
         .buttons {
@@ -40,35 +43,37 @@ export const SideBar = styled.div`
     }
 `;
 export const Content = styled.div`
-    width: 100%;
-    height: 100%;
-    padding-top: 10vh;
-    display: flex;
-    hr {
-        display: none;
-    }
-    .not-env {
-        width: 100vw;
-        text-align: center;
-    }
-    .env {
-        width: 100vw;
-        text-align: center;
-    }
-    .provas {
-        padding-top: 40px;
+    @media (min-width: 300px) and (max-width: 899px) {
+        width: 100%;
+        height: 100%;
+        padding-top: 10vh;
         display: flex;
-        flex-direction: column;
-        gap: 40px;
-        align-items: center;
-        justify-content: center;
+        hr {
+            display: none;
+            @media (min-width: 900px) {
+                display: block;
+            }
+        }
+        .not-env {
+            width: 100vw;
+            text-align: center;
+        }
+        .env {
+            width: 100vw;
+            text-align: center;
+        }
+        .provas {
+            padding-top: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            align-items: center;
+            justify-content: center;
+        }
     }
 
-    @media (min-width: 900px) and (max-width: 1200px) {
-        height: 90vh;
-    }
-
-    @media (min-width: 900px) and (max-width: 1200px) {
+    @media (min-width: 900px) {
+        display: flex;
         .sec-provas {
             text-align: center;
             padding: 30px;
@@ -78,82 +83,84 @@ export const Content = styled.div`
                 flex-wrap: wrap;
                 padding-top: 20px;
                 gap: 50px;
+                justify-content: center;
+                align-items: center;
             }
             .prova {
                 cursor: pointer;
             }
         }
+        height: 90vh;
     }
 `;
 
 export const Header = styled.header`
-    width: 100%;
-    height: 10vh;
-    display: flex;
-    position: fixed;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.6);
-    justify-content: space-between;
-    padding: 0 30px;
-    img {
-        width: 50px;
-    }
-    border-bottom: 1px solid ${Color.line};
-    .options {
+    @media (min-width: 300px) and (max-width: 899px) {
+        width: 100%;
+        height: 10vh;
         display: flex;
-        flex-direction: row;
+        position: fixed;
         align-items: center;
+        background-color: rgba(0, 0, 0, 0.6);
         justify-content: space-between;
-        gap: 40px;
-        svg {
+        padding: 0 30px;
+        img {
+            width: 50px;
+        }
+        border-bottom: 1px solid ${Color.line};
+        .options {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            svg {
+                cursor: pointer;
+            }
+        }
+        .ham {
             cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
+            transition: transform 400ms;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
         }
-    }
-    .ham {
-        cursor: pointer;
-        -webkit-tap-highlight-color: transparent;
-        transition: transform 400ms;
-        -moz-user-select: none;
-        -webkit-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-        @media (min-width: 600px) {
-            display: none;
+        .hamRotate.active {
+            transform: rotate(45deg);
         }
-    }
-    .hamRotate.active {
-        transform: rotate(45deg);
-    }
-    .hamRotate180.active {
-        transform: rotate(180deg);
-    }
-    .line {
-        fill: none;
-        transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
-        stroke: #fff;
-        stroke-width: 6.5;
-        stroke-linecap: round;
-    }
-    .ham6 .top {
-        stroke-dasharray: 40 172;
-    }
-    .ham6 .middle {
-        stroke-dasharray: 40 111;
-    }
-    .ham6 .bottom {
-        stroke-dasharray: 40 172;
-    }
-    .ham6.active .top {
-        stroke-dashoffset: -132px;
-    }
-    .ham6.active .middle {
-        stroke-dashoffset: -71px;
-    }
-    .ham6.active .bottom {
-        stroke-dashoffset: -132px;
+        .hamRotate180.active {
+            transform: rotate(180deg);
+        }
+        .line {
+            fill: none;
+            transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+            stroke: #fff;
+            stroke-width: 6.5;
+            stroke-linecap: round;
+        }
+        .ham6 .top {
+            stroke-dasharray: 40 172;
+        }
+        .ham6 .middle {
+            stroke-dasharray: 40 111;
+        }
+        .ham6 .bottom {
+            stroke-dasharray: 40 172;
+        }
+        .ham6.active .top {
+            stroke-dashoffset: -132px;
+        }
+        .ham6.active .middle {
+            stroke-dashoffset: -71px;
+        }
+        .ham6.active .bottom {
+            stroke-dashoffset: -132px;
+        }
     }
 
-    @media (min-width: 900px) and (max-width: 1200px) {
+    @media (min-width: 900px) {
         width: 100%;
         height: 10vh;
         display: flex;
