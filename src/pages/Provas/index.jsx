@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FaSignOutAlt, FaUserAlt } from 'react-icons/fa';
+import { FaSignOutAlt } from 'react-icons/fa';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import Modal from 'react-modal';
@@ -47,11 +47,12 @@ export default function Provas() {
 
     const [valor, setValor] = useState(undefined);
     const [idProf, setIdProf] = useState(undefined);
+    const [menuMobile, setMenuMobile] = useState();
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const modalStyle = {
         content: {
-            width: '60vw',
+            width: '80vw',
             height: '90vh',
             backgroundColor: '#0A181F',
             margin: 'auto',
@@ -187,14 +188,32 @@ export default function Provas() {
                     <S.Header>
                         <img src="/images/logo.png" alt="" srcSet="" />
                         <div className="options">
-                            <FaUserAlt size={25} />
+                            <svg
+                                className={`ham ham6 ${menuMobile && 'active'}`}
+                                viewBox="0 0 100 100"
+                                width="50"
+                                onClick={() => setMenuMobile(!menuMobile)}
+                            >
+                                <path
+                                    className="line top"
+                                    d="m 30,33 h 40 c 13.100415,0 14.380204,31.80258 6.899646,33.421777 -24.612039,5.327373 9.016154,-52.337577 -12.75751,-30.563913 l -28.284272,28.284272"
+                                />
+                                <path
+                                    className="line middle"
+                                    d="m 70,50 c 0,0 -32.213436,0 -40,0 -7.786564,0 -6.428571,-4.640244 -6.428571,-8.571429 0,-5.895471 6.073743,-11.783399 12.286435,-5.570707 6.212692,6.212692 28.284272,28.284272 28.284272,28.284272"
+                                />
+                                <path
+                                    className="line bottom"
+                                    d="m 69.575405,67.073826 h -40 c -13.100415,0 -14.380204,-31.80258 -6.899646,-33.421777 24.612039,-5.327373 -9.016154,52.337577 12.75751,30.563913 l 28.284272,-28.284272"
+                                />
+                            </svg>
                             <Link to="/" id="out" onClick={handleLogout}>
                                 <FaSignOutAlt size={24} />
                             </Link>
                         </div>
                     </S.Header>
                     <S.Content>
-                        <div className="sidebar">
+                        <S.SideBar menuMobile={menuMobile} className="sidebar">
                             <h1>Bem vindo {nome}</h1>
                             <div className="buttons">
                                 <S.NotEnvBtn
@@ -218,7 +237,7 @@ export default function Provas() {
                                     Enviadas
                                 </S.EnvBtn>
                             </div>
-                        </div>
+                        </S.SideBar>
                         <hr />
                         <div className="sec-provas">
                             {notenv ? (
@@ -915,7 +934,7 @@ export default function Provas() {
                                                             ].nome
                                                         }
                                                     </h2>
-                                                    <h3>{prova.valor}</h3>
+                                                    <h3>Nota:{prova.valor}</h3>
                                                 </div>
                                             ))
                                         )}
