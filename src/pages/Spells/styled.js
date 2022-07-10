@@ -114,7 +114,7 @@ export const Container = styled.div`
         &:hover {
             cursor: pointer;
             .trace-motion {
-                animation: draw 0.7s linear forwards;
+                animation: draw 1s linear forwards;
             }
         }
     }

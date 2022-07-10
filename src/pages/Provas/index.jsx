@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from 'react';
+/* eslint-disable react/no-unstable-nested-components */
+import React, { useState, useEffect, useRef } from 'react';
 import { FaSignOutAlt } from 'react-icons/fa';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import Modal from 'react-modal';
+import { useReactToPrint } from 'react-to-print';
 import * as actions from '../../store/modules/auth/actions';
 import axios from '../../services/axios';
 import Aritmancia from '../../components/modals/Aritmancia';
@@ -18,6 +20,7 @@ import HisT from '../../components/modals/HisT';
 import Pocoes from '../../components/modals/Pocoes';
 import Runas from '../../components/modals/Runas';
 import Trans from '../../components/modals/Trans';
+import { Boletim } from '../../components/Boletim';
 
 import * as S from './styled';
 
@@ -44,12 +47,31 @@ export default function Provas() {
     const [pocoesIsOpen, setPocoesIsOpen] = useState(false);
     const [runasIsOpen, setRunasIsOpen] = useState(false);
     const [transIsOpen, setTransIsOpen] = useState(false);
-
     const [valor, setValor] = useState(undefined);
     const [idProf, setIdProf] = useState(undefined);
     const [menuMobile, setMenuMobile] = useState();
     const navigate = useNavigate();
     const dispatch = useDispatch();
+    const componentRef = useRef();
+    const [provasFeitas, setProvasFeitas] = useState([
+        'NA',
+        'NA',
+        'NA',
+        'NA',
+        'NA',
+        'NA',
+        'NA',
+        'NA',
+        'NA',
+        'NA',
+        'NA',
+        'NA',
+        'NA',
+    ]);
+    const handlePrint = useReactToPrint({
+        content: () => componentRef.current,
+    });
+
     const modalStyle = {
         content: {
             width: '80vw',
@@ -82,6 +104,10 @@ export default function Provas() {
                 const newArr = [...notprovas];
                 newArr.splice(position, 1);
                 setNotProvas([...newArr]);
+                const arr = [...provasFeitas];
+                arr[[e.prof_id - 1]] = e.valor;
+
+                setProvasFeitas([...arr]);
             }
         });
     }, [provas]);
@@ -456,7 +482,7 @@ export default function Provas() {
                                                     />
                                                     <h2 name="5">
                                                         Defesa Contra as Artes
-                                                        das Trvas
+                                                        das Trevas
                                                     </h2>
                                                 </div>
                                                 <Modal
@@ -979,6 +1005,15 @@ export default function Provas() {
                                                 </div>
                                             ))
                                         )}
+                                    </div>
+                                    <button type="button" onClick={handlePrint}>
+                                        Gerar Boletim
+                                    </button>
+                                    <div style={{ display: 'none' }}>
+                                        <Boletim
+                                            ref={componentRef}
+                                            provasFeitas={provasFeitas}
+                                        />
                                     </div>
                                 </div>
                             )}
