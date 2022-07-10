@@ -10,6 +10,15 @@ export const Container = styled.div`
         text-decoration: none;
         color: white;
     }
+    @media (min-width: 300px) and (max-width: 899px) {
+        .sidebar {
+            position: absolute;
+            left: -200%;
+        }
+        .active {
+            left: 0;
+        }
+    }
 `;
 
 export const Content = styled.div`
@@ -39,6 +48,50 @@ export const Header = styled.header`
             cursor: pointer;
         }
     }
+    .ham {
+        cursor: pointer;
+        z-index: 100;
+        -webkit-tap-highlight-color: transparent;
+        transition: transform 400ms;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        @media (min-width: 900px) {
+            display: none;
+        }
+    }
+    .hamRotate.active {
+        transform: rotate(45deg);
+    }
+    .hamRotate180.active {
+        transform: rotate(180deg);
+    }
+    .line {
+        fill: none;
+        transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+        stroke: #fff;
+        stroke-width: 6.5;
+        stroke-linecap: round;
+    }
+    .ham6 .top {
+        stroke-dasharray: 40 172;
+    }
+    .ham6 .middle {
+        stroke-dasharray: 40 111;
+    }
+    .ham6 .bottom {
+        stroke-dasharray: 40 172;
+    }
+    .ham6.active .top {
+        stroke-dashoffset: -132px;
+    }
+    .ham6.active .middle {
+        stroke-dashoffset: -71px;
+    }
+    .ham6.active .bottom {
+        stroke-dashoffset: -132px;
+    }
 `;
 
 export const ListContainer = styled.div`
@@ -49,6 +102,9 @@ export const ListContainer = styled.div`
     padding: 100px;
     gap: 50px;
     flex-direction: row;
+    @media (min-width: 300px) and (max-width: 899px) {
+        flex-direction: column;
+    }
     padding-top: 50px;
     .aluno {
         display: flex;

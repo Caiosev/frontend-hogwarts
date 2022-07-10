@@ -3,9 +3,9 @@ import { FaSearch } from 'react-icons/fa';
 import Proptypes from 'prop-types';
 import * as S from './styled';
 
-export default function Sidebar({ setHouse }) {
+export default function Sidebar({ setHouse, menuMobile }) {
     return (
-        <S.Container>
+        <S.Container className={`sidebar ${menuMobile && 'active'}`}>
             <FaSearch />
             <input type="text" />
             <div
@@ -83,4 +83,5 @@ export default function Sidebar({ setHouse }) {
 
 Sidebar.propTypes = {
     setHouse: Proptypes.func.isRequired,
+    menuMobile: Proptypes.string.isRequired,
 };

@@ -25,6 +25,7 @@ export default function Dashboard() {
     const [editAluno, seteditAluno] = useState(false);
     const [points, setPoints] = useState(-1);
     const [allPoints, setallPoints] = useState([-1]);
+    const [menuMobile, setMenuMobile] = useState();
 
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -121,8 +122,7 @@ export default function Dashboard() {
 
     const deleteData = async (e, id) => {
         try {
-            const res = await axios.delete(`/alunos/${id}`);
-            console.log(res);
+            await axios.delete(`/alunos/${id}`);
             e.parentElement.parentElement.remove();
         } catch (error) {
             console.log(error);
@@ -134,7 +134,6 @@ export default function Dashboard() {
             deleteData(e, id);
         }
         if (editAluno) {
-            console.log('hogwarts');
             navigate(`/aluno/${id}`);
         }
     };
@@ -145,9 +144,28 @@ export default function Dashboard() {
 
     return (
         <S.Container>
-            <Sidebar setHouse={setHouse} />
+            <Sidebar setHouse={setHouse} menuMobile={menuMobile} />
             <S.Content>
                 <S.Header house={house} color={color}>
+                    <svg
+                        className={`ham ham6 ${menuMobile && 'active'}`}
+                        viewBox="0 0 100 100"
+                        width="50"
+                        onClick={() => setMenuMobile(!menuMobile)}
+                    >
+                        <path
+                            className="line top"
+                            d="m 30,33 h 40 c 13.100415,0 14.380204,31.80258 6.899646,33.421777 -24.612039,5.327373 9.016154,-52.337577 -12.75751,-30.563913 l -28.284272,28.284272"
+                        />
+                        <path
+                            className="line middle"
+                            d="m 70,50 c 0,0 -32.213436,0 -40,0 -7.786564,0 -6.428571,-4.640244 -6.428571,-8.571429 0,-5.895471 6.073743,-11.783399 12.286435,-5.570707 6.212692,6.212692 28.284272,28.284272 28.284272,28.284272"
+                        />
+                        <path
+                            className="line bottom"
+                            d="m 69.575405,67.073826 h -40 c -13.100415,0 -14.380204,-31.80258 -6.899646,-33.421777 24.612039,-5.327373 -9.016154,52.337577 12.75751,30.563913 l 28.284272,-28.284272"
+                        />
+                    </svg>
                     <img src={logo} alt="" />
                     <div className="options">
                         <Link to="/aluno">
@@ -233,14 +251,3 @@ export default function Dashboard() {
         </S.Container>
     );
 }
-
-// {
-// 	"nome":"Teste",
-// 	"sobrenome":"Teste",
-// 	"idade":10,
-// 	"sangue_status":"Puro",
-// 	"varinha":"TEste",
-// 	"patrono":"teste",
-// 	"sala_id":2,
-// 	"casa_id":3
-// }
