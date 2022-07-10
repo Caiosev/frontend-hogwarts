@@ -107,6 +107,11 @@ export const Header = styled.header`
         img {
             width: 50px;
         }
+        #id {
+            margin-left: -25px;
+            position: absolute;
+            left: 50%;
+        }
         border-bottom: 1px solid ${Color.line};
         .options {
             display: flex;
@@ -181,6 +186,9 @@ export const Header = styled.header`
             svg {
                 cursor: pointer;
             }
+        }
+        .menu {
+            display: none;
         }
     }
 `;
