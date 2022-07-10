@@ -72,7 +72,7 @@ export default function Header() {
                             <FaSignOutAlt size={24} />
                         </Link>
                         {loggedAs === 'prof' ? (
-                            <Link to="/dashboard" id="dashboard">
+                            <Link to="/painel" id="dashboard">
                                 <FaColumns size={24} />
                             </Link>
                         ) : (

@@ -57,7 +57,7 @@ export default function User() {
             ) : (
                 <>
                     <S.Header>
-                        <Link to="/dashboard">
+                        <Link to="/painel">
                             <FaArrowAltCircleLeft size={30} />
                         </Link>
                         <img src="/images/logo.png" alt="" />

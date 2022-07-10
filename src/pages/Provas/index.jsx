@@ -243,6 +243,9 @@ export default function Provas() {
                                 >
                                     Enviadas
                                 </S.EnvBtn>
+                                <S.EnvBtn>
+                                    <Link to="/feiticos">Feiticos</Link>
+                                </S.EnvBtn>
                             </div>
                         </S.SideBar>
                         <hr />
@@ -941,7 +944,38 @@ export default function Provas() {
                                                             ].nome
                                                         }
                                                     </h2>
-                                                    <h3>Nota:{prova.valor}</h3>
+                                                    {prova.valor === 0 && (
+                                                        <h3>
+                                                            Resultado: Trasgo
+                                                        </h3>
+                                                    )}
+                                                    {prova.valor === 1 && (
+                                                        <h3>
+                                                            Resultado:
+                                                            Deploravel
+                                                        </h3>
+                                                    )}
+                                                    {prova.valor === 2 && (
+                                                        <h3>
+                                                            Resultado: Pessimo
+                                                        </h3>
+                                                    )}
+                                                    {prova.valor === 3 && (
+                                                        <h3>
+                                                            Resultado: Aceitavel
+                                                        </h3>
+                                                    )}
+                                                    {prova.valor === 4 && (
+                                                        <h3>
+                                                            Resultado: Excedeu
+                                                            Expectativas
+                                                        </h3>
+                                                    )}
+                                                    {prova.valor === 5 && (
+                                                        <h3>
+                                                            Resultado: Otimo
+                                                        </h3>
+                                                    )}
                                                 </div>
                                             ))
                                         )}

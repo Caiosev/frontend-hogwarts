@@ -13,7 +13,7 @@ function* loginRequest({ payload }) {
         );
         axios.defaults.headers.common.Authorization = `Bearer ${response.data.token}`;
         toast.success('Login realizado com sucesso!');
-        if (payload.options === 'prof') payload.navigate('/dashboard');
+        if (payload.options === 'prof') payload.navigate('/painel');
         if (payload.options === 'aluno') payload.navigate('/provas');
     } catch (error) {
         console.log(error);

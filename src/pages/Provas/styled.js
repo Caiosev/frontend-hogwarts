@@ -207,6 +207,9 @@ export const EnvBtn = styled.button`
         background-color: #d1af5a;
         cursor: pointer;
     }
+    a {
+        color: black;
+    }
 `;
 
 export const NotEnvBtn = styled.button`

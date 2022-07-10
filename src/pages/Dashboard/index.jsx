@@ -200,7 +200,7 @@ export default function Dashboard() {
                             opacity={deleteAluno ? 1 : 0.5}
                             color={deleteAluno ? 'red' : '#fff'}
                         />
-                        <Link to="/user">
+                        <Link to="/usuario">
                             <FaUserAlt size={25} />
                         </Link>
                         <FaSignOutAlt size={25} onClick={handleLogout} />

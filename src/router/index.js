@@ -9,6 +9,7 @@ import Dashboard from '../pages/Dashboard';
 import CadastroAluno from '../pages/CadastroAluno';
 import User from '../pages/User';
 import Provas from '../pages/Provas';
+import Spells from '../pages/Spells';
 
 function PrivateRoute({ children }) {
     const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
@@ -26,7 +27,7 @@ export default function MainRoutes() {
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route
-                path="/dashboard"
+                path="/painel"
                 element={
                     <PrivateRoute>
                         <Dashboard />
@@ -50,7 +51,7 @@ export default function MainRoutes() {
                 }
             />
             <Route
-                path="/user/"
+                path="/usuario/"
                 element={
                     <PrivateRoute>
                         <User />
@@ -62,6 +63,14 @@ export default function MainRoutes() {
                 element={
                     <PrivateRoute>
                         <Provas />
+                    </PrivateRoute>
+                }
+            />
+            <Route
+                path="/feiticos/"
+                element={
+                    <PrivateRoute>
+                        <Spells />
                     </PrivateRoute>
                 }
             />

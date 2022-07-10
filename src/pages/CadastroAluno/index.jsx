@@ -149,7 +149,7 @@ export default function CadastroAluno() {
     return (
         <S.Container>
             <S.Header color={color}>
-                <Link to="/dashboard">
+                <Link to="/painel">
                     <FaArrowAltCircleLeft size={30} />
                 </Link>
                 <img src={imgLogo} alt="" />
