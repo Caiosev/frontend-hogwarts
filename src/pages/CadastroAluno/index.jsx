@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { get } from 'lodash';
 import { toast } from 'react-toastify';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams, Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { FaArrowAltCircleLeft } from 'react-icons/fa';
 import * as S from './styled';
+
 import axios from '../../services/axios';
 
 export default function CadastroAluno() {
@@ -147,6 +149,9 @@ export default function CadastroAluno() {
     return (
         <S.Container>
             <S.Header color={color}>
+                <Link to="/dashboard">
+                    <FaArrowAltCircleLeft size={30} />
+                </Link>
                 <img src={imgLogo} alt="" />
             </S.Header>
             <S.Section>

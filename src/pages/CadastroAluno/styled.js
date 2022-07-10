@@ -6,7 +6,7 @@ export const Container = styled.div`
     height: 100vh;
     background-color: ${Color.activeNav};
     font-family: 'SofiaPro';
-    @media (min-width: 300px) and (max-width: 899px) {
+    @media (min-width: 300px) and (max-width: 1200px) {
         height: 100%;
         hr {
             display: none;
@@ -16,7 +16,7 @@ export const Container = styled.div`
 
 export const Header = styled.header`
     width: 100%;
-    height: 10vh;
+    height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -26,6 +26,11 @@ export const Header = styled.header`
         width: 50px;
     }
     border-bottom: 1px solid ${Color.line};
+    a {
+        color: white;
+        position: absolute;
+        left: 20px;
+    }
 `;
 
 export const Section = styled.section`
@@ -33,12 +38,14 @@ export const Section = styled.section`
     align-items: center;
     justify-content: center;
     gap: 100px;
-    height: 90vh;
+    height: 85vh;
     width: 100vw;
-    @media (min-width: 300px) and (max-width: 899px) {
+    @media (min-width: 300px) and (max-width: 1200px) {
         flex-direction: column;
-        margin-top: 20vh;
+        margin-top: 100px;
         height: 100%;
+        display: block;
+        height: 900px;
     }
 
     hr {
@@ -49,11 +56,12 @@ export const Section = styled.section`
 
 export const Infos = styled.div`
     height: 60%;
-    @media (min-width: 300px) and (max-width: 899px) {
+    @media (min-width: 300px) and (max-width: 1200px) {
         background-color: ${Color.activeNav};
-        height: 100%;
+        height: 1200px;
         width: 100%;
         text-align: center;
+        padding-top: 50px;
     }
     form {
         display: flex;
@@ -61,13 +69,14 @@ export const Infos = styled.div`
         align-content: space-between;
         height: 110%;
         justify-content: space-around;
-        @media (min-width: 300px) and (max-width: 899px) {
+        @media (min-width: 300px) and (max-width: 1200px) {
             align-items: center;
             padding-top: 90px;
+            height: 1100px;
         }
         div {
             display: flex;
-            @media (min-width: 300px) and (max-width: 899px) {
+            @media (min-width: 300px) and (max-width: 1200px) {
                 flex-direction: column;
             }
         }
@@ -105,6 +114,7 @@ export const Foto = styled.div`
         height: 400px;
         padding: 15px 40px;
     }
-    @media (min-width: 300px) and (max-width: 899px) {
+    @media (min-width: 300px) and (max-width: 1200px) {
+        margin: auto;
     }
 `;
