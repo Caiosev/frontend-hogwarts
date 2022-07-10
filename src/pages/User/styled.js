@@ -76,6 +76,11 @@ export const Inputs = styled.div`
         gap:20px;
         flex-wrap:wrap;
         justify-content: center;
+        @media (min-width: 300px) and (max-width: 899px) {
+            flex-direction:column;
+            width: 100vw;
+            align-items: center
+        }
 
         input {
                     width: 200px;

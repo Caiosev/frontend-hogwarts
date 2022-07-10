@@ -6,6 +6,12 @@ export const Container = styled.div`
     height: 100vh;
     background-color: ${Color.activeNav};
     font-family: 'SofiaPro';
+    @media (min-width: 300px) and (max-width: 899px) {
+        height: 100%;
+        hr {
+            display: none;
+        }
+    }
 `;
 
 export const Header = styled.header`
@@ -29,6 +35,11 @@ export const Section = styled.section`
     gap: 100px;
     height: 90vh;
     width: 100vw;
+    @media (min-width: 300px) and (max-width: 899px) {
+        flex-direction: column;
+        margin-top: 20vh;
+        height: 100%;
+    }
 
     hr {
         width: 1px;
@@ -38,14 +49,27 @@ export const Section = styled.section`
 
 export const Infos = styled.div`
     height: 60%;
+    @media (min-width: 300px) and (max-width: 899px) {
+        background-color: ${Color.activeNav};
+        height: 100%;
+        width: 100%;
+        text-align: center;
+    }
     form {
         display: flex;
         flex-direction: column;
         align-content: space-between;
         height: 110%;
         justify-content: space-around;
+        @media (min-width: 300px) and (max-width: 899px) {
+            align-items: center;
+            padding-top: 90px;
+        }
         div {
             display: flex;
+            @media (min-width: 300px) and (max-width: 899px) {
+                flex-direction: column;
+            }
         }
         button {
             width: 200px;
@@ -80,5 +104,7 @@ export const Foto = styled.div`
         width: 100%;
         height: 400px;
         padding: 15px 40px;
+    }
+    @media (min-width: 300px) and (max-width: 899px) {
     }
 `;
