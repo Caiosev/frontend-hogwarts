@@ -233,12 +233,14 @@ export default function Provas() {
                                 />
                             </svg>
                         </div>
-                        <img
-                            src="/images/logo.png"
-                            alt=""
-                            srcSet=""
-                            id="logo"
-                        />
+                        <Link to="/">
+                            <img
+                                src="/images/logo.png"
+                                alt=""
+                                srcSet=""
+                                id="logo"
+                            />
+                        </Link>
                         <div className="options">
                             <Link to="/" id="out" onClick={handleLogout}>
                                 <FaSignOutAlt size={24} />
@@ -269,9 +271,9 @@ export default function Provas() {
                                 >
                                     Enviadas
                                 </S.EnvBtn>
-                                <S.EnvBtn>
-                                    <Link to="/feiticos">Feiticos</Link>
-                                </S.EnvBtn>
+                                <Link to="/feiticos">
+                                    <S.EnvBtn>Feiticos</S.EnvBtn>
+                                </Link>
                             </div>
                         </S.SideBar>
                         <hr />
@@ -1006,9 +1008,13 @@ export default function Provas() {
                                             ))
                                         )}
                                     </div>
-                                    <button type="button" onClick={handlePrint}>
+                                    <S.EnvBtn
+                                        type="button"
+                                        onClick={handlePrint}
+                                        style={{ marginTop: '100px' }}
+                                    >
                                         Gerar Boletim
-                                    </button>
+                                    </S.EnvBtn>
                                     <div style={{ display: 'none' }}>
                                         <Boletim
                                             ref={componentRef}

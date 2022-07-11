@@ -40,7 +40,6 @@ export const Nav = styled.nav`
         }
     }
     .link-logo {
-        display: ${(props) => (props.isLoggedIn ? `none` : 'inline')};
         position: absolute;
         left: 45vw;
         width: 65px;
