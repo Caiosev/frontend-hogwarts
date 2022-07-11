@@ -1,10 +1,21 @@
 import React from 'react';
-import { Container } from '../../styles/GlobalStyles';
+import { Link } from 'react-router-dom';
+import Particles from '../../components/Particles';
+import * as S from './style';
 
 export default function Page404() {
     return (
-        <Container>
-            <p>Esta pagina nao existe</p>
-        </Container>
+        <S.Container>
+            <Particles />
+            <div className="content">
+                <div className="text">
+                    <h1>Erro 404</h1>
+                    <h2>A Pagina acessada não foi encontrada</h2>
+                </div>
+                <Link to="/">
+                    <S.Btn type="button">Pagina Inical</S.Btn>
+                </Link>
+            </div>
+        </S.Container>
     );
 }
