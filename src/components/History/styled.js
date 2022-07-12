@@ -38,9 +38,9 @@ export const SecHistory = styled.section`
     #texto {
         background-color: ${Color.gold};
         margin-left: -20px;
-        margin-top: 250px;
+        margin-top: 50px;
         h3 {
-            font-size: 15px;
+            font-size: 13px;
             @media (min-width: 600px) and (max-width: 900px) {
                 font-size: 18px;
             }
@@ -48,7 +48,7 @@ export const SecHistory = styled.section`
                 font-size: 18px;
             }
             @media (min-width: 1200px) and (max-width: 1800px) {
-                font-size: 21px;
+                font-size: 22px;
             }
             @media (min-width: 1800px) {
                 font-size: 26px;

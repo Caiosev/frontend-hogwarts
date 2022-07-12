@@ -16,6 +16,7 @@ export default function ParticleElement() {
                     },
                 },
                 fpsLimit: 120,
+                fullScreen: false,
                 interactivity: {
                     events: {
                         onClick: {

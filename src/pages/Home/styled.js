@@ -219,6 +219,9 @@ export const BgParticles = styled.div`
     z-index: -1;
     width: 100vw;
     height: 100%;
+    #tsparticles {
+        height: 100vh;
+    }
 `;
 
 export const HomeBg = styled.section`

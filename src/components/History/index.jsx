@@ -1,24 +1,7 @@
-import React, { useEffect } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import React from 'react';
 import * as S from './styled';
 
 export default function History() {
-    gsap.registerPlugin(ScrollTrigger);
-
-    useEffect(() => {
-        gsap.to('#texto', {
-            scrollTrigger: {
-                trigger: '#foto',
-                start: 'top center',
-                end: 'center center',
-            },
-            marginTop: 50,
-            duration: 1,
-            ease: 'power3.out',
-        });
-    });
-
     return (
         <S.SecHistory id="history">
             <div id="foto" />
