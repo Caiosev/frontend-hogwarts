@@ -11,6 +11,7 @@ export default createGlobalStyle`
 
     body{
         color: #fff;
+        background-color:#10141B;
         scroll-behavior: smooth;
     }
 
