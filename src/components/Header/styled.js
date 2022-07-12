@@ -6,6 +6,7 @@ export const Header = styled.header`
         left: 0;
     }
     transition: all ease-in-out;
+    scroll-behavior: smooth;
 `;
 
 export const Nav = styled.nav`
@@ -120,6 +121,7 @@ export const Menu = styled.div`
         font-weight: 700;
         &:hover {
             border-bottom: 1px solid ${Color.roxo};
+            cursor: pointer;
         }
         @media (max-width: 600px) {
             display: none !important;

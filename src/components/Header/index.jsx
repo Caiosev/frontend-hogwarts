@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { gsap } from 'gsap';
 import { FaSignOutAlt, FaColumns } from 'react-icons/fa';
+import { Link as Scroll } from 'react-scroll';
 import * as S from './styled';
 import * as actions from '../../store/modules/auth/actions';
 
@@ -103,20 +104,92 @@ export default function Header() {
                             d="m 69.575405,67.073826 h -40 c -13.100415,0 -14.380204,-31.80258 -6.899646,-33.421777 24.612039,-5.327373 -9.016154,52.337577 12.75751,30.563913 l 28.284272,-28.284272"
                         />
                     </svg>
-                    <a href="/#news">Nossa História</a>
-                    <a href="/#staff">Staff</a>
-                    <a href="/#materiais">Materiais</a>
-                    <a href="/#local">Como Chegar</a>
+                    <Scroll
+                        activeClass="active"
+                        to="history"
+                        spy
+                        smooth
+                        offset={-70}
+                        duration={500}
+                    >
+                        Nossa História
+                    </Scroll>
+                    <Scroll
+                        activeClass="active"
+                        to="staff"
+                        spy
+                        smooth
+                        offset={-70}
+                        duration={500}
+                    >
+                        Staff
+                    </Scroll>
+                    <Scroll
+                        activeClass="active"
+                        to="materiais"
+                        spy
+                        smooth
+                        offset={-70}
+                        duration={500}
+                    >
+                        Materiais
+                    </Scroll>
+                    <Scroll
+                        activeClass="active"
+                        to="local"
+                        spy
+                        smooth
+                        offset={-70}
+                        duration={500}
+                    >
+                        Como Chegar
+                    </Scroll>
                 </S.Menu>
             </S.Nav>
             <S.MobileMenu
                 menuMobile={menuMobile}
                 className={`${menuMobile && 'active'}`}
             >
-                <a href="/#news">Nossa História</a>
-                <a href="/#staff">Staff</a>
-                <a href="/#materiais">Materiais</a>
-                <a href="/#local">Como Chegar</a>
+                <Scroll
+                    activeClass="active"
+                    to="history"
+                    spy
+                    smooth
+                    offset={-70}
+                    duration={500}
+                >
+                    Nossa História
+                </Scroll>
+                <Scroll
+                    activeClass="active"
+                    to="staff"
+                    spy
+                    smooth
+                    offset={-70}
+                    duration={500}
+                >
+                    Staff
+                </Scroll>
+                <Scroll
+                    activeClass="active"
+                    to="materiais"
+                    spy
+                    smooth
+                    offset={-70}
+                    duration={500}
+                >
+                    Materiais
+                </Scroll>
+                <Scroll
+                    activeClass="active"
+                    to="local"
+                    spy
+                    smooth
+                    offset={-70}
+                    duration={500}
+                >
+                    Como Chegar
+                </Scroll>
             </S.MobileMenu>
         </S.Header>
     );

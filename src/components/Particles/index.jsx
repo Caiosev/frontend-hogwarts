@@ -15,7 +15,7 @@ export default function ParticleElement() {
                         value: '#10141B',
                     },
                 },
-                fpsLimit: 60,
+                fpsLimit: 120,
                 interactivity: {
                     events: {
                         onClick: {
@@ -26,7 +26,7 @@ export default function ParticleElement() {
                             enable: false,
                             mode: 'repulse',
                         },
-                        resize: true,
+                        resize: false,
                     },
                     modes: {
                         push: {
@@ -73,7 +73,7 @@ export default function ParticleElement() {
                         value: { min: 1, max: 3 },
                     },
                 },
-                detectRetina: true,
+                detectRetina: false,
             }}
         />
     );

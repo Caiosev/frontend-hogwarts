@@ -5,7 +5,7 @@ export const Container = styled.div`
     h1 {
         font-family: 'BluuNext', sans-serif;
     }
-
+    scroll-behavior: smooth;
     .splash {
         position: fixed;
         width: 100vw;
@@ -218,6 +218,7 @@ export const BgParticles = styled.div`
     left: 0;
     z-index: -1;
     width: 100vw;
+    height: 100%;
 `;
 
 export const HomeBg = styled.section`
