@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Sec = styled.section`
-    height: 2250px;
+    height: 2500px;
     width: 100%;
     padding-top: 50px;
     display: flex;
@@ -84,7 +84,7 @@ export const Sec = styled.section`
         }
         .grid-image img {
             width: 150px;
-            height: 220px;
+            height: 270px;
             @media (min-width: 600px) and (max-width: 900px) {
                 width: 200px;
                 height: 270px;

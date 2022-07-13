@@ -36,8 +36,8 @@ export const Container = styled.section`
         align-items: center;
         justify-content: center;
         h2 {
-            font-size: 2.5rem;
-            padding-bottom: 10px;
+            font-size: 2.25rem;
+            padding: 10px 0 20px 0;
         }
         .image {
             width: 80%;
@@ -60,9 +60,10 @@ export const Container = styled.section`
             );
         }
         .texto {
-            padding: 20px;
+            width: 80%;
+            text-align: center;
             p {
-                font-size: 1.4rem;
+                font-size: 1.125rem;
             }
         }
         @media (min-width: 900px) and (max-width: 1200px) {

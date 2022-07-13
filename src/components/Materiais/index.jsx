@@ -6,6 +6,7 @@ import Uniforme from '../modals/Uniforme';
 import Varinha from '../modals/Varinha';
 import Livros from '../modals/Livros';
 
+Modal.setAppElement('#root');
 export default function Materiais() {
     const [calIsOpen, setCalIsOpen] = useState(false);
     const [uniIsOpen, setUniIsOpen] = useState(false);
@@ -39,9 +40,12 @@ export default function Materiais() {
     const modalStyle = {
         content: {
             width: '70vw',
-            height: '40vh',
+            height: '70vh',
             backgroundColor: '#0A181F',
             margin: 'auto',
+        },
+        overlay: {
+            backgroundColor: 'black',
         },
     };
 

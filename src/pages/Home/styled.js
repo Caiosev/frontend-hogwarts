@@ -275,5 +275,6 @@ export const HomeText = styled.div`
         position: absolute;
         bottom: 0px;
         transform: scale(0);
+        display: ${(props) => (props.active ? 'none' : 'block')};
     }
 `;

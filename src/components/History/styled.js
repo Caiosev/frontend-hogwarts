@@ -7,14 +7,14 @@ export const SecHistory = styled.section`
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding-top: 80px;
+    padding-top: 100px;
     @media (min-width: 1800px) {
         height: 900px;
     }
     #foto,
     #texto {
         width: 40%;
-        max-height: 668px;
+        height: 500px;
         @media (min-width: 600px) and (max-width: 900px) {
             width: 30%;
         }
@@ -38,7 +38,7 @@ export const SecHistory = styled.section`
     #texto {
         background-color: ${Color.gold};
         margin-left: -20px;
-        margin-top: 50px;
+        margin-top: 20px;
         h3 {
             font-size: 13px;
             @media (min-width: 600px) and (max-width: 900px) {

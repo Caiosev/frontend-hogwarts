@@ -18,13 +18,14 @@ export const Container = styled.div`
         }
     }
     h2 {
-        font-size: 2.5rem;
+        font-size: 2.25rem;
+        padding: 10px 0 20px 0;
         @media (min-width: 1800px) {
             font-size: 3rem;
         }
     }
     p {
-        font-size: 1.5rem;
+        font-size: 1.225rem;
         @media (min-width: 1800px) {
             font-size: 2rem;
         }

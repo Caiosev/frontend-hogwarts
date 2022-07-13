@@ -13,7 +13,7 @@ export const Nav = styled.nav`
     background-color: ${(props) =>
         props.active ? `${Color.activeNav}` : 'transparent'};
     display: flex;
-    height: 100px;
+    height: 75px;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease-in;
@@ -25,10 +25,14 @@ export const Nav = styled.nav`
         justify-content: flex-start;
     }
     .link-chapeu {
-        display: ${(props) => (props.isLoggedIn ? `none` : 'inline')};
+        display: ${(props) => (props.isLoggedIn ? `none` : 'flex')};
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         position: absolute;
-        right: 50px;
-        width: 40px;
+        right: 20px;
+        width: 30px;
+        text-decoration: none;
         @media (min-width: 1800px) {
             width: 55px;
         }
@@ -180,13 +184,13 @@ export const Menu = styled.div`
 export const MobileMenu = styled.div`
     width: 100vw;
     height: 180px;
-    margin-top: 100px;
+    margin-top: 75px;
     position: fixed;
     transition: all 0.3s ease-in;
     z-index: 10;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(10, 24, 31, 1);
     display: flex;
     padding: 10px;
     color: white;

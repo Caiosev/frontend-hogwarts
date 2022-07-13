@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { FaMagic } from 'react-icons/fa';
 import { gsap } from 'gsap';
 import Header from '../../components/Header';
@@ -15,6 +15,8 @@ import Local from '../../components/Local';
 export default function Home() {
     const [offset, setOffset] = useState(0);
     const dispatch = useDispatch();
+    const active =
+        useSelector((state) => state.scrollReducer.ativar_nav) || false;
 
     useEffect(() => {
         const onScroll = () => setOffset(window.pageYOffset);
@@ -151,7 +153,7 @@ export default function Home() {
                     <Particles />
                 </S.BgParticles>
                 <S.HomeBg id="home" />
-                <S.HomeText>
+                <S.HomeText active={active}>
                     <h1>Hogwarts</h1>
                     <h2>Escola de Magia e Bruxaria</h2>
                     <div className="divWand">
