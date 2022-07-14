@@ -19,6 +19,7 @@ export const Container = styled.section`
             width: 100%;
             text-align: center;
             margin-top: 40px;
+            padding: 10px;
             font-size: 4rem;
             display: flex;
             align-items: center;
@@ -36,12 +37,18 @@ export const Container = styled.section`
             justify-content: center;
             align-items: center;
             gap: 100px;
+            @media (max-width: 900px) {
+                gap: 0;
+            }
             flex-direction: row;
             background-color: ${Colors.activeNav};
             @media (min-width: 1800px) {
                 gap: 200px;
             }
             .option {
+                @media (max-width: 900px) {
+                    width: 150px;
+                }
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -149,9 +156,9 @@ export const Container = styled.section`
             height: 35px;
         }
         .login-container {
+            display: ${(props) => (props.options === false ? 'none' : 'flex')};
             grid-column: 1/4;
             grid-row: 2/3;
-            display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: flex-start;
@@ -211,7 +218,7 @@ export const Container = styled.section`
         width: 100%;
         height: 100vh;
         background-color: ${Colors.activeNav};
-        display: grid;
+
         grid-template-columns: 30% 40% 30%;
         grid-template-rows: 15% 85%;
         #back,
