@@ -26,6 +26,9 @@ export const Container = styled.section`
             @media (max-width: 900px) {
                 font-size: 3rem;
             }
+            @media (min-width: 900px) {
+                margin-top: 150px;
+            }
         }
         .options {
             display: flex;
@@ -37,9 +40,6 @@ export const Container = styled.section`
             background-color: ${Colors.activeNav};
             @media (min-width: 1800px) {
                 gap: 200px;
-            }
-            @media (min-width: 900px) {
-                height: 100vh;
             }
             .option {
                 display: flex;
