@@ -18,34 +18,42 @@ export const Container = styled.section`
         h1 {
             width: 100%;
             text-align: center;
-            margin-top: 20px;
+            margin-top: 40px;
             font-size: 4rem;
             display: flex;
             align-items: center;
             justify-content: center;
+            @media (max-width: 900px) {
+                font-size: 3rem;
+            }
         }
         .options {
             display: flex;
-            height: 100%;
+            height: 100vh;
             justify-content: center;
             align-items: center;
             gap: 100px;
-            flex-direction: column;
+            flex-direction: row;
             background-color: black;
-            @media (min-width: 900px) {
-                flex-direction: row;
-            }
             @media (min-width: 1800px) {
                 gap: 200px;
+            }
+            @media (max-width: 900px) {
+                height: auto;
+                padding-top: 150px;
             }
             .option {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
+                cursor: pointer;
                 img {
                     opacity: 0.8;
                     width: 180px;
+                    @media (max-width: 900px) {
+                        width: 80px;
+                    }
                     &:hover {
                         opacity: 1;
                     }
