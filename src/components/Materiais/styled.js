@@ -18,13 +18,25 @@ export const Container = styled.section`
     }
     @media (min-width: 1200px) and (max-width: 1800px) {
         justify-content: flex-start;
-        height: 800px;
+        height: 700px;
     }
     @media (min-width: 1800px) {
         font-size: 4rem;
-        height: 1200px;
+        height: 900px;
     }
-
+    .modal {
+        ::-webkit-scrollbar {
+            width: 10px;
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #dddddd;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #a2b5bb;
+            border-radius: 10px;
+        }
+    }
     h1 {
         font-size: 3rem;
         text-align: center;
@@ -62,15 +74,21 @@ export const Container = styled.section`
         .texto {
             width: 80%;
             text-align: center;
+            @media (min-width: 900px) {
+                text-align: left;
+                margin-left: 10px;
+            }
             p {
                 font-size: 1.125rem;
             }
         }
         @media (min-width: 900px) and (max-width: 1200px) {
             flex-direction: row;
-            .image,
             .texto {
                 width: 450px;
+            }
+            .image {
+                width: 300px;
             }
         }
         @media (min-width: 1200px) and (max-width: 1800px) {
@@ -108,10 +126,10 @@ export const Container = styled.section`
         align-items: center;
         justify-content: center;
         img {
-            width: 60px;
+            width: 50px;
             overflow: hidden;
             @media (min-width: 1800px) {
-                width: 90px;
+                width: 80px;
             }
         }
         @media (min-width: 1800px) {

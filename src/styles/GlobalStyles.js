@@ -27,6 +27,20 @@ export default createGlobalStyle`
         }
         overflow-x: clip;
         width:100vw;
+
+    }
+    body{
+        *::-webkit-scrollbar{
+            width: 10px;
+            border-radius:5px;
+        }
+        *::-webkit-scrollbar-track{
+            background:#dddddd;
+        }
+        *::-webkit-scrollbar-thumb{
+            background:#A2B5BB;
+            border-radius:10px;
+        }
     }
 
     ul{

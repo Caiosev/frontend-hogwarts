@@ -13,6 +13,8 @@ export default function SliderElement({ setNews }) {
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
+        scrollEnabled: 0,
+        swipe: false,
     };
     useEffect(() => {
         document.querySelector('.slick-prev').addEventListener('click', () => {
@@ -96,28 +98,6 @@ export default function SliderElement({ setNews }) {
                     <div className="img-titulo">
                         <div className="foto" />
                         <h2>4Boas vindas a todos nossos novos estudantes!</h2>
-                    </div>
-                    <div className="texto">
-                        <h3>Lorem ipsum dolor, sit amet consectetur</h3>
-                        <hr />
-                        <h3>Lorem ipsum dolor, sit amet consectetur</h3>
-                    </div>
-                </div>
-                <div className="news5">
-                    <div className="img-titulo">
-                        <div className="foto" />
-                        <h2>5Boas vindas a todos nossos novos estudantes!</h2>
-                    </div>
-                    <div className="texto">
-                        <h3>Lorem ipsum dolor, sit amet consectetur</h3>
-                        <hr />
-                        <h3>Lorem ipsum dolor, sit amet consectetur</h3>
-                    </div>
-                </div>
-                <div className="news6">
-                    <div className="img-titulo">
-                        <div className="foto" />
-                        <h2>6Boas vindas a todos nossos novos estudantes!</h2>
                     </div>
                     <div className="texto">
                         <h3>Lorem ipsum dolor, sit amet consectetur</h3>

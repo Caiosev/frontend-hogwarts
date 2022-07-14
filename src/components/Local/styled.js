@@ -10,7 +10,7 @@ export const Container = styled.div`
     justify-content: center;
     font-family: 'SofiaPro';
     h1 {
-        font-size: 3.5rem;
+        font-size: 3rem;
         text-align: center;
         margin-bottom: 50px;
         @media (min-width: 1800px) {

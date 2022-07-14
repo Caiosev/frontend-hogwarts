@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { gsap } from 'gsap';
-import { FaSignOutAlt, FaColumns } from 'react-icons/fa';
+import { FaSignOutAlt, FaColumns, FaUserAlt } from 'react-icons/fa';
 import { Link as Scroll } from 'react-scroll';
 import * as S from './styled';
 import * as actions from '../../store/modules/auth/actions';
@@ -36,7 +36,7 @@ export default function Header() {
                     scale: 0,
                     duration: 0.2,
                     left: '50vw',
-                    marginLeft: '-32px',
+                    marginLeft: '-27.5px',
                 })
                 .to('.menu', { display: 'none', duration: 0.2, opacity: 0 })
                 .to('.link-logo', { duration: 0.5, scale: 1 });
@@ -54,7 +54,7 @@ export default function Header() {
     return (
         <S.Header>
             <S.Nav active={active} isLoggedIn={isLoggedIn}>
-                <Link to="login" className="link-logo">
+                <Link to="/" className="link-logo">
                     <img src="/images/logo.png" alt="logo" srcSet="" />
                 </Link>
                 {!isLoggedIn ? (
@@ -78,7 +78,7 @@ export default function Header() {
                             </Link>
                         ) : (
                             <Link to="/provas" id="dashboard">
-                                <FaColumns size={24} />
+                                <FaUserAlt size={25} />
                             </Link>
                         )}
                     </>

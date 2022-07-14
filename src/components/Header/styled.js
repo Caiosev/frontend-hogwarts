@@ -33,6 +33,9 @@ export const Nav = styled.nav`
         right: 20px;
         width: 30px;
         text-decoration: none;
+        @media (min-width: 800px) {
+            right: 40px;
+        }
         @media (min-width: 1800px) {
             width: 55px;
         }
@@ -47,7 +50,7 @@ export const Nav = styled.nav`
     .link-logo {
         position: absolute;
         left: 45vw;
-        width: 65px;
+        width: 55px;
         @media (min-width: 1800px) {
             width: 85px;
         }
@@ -124,7 +127,7 @@ export const Menu = styled.div`
         font-size: 16px;
         font-weight: 700;
         &:hover {
-            border-bottom: 1px solid ${Color.roxo};
+            color: rgb(209, 175, 100);
             cursor: pointer;
         }
         @media (max-width: 600px) {
@@ -184,13 +187,14 @@ export const Menu = styled.div`
 export const MobileMenu = styled.div`
     width: 100vw;
     height: 180px;
+    border-top: 1px solid white;
     margin-top: 75px;
     position: fixed;
     transition: all 0.3s ease-in;
     z-index: 10;
     justify-content: center;
     align-items: center;
-    background-color: rgba(10, 24, 31, 1);
+    background-color: rgba(36, 38, 51, 1);
     display: flex;
     padding: 10px;
     color: white;
@@ -205,7 +209,7 @@ export const MobileMenu = styled.div`
         font-size: 20px;
         font-weight: 700;
         &:hover {
-            border-bottom: 1px solid ${Color.roxo};
+            color: rgb(209, 175, 100);
         }
     }
 `;

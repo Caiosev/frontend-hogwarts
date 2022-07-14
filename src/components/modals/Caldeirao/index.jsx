@@ -14,9 +14,9 @@ export default function Caldeirao() {
                 aberto e podem ser pendurados em um fogo de uma alça de ferro.
                 Os primeiros anos na Escola de Magia e Bruxaria de Hogwarts usam
                 caldeirões de estanho tamanho 2, conforme mencionado na lista
-                que acompanhava sua carta de aceitação de Hogwarts. Lojas: Loja
-                de Caldeirões
+                que acompanhava sua carta de aceitação de Hogwarts.
             </p>
+            <p>Lojas: Loja de Caldeirões</p>
         </S.Container>
     );
 }

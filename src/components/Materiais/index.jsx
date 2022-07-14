@@ -8,6 +8,7 @@ import Livros from '../modals/Livros';
 
 Modal.setAppElement('#root');
 export default function Materiais() {
+    const offset = window.screen.width;
     const [calIsOpen, setCalIsOpen] = useState(false);
     const [uniIsOpen, setUniIsOpen] = useState(false);
     const [vaIsOpen, setVaIsOpen] = useState(false);
@@ -36,13 +37,26 @@ export default function Materiais() {
     const handleCloseBook = () => {
         setBookIsOpen(false);
     };
-
-    const modalStyle = {
+    console.log(offset);
+    const modalMobileStyle = {
         content: {
             width: '70vw',
             height: '70vh',
             backgroundColor: '#0A181F',
             margin: 'auto',
+            borderRadius: '20px',
+        },
+        overlay: {
+            backgroundColor: 'black',
+        },
+    };
+    const modalStyle = {
+        content: {
+            width: '45vw',
+            height: '60vh',
+            backgroundColor: '#0A181F',
+            margin: 'auto',
+            borderRadius: '20px',
         },
         overlay: {
             backgroundColor: 'black',
@@ -98,7 +112,7 @@ export default function Materiais() {
                     role="button"
                     tabIndex="0"
                 >
-                    <img src="/images/materias/magic-wand.png" alt="" />
+                    <img src="/images/magic-wand(1).png" alt="" />
                 </div>
                 <div
                     className="item"
@@ -113,7 +127,7 @@ export default function Materiais() {
             <Modal
                 isOpen={calIsOpen}
                 onRequestClose={handleClosecal}
-                style={modalStyle}
+                style={offset >= 800 ? modalStyle : modalMobileStyle}
             >
                 <button
                     type="button"
@@ -121,9 +135,15 @@ export default function Materiais() {
                     className="close"
                     style={{
                         color: 'white',
-                        background: 'none',
-                        border: 'none',
+                        fontSize: '1.25rem',
+                        backgroundColor: '#d1af5a',
+                        borderRadius: '50%',
+                        padding: '5px',
                         cursor: 'pointer',
+                        width: '40px',
+                        height: '40px',
+                        position: 'absolute',
+                        right: '30px',
                     }}
                 >
                     X
@@ -133,7 +153,7 @@ export default function Materiais() {
             <Modal
                 isOpen={uniIsOpen}
                 onRequestClose={handleCloseUni}
-                style={modalStyle}
+                style={offset >= 800 ? modalStyle : modalMobileStyle}
             >
                 <button
                     type="button"
@@ -141,9 +161,15 @@ export default function Materiais() {
                     className="close"
                     style={{
                         color: 'white',
-                        background: 'none',
-                        border: 'none',
+                        fontSize: '1.25rem',
+                        backgroundColor: '#d1af5a',
+                        borderRadius: '50%',
+                        padding: '5px',
                         cursor: 'pointer',
+                        width: '40px',
+                        height: '40px',
+                        position: 'absolute',
+                        right: '30px',
                     }}
                 >
                     X
@@ -153,7 +179,7 @@ export default function Materiais() {
             <Modal
                 isOpen={vaIsOpen}
                 onRequestClose={handleCloseVa}
-                style={modalStyle}
+                style={offset >= 800 ? modalStyle : modalMobileStyle}
             >
                 <button
                     type="button"
@@ -161,9 +187,15 @@ export default function Materiais() {
                     className="close"
                     style={{
                         color: 'white',
-                        background: 'none',
-                        border: 'none',
+                        fontSize: '1.25rem',
+                        backgroundColor: '#d1af5a',
+                        borderRadius: '50%',
+                        padding: '5px',
                         cursor: 'pointer',
+                        width: '40px',
+                        height: '40px',
+                        position: 'absolute',
+                        right: '30px',
                     }}
                 >
                     X
@@ -173,7 +205,7 @@ export default function Materiais() {
             <Modal
                 isOpen={bookIsOpen}
                 onRequestClose={handleCloseBook}
-                style={modalStyle}
+                style={offset >= 800 ? modalStyle : modalMobileStyle}
             >
                 <button
                     type="button"
@@ -181,9 +213,15 @@ export default function Materiais() {
                     className="close"
                     style={{
                         color: 'white',
-                        background: 'none',
-                        border: 'none',
+                        fontSize: '1.25rem',
+                        backgroundColor: '#d1af5a',
+                        borderRadius: '50%',
+                        padding: '5px',
                         cursor: 'pointer',
+                        width: '40px',
+                        height: '40px',
+                        position: 'absolute',
+                        right: '30px',
                     }}
                 >
                     X

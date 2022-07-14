@@ -27,10 +27,29 @@ export const Sec = styled.section`
     .snape {
         opacity: 0;
     }
+    .pomona,
+    .minerva,
+    .filius,
+    .snape {
+        @media (min-width: 900px) {
+            max-width: 140px;
+        }
+    }
+    .minerva {
+        @media (min-width: 1200px) {
+            .grid-frame {
+                margin-bottom: 10px;
+            }
+            h2 {
+                padding: 0;
+            }
+        }
+    }
     h1 {
         font-size: 3rem;
         text-align: center;
         margin-bottom: 50px;
+        padding-left: 30px;
     }
     h2 {
         padding-top: 30px;
@@ -42,21 +61,24 @@ export const Sec = styled.section`
         display: flex;
         text-align: center;
         flex-direction: column;
-        gap: 50px;
-        padding-top: 50px;
+        gap: 80px;
         @media (min-width: 900px) and (max-width: 1200px) {
             flex-direction: row;
-            width: 90%;
+            width: 100%;
         }
         @media (min-width: 1200px) and (max-width: 1800px) {
             flex-direction: row;
+            align-items: center;
+            justify-content: center;
         }
         @media (min-width: 1800px) {
             flex-direction: row;
+            align-items: center;
+            justify-content: center;
         }
     }
     .grid-frame {
-        padding: 28px;
+        padding: 14px;
         position: relative;
         border: 1px solid #a85;
         .square {
@@ -85,29 +107,26 @@ export const Sec = styled.section`
         .grid-image img {
             width: 150px;
             height: 270px;
-            @media (min-width: 600px) and (max-width: 900px) {
-                width: 200px;
-                height: 270px;
-            }
+
             @media (min-width: 900px) and (max-width: 1200px) {
                 width: 60px;
                 height: 130px;
             }
             @media (min-width: 1200px) and (max-width: 1800px) {
                 width: 100px;
-                height: 170px;
+                height: 160px;
             }
         }
         .grid-image-dumbledore img {
-            width: 180px;
-            height: 250px;
-            @media (min-width: 600px) and (max-width: 900px) {
-                width: 230px;
-                height: 300px;
+            width: 200px;
+            height: 270px;
+            @media (min-width: 900px) and (max-width: 1199px) {
+                width: 110px;
+                height: 180px;
             }
-            @media (min-width: 900px) and (max-width: 1200px) {
-                width: 80px;
-                height: 150px;
+            @media (min-width: 1200px) and (max-width: 1800px) {
+                width: 200px;
+                height: 270px;
             }
         }
     }

@@ -29,17 +29,16 @@ export const SecNews = styled.section`
     #VI {
         opacity: 0.5;
         transition: all 0.1s ease-in-out;
-        cursor: pointer;
     }
     .active {
         opacity: 1 !important;
         color: #d1af5a;
-        transform: scale(1.2);
+        transform: scale(1.3);
     }
     @media (min-width: 900px) and (max-width: 1200px) {
-        height: 900px;
+        height: 800px;
     }
     @media (min-width: 1200px) and (max-width: 1800px) {
-        height: 900px;
+        height: 800px;
     }
 `;

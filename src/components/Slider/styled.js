@@ -57,7 +57,7 @@ export const Container = styled.div`
             align-items: center;
             justify-content: center;
             padding-top: 40px;
-
+            align-items: flex-start;
             .img-texto {
                 display: flex;
                 justify-content: space-evenly;
@@ -85,10 +85,10 @@ export const Container = styled.div`
             }
         }
         @media (min-width: 900px) and (max-width: 1200px) {
-            height: 600px;
+            height: 500px;
         }
         @media (min-width: 1200px) and (max-width: 1800px) {
-            height: 600px;
+            height: 500px;
         }
     }
 
