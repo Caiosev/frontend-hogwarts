@@ -33,45 +33,50 @@ export default function Login() {
         }
     };
     return (
-        <S.Container>
+        <S.Container options={options}>
+            <div className="select-options">
+                <h1>Gostaria de Logar como:</h1>
+                <div className="options">
+                    <div
+                        className="option"
+                        onClick={() => {
+                            setOptions('aluno');
+                            document.querySelector('#aluno-img').style.opacity =
+                                '1';
+                            document.querySelector('#prof-img').style.opacity =
+                                '0.5';
+                        }}
+                        onKeyPress={handleKeyPress}
+                        role="button"
+                        tabIndex="0"
+                    >
+                        <img src="/images/student.png" id="aluno-img" alt="" />
+                        <p>Aluno</p>
+                    </div>
+                    <div
+                        className="option"
+                        onClick={() => {
+                            setOptions('prof');
+                            document.querySelector('#prof-img').style.opacity =
+                                '1';
+                            document.querySelector('#aluno-img').style.opacity =
+                                '0.5';
+                        }}
+                        onKeyPress={handleKeyPress}
+                        role="button"
+                        tabIndex="-1"
+                    >
+                        <img src="/images/mago.png" id="prof-img" alt="" />
+                        <p>Professor</p>
+                    </div>
+                </div>
+            </div>
             <Link to="/" id="link-back">
                 <button id="back" type="submit">
                     Voltar
                 </button>
             </Link>
-            <div className="options">
-                <div
-                    className="option"
-                    onClick={() => {
-                        setOptions('aluno');
-                        document.querySelector('#aluno-img').style.opacity =
-                            '1';
-                        document.querySelector('#prof-img').style.opacity =
-                            '0.5';
-                    }}
-                    onKeyPress={handleKeyPress}
-                    role="button"
-                    tabIndex="0"
-                >
-                    <img src="/images/books.png" id="aluno-img" alt="" />
-                    <p>Aluno</p>
-                </div>
-                <div
-                    className="option"
-                    onClick={() => {
-                        setOptions('prof');
-                        document.querySelector('#prof-img').style.opacity = '1';
-                        document.querySelector('#aluno-img').style.opacity =
-                            '0.5';
-                    }}
-                    onKeyPress={handleKeyPress}
-                    role="button"
-                    tabIndex="-1"
-                >
-                    <img src="/images/wand.png" id="prof-img" alt="" />
-                    <p>Professor</p>
-                </div>
-            </div>
+
             <div className="login-container">
                 <img src="/images/logo.png" id="#logo" alt="" />
                 <form onSubmit={handleSubmit}>

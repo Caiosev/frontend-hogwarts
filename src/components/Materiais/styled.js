@@ -74,11 +74,12 @@ export const Container = styled.section`
         .texto {
             width: 80%;
             text-align: center;
+            padding-left: 20px;
             @media (min-width: 900px) {
                 text-align: left;
             }
             p {
-                font-size: 1.125rem;
+                font-size: 1.25rem;
             }
         }
         @media (min-width: 900px) and (max-width: 1200px) {

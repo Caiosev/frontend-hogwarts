@@ -37,7 +37,6 @@ export default function Materiais() {
     const handleCloseBook = () => {
         setBookIsOpen(false);
     };
-    console.log(offset);
     const modalMobileStyle = {
         content: {
             width: '70vw',

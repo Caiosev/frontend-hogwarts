@@ -8,6 +8,57 @@ export const Container = styled.section`
     display: grid;
     grid-template-columns: 30% 40% 30%;
     grid-template-rows: 15% 85%;
+    .select-options {
+        position: absolute;
+        z-index: 10;
+        background-color: black;
+        width: 100vw;
+        height: 100vh;
+        display: ${(props) => (props.options === false ? 'block' : 'none')};
+        h1 {
+            width: 100%;
+            position: absolute;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 4rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .options {
+            display: flex;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            gap: 100px;
+            flex-direction: column;
+            background-color: black;
+            margin-top: 50px;
+            @media (min-width: 900px) {
+                flex-direction: row;
+            }
+            @media (min-width: 1800px) {
+                gap: 200px;
+            }
+            .option {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                img {
+                    opacity: 0.8;
+                    width: 180px;
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+                p {
+                    margin-top: 10px;
+                    font-size: 28px;
+                }
+            }
+        }
+    }
     #back,
     #link-back {
         grid-column: 1 / 2;
@@ -16,24 +67,7 @@ export const Container = styled.section`
         height: 35px;
     }
     #link-back {
-        margin-left: 10px;
-    }
-    .options {
-        grid-column: 2 / 4;
-        grid-row: 1 / 2;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 60px;
-        img {
-            width: 75px;
-            cursor: pointer;
-            height: 75px;
-            opacity: 0.5;
-            &:hover {
-                opacity: 1;
-            }
-        }
+        margin-left: 30px;
     }
     .login-container {
         grid-column: 1/4;
@@ -44,7 +78,6 @@ export const Container = styled.section`
         justify-content: flex-start;
         padding-top: 50px;
         gap: 50px;
-        border-top: 1px solid #fff;
         form {
             display: flex;
             flex-direction: column;
@@ -88,9 +121,6 @@ export const Container = styled.section`
     #next {
         margin-top: 20px;
     }
-    img {
-        width: 150px;
-    }
     .option {
         text-align: center;
     }
@@ -108,23 +138,6 @@ export const Container = styled.section`
             width: 120px;
             height: 35px;
         }
-        .options {
-            grid-column: 2 / 3;
-            grid-row: 1 / 2;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 60px;
-            img {
-                width: 75px;
-                cursor: pointer;
-                height: 75px;
-                opacity: 0.5;
-                &:hover {
-                    opacity: 1;
-                }
-            }
-        }
         .login-container {
             grid-column: 1/4;
             grid-row: 2/3;
@@ -134,7 +147,6 @@ export const Container = styled.section`
             justify-content: flex-start;
             padding-top: 50px;
             gap: 50px;
-            border-top: 1px solid #fff;
             form {
                 display: flex;
                 flex-direction: column;
@@ -182,11 +194,6 @@ export const Container = styled.section`
         }
     }
     @media (min-width: 1800px) {
-        #link-back,
-        #back {
-        }
-        .options {
-        }
         img {
             width: 250px;
         }
@@ -202,31 +209,9 @@ export const Container = styled.section`
             grid-column: 1 / 2;
             grid-row: 1 / 2;
             margin: auto;
-            width: 200px;
+            width: 150px;
             height: 90px;
             font-size: 1.5625rem;
-        }
-        .options {
-            grid-column: 2 / 3;
-            grid-row: 1 / 2;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 60px;
-
-            img {
-                cursor: pointer;
-
-                opacity: 0.5;
-
-                width: 100px;
-                height: 120px;
-
-                gap: 200px;
-                &:hover {
-                    opacity: 1;
-                }
-            }
         }
         .login-container {
             grid-column: 1/4;
@@ -237,7 +222,6 @@ export const Container = styled.section`
             justify-content: flex-start;
             padding-top: 50px;
             gap: 50px;
-            border-top: 1px solid #fff;
             form {
                 display: flex;
                 flex-direction: column;
@@ -253,7 +237,7 @@ export const Container = styled.section`
                     margin-bottom: 20px;
 
                     input {
-                        width: 280px;
+                        width: 150px;
                         height: 50px;
                         border: 1px solid #fff;
                         border-radius: 5px;
