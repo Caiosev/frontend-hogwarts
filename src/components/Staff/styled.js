@@ -31,8 +31,11 @@ export const Sec = styled.section`
     .minerva,
     .filius,
     .snape {
-        @media (min-width: 900px) {
+        @media (min-width: 900px) and (max-width: 1800px) {
             max-width: 140px;
+        }
+        @media (min-width: 1800px) {
+            width: 200px;
         }
     }
     .minerva {
@@ -116,6 +119,10 @@ export const Sec = styled.section`
                 width: 100px;
                 height: 160px;
             }
+            @media (min-width: 1800px) {
+                width: 170px;
+                height: 270px;
+            }
         }
         .grid-image-dumbledore img {
             width: 200px;
@@ -127,6 +134,10 @@ export const Sec = styled.section`
             @media (min-width: 1200px) and (max-width: 1800px) {
                 width: 200px;
                 height: 270px;
+            }
+            @media (min-width: 1800px) {
+                width: 220px;
+                height: 320px;
             }
         }
     }

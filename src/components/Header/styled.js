@@ -5,7 +5,7 @@ export const Header = styled.header`
     .active {
         left: 0;
     }
-    transition: all ease-in-out;
+    transition: all ease-in-out 1s;
     scroll-behavior: smooth;
 `;
 
@@ -32,6 +32,7 @@ export const Nav = styled.nav`
         position: absolute;
         right: 20px;
         width: 30px;
+        gap: 10px;
         text-decoration: none;
         @media (min-width: 800px) {
             right: 40px;

@@ -38,7 +38,7 @@ export const SecNews = styled.section`
     @media (min-width: 900px) and (max-width: 1200px) {
         height: 800px;
     }
-    @media (min-width: 1200px) and (max-width: 1800px) {
+    @media (min-width: 1200px) {
         height: 800px;
     }
 `;

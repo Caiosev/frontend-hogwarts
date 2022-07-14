@@ -76,7 +76,6 @@ export const Container = styled.section`
             text-align: center;
             @media (min-width: 900px) {
                 text-align: left;
-                margin-left: 10px;
             }
             p {
                 font-size: 1.125rem;
@@ -103,6 +102,9 @@ export const Container = styled.section`
             .image,
             .texto {
                 width: 750px;
+            }
+            .image {
+                width: 600px;
             }
         }
     }

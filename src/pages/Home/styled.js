@@ -268,11 +268,17 @@ export const HomeText = styled.div`
     h1 {
         font-size: 4rem;
         text-shadow: 0px 3px 10px rgba(0, 0, 0, 1);
+        @media (min-width: 1800px) {
+            font-size: 5rem;
+        }
     }
     h2 {
         font-size: 1.5rem;
         color: rgb(209, 175, 100);
         text-shadow: 0px 3px 10px rgba(0, 0, 0, 1);
+        @media (min-width: 1800px) {
+            font-size: 2rem;
+        }
     }
     .divWand {
         position: absolute;

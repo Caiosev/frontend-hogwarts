@@ -26,6 +26,7 @@ export const SecHistory = styled.section`
         }
         @media (min-width: 1800px) {
             width: 25%;
+            height: 700px;
         }
     }
     #foto {
@@ -38,20 +39,20 @@ export const SecHistory = styled.section`
     #texto {
         background-color: ${Color.gold};
         margin-left: -20px;
-        margin-top: 20px;
+        margin-top: 40px;
         h3 {
             font-size: 13px;
             @media (min-width: 600px) and (max-width: 900px) {
-                font-size: 18px;
+                font-size: 1.125rem;
             }
             @media (min-width: 900px) and (max-width: 1200px) {
-                font-size: 18px;
+                font-size: 1.125rem;
             }
             @media (min-width: 1200px) and (max-width: 1800px) {
-                font-size: 22px;
+                font-size: 1.375rem;
             }
             @media (min-width: 1800px) {
-                font-size: 26px;
+                font-size: 2rem;
             }
         }
 
