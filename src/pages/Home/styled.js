@@ -210,6 +210,7 @@ export const Container = styled.div`
             }
         }
     }
+    background-color: #1a1a1d;
 `;
 
 export const BgParticles = styled.div`

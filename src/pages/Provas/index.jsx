@@ -78,11 +78,10 @@ export default function Provas() {
             width: '80vw',
             height: '90vh',
             backgroundColor: '#0A181F',
-
-            borderRadius: '20px',
+            border: '0',
         },
         overlay: {
-            backgroundColor: 'black',
+            backgroundColor: '#132d3a',
         },
     };
     const modalStyle = {
@@ -91,9 +90,10 @@ export default function Provas() {
             height: '70vh',
             backgroundColor: '#0A181F',
             margin: 'auto',
+            border: '0',
         },
         overlay: {
-            backgroundColor: 'black',
+            backgroundColor: '#132d3a',
         },
     };
     useEffect(() => {

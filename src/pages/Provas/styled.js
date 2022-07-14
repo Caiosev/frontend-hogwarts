@@ -85,12 +85,17 @@ export const Content = styled.div`
             .provas {
                 display: flex;
                 flex-wrap: wrap;
-                padding-top: 20px;
+                padding-top: 80px;
                 gap: 50px;
                 justify-content: flex-start;
                 align-items: center;
             }
             .prova {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                gap: 15px;
+                justify-content: center;
                 cursor: pointer;
                 width: 180px;
             }
