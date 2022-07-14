@@ -24,19 +24,6 @@ export const Container = styled.section`
         font-size: 4rem;
         height: 900px;
     }
-    .modal {
-        ::-webkit-scrollbar {
-            width: 10px;
-            border-radius: 5px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #dddddd;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #a2b5bb;
-            border-radius: 10px;
-        }
-    }
     h1 {
         font-size: 3rem;
         text-align: center;
@@ -70,6 +57,9 @@ export const Container = styled.section`
                 rgba(, 0, 0, 1),
                 rgba(0, 0, 0, 0)
             );
+            @media (max-width: 600px) {
+                margin-bottom: 15px;
+            }
         }
         .texto {
             width: 80%;

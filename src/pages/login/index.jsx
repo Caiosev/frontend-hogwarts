@@ -78,7 +78,7 @@ export default function Login() {
             </Link>
 
             <div className="login-container">
-                <img src="/images/logo.png" id="#logo" alt="" />
+                <img src="/images/logo.png" id="logo" alt="" />
                 <form onSubmit={handleSubmit}>
                     <label htmlFor="#username">
                         Username

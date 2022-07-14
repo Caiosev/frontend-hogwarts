@@ -30,7 +30,8 @@ export default createGlobalStyle`
 
     }
     body{
-        *::-webkit-scrollbar{
+        @media(min-width:900px){
+            *::-webkit-scrollbar{
             width: 10px;
             border-radius:5px;
         }
@@ -40,6 +41,7 @@ export default createGlobalStyle`
         *::-webkit-scrollbar-thumb{
             background:#A2B5BB;
             border-radius:10px;
+        }
         }
     }
 

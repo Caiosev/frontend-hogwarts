@@ -77,7 +77,11 @@ export const Container = styled.section`
         align-items: center;
         justify-content: flex-start;
         padding-top: 50px;
+        #logo {
+            width: 250px;
+        }
         gap: 50px;
+        display: ${(props) => (props.options === false ? 'none' : 'flex')};
         form {
             display: flex;
             flex-direction: column;
@@ -124,6 +128,7 @@ export const Container = styled.section`
     .option {
         text-align: center;
     }
+
     @media (min-width: 700px) and (max-width: 1799px) {
         width: 100%;
         height: 100vh;
