@@ -44,6 +44,7 @@ export const Container = styled.section`
             }
             .option {
                 display: flex;
+                width: 100px;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
