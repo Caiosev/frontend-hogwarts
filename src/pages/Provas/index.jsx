@@ -25,6 +25,7 @@ import { Boletim } from '../../components/Boletim';
 import * as S from './styled';
 
 export default function Provas() {
+    const offset = window.screen.width;
     const id = useSelector((state) => state.auth.user.id);
     const nome = useSelector((state) => state.auth.user.nome);
     const [env, setEnv] = useState(false);
@@ -72,12 +73,27 @@ export default function Provas() {
         content: () => componentRef.current,
     });
 
-    const modalStyle = {
+    const modalMobileStyle = {
         content: {
             width: '80vw',
             height: '90vh',
             backgroundColor: '#0A181F',
+
+            borderRadius: '20px',
+        },
+        overlay: {
+            backgroundColor: 'black',
+        },
+    };
+    const modalStyle = {
+        content: {
+            width: '40vw',
+            height: '70vh',
+            backgroundColor: '#0A181F',
             margin: 'auto',
+        },
+        overlay: {
+            backgroundColor: 'black',
         },
     };
     useEffect(() => {
@@ -308,7 +324,11 @@ export default function Provas() {
                                                     onRequestClose={
                                                         handleClosearitmancia
                                                     }
-                                                    style={modalStyle}
+                                                    style={
+                                                        offset >= 800
+                                                            ? modalStyle
+                                                            : modalMobileStyle
+                                                    }
                                                 >
                                                     <button
                                                         type="button"
@@ -371,7 +391,11 @@ export default function Provas() {
                                                     onClick={
                                                         handleCloseastronomia
                                                     }
-                                                    style={modalStyle}
+                                                    style={
+                                                        offset >= 800
+                                                            ? modalStyle
+                                                            : modalMobileStyle
+                                                    }
                                                 >
                                                     <button
                                                         type="button"
@@ -436,7 +460,11 @@ export default function Provas() {
                                                     onRequestClose={
                                                         handleClosecriaturasmagicas
                                                     }
-                                                    style={modalStyle}
+                                                    style={
+                                                        offset >= 800
+                                                            ? modalStyle
+                                                            : modalMobileStyle
+                                                    }
                                                 >
                                                     <button
                                                         type="button"
@@ -492,7 +520,11 @@ export default function Provas() {
                                                     onRequestClose={
                                                         handleClosefeiticos
                                                     }
-                                                    style={modalStyle}
+                                                    style={
+                                                        offset >= 800
+                                                            ? modalStyle
+                                                            : modalMobileStyle
+                                                    }
                                                 >
                                                     <button
                                                         type="button"
@@ -551,7 +583,11 @@ export default function Provas() {
                                                     onRequestClose={
                                                         handleClosedefesa
                                                     }
-                                                    style={modalStyle}
+                                                    style={
+                                                        offset >= 800
+                                                            ? modalStyle
+                                                            : modalMobileStyle
+                                                    }
                                                 >
                                                     <button
                                                         type="button"
@@ -607,7 +643,11 @@ export default function Provas() {
                                                     onRequestClose={
                                                         handleCloseadvinha
                                                     }
-                                                    style={modalStyle}
+                                                    style={
+                                                        offset >= 800
+                                                            ? modalStyle
+                                                            : modalMobileStyle
+                                                    }
                                                 >
                                                     <button
                                                         type="button"
@@ -663,7 +703,11 @@ export default function Provas() {
                                                     onRequestClose={
                                                         handleClosevoo
                                                     }
-                                                    style={modalStyle}
+                                                    style={
+                                                        offset >= 800
+                                                            ? modalStyle
+                                                            : modalMobileStyle
+                                                    }
                                                 >
                                                     <button
                                                         type="button"
@@ -715,7 +759,11 @@ export default function Provas() {
                                                     onRequestClose={
                                                         handleCloseherbo
                                                     }
-                                                    style={modalStyle}
+                                                    style={
+                                                        offset >= 800
+                                                            ? modalStyle
+                                                            : modalMobileStyle
+                                                    }
                                                 >
                                                     <button
                                                         type="button"
@@ -771,7 +819,11 @@ export default function Provas() {
                                                     onRequestClose={
                                                         handleClosehis
                                                     }
-                                                    style={modalStyle}
+                                                    style={
+                                                        offset >= 800
+                                                            ? modalStyle
+                                                            : modalMobileStyle
+                                                    }
                                                 >
                                                     <button
                                                         type="button"
@@ -825,7 +877,11 @@ export default function Provas() {
                                                     onRequestClose={
                                                         handleClosehist
                                                     }
-                                                    style={modalStyle}
+                                                    style={
+                                                        offset >= 800
+                                                            ? modalStyle
+                                                            : modalMobileStyle
+                                                    }
                                                 >
                                                     <button
                                                         type="button"
@@ -879,7 +935,11 @@ export default function Provas() {
                                                     onRequestClose={
                                                         handleClosepocoes
                                                     }
-                                                    style={modalStyle}
+                                                    style={
+                                                        offset >= 800
+                                                            ? modalStyle
+                                                            : modalMobileStyle
+                                                    }
                                                 >
                                                     <button
                                                         type="button"
@@ -937,7 +997,11 @@ export default function Provas() {
                                                     onRequestClose={
                                                         handleCloserunas
                                                     }
-                                                    style={modalStyle}
+                                                    style={
+                                                        offset >= 800
+                                                            ? modalStyle
+                                                            : modalMobileStyle
+                                                    }
                                                 >
                                                     <button
                                                         type="button"
@@ -993,7 +1057,11 @@ export default function Provas() {
                                                     onRequestClose={
                                                         handleClosetrans
                                                     }
-                                                    style={modalStyle}
+                                                    style={
+                                                        offset >= 800
+                                                            ? modalStyle
+                                                            : modalMobileStyle
+                                                    }
                                                 >
                                                     <button
                                                         type="button"

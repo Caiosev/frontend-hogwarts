@@ -2,7 +2,15 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     text-align: center;
+    @media (max-width: 600px) {
+        text-align: left;
+        font-size: 14px;
+        h1 {
+            padding-top: 50px;
+        }
+    }
     form {
+        text-align: left;
         padding-top: 20px;
         display: flex;
         flex-direction: column;
@@ -14,7 +22,7 @@ export const Container = styled.div`
             padding-top: 20px;
             display: flex;
             gap: 25px;
-            align-items: center;
+            align-items: flex-start;
             justify-content: center;
             flex-direction: column;
         }
