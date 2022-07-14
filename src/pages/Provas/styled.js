@@ -74,6 +74,15 @@ export const Content = styled.div`
             align-items: center;
             justify-content: center;
         }
+        .prova {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 10px;
+            justify-content: center;
+            cursor: pointer;
+            width: 180px;
+        }
     }
 
     @media (min-width: 900px) {
