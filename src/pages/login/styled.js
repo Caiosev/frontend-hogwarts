@@ -11,7 +11,7 @@ export const Container = styled.section`
     .select-options {
         position: absolute;
         z-index: 10;
-        background-color: black;
+        background-color: ${Colors.activeNav};
         width: 100vw;
         height: 100vh;
         display: ${(props) => (props.options === false ? 'block' : 'none')};
@@ -29,22 +29,20 @@ export const Container = styled.section`
         }
         .options {
             display: flex;
-            height: 100vh;
+            height: 60vh;
             justify-content: center;
             align-items: center;
             gap: 100px;
             flex-direction: row;
-            background-color: black;
+            background-color: ${Colors.activeNav};
             @media (min-width: 1800px) {
                 gap: 200px;
             }
-            @media (max-width: 900px) {
-                height: auto;
-                padding-top: 150px;
+            @media (min-width: 900px) {
+                height: 100vh;
             }
             .option {
                 display: flex;
-                width: 100px;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
@@ -221,8 +219,8 @@ export const Container = styled.section`
             grid-column: 1 / 2;
             grid-row: 1 / 2;
             margin: auto;
-            width: 150px;
-            height: 90px;
+            width: 200px;
+            height: 70px;
             font-size: 1.5625rem;
         }
         .login-container {
@@ -249,7 +247,7 @@ export const Container = styled.section`
                     margin-bottom: 20px;
 
                     input {
-                        width: 150px;
+                        width: 250px;
                         height: 50px;
                         border: 1px solid #fff;
                         border-radius: 5px;
@@ -261,7 +259,7 @@ export const Container = styled.section`
         button,
         a {
             width: 200px;
-            height: 90px;
+            height: 70px;
             font-size: 1.5625rem;
             background-color: #fff;
             font-weight: bold;
