@@ -109,6 +109,7 @@ export const Container = styled.section`
                 margin-bottom: 10px;
 
                 input {
+                    padding-left: 10px;
                     margin-left: 10px;
                     width: 200px;
                     height: 30px;
@@ -179,6 +180,7 @@ export const Container = styled.section`
                     margin-bottom: 10px;
 
                     input {
+                        padding-left: 10px;
                         width: 200px;
                         height: 30px;
                         border: 1px solid #fff;
@@ -218,17 +220,15 @@ export const Container = styled.section`
         width: 100%;
         height: 100vh;
         background-color: ${Colors.activeNav};
-
         grid-template-columns: 30% 40% 30%;
-        grid-template-rows: 15% 85%;
+        grid-template-rows: 10% 90%;
         #back,
         #link-back {
             grid-column: 1 / 2;
             grid-row: 1 / 2;
-            margin: auto;
-            width: 200px;
-            height: 70px;
-            font-size: 1.5625rem;
+            width: 170px;
+            height: 50px;
+            font-size: 1.2rem;
         }
         .login-container {
             grid-column: 1/4;
@@ -254,8 +254,9 @@ export const Container = styled.section`
                     margin-bottom: 20px;
 
                     input {
+                        padding-left: 10px;
                         width: 250px;
-                        height: 50px;
+                        height: 40px;
                         border: 1px solid #fff;
                         border-radius: 5px;
                         margin-top: 10px;
@@ -265,15 +266,14 @@ export const Container = styled.section`
         }
         button,
         a {
-            width: 200px;
-            height: 70px;
-            font-size: 1.5625rem;
+            width: 170px;
+            height: 50px;
+            font-size: 1.2rem;
             background-color: #fff;
             font-weight: bold;
             font-family: 'SofiaPro', sans-serif;
             border-radius: 50px;
             border: none;
-            margin: auto;
             &:hover {
                 background-color: #d1af5a;
                 cursor: pointer;
