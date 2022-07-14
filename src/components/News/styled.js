@@ -8,6 +8,9 @@ export const SecNews = styled.section`
         font-size: 3rem;
         text-align: center;
         padding-top: 150px;
+        @media (min-width: 1200px) {
+            padding-top: 200px;
+        }
     }
     .line {
         width: 70vw;
@@ -39,6 +42,6 @@ export const SecNews = styled.section`
         height: 800px;
     }
     @media (min-width: 1200px) {
-        height: 800px;
+        height: 850px;
     }
 `;
