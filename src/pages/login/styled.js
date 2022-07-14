@@ -17,7 +17,6 @@ export const Container = styled.section`
         display: ${(props) => (props.options === false ? 'block' : 'none')};
         h1 {
             width: 100%;
-            position: absolute;
             text-align: center;
             margin-top: 20px;
             font-size: 4rem;
@@ -33,7 +32,6 @@ export const Container = styled.section`
             gap: 100px;
             flex-direction: column;
             background-color: black;
-            margin-top: 50px;
             @media (min-width: 900px) {
                 flex-direction: row;
             }
