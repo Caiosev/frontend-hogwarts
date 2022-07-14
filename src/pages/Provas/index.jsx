@@ -315,6 +315,20 @@ export default function Provas() {
                                                         onClick={
                                                             handleClosearitmancia
                                                         }
+                                                        style={{
+                                                            color: 'white',
+                                                            fontSize: '1.25rem',
+                                                            backgroundColor:
+                                                                '#d1af5a',
+                                                            borderRadius: '50%',
+                                                            padding: '5px',
+                                                            cursor: 'pointer',
+                                                            width: '40px',
+                                                            height: '40px',
+                                                            position:
+                                                                'absolute',
+                                                            right: '30px',
+                                                        }}
                                                     >
                                                         X
                                                     </button>
@@ -354,6 +368,9 @@ export default function Provas() {
                                                     onRequestClose={
                                                         handleCloseastronomia
                                                     }
+                                                    onClick={
+                                                        handleCloseastronomia
+                                                    }
                                                     style={modalStyle}
                                                 >
                                                     <button
@@ -361,6 +378,20 @@ export default function Provas() {
                                                         onClick={
                                                             handleCloseastronomia
                                                         }
+                                                        style={{
+                                                            color: 'white',
+                                                            fontSize: '1.25rem',
+                                                            backgroundColor:
+                                                                '#d1af5a',
+                                                            borderRadius: '50%',
+                                                            padding: '5px',
+                                                            cursor: 'pointer',
+                                                            width: '40px',
+                                                            height: '40px',
+                                                            position:
+                                                                'absolute',
+                                                            right: '30px',
+                                                        }}
                                                     >
                                                         X
                                                     </button>
@@ -412,6 +443,20 @@ export default function Provas() {
                                                         onClick={
                                                             handleClosecriaturasmagicas
                                                         }
+                                                        style={{
+                                                            color: 'white',
+                                                            fontSize: '1.25rem',
+                                                            backgroundColor:
+                                                                '#d1af5a',
+                                                            borderRadius: '50%',
+                                                            padding: '5px',
+                                                            cursor: 'pointer',
+                                                            width: '40px',
+                                                            height: '40px',
+                                                            position:
+                                                                'absolute',
+                                                            right: '30px',
+                                                        }}
                                                     >
                                                         X
                                                     </button>
@@ -454,6 +499,20 @@ export default function Provas() {
                                                         onClick={
                                                             handleClosefeiticos
                                                         }
+                                                        style={{
+                                                            color: 'white',
+                                                            fontSize: '1.25rem',
+                                                            backgroundColor:
+                                                                '#d1af5a',
+                                                            borderRadius: '50%',
+                                                            padding: '5px',
+                                                            cursor: 'pointer',
+                                                            width: '40px',
+                                                            height: '40px',
+                                                            position:
+                                                                'absolute',
+                                                            right: '30px',
+                                                        }}
                                                     >
                                                         X
                                                     </button>
@@ -499,6 +558,20 @@ export default function Provas() {
                                                         onClick={
                                                             handleClosedefesa
                                                         }
+                                                        style={{
+                                                            color: 'white',
+                                                            fontSize: '1.25rem',
+                                                            backgroundColor:
+                                                                '#d1af5a',
+                                                            borderRadius: '50%',
+                                                            padding: '5px',
+                                                            cursor: 'pointer',
+                                                            width: '40px',
+                                                            height: '40px',
+                                                            position:
+                                                                'absolute',
+                                                            right: '30px',
+                                                        }}
                                                     >
                                                         X
                                                     </button>
@@ -541,6 +614,20 @@ export default function Provas() {
                                                         onClick={
                                                             handleCloseadvinha
                                                         }
+                                                        style={{
+                                                            color: 'white',
+                                                            fontSize: '1.25rem',
+                                                            backgroundColor:
+                                                                '#d1af5a',
+                                                            borderRadius: '50%',
+                                                            padding: '5px',
+                                                            cursor: 'pointer',
+                                                            width: '40px',
+                                                            height: '40px',
+                                                            position:
+                                                                'absolute',
+                                                            right: '30px',
+                                                        }}
                                                     >
                                                         X
                                                     </button>
@@ -581,6 +668,20 @@ export default function Provas() {
                                                     <button
                                                         type="button"
                                                         onClick={handleClosevoo}
+                                                        style={{
+                                                            color: 'white',
+                                                            fontSize: '1.25rem',
+                                                            backgroundColor:
+                                                                '#d1af5a',
+                                                            borderRadius: '50%',
+                                                            padding: '5px',
+                                                            cursor: 'pointer',
+                                                            width: '40px',
+                                                            height: '40px',
+                                                            position:
+                                                                'absolute',
+                                                            right: '30px',
+                                                        }}
                                                     >
                                                         X
                                                     </button>
@@ -621,6 +722,20 @@ export default function Provas() {
                                                         onClick={
                                                             handleCloseherbo
                                                         }
+                                                        style={{
+                                                            color: 'white',
+                                                            fontSize: '1.25rem',
+                                                            backgroundColor:
+                                                                '#d1af5a',
+                                                            borderRadius: '50%',
+                                                            padding: '5px',
+                                                            cursor: 'pointer',
+                                                            width: '40px',
+                                                            height: '40px',
+                                                            position:
+                                                                'absolute',
+                                                            right: '30px',
+                                                        }}
                                                     >
                                                         X
                                                     </button>
@@ -661,6 +776,20 @@ export default function Provas() {
                                                     <button
                                                         type="button"
                                                         onClick={handleClosehis}
+                                                        style={{
+                                                            color: 'white',
+                                                            fontSize: '1.25rem',
+                                                            backgroundColor:
+                                                                '#d1af5a',
+                                                            borderRadius: '50%',
+                                                            padding: '5px',
+                                                            cursor: 'pointer',
+                                                            width: '40px',
+                                                            height: '40px',
+                                                            position:
+                                                                'absolute',
+                                                            right: '30px',
+                                                        }}
                                                     >
                                                         X
                                                     </button>
@@ -703,6 +832,20 @@ export default function Provas() {
                                                         onClick={
                                                             handleClosehist
                                                         }
+                                                        style={{
+                                                            color: 'white',
+                                                            fontSize: '1.25rem',
+                                                            backgroundColor:
+                                                                '#d1af5a',
+                                                            borderRadius: '50%',
+                                                            padding: '5px',
+                                                            cursor: 'pointer',
+                                                            width: '40px',
+                                                            height: '40px',
+                                                            position:
+                                                                'absolute',
+                                                            right: '30px',
+                                                        }}
                                                     >
                                                         X
                                                     </button>
@@ -743,6 +886,20 @@ export default function Provas() {
                                                         onClick={
                                                             handleClosepocoes
                                                         }
+                                                        style={{
+                                                            color: 'white',
+                                                            fontSize: '1.25rem',
+                                                            backgroundColor:
+                                                                '#d1af5a',
+                                                            borderRadius: '50%',
+                                                            padding: '5px',
+                                                            cursor: 'pointer',
+                                                            width: '40px',
+                                                            height: '40px',
+                                                            position:
+                                                                'absolute',
+                                                            right: '30px',
+                                                        }}
                                                     >
                                                         X
                                                     </button>
@@ -787,6 +944,20 @@ export default function Provas() {
                                                         onClick={
                                                             handleCloserunas
                                                         }
+                                                        style={{
+                                                            color: 'white',
+                                                            fontSize: '1.25rem',
+                                                            backgroundColor:
+                                                                '#d1af5a',
+                                                            borderRadius: '50%',
+                                                            padding: '5px',
+                                                            cursor: 'pointer',
+                                                            width: '40px',
+                                                            height: '40px',
+                                                            position:
+                                                                'absolute',
+                                                            right: '30px',
+                                                        }}
                                                     >
                                                         X
                                                     </button>
@@ -829,6 +1000,20 @@ export default function Provas() {
                                                         onClick={
                                                             handleClosetrans
                                                         }
+                                                        style={{
+                                                            color: 'white',
+                                                            fontSize: '1.25rem',
+                                                            backgroundColor:
+                                                                '#d1af5a',
+                                                            borderRadius: '50%',
+                                                            padding: '5px',
+                                                            cursor: 'pointer',
+                                                            width: '40px',
+                                                            height: '40px',
+                                                            position:
+                                                                'absolute',
+                                                            right: '30px',
+                                                        }}
                                                     >
                                                         X
                                                     </button>

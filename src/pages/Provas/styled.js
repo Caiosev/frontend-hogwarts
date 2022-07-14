@@ -32,6 +32,10 @@ export const SideBar = styled.div`
         width: 30vw;
         padding: 40px 20px;
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         .buttons {
             padding-top: 100px;
             display: flex;
@@ -83,11 +87,12 @@ export const Content = styled.div`
                 flex-wrap: wrap;
                 padding-top: 20px;
                 gap: 50px;
-                justify-content: center;
+                justify-content: flex-start;
                 align-items: center;
             }
             .prova {
                 cursor: pointer;
+                width: 180px;
             }
         }
         height: 90vh;
