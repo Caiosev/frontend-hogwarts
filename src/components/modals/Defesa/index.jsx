@@ -1,31 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import { toast } from 'react-toastify';
 import PropTypes from 'prop-types';
+import { Form } from '@unform/web';
 import * as S from './styled';
+import Radio from '../../Form/radio';
 
 export default function Defesa({ setValor, setIdProf, close }) {
     const [pontos, setPontos] = useState(undefined);
-    const [q1, setQ1] = useState(undefined);
-    const [q2, setQ2] = useState(undefined);
-    const [q3, setQ3] = useState(undefined);
-    const [q4, setQ4] = useState(undefined);
-    const [q5, setQ5] = useState(undefined);
     const [nota, setNota] = useState(undefined);
     const res = ['4', '3', '2', '4', '2'];
 
-    const handleSubmit = () => {
-        if (
-            q1 === undefined ||
-            q2 === undefined ||
-            q3 === undefined ||
-            q4 === undefined ||
-            q5 === undefined
-        ) {
+    const handleSubmit = (data) => {
+        const resAluno = Object.values(data);
+        if (resAluno.length < 5) {
             toast.error('Responda todas as questoes');
             return;
         }
         let soma = 0;
-        [q1, q2, q3, q4, q5].forEach((element, i) => {
+        resAluno.forEach((element, i) => {
             if (element === res[i]) {
                 soma += 1;
             }
@@ -59,161 +51,161 @@ export default function Defesa({ setValor, setIdProf, close }) {
             default:
                 break;
         }
-        setValor(pontos);
         close();
+        setValor(pontos);
+        toast.success(
+            'Prova realizada com Sucesso, acesse a aba de provas enviadas'
+        );
     }, [pontos]);
+
+    const optionsQ1 = [
+        {
+            id: 1,
+            value: '1',
+            label: 'Faiscas apareceram no ar, na cor vermelha, emitindo uma luz cegante',
+        },
+        {
+            id: 2,
+            value: '2',
+            label: 'Faiscas apareceram no ar, na cor verde, emitindo um som ensurdecedor',
+        },
+        {
+            id: 3,
+            value: '3',
+            label: 'Uma orbe aparecerá no ar, na cor vermelha, emitindo som ensurdecedor',
+        },
+        {
+            id: 4,
+            value: '4',
+            label: 'Uma orbe aparecerá no ar, na cor verde, emitindo uma luz cegante',
+        },
+    ];
+    const optionsQ2 = [
+        {
+            id: 5,
+            value: '1',
+            label: 'Movimento Circular',
+        },
+        {
+            id: 6,
+            value: '2',
+            label: 'Movimento Oval',
+        },
+        {
+            id: 7,
+            value: '3',
+            label: 'Movimento de Aceno',
+        },
+        {
+            id: 8,
+            value: '4',
+            label: 'Movimento em U',
+        },
+    ];
+
+    const optionsQ3 = [
+        {
+            id: 9,
+            value: '1',
+            label: 'Se defender de vampiros',
+        },
+        {
+            id: 10,
+            value: '2',
+            label: 'Se defender do bicho-papão',
+        },
+        {
+            id: 11,
+            value: '3',
+            label: 'Se defender de diabretes',
+        },
+        {
+            id: 12,
+            value: '4',
+            label: 'Matar diabretes',
+        },
+    ];
+
+    const optionsQ4 = [
+        {
+            id: 13,
+            value: '1',
+            label: 'Dando um banana para ele',
+        },
+        {
+            id: 14,
+            value: '2',
+            label: 'Faze-lo perder o equilibrio',
+        },
+        {
+            id: 15,
+            value: '3',
+            label: 'Você deve ficar de ponta cabeça',
+        },
+        {
+            id: 16,
+            value: '4',
+            label: 'Jogar um pepino com o seu nome gravado à faca para ele',
+        },
+    ];
+
+    const optionsQ5 = [
+        {
+            id: 17,
+            value: '1',
+            label: 'Musculosos palidos altos com presas e noturnos',
+        },
+        {
+            id: 18,
+            value: '2',
+            label: 'Magros palidos altos com presas e noturnos',
+        },
+        {
+            id: 19,
+            value: '3',
+            label: 'Magros palidos altos com presas e diurnos',
+        },
+        {
+            id: 20,
+            value: '4',
+            label: 'Não conseguimos identificar até que ele mostre sua verdadeira forma',
+        },
+    ];
 
     return (
         <S.Container>
             <h1>Prova de Defesa Contra as Artes das Trevas</h1>
             <h2>Questões</h2>
-            <form action="">
-                <label
-                    htmlFor="q1"
-                    value={q1}
-                    onChange={(e) => setQ1(e.target.value)}
-                >
-                    {' '}
-                    1 - Se você balançar sua varinha em um movimento circular
-                    sobre a cabeça enquanto diz lentamente Verdimillious ,
-                    mirando apenas em ar rarefeito, qual será o efeito?
-                    <div className="options">
-                        <div className="">
-                            <input type="radio" name="q1" id="" value="1" />
-                            Faiscas apareceram no ar, na cor vermelha, emitindo
-                            uma luz cegante
-                        </div>
-                        <div className="">
-                            <input type="radio" name="q1" id="" value="2" />
-                            Faiscas apareceram no ar, na cor verde, emitindo um
-                            som ensurdecedor
-                        </div>
-                        <div className="">
-                            <input type="radio" name="q1" id="" value="3" />
-                            Uma orbe aparecerá no ar, na cor vermelha, emitindo
-                            som ensurdecedor
-                        </div>
-                        <div className="">
-                            <input type="radio" name="q1" id="" value="4" />
-                            Uma orbe aparecerá no ar, na cor verde, emitindo uma
-                            luz cegante
-                        </div>
-                    </div>
-                </label>
-                <label
-                    htmlFor="q2"
-                    value={q2}
-                    onChange={(e) => setQ2(e.target.value)}
-                >
-                    {' '}
-                    2 - Qual o movimento utilizado para executar o Flipendo?
-                    <div className="options">
-                        <div className="">
-                            <input type="radio" name="q2" id="" value="1" />{' '}
-                            Movimento Circular
-                        </div>
-                        <div className="">
-                            <input type="radio" name="q2" id="" value="2" />
-                            Movimento Oval
-                        </div>
-                        <div className="">
-                            <input type="radio" name="q2" id="" value="3" />
-                            Movimento de Aceno
-                        </div>
-                        <div className="">
-                            <input type="radio" name="q2" id="" value="4" />
-                            Movimento em U
-                        </div>
-                    </div>
-                </label>
-                <label
-                    htmlFor="q3"
-                    value={q3}
-                    onChange={(e) => setQ3(e.target.value)}
-                >
-                    {' '}
-                    3 - O feitiço Riddikulus é utilizado para:
-                    <div className="options">
-                        <div className="">
-                            <input type="radio" name="q3" id="" value="1" />
-                            Se defender de vampiros
-                        </div>
-                        <div className="">
-                            <input type="radio" name="q3" id="" value="2" />
-                            Se defender do bicho-papão
-                        </div>
-                        <div className="">
-                            <input type="radio" name="q3" id="" value="3" />
-                            Se defender de diabretes
-                        </div>
-                        <div className="">
-                            <input type="radio" name="q3" id="" value="4" />
-                            Matar diabretes
-                        </div>
-                    </div>
-                </label>
-                <label
-                    htmlFor="q4"
-                    value={q4}
-                    onChange={(e) => setQ4(e.target.value)}
-                >
-                    {' '}
-                    4 - Como você pode se defender de um Kappa?
-                    <div className="options">
-                        <div className="">
-                            <input type="radio" name="q4" id="" value="1" />
-                            Dando um banana para ele
-                        </div>
-                        <div className="">
-                            <input type="radio" name="q4" id="" value="2" />
-                            Faze-lo perder o equilibrio
-                        </div>
-                        <div className="">
-                            <input type="radio" name="q4" id="" value="3" />
-                            Você deve ficar de ponta cabeça
-                        </div>
-                        <div className="">
-                            <input type="radio" name="q4" id="" value="4" />
-                            Jogar um pepino com o seu nome gravado à faca para
-                            ele
-                        </div>
-                    </div>
-                </label>
-                <label
-                    htmlFor="q5"
-                    value={q5}
-                    onChange={(e) => setQ5(e.target.value)}
-                >
-                    {' '}
-                    5 - Como podemos indentificar um vampiro ?
-                    <div className="options">
-                        <div className="">
-                            <input type="radio" name="q5" id="" value="1" />
-                            Musculosos palidos altos com presas e noturnos
-                        </div>
-                        <div className="">
-                            <input type="radio" name="q5" id="" value="2" />
-                            Magros palidos altos com presas e noturnos
-                        </div>
-                        <div className="">
-                            <input type="radio" name="q5" id="" value="3" />
-                            Magros palidos altos com presas e diurnos
-                        </div>
-                        <div className="">
-                            <input type="radio" name="q5" id="" value="4" />
-                            Não conseguimos identificar até que ele mostre sua
-                            verdadeira forma
-                        </div>
-                    </div>
-                </label>
-                <button
-                    type="button"
-                    onClick={handleSubmit}
-                    disabled={nota !== undefined}
-                >
-                    Enviar
-                </button>
-            </form>
+            <Form onSubmit={handleSubmit}>
+                <Radio
+                    name="q1"
+                    label="1 - Se você balançar sua varinha em um movimento circular sobre a cabeça enquanto diz lentamente Verdimillious, mirando apenas em ar rarefeito, qual será o efeito?"
+                    options={optionsQ1}
+                />
+                <Radio
+                    name="q2"
+                    label="2 - Qual o movimento utilizado para executar o Flipendo?"
+                    options={optionsQ2}
+                />
+                <Radio
+                    name="q3"
+                    label="3 - O feitiço Riddikulus é utilizado para:"
+                    options={optionsQ3}
+                />
+                <Radio
+                    name="q4"
+                    label="4 - Como você pode se defender de um Kappa?"
+                    options={optionsQ4}
+                />
+                <Radio
+                    name="q5"
+                    label=" 5 - Como podemos indentificar um vampiro?"
+                    options={optionsQ5}
+                />
+                {nota}
+                {pontos && '/5'}
+                <button type="submit">Enviar</button>
+            </Form>
         </S.Container>
     );
 }
