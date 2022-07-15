@@ -9,6 +9,9 @@ export const Container = styled.div`
             padding-top: 50px;
         }
     }
+    h2 {
+        padding-top: 10px;
+    }
     form {
         text-align: left;
         padding-top: 20px;

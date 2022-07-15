@@ -77,6 +77,7 @@ export default function Provas() {
         content: {
             width: '80vw',
             height: '90vh',
+            padding: '40px',
             backgroundColor: '#0A181F',
             border: '0',
         },
@@ -88,6 +89,7 @@ export default function Provas() {
         content: {
             width: '40vw',
             height: '70vh',
+            padding: '40px',
             backgroundColor: '#0A181F',
             margin: 'auto',
             border: '0',

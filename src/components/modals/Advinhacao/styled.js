@@ -1,13 +1,15 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    text-align: center;
     @media (max-width: 600px) {
         text-align: left;
         font-size: 14px;
         h1 {
             padding-top: 50px;
         }
+    }
+    h2 {
+        padding-top: 10px;
     }
     form {
         text-align: left;

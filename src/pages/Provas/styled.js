@@ -106,7 +106,7 @@ export const Content = styled.div`
                 gap: 15px;
                 justify-content: center;
                 cursor: pointer;
-                width: 180px;
+                width: 150px;
             }
         }
         height: 90vh;
