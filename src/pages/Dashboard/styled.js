@@ -27,70 +27,140 @@ export const Content = styled.div`
 `;
 
 export const Header = styled.header`
-    width: 100%;
-    height: 10%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: ${(props) => props.color};
-    padding: 0 20px;
-    img {
-        width: 50px;
-    }
-    border-bottom: 1px solid ${Color.line};
-    .options {
+    @media (max-width: 899px) {
+        width: 100%;
+        height: 10%;
         display: flex;
-        flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        gap: 20px;
-        svg {
-            cursor: pointer;
-        }
-    }
-    .ham {
-        cursor: pointer;
-        z-index: 100;
-        -webkit-tap-highlight-color: transparent;
-        transition: transform 400ms;
-        -moz-user-select: none;
-        -webkit-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-        @media (min-width: 900px) {
+        background-color: ${(props) => props.color};
+        padding: 0 20px;
+        img {
+            width: 50px;
             display: none;
         }
+        border-bottom: 1px solid ${Color.line};
+        .options {
+            display: none;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            svg {
+                cursor: pointer;
+            }
+        }
+        .ham {
+            cursor: pointer;
+            z-index: 100;
+            -webkit-tap-highlight-color: transparent;
+            transition: transform 400ms;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            @media (min-width: 900px) {
+                display: none;
+            }
+        }
+        .hamRotate.active {
+            transform: rotate(45deg);
+        }
+        .hamRotate180.active {
+            transform: rotate(180deg);
+        }
+        .line {
+            fill: none;
+            transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+            stroke: #fff;
+            stroke-width: 6.5;
+            stroke-linecap: round;
+        }
+        .ham6 .top {
+            stroke-dasharray: 40 172;
+        }
+        .ham6 .middle {
+            stroke-dasharray: 40 111;
+        }
+        .ham6 .bottom {
+            stroke-dasharray: 40 172;
+        }
+        .ham6.active .top {
+            stroke-dashoffset: -132px;
+        }
+        .ham6.active .middle {
+            stroke-dashoffset: -71px;
+        }
+        .ham6.active .bottom {
+            stroke-dashoffset: -132px;
+        }
     }
-    .hamRotate.active {
-        transform: rotate(45deg);
-    }
-    .hamRotate180.active {
-        transform: rotate(180deg);
-    }
-    .line {
-        fill: none;
-        transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
-        stroke: #fff;
-        stroke-width: 6.5;
-        stroke-linecap: round;
-    }
-    .ham6 .top {
-        stroke-dasharray: 40 172;
-    }
-    .ham6 .middle {
-        stroke-dasharray: 40 111;
-    }
-    .ham6 .bottom {
-        stroke-dasharray: 40 172;
-    }
-    .ham6.active .top {
-        stroke-dashoffset: -132px;
-    }
-    .ham6.active .middle {
-        stroke-dashoffset: -71px;
-    }
-    .ham6.active .bottom {
-        stroke-dashoffset: -132px;
+    @media (min-width: 900px) {
+        width: 100%;
+        height: 10%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: ${(props) => props.color};
+        padding: 0 20px;
+        img {
+            width: 50px;
+        }
+        border-bottom: 1px solid ${Color.line};
+        .options {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            svg {
+                cursor: pointer;
+            }
+        }
+        .ham {
+            cursor: pointer;
+            z-index: 100;
+            -webkit-tap-highlight-color: transparent;
+            transition: transform 400ms;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            @media (min-width: 900px) {
+                display: none;
+            }
+        }
+        .hamRotate.active {
+            transform: rotate(45deg);
+        }
+        .hamRotate180.active {
+            transform: rotate(180deg);
+        }
+        .line {
+            fill: none;
+            transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+            stroke: #fff;
+            stroke-width: 6.5;
+            stroke-linecap: round;
+        }
+        .ham6 .top {
+            stroke-dasharray: 40 172;
+        }
+        .ham6 .middle {
+            stroke-dasharray: 40 111;
+        }
+        .ham6 .bottom {
+            stroke-dasharray: 40 172;
+        }
+        .ham6.active .top {
+            stroke-dashoffset: -132px;
+        }
+        .ham6.active .middle {
+            stroke-dashoffset: -71px;
+        }
+        .ham6.active .bottom {
+            stroke-dashoffset: -132px;
+        }
     }
 `;
 

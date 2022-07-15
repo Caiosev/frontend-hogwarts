@@ -144,7 +144,14 @@ export default function Dashboard() {
 
     return (
         <S.Container>
-            <Sidebar setHouse={setHouse} menuMobile={menuMobile} />
+            <Sidebar
+                setHouse={setHouse}
+                menuMobile={menuMobile}
+                setaddAluno={setaddAluno}
+                seteditAluno={seteditAluno}
+                setMenuMobile={setMenuMobile}
+                handleLogout={handleLogout}
+            />
             <S.Content>
                 <S.Header house={house} color={color}>
                     <svg
@@ -174,7 +181,6 @@ export default function Dashboard() {
                                 onClick={() => {
                                     setaddAluno(true);
                                     seteditAluno(false);
-                                    setDeleteAluno(false);
                                 }}
                                 opacity={addAluno ? 1 : 0.5}
                             />
