@@ -1107,6 +1107,7 @@ export default function Provas() {
                                             provas.map((prova) => (
                                                 <div
                                                     className="prova"
+                                                    id="feita"
                                                     key={prova.id}
                                                 >
                                                     {prova['prova-prof'][
@@ -1228,34 +1229,34 @@ export default function Provas() {
                                                         }
                                                     </h2>
                                                     {prova.valor === 0 && (
-                                                        <h3>
+                                                        <h3 className="notaT">
                                                             Resultado: Trasgo
                                                         </h3>
                                                     )}
                                                     {prova.valor === 1 && (
-                                                        <h3>
+                                                        <h3 className="notaD">
                                                             Resultado:
                                                             Deploravel
                                                         </h3>
                                                     )}
                                                     {prova.valor === 2 && (
-                                                        <h3>
+                                                        <h3 className="notaP">
                                                             Resultado: Pessimo
                                                         </h3>
                                                     )}
                                                     {prova.valor === 3 && (
-                                                        <h3>
+                                                        <h3 className="notaA">
                                                             Resultado: Aceitavel
                                                         </h3>
                                                     )}
                                                     {prova.valor === 4 && (
-                                                        <h3>
+                                                        <h3 className="notaE">
                                                             Resultado: Excedeu
                                                             Expectativas
                                                         </h3>
                                                     )}
                                                     {prova.valor === 5 && (
-                                                        <h3>
+                                                        <h3 className="notaO">
                                                             Resultado: Otimo
                                                         </h3>
                                                     )}

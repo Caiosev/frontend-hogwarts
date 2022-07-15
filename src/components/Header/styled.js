@@ -73,7 +73,7 @@ export const Nav = styled.nav`
     }
     #out {
         position: absolute;
-        right: 50px;
+        right: 10px;
         width: 40px;
         color: white;
         &:hover {
@@ -82,7 +82,7 @@ export const Nav = styled.nav`
     }
     #dashboard {
         position: absolute;
-        right: 100px;
+        right: 60px;
         width: 40px;
         color: white;
         &:hover {

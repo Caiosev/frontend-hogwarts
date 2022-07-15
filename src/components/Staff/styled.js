@@ -52,7 +52,9 @@ export const Sec = styled.section`
         font-size: 3rem;
         text-align: center;
         margin-bottom: 50px;
-        padding-left: 30px;
+        @media (min-width: 1000px) {
+            padding-left: 30px;
+        }
     }
     h2 {
         padding-top: 30px;

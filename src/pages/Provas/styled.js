@@ -9,15 +9,38 @@ export const Container = styled.div`
         text-decoration: none;
         color: white;
     }
+    .notaO {
+        color: #fdbf45;
+    }
+    .notaE {
+        color: #146356;
+    }
+    .notaA {
+        color: #519259;
+    }
+    .notaP {
+        color: #ff7700;
+    }
+    .notaD {
+        color: #e04d01;
+    }
+    .notaT {
+        color: #b33030;
+    }
+    #feita {
+        cursor: initial;
+    }
 `;
 export const SideBar = styled.div`
     @media (min-width: 300px) and (max-width: 899px) {
         position: fixed;
         left: ${(props) => (props.menuMobile ? '0' : '-200%')};
-        width: 60vw;
+        width: 100vw;
         height: 100vh;
         text-align: center;
-        background-color: rgba(0, 0, 0, 0.9);
+        background-color: #1a1a1d;
+        position: absolute;
+        top: 10vh;
         .buttons {
             padding-top: 100px;
             display: flex;
@@ -50,7 +73,7 @@ export const Content = styled.div`
     @media (min-width: 300px) and (max-width: 899px) {
         width: 100%;
         height: 100%;
-        padding-top: 10vh;
+        padding-top: 13vh;
         display: flex;
         hr {
             display: none;
@@ -67,12 +90,14 @@ export const Content = styled.div`
             text-align: center;
         }
         .provas {
-            padding-top: 40px;
+            padding: 40px 0;
             display: flex;
             flex-direction: column;
             gap: 40px;
             align-items: center;
             justify-content: center;
+            width: 150px;
+            margin: auto;
         }
         .prova {
             display: flex;
@@ -98,15 +123,18 @@ export const Content = styled.div`
                 gap: 50px;
                 justify-content: flex-start;
                 align-items: center;
+                max-width: 750px;
+                margin: auto;
             }
             .prova {
                 display: flex;
                 align-items: center;
                 flex-direction: column;
                 gap: 15px;
-                justify-content: center;
+                justify-content: flex-start;
                 cursor: pointer;
                 width: 150px;
+                height: 160px;
             }
         }
         height: 90vh;
@@ -120,9 +148,9 @@ export const Header = styled.header`
         display: flex;
         position: fixed;
         align-items: center;
-        background-color: rgba(0, 0, 0, 0.6);
+        background-color: #1a1a1d;
         justify-content: space-between;
-        padding: 0 30px;
+        padding: 0 5px;
         img {
             width: 50px;
         }
@@ -140,6 +168,7 @@ export const Header = styled.header`
             gap: 40px;
             svg {
                 cursor: pointer;
+                width: 50px;
             }
         }
         .ham {
