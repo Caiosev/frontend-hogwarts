@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import * as S from './styled';
 
 export const Boletim = React.forwardRef(({ provasFeitas }, ref) => {
-    console.log(provasFeitas);
     return (
         <div>
             <S.Container ref={ref}>
