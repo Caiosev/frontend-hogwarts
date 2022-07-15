@@ -1259,6 +1259,7 @@ export default function Provas() {
                                                             Resultado: Otimo
                                                         </h3>
                                                     )}
+                                                    <h3>{prova.valor}/5</h3>
                                                 </div>
                                             ))
                                         )}

@@ -1,31 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import { toast } from 'react-toastify';
 import PropTypes from 'prop-types';
+import { Form } from '@unform/web';
 import * as S from './styled';
+import Radio from '../../Form/radio';
 
 export default function Feiticos({ setValor, setIdProf, close }) {
     const [pontos, setPontos] = useState(undefined);
-    const [q1, setQ1] = useState(undefined);
-    const [q2, setQ2] = useState(undefined);
-    const [q3, setQ3] = useState(undefined);
-    const [q4, setQ4] = useState(undefined);
-    const [q5, setQ5] = useState(undefined);
     const [nota, setNota] = useState(undefined);
     const res = ['1', '4', '3', '3', '4'];
 
-    const handleSubmit = () => {
-        if (
-            q1 === undefined ||
-            q2 === undefined ||
-            q3 === undefined ||
-            q4 === undefined ||
-            q5 === undefined
-        ) {
+    const handleSubmit = (data) => {
+        const resAluno = Object.values(data);
+        if (resAluno.length < 5) {
             toast.error('Responda todas as questoes');
             return;
         }
         let soma = 0;
-        [q1, q2, q3, q4, q5].forEach((element, i) => {
+        resAluno.forEach((element, i) => {
             if (element === res[i]) {
                 soma += 1;
             }
@@ -59,156 +51,161 @@ export default function Feiticos({ setValor, setIdProf, close }) {
             default:
                 break;
         }
-        setValor(pontos);
         close();
+        setValor(pontos);
+        toast.success(
+            'Prova realizada com Sucesso, acesse a aba de provas enviadas'
+        );
     }, [pontos]);
+
+    const optionsQ1 = [
+        {
+            id: 1,
+            value: '1',
+            label: 'Jogar a varinha do alvo para trás',
+        },
+        {
+            id: 2,
+            value: '2',
+            label: 'Repar objetos',
+        },
+        {
+            id: 3,
+            value: '3',
+            label: 'Controlar a mente do alvo',
+        },
+        {
+            id: 4,
+            value: '4',
+            label: 'Trazer objetos para suas mãos',
+        },
+    ];
+    const optionsQ2 = [
+        {
+            id: 5,
+            value: '1',
+            label: 'As trancas sejam fabricadas por trouxas',
+        },
+        {
+            id: 6,
+            value: '2',
+            label: 'As trancas sejam fabricadas por bruxos',
+        },
+        {
+            id: 7,
+            value: '3',
+            label: 'As trancas não estejam dentro de um local protegido por outros feitiços',
+        },
+        {
+            id: 8,
+            value: '4',
+            label: 'As trancas não estejam protegidas por outros feitiços',
+        },
+    ];
+
+    const optionsQ3 = [
+        {
+            id: 9,
+            value: '1',
+            label: 'Congela o alvo no tempo',
+        },
+        {
+            id: 10,
+            value: '2',
+            label: 'Deixa o alvo estatico',
+        },
+        {
+            id: 11,
+            value: '3',
+            label: 'Diminui a velocidade do alvo',
+        },
+        {
+            id: 12,
+            value: '4',
+            label: 'Petrifica o alvo',
+        },
+    ];
+
+    const optionsQ4 = [
+        {
+            id: 13,
+            value: '1',
+            label: 'Priori Incantatem',
+        },
+        {
+            id: 14,
+            value: '2',
+            label: 'Cave Inimicum',
+        },
+        {
+            id: 15,
+            value: '3',
+            label: 'Prior Incantato',
+        },
+        {
+            id: 16,
+            value: '4',
+            label: 'Piertotum Locomotor',
+        },
+    ];
+
+    const optionsQ5 = [
+        {
+            id: 17,
+            value: '1',
+            label: 'Levitar',
+        },
+        {
+            id: 18,
+            value: '2',
+            label: 'Levitar Alto',
+        },
+        {
+            id: 19,
+            value: '3',
+            label: 'Levantar',
+        },
+        {
+            id: 20,
+            value: '4',
+            label: 'Levantar Alto',
+        },
+    ];
 
     return (
         <S.Container>
             <h1>Prova de Feitiços</h1>
             <h2>Questões</h2>
-            <form action="">
-                <label
-                    htmlFor="q1"
-                    value={q1}
-                    onChange={(e) => setQ1(e.target.value)}
-                >
-                    {' '}
-                    1 - O feitiço Expelliarmus serve para:
-                    <div className="options">
-                        <div className="">
-                            <input type="radio" name="q1" id="" value="1" />
-                            Jogar a varinha do alvo para trás
-                        </div>
-                        <div className="">
-                            <input type="radio" name="q1" id="" value="2" />
-                            Repar objetos
-                        </div>
-                        <div className="">
-                            <input type="radio" name="q1" id="" value="3" />
-                            Controlar a mente do alvo
-                        </div>
-                        <div className="">
-                            <input type="radio" name="q1" id="" value="4" />
-                            Trazer objetos para suas mãos
-                        </div>
-                    </div>
-                </label>
-                <label
-                    htmlFor="q2"
-                    value={q2}
-                    onChange={(e) => setQ2(e.target.value)}
-                >
-                    {' '}
-                    2 - O feitiço Alorromora permite abrir trancas desde que:
-                    <div className="options">
-                        <div className="">
-                            <input type="radio" name="q2" id="" value="1" /> As
-                            trancas sejam fabricadas por trouxas
-                        </div>
-                        <div className="">
-                            <input type="radio" name="q2" id="" value="2" />
-                            As trancas sejam fabricadas por bruxos
-                        </div>
-                        <div className="">
-                            <input type="radio" name="q2" id="" value="3" />
-                            As trancas não estejam dentro de um local protegido
-                            por outros feitiços
-                        </div>
-                        <div className="">
-                            <input type="radio" name="q2" id="" value="4" />
-                            As trancas não estejam protegidas por outros
-                            feitiços
-                        </div>
-                    </div>
-                </label>
-                <label
-                    htmlFor="q3"
-                    value={q3}
-                    onChange={(e) => setQ3(e.target.value)}
-                >
-                    {' '}
-                    3 - Qual o efeito do feitiço Arresto Momentum ?
-                    <div className="options">
-                        <div className="">
-                            <input type="radio" name="q3" id="" value="1" />
-                            Congela o alvo no tempo
-                        </div>
-                        <div className="">
-                            <input type="radio" name="q3" id="" value="2" />
-                            Deixa o alvo estatico
-                        </div>
-                        <div className="">
-                            <input type="radio" name="q3" id="" value="3" />
-                            Diminui a velocidade do alvo
-                        </div>
-                        <div className="">
-                            <input type="radio" name="q3" id="" value="4" />
-                            Petrifica o alvo
-                        </div>
-                    </div>
-                </label>
-                <label
-                    htmlFor="q4"
-                    value={q4}
-                    onChange={(e) => setQ4(e.target.value)}
-                >
-                    {' '}
-                    4 - Existe um encantamento utilizado para descobrir todos
-                    feitiços conjurados por uma varinha, qual seu nome?
-                    <div className="options">
-                        <div className="">
-                            <input type="radio" name="q4" id="" value="1" />
-                            Priori Incantatem
-                        </div>
-                        <div className="">
-                            <input type="radio" name="q4" id="" value="2" />
-                            Cave Inimicum
-                        </div>
-                        <div className="">
-                            <input type="radio" name="q4" id="" value="3" />
-                            Prior Incantato
-                        </div>
-                        <div className="">
-                            <input type="radio" name="q4" id="" value="4" />
-                            Piertotum Locomotor
-                        </div>
-                    </div>
-                </label>
-                <label
-                    htmlFor="q5"
-                    value={q5}
-                    onChange={(e) => setQ5(e.target.value)}
-                >
-                    {' '}
-                    5 - Qual o significado do nome Wingardium Leviosa ?
-                    <div className="options">
-                        <div className="">
-                            <input type="radio" name="q5" id="" value="1" />
-                            Levitar
-                        </div>
-                        <div className="">
-                            <input type="radio" name="q5" id="" value="2" />
-                            Levitar Alto
-                        </div>
-                        <div className="">
-                            <input type="radio" name="q5" id="" value="3" />
-                            Levantar
-                        </div>
-                        <div className="">
-                            <input type="radio" name="q5" id="" value="4" />
-                            Levantar Alto
-                        </div>
-                    </div>
-                </label>
-                <button
-                    type="button"
-                    onClick={handleSubmit}
-                    disabled={nota !== undefined}
-                >
-                    Enviar
-                </button>
-            </form>
+            <Form onSubmit={handleSubmit}>
+                <Radio
+                    name="q1"
+                    label="1 - O feitiço Expelliarmus serve para:"
+                    options={optionsQ1}
+                />
+                <Radio
+                    name="q2"
+                    label="2 - O feitiço Alorromora permite abrir trancas desde que:"
+                    options={optionsQ2}
+                />
+                <Radio
+                    name="q3"
+                    label="3 - Qual o efeito do feitiço Arresto Momentum?"
+                    options={optionsQ3}
+                />
+                <Radio
+                    name="q4"
+                    label="4 - Existe um encantamento utilizado para descobrir todos feitiços conjurados por uma varinha, qual seu nome?"
+                    options={optionsQ4}
+                />
+                <Radio
+                    name="q5"
+                    label="5 - Qual o significado do nome Wingardium Leviosa?"
+                    options={optionsQ5}
+                />
+                {nota}
+                {pontos && '/5'}
+                <button type="submit">Enviar</button>
+            </Form>
         </S.Container>
     );
 }

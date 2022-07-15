@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    text-align: center;
+    text-align: left;
+    font-size: 18px;
+    padding-right: 30px;
     @media (max-width: 600px) {
-        text-align: left;
         font-size: 14px;
         h1 {
             padding-top: 50px;
@@ -18,8 +19,13 @@ export const Container = styled.div`
         display: flex;
         flex-direction: column;
         gap: 50px;
-        label {
-            font-size: 25px;
+        div {
+            p {
+                font-size: 25px;
+                @media (max-width: 600px) {
+                    font-size: 18px;
+                }
+            }
         }
         .options {
             padding-top: 20px;
@@ -28,6 +34,7 @@ export const Container = styled.div`
             align-items: flex-start;
             justify-content: center;
             flex-direction: column;
+            font-size: 22px;
         }
         input {
             margin: 5px 5px;
