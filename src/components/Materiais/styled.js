@@ -63,13 +63,14 @@ export const Container = styled.section`
         }
         .texto {
             width: 80%;
-            text-align: center;
+            text-align: left;
             padding-left: 20px;
             @media (min-width: 900px) {
                 text-align: left;
             }
             p {
-                font-size: 1.25rem;
+                font-size: 1.225rem;
+                font-weight: 300;
             }
         }
         @media (min-width: 900px) and (max-width: 1200px) {
