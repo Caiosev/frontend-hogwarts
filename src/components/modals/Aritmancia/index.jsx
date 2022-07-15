@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
 import { toast } from 'react-toastify';
 import PropTypes from 'prop-types';
@@ -52,8 +51,11 @@ export default function Aritmancia({ setValor, setIdProf, close }) {
             default:
                 break;
         }
-        setValor(pontos);
         close();
+        setValor(pontos);
+        toast.success(
+            'Prova realizada com Sucesso, acesse a aba de provas enviadas'
+        );
     }, [pontos]);
 
     const optionsQ1 = [
@@ -204,6 +206,8 @@ export default function Aritmancia({ setValor, setIdProf, close }) {
                     Nicholas Flames?"
                     options={optionsQ5}
                 />
+                {nota}
+                {pontos && '/5'}
                 <button type="submit">Enviar</button>
             </Form>
         </S.Container>
