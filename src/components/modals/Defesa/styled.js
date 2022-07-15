@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
     text-align: left;
     font-size: 18px;
+    padding-right: 30px;
     @media (max-width: 600px) {
         font-size: 14px;
         h1 {
