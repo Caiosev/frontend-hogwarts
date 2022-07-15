@@ -9,6 +9,27 @@ export const Container = styled.div`
         text-decoration: none;
         color: white;
     }
+    .notaO {
+        color: #fdbf45;
+    }
+    .notaE {
+        color: #146356;
+    }
+    .notaA {
+        color: #519259;
+    }
+    .notaP {
+        color: #ff7700;
+    }
+    .notaD {
+        color: #e04d01;
+    }
+    .notaT {
+        color: #b33030;
+    }
+    #feita {
+        cursor: initial;
+    }
 `;
 export const SideBar = styled.div`
     @media (min-width: 300px) and (max-width: 899px) {
@@ -98,15 +119,18 @@ export const Content = styled.div`
                 gap: 50px;
                 justify-content: flex-start;
                 align-items: center;
+                max-width: 750px;
+                margin: auto;
             }
             .prova {
                 display: flex;
                 align-items: center;
                 flex-direction: column;
                 gap: 15px;
-                justify-content: center;
+                justify-content: flex-start;
                 cursor: pointer;
                 width: 150px;
+                height: 160px;
             }
         }
         height: 90vh;
