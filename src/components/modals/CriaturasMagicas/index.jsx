@@ -158,7 +158,7 @@ export default function CriaturasMagicas({ setValor, setIdProf, close }) {
         {
             id: 18,
             value: '2',
-            label: '3Consumo Proibido, punição moderada',
+            label: 'Consumo Proibido, punição moderada',
         },
         {
             id: 19,
