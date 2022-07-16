@@ -38,7 +38,6 @@ export default function Step1({
                     <p>Sobrenome</p>
                     <input
                         type="text"
-                        id="nome"
                         value={sobrenome}
                         onChange={(e) => setSobrenome(e.target.value)}
                     />
@@ -47,7 +46,6 @@ export default function Step1({
                     <p>Idade</p>
                     <input
                         type="number"
-                        id="nome"
                         value={idade}
                         onChange={(e) => setIdade(e.target.value)}
                     />

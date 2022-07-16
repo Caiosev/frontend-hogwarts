@@ -38,7 +38,6 @@ export default function Step2({
                     <p>Varinha</p>
                     <input
                         type="text"
-                        id="patrono"
                         value={varinha}
                         onChange={(e) => setVarinha(e.target.value)}
                     />
