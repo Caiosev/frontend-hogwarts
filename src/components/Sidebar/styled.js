@@ -21,6 +21,7 @@ export const Container = styled.div`
         display: none;
     }
     @media (min-width: 300px) and (max-width: 899px) {
+        border-right: 0;
         .mobile {
             display: flex;
             align-items: center;

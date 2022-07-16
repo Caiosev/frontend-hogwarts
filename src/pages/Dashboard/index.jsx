@@ -10,6 +10,7 @@ import { useNavigate, Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import * as S from './styled';
 import Sidebar from '../../components/Sidebar';
+import FilterMobile from '../../components/FilterMobile';
 import axios from '../../services/axios';
 import * as actions from '../../store/modules/auth/actions';
 
@@ -212,6 +213,7 @@ export default function Dashboard() {
                         <FaSignOutAlt size={25} onClick={handleLogout} />
                     </div>
                 </S.Header>
+                <FilterMobile setHouse={setHouse} house={house} />
                 <S.Points points={points} className="points">
                     <h4>Pontos:{points}</h4>
                 </S.Points>
