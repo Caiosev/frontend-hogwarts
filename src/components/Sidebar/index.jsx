@@ -11,12 +11,18 @@ export default function Sidebar({
     seteditAluno,
     setMenuMobile,
     handleLogout,
+    setNome,
+    nome,
 }) {
     return (
         <S.Container className={`sidebar ${menuMobile && 'active'}`}>
             <div className="desk">
                 <FaSearch />
-                <input type="text" />
+                <input
+                    type="text"
+                    value={nome}
+                    onChange={(e) => setNome(e.target.value)}
+                />
                 <div
                     role="button"
                     onClick={() => {
@@ -131,4 +137,6 @@ Sidebar.propTypes = {
     seteditAluno: Proptypes.func.isRequired,
     setMenuMobile: Proptypes.func.isRequired,
     handleLogout: Proptypes.func.isRequired,
+    setNome: Proptypes.func.isRequired,
+    nome: Proptypes.string.isRequired,
 };

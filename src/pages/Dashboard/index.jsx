@@ -27,6 +27,7 @@ export default function Dashboard() {
     const [points, setPoints] = useState(-1);
     const [allPoints, setallPoints] = useState([-1]);
     const [menuMobile, setMenuMobile] = useState();
+    const [nome, setNome] = useState('');
 
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -36,7 +37,9 @@ export default function Dashboard() {
             case 'hogwarts':
                 setLogo('/images/logo.png');
                 setColor('#242633');
-                setAlunos(todosalunos);
+                setAlunos(
+                    todosalunos.filter((aluno) => aluno.nome.includes(nome))
+                );
                 setPoints(allPoints[0]);
                 break;
 
@@ -47,7 +50,9 @@ export default function Dashboard() {
                 setColor('#B71B15');
                 setAlunos(
                     todosalunos.filter(
-                        (aluno) => aluno['aluno-casa'].nome === 'Grifinória'
+                        (aluno) =>
+                            aluno['aluno-casa'].nome === 'Grifinória' &&
+                            aluno.nome.includes(nome)
                     )
                 );
                 setPoints(allPoints[1]);
@@ -60,7 +65,9 @@ export default function Dashboard() {
                 setColor('#088EB3');
                 setAlunos(
                     todosalunos.filter(
-                        (aluno) => aluno['aluno-casa'].nome === 'Corvinal'
+                        (aluno) =>
+                            aluno['aluno-casa'].nome === 'Corvinal' &&
+                            aluno.nome.includes(nome)
                     )
                 );
                 setPoints(allPoints[4]);
@@ -73,7 +80,9 @@ export default function Dashboard() {
                 setColor('#DBB409');
                 setAlunos(
                     todosalunos.filter(
-                        (aluno) => aluno['aluno-casa'].nome === 'Lufa-lufa'
+                        (aluno) =>
+                            aluno['aluno-casa'].nome === 'Lufa-lufa' &&
+                            aluno.nome.includes(nome)
                     )
                 );
                 setPoints(allPoints[3]);
@@ -86,7 +95,9 @@ export default function Dashboard() {
                 setColor('#10450E');
                 setAlunos(
                     todosalunos.filter(
-                        (aluno) => aluno['aluno-casa'].nome === 'Sonserina'
+                        (aluno) =>
+                            aluno['aluno-casa'].nome === 'Sonserina' &&
+                            aluno.nome.includes(nome)
                     )
                 );
                 setPoints(allPoints[2]);
@@ -94,7 +105,7 @@ export default function Dashboard() {
             default:
                 break;
         }
-    }, [house, loading === false]);
+    }, [house, loading === false, nome, allPoints, todosalunos]);
 
     useEffect(() => {
         async function loadAlunos() {
@@ -152,6 +163,8 @@ export default function Dashboard() {
                 seteditAluno={seteditAluno}
                 setMenuMobile={setMenuMobile}
                 handleLogout={handleLogout}
+                setNome={setNome}
+                nome={nome}
             />
             <S.Content>
                 <S.Header house={house} color={color}>
@@ -213,7 +226,12 @@ export default function Dashboard() {
                         <FaSignOutAlt size={25} onClick={handleLogout} />
                     </div>
                 </S.Header>
-                <FilterMobile setHouse={setHouse} house={house} />
+                <FilterMobile
+                    setHouse={setHouse}
+                    house={house}
+                    setNome={setNome}
+                    nome={nome}
+                />
                 <S.Points points={points} className="points">
                     <h4>Pontos:{points}</h4>
                 </S.Points>

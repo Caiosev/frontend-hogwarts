@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import * as S from './style';
 
-export default function FilterMobile({ setHouse, house }) {
+export default function FilterMobile({ setHouse, house, nome, setNome }) {
     const [isOpen, setIsOpen] = useState();
     const [display, setDisplay] = useState('/images/logo.png');
     useEffect(() => {
@@ -117,7 +117,12 @@ export default function FilterMobile({ setHouse, house }) {
                 />
             </div>
 
-            <input type="text" id="search" />
+            <input
+                type="text"
+                id="search"
+                value={nome}
+                onChange={(e) => setNome(e.target.value)}
+            />
         </S.Container>
     );
 }
@@ -125,4 +130,6 @@ export default function FilterMobile({ setHouse, house }) {
 FilterMobile.propTypes = {
     setHouse: PropTypes.func,
     house: PropTypes.string,
+    setNome: PropTypes.func,
+    nome: PropTypes.string,
 }.isRequired;
