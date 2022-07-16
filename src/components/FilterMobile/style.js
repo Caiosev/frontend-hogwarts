@@ -5,7 +5,7 @@ export const Container = styled.div`
     height: 100px;
     align-items: center;
     justify-content: space-between;
-    padding: 0 10px;
+    padding: 0 20px;
     padding-top: 40px;
     #inDisplay {
         display: ${(props) => (props.isOpen ? 'none' : 'block')};
@@ -15,7 +15,7 @@ export const Container = styled.div`
     }
     .filter {
         img {
-            width: 80px;
+            width: 60px;
         }
         .options {
             width: ${(props) => (props.isOpen ? '90%' : '80px')};
@@ -27,7 +27,6 @@ export const Container = styled.div`
         align-items: center;
         width: ${(props) => (props.isOpen ? '100%' : '130px')};
         #arrow {
-            margin-left: 10px;
             transform: ${(props) =>
                 props.isOpen ? 'rotate(-180deg)' : 'none'};
             transition: all 0.5s ease-in-out;
@@ -41,6 +40,7 @@ export const Container = styled.div`
         padding-left: 5px;
         font-size: 18px;
         border-radius: 10px;
+        width: 180px;
     }
     @media (min-width: 800px) {
         display: none;
