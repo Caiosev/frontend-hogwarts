@@ -29,7 +29,9 @@ export default function Dashboard() {
                 setLogo('/images/logo.png');
                 setColor('#242633');
                 setAlunos(
-                    todosalunos.filter((aluno) => aluno.nome.includes(nome))
+                    todosalunos.filter((aluno) =>
+                        aluno.nome.toLowerCase().includes(nome.toLowerCase())
+                    )
                 );
                 setPoints(allPoints[0]);
                 break;

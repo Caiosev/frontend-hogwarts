@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { toast } from 'react-toastify';
@@ -77,12 +78,26 @@ export default function Step2({
                 </div>
             </div>
             <div className="buttons">
-                <button type="button" onClick={() => setStep(1)}>
+                {/* <button type="button" onClick={() => setStep(1)}>
                     Voltar
                 </button>
-                <button type="button" onClick={handleSubmit}>
+                <button type="button" >
                     Continuar
-                </button>
+                </button> */}
+                <img
+                    src="/images/right-arrow.png"
+                    className="voltar"
+                    onClick={() => setStep(1)}
+                    onKeyPress={() => setStep(1)}
+                    alt=""
+                />
+                <img
+                    src="/images/right-arrow.png"
+                    alt=""
+                    className="prox"
+                    onClick={handleSubmit}
+                    onKeyPress={handleSubmit}
+                />
             </div>
         </S.Container>
     );

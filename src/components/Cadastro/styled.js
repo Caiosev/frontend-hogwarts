@@ -3,7 +3,7 @@ import * as Color from '../../config/colors';
 
 export const Container = styled.div`
     width: 100vw;
-    height: 85vh;
+    height: 100vh;
     background-color: #242633;
     display: flex;
     align-items: center;
@@ -21,7 +21,16 @@ export const Container = styled.div`
         display: flex;
         gap: 30px;
         width: 600px;
+        height: 60px;
         flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 100px;
+        img {
+            height: 45px;
+        }
+        .voltar {
+            transform: rotate(180deg);
+        }
     }
     h1 {
         margin-top: 15px;

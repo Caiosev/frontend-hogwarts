@@ -185,6 +185,7 @@ export const ListContainer = styled.div`
         &:hover {
             transform: scale(1.1);
         }
+        cursor: pointer;
     }
     .grid-frame {
         position: relative;
@@ -218,6 +219,7 @@ export const ListContainer = styled.div`
             width: 100%;
             height: 100%;
             padding: 10px;
+            object-fit: cover;
         }
     }
     .aluno-nome {

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     width: 100%;
-    height: 100%;
+    height: 1000px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -12,7 +12,7 @@ export const Container = styled.div`
         flex-direction: column;
     }
     #divfoto {
-        height: 500px;
+        height: 370px;
         @media (min-width: 900px) {
             height: 700px;
         }
@@ -34,8 +34,8 @@ export const Container = styled.div`
         }
     }
     .item {
-        width: 250px;
-        height: 150px;
+        width: 230px;
+        height: 130px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -46,7 +46,7 @@ export const Container = styled.div`
         }
         input,
         select {
-            height: 50px;
+            height: 45px;
             padding-left: 10px;
             width: 100%;
             font-size: 20px;
@@ -54,8 +54,8 @@ export const Container = styled.div`
         }
     }
     button {
-        width: 200px;
-        height: 60px;
+        width: 170px;
+        height: 45px;
         font-size: 18px;
         font-weight: bold;
         font-family: 'SofiaPro', sans-serif;
@@ -69,5 +69,37 @@ export const Container = styled.div`
         a {
             color: black;
         }
+    }
+    .file-input {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .file-input__input {
+        width: 0.1px;
+        height: 0.1px;
+        opacity: 0;
+        overflow: hidden;
+        position: absolute;
+        z-index: -1;
+    }
+
+    .file-input__label {
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        border-radius: 4px;
+        font-size: 14px;
+        font-weight: 600;
+        color: #fff;
+        font-size: 14px;
+        padding: 10px 12px;
+        background-color: #4245a8;
+        box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+    }
+
+    .file-input__label svg {
+        height: 16px;
+        margin-right: 4px;
     }
 `;

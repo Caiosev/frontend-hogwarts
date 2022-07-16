@@ -21,8 +21,8 @@ export const Container = styled.div`
         }
     }
     .item {
-        width: 250px;
-        height: 150px;
+        width: 230px;
+        height: 130px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -33,7 +33,7 @@ export const Container = styled.div`
         }
         input,
         select {
-            height: 50px;
+            height: 45px;
             padding-left: 10px;
             width: 100%;
             font-size: 20px;
@@ -41,8 +41,8 @@ export const Container = styled.div`
         }
     }
     button {
-        width: 200px;
-        height: 60px;
+        width: 170px;
+        height: 45px;
         font-size: 18px;
         font-weight: bold;
         font-family: 'SofiaPro', sans-serif;
@@ -56,5 +56,8 @@ export const Container = styled.div`
         a {
             color: black;
         }
+    }
+    .prox {
+        margin: auto;
     }
 `;
