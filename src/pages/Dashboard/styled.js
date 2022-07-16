@@ -28,7 +28,7 @@ export const Content = styled.div`
 export const Header = styled.header`
     @media (max-width: 899px) {
         width: 100%;
-        height: 10%;
+        height: 90px;
         display: flex;
         align-items: center;
         justify-content: space-between;

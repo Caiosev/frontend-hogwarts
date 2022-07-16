@@ -53,7 +53,7 @@ export const Container = styled.div`
         .desk {
             display: none;
         }
-        margin-top: 10vh;
+        margin-top: 90px;
         width: 100vw;
         height: 90vh;
         background-color: rgba(0, 0, 0, 1);
@@ -79,10 +79,12 @@ export const Container = styled.div`
             opacity: 1;
         }
     }
-    &:hover {
-        width: 20vw;
-    }
-    &:hover input {
-        opacity: 1;
+    @media (min-width: 900px) {
+        &:hover {
+            width: 20vw;
+        }
+        &:hover input {
+            opacity: 1;
+        }
     }
 `;
