@@ -3,7 +3,7 @@ import * as Color from '../../config/colors';
 
 export const Container = styled.div`
     width: 100vw;
-    height: 100vh;
+    height: 85vh;
     background-color: #242633;
     display: flex;
     align-items: center;

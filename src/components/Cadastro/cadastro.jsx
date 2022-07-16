@@ -66,55 +66,57 @@ export default function Cadastro() {
     };
 
     return (
-        <S.Container>
+        <>
             <S.Header>
                 <Link to="/painel">
                     <FaArrowAltCircleLeft size={30} />
                 </Link>
                 <img src="/images/logo.png" alt="" />
             </S.Header>
-            <h1>Cadastro de Aluno</h1>
-            <div className="step">
-                {step === 1 && (
-                    <Step1
-                        setStep={setStep}
-                        nome={nome}
-                        setNome={setNome}
-                        sobrenome={sobrenome}
-                        setSobrenome={setSobrenome}
-                        idade={idade}
-                        setIdade={setIdade}
-                        sangue={sangue}
-                        setSangue={setSangue}
-                    />
-                )}
-                {step === 2 && (
-                    <Step2
-                        setStep={setStep}
-                        patrono={patrono}
-                        setPatrono={setPatrono}
-                        varinha={varinha}
-                        setVarinha={setVarinha}
-                        casa={casa}
-                        setCasa={setCasa}
-                        sala={sala}
-                        setSala={setSala}
-                    />
-                )}
-                {step === 3 && (
-                    <Step3
-                        setStep={setStep}
-                        login={login}
-                        setLogin={setLogin}
-                        senha1={senha1}
-                        setSenha1={setSenha1}
-                        senha2={senha2}
-                        setSenha2={setSenha2}
-                        setFoto={setFoto}
-                        SendRequest={SendRequest}
-                    />
-                )}
-            </div>
-        </S.Container>
+            <S.Container>
+                <h1>Cadastro de Aluno</h1>
+                <div className="step">
+                    {step === 1 && (
+                        <Step1
+                            setStep={setStep}
+                            nome={nome}
+                            setNome={setNome}
+                            sobrenome={sobrenome}
+                            setSobrenome={setSobrenome}
+                            idade={idade}
+                            setIdade={setIdade}
+                            sangue={sangue}
+                            setSangue={setSangue}
+                        />
+                    )}
+                    {step === 2 && (
+                        <Step2
+                            setStep={setStep}
+                            patrono={patrono}
+                            setPatrono={setPatrono}
+                            varinha={varinha}
+                            setVarinha={setVarinha}
+                            casa={casa}
+                            setCasa={setCasa}
+                            sala={sala}
+                            setSala={setSala}
+                        />
+                    )}
+                    {step === 3 && (
+                        <Step3
+                            setStep={setStep}
+                            login={login}
+                            setLogin={setLogin}
+                            senha1={senha1}
+                            setSenha1={setSenha1}
+                            senha2={senha2}
+                            setSenha2={setSenha2}
+                            setFoto={setFoto}
+                            SendRequest={SendRequest}
+                        />
+                    )}
+                </div>
+            </S.Container>
+        </>
     );
 }
