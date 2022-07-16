@@ -12,6 +12,7 @@ export default function Step3({
     senha2,
     setSenha2,
     setFoto,
+    SendRequest,
 }) {
     const [preview, setPreview] = useState();
     const handleSelectFile = (e) => {
@@ -29,7 +30,7 @@ export default function Step3({
                 toast.error('As senha não estão identicas');
                 return;
             }
-            setStep(4);
+            SendRequest();
             return;
         }
         toast.error('Preencha todos Campos');
@@ -69,7 +70,7 @@ export default function Step3({
                 </div>
             </div>
             <div className="buttons">
-                <button type="button" onClick={() => setStep(1)}>
+                <button type="button" onClick={() => setStep(2)}>
                     Voltar
                 </button>
                 <button type="button" onClick={handleSubmit}>
@@ -88,4 +89,5 @@ Step3.propTypes = {
     setSenha1: PropTypes.func,
     senha2: PropTypes.string,
     setSenha2: PropTypes.func,
+    SendRequest: PropTypes.func,
 }.isRequired;

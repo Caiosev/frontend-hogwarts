@@ -40,7 +40,9 @@ export default function CadastroAluno() {
                 setPatrono(data.patrono);
                 setHouse(data.casa_id);
                 setSala(data.sala_id);
-                setPreview(data['aluno-foto'][0].url);
+                setPreview(
+                    data['aluno-foto'][data['aluno-foto'].length - 1].url
+                );
                 setFoto(data['aluno-foto'][0].url);
                 console.log(data);
             } catch (error) {
@@ -86,59 +88,38 @@ export default function CadastroAluno() {
     const handleSubmit = async (element) => {
         element.preventDefault();
 
-        if (!id) {
+        try {
+            const data = await axios.put(`/alunos/${id}`, {
+                nome,
+                sobrenome,
+                idade,
+                sangue_status: sangue,
+                varinha,
+                patrono,
+                casa_id: house,
+                sala_id: sala,
+                login,
+                senha,
+            });
+            const idA = data.data.id;
+            const formData = new FormData();
+            formData.append('aluno_id', idA);
+            formData.append('foto', foto);
             try {
-                const { data } = await axios.post('/alunos', {
-                    nome,
-                    sobrenome,
-                    idade,
-                    sangue_status: sangue,
-                    varinha,
-                    patrono,
-                    casa_id: house,
-                    sala_id: sala,
+                await axios.post('/fotosAlunos', formData, {
+                    headers: {
+                        'Content-Type': 'multipart/form-data',
+                    },
                 });
-                const { iddata } = data;
-                const formData = new FormData();
-                formData.append('aluno_id', iddata);
-                formData.append('foto', foto);
-                try {
-                    await axios.post('/fotosAlunos', formData, {
-                        headers: {
-                            'Content-Type': 'multipart/form-data',
-                        },
-                    });
-                } catch (error) {
-                    toast.error('Erro ao cadastrar foto');
-                    console.log('erro na foto');
-                }
-                toast.success('Cadastrado com sucesso');
-                navigate('/dashboard');
-            } catch (e) {
-                toast.error('Erro ao cadastrar aluno');
-                const errors = get(e, 'response.data.errors', []);
-                errors.map((error) => toast.error(error));
+            } catch (error) {
+                toast.error('Erro ao cadastrar foto');
+                console.log(error);
             }
-        } else {
-            try {
-                await axios.put(`/alunos/${id}`, {
-                    nome,
-                    sobrenome,
-                    idade,
-                    sangue_status: sangue,
-                    varinha,
-                    patrono,
-                    casa_id: house,
-                    sala_id: sala,
-                    login,
-                    senha,
-                });
-                navigate('/dashboard');
-            } catch (e) {
-                toast.error('Erro ao editar aluno');
-                const errors = get(e, 'response.data.errors', []);
-                errors.map((error) => toast.error(error));
-            }
+            navigate('/painel');
+        } catch (e) {
+            toast.error('Erro ao editar aluno');
+            const errors = get(e, 'response.data.errors', []);
+            errors.map((error) => toast.error(error));
         }
     };
 
