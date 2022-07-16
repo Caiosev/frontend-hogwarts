@@ -37,7 +37,7 @@ export const Container = styled.div`
     #search {
         display: ${(props) => (props.isOpen ? 'none' : 'block')};
         height: 50px;
-        padding-left: 5px;
+        padding-left: 10px;
         font-size: 18px;
         border-radius: 10px;
         width: 180px;
