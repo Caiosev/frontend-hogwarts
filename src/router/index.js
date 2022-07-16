@@ -7,6 +7,7 @@ import Login from '../pages/login';
 import Page404 from '../pages/Page404';
 import Dashboard from '../pages/Dashboard';
 import CadastroAluno from '../pages/CadastroAluno';
+import Cadastro from '../components/Cadastro/cadastro';
 import User from '../pages/User';
 import Provas from '../pages/Provas';
 import Spells from '../pages/Spells';
@@ -46,7 +47,7 @@ export default function MainRoutes() {
                 path="/aluno/"
                 element={
                     <PrivateRoute>
-                        <CadastroAluno />
+                        <Cadastro />
                     </PrivateRoute>
                 }
             />

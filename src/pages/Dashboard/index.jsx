@@ -258,7 +258,10 @@ export default function Dashboard() {
                                         className="foto-aluno"
                                         src={
                                             aluno['aluno-foto'].length > 0
-                                                ? aluno['aluno-foto'][0].url
+                                                ? aluno['aluno-foto'][
+                                                      aluno['aluno-foto']
+                                                          .length - 1
+                                                  ].url
                                                 : 'images/user.png'
                                         }
                                         alt=""
