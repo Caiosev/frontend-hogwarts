@@ -10,6 +10,7 @@ import { useNavigate, Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import * as S from './styled';
 import Sidebar from '../../components/Sidebar';
+import FilterMobile from '../../components/FilterMobile';
 import axios from '../../services/axios';
 import * as actions from '../../store/modules/auth/actions';
 
@@ -144,7 +145,14 @@ export default function Dashboard() {
 
     return (
         <S.Container>
-            <Sidebar setHouse={setHouse} menuMobile={menuMobile} />
+            <Sidebar
+                setHouse={setHouse}
+                menuMobile={menuMobile}
+                setaddAluno={setaddAluno}
+                seteditAluno={seteditAluno}
+                setMenuMobile={setMenuMobile}
+                handleLogout={handleLogout}
+            />
             <S.Content>
                 <S.Header house={house} color={color}>
                     <svg
@@ -174,7 +182,6 @@ export default function Dashboard() {
                                 onClick={() => {
                                     setaddAluno(true);
                                     seteditAluno(false);
-                                    setDeleteAluno(false);
                                 }}
                                 opacity={addAluno ? 1 : 0.5}
                             />
@@ -206,6 +213,7 @@ export default function Dashboard() {
                         <FaSignOutAlt size={25} onClick={handleLogout} />
                     </div>
                 </S.Header>
+                <FilterMobile setHouse={setHouse} house={house} />
                 <S.Points points={points} className="points">
                     <h4>Pontos:{points}</h4>
                 </S.Points>
