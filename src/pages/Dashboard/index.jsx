@@ -1,11 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {
-    FaSignOutAlt,
-    FaUserAlt,
-    FaPlusCircle,
-    FaEdit,
-    FaUserMinus,
-} from 'react-icons/fa';
+import { FaSignOutAlt, FaUserAlt, FaPlusCircle } from 'react-icons/fa';
 import { useNavigate, Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import * as S from './styled';
@@ -21,9 +15,6 @@ export default function Dashboard() {
     const [loading, setLoading] = useState(true);
     const [alunos, setAlunos] = useState([]);
     const [todosalunos, setTodosAlunos] = useState([]);
-    const [deleteAluno, setDeleteAluno] = useState(false);
-    const [addAluno, setaddAluno] = useState(true);
-    const [editAluno, seteditAluno] = useState(false);
     const [points, setPoints] = useState(-1);
     const [allPoints, setallPoints] = useState([-1]);
     const [menuMobile, setMenuMobile] = useState();
@@ -132,36 +123,24 @@ export default function Dashboard() {
         navigate('/');
     };
 
-    const deleteData = async (e, id) => {
-        try {
-            await axios.delete(`/alunos/${id}`);
-            e.parentElement.parentElement.remove();
-        } catch (error) {
-            console.log(error);
-        }
-    };
+    // const deleteData = async (e, id) => {
+    //     try {
+    //         await axios.delete(`/alunos/${id}`);
+    //         e.parentElement.parentElement.remove();
+    //     } catch (error) {
+    //         console.log(error);
+    //     }
+    // };
 
-    const handleClickAluno = (e, id) => {
-        if (deleteAluno) {
-            deleteData(e, id);
-        }
-        if (editAluno) {
-            navigate(`/aluno/${id}`);
-        }
+    const handleClickAluno = (id) => {
+        navigate(`/aluno/${id}`);
     };
-
-    useEffect(() => {
-        if (!editAluno && !deleteAluno) setaddAluno(true);
-    }, [editAluno, deleteAluno]);
 
     return (
         <S.Container>
             <Sidebar
                 setHouse={setHouse}
                 menuMobile={menuMobile}
-                setaddAluno={setaddAluno}
-                seteditAluno={seteditAluno}
-                setMenuMobile={setMenuMobile}
                 handleLogout={handleLogout}
                 setNome={setNome}
                 nome={nome}
@@ -190,36 +169,8 @@ export default function Dashboard() {
                     <img src={logo} alt="" />
                     <div className="options">
                         <Link to="/aluno">
-                            <FaPlusCircle
-                                size={25}
-                                onClick={() => {
-                                    setaddAluno(true);
-                                    seteditAluno(false);
-                                }}
-                                opacity={addAluno ? 1 : 0.5}
-                            />
+                            <FaPlusCircle size={25} />
                         </Link>
-
-                        <FaEdit
-                            size={25}
-                            onClick={() => {
-                                setaddAluno(false);
-                                seteditAluno(!editAluno);
-                                setDeleteAluno(false);
-                            }}
-                            opacity={editAluno ? 1 : 0.5}
-                            color={editAluno ? 'blue' : '#fff'}
-                        />
-                        <FaUserMinus
-                            size={28}
-                            onClick={() => {
-                                setaddAluno(false);
-                                seteditAluno(false);
-                                setDeleteAluno(!deleteAluno);
-                            }}
-                            opacity={deleteAluno ? 1 : 0.5}
-                            color={deleteAluno ? 'red' : '#fff'}
-                        />
                         <Link to="/usuario">
                             <FaUserAlt size={25} />
                         </Link>
@@ -241,9 +192,7 @@ export default function Dashboard() {
                             <div
                                 className="aluno"
                                 key={String(aluno.id)}
-                                onClick={(e) =>
-                                    handleClickAluno(e.target, aluno.id)
-                                }
+                                onClick={() => handleClickAluno(aluno.id)}
                                 onKeyDown={() => handleClickAluno(aluno.id)}
                                 role="button"
                                 tabIndex="0"

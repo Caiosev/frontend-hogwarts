@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { toast } from 'react-toastify';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { get } from 'lodash';
+import { FaArrowAltCircleLeft } from 'react-icons/fa';
 import * as S from './styled';
 import Step1 from './Steps/Step1';
 import Step2 from './Steps/Step2';
@@ -66,6 +67,12 @@ export default function Cadastro() {
 
     return (
         <S.Container>
+            <S.Header>
+                <Link to="/painel">
+                    <FaArrowAltCircleLeft size={30} />
+                </Link>
+                <img src="/images/logo.png" alt="" />
+            </S.Header>
             <h1>Cadastro de Aluno</h1>
             <div className="step">
                 {step === 1 && (

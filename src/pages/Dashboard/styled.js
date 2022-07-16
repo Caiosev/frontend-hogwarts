@@ -12,7 +12,6 @@ export const Container = styled.div`
     }
     @media (min-width: 300px) and (max-width: 899px) {
         .sidebar {
-            position: absolute;
             left: -200%;
         }
         .active {
@@ -35,6 +34,7 @@ export const Header = styled.header`
         justify-content: space-between;
         background-color: ${(props) => props.color};
         padding: 0 20px;
+        position: fixed;
         img {
             width: 50px;
             display: none;

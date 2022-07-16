@@ -7,9 +7,6 @@ import * as S from './styled';
 export default function Sidebar({
     setHouse,
     menuMobile,
-    setaddAluno,
-    seteditAluno,
-    setMenuMobile,
     handleLogout,
     setNome,
     nome,
@@ -98,26 +95,9 @@ export default function Sidebar({
                     <button type="button">Home</button>
                 </Link>
                 <Link to="/aluno">
-                    <button
-                        type="button"
-                        onClick={() => {
-                            setaddAluno(true);
-                            setMenuMobile(false);
-                        }}
-                    >
-                        Adicionar Aluno
-                    </button>
+                    <button type="button">Adicionar Aluno</button>
                 </Link>
 
-                <button
-                    type="button"
-                    onClick={() => {
-                        seteditAluno(true);
-                        setMenuMobile(false);
-                    }}
-                >
-                    Editar Aluno
-                </button>
                 <Link to="/usuario">
                     <button type="button">Perfil</button>
                 </Link>
@@ -133,9 +113,6 @@ export default function Sidebar({
 Sidebar.propTypes = {
     setHouse: Proptypes.func.isRequired,
     menuMobile: Proptypes.string.isRequired,
-    setaddAluno: Proptypes.func.isRequired,
-    seteditAluno: Proptypes.func.isRequired,
-    setMenuMobile: Proptypes.func.isRequired,
     handleLogout: Proptypes.func.isRequired,
     setNome: Proptypes.func.isRequired,
     nome: Proptypes.string.isRequired,

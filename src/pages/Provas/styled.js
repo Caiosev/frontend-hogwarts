@@ -39,7 +39,6 @@ export const SideBar = styled.div`
         height: 100vh;
         text-align: center;
         background-color: #1a1a1d;
-        position: absolute;
         top: 10vh;
         .buttons {
             padding-top: 100px;
