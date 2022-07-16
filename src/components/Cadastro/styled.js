@@ -16,4 +16,10 @@ export const Container = styled.div`
             height: 80%;
         }
     }
+    .buttons {
+        display: flex;
+        gap: 30px;
+        width: 600px;
+        flex-wrap: wrap;
+    }
 `;

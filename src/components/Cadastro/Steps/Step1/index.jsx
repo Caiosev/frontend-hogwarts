@@ -17,6 +17,7 @@ export default function Step1({
     const handleSubmit = () => {
         if (nome !== '' && sobrenome !== '' && idade !== '' && sangue !== '') {
             setStep(2);
+            return;
         }
         toast.error('Preencha todos Campos');
     };
