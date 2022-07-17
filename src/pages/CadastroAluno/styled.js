@@ -186,6 +186,7 @@ export const Foto = styled.div`
         width: 100%;
         height: 400px;
         padding: 15px 40px;
+        object-fit: cover;
     }
     @media (min-width: 300px) and (max-width: 1200px) {
         margin: auto;

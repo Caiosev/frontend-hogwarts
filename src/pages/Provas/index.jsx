@@ -98,15 +98,18 @@ export default function Provas() {
             backgroundColor: '#132d3a',
         },
     };
-    useEffect(() => {
+    const getProvas = async () => {
         try {
-            axios.get(`/provas/${id}`).then((res) => {
+            await axios.get(`/provas/${id}`).then((res) => {
                 setProvas(res.data);
-                setLoading(false);
             });
+            setLoading(false);
         } catch (error) {
             console.log(error);
         }
+    };
+    useEffect(() => {
+        getProvas();
     }, [loading === true]);
 
     const handleLogout = () => {
