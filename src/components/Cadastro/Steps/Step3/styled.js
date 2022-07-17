@@ -10,8 +10,8 @@ export const Container = styled.div`
     flex-wrap: wrap;
     @media (min-width: 900px) {
         flex-direction: column;
-        height: 700px;
-        width: 1500px;
+        height: 64vh;
+        width: 78vw;
         background: #181928;
         border: 1px solid #353643;
         box-shadow: -1px 7px 13px 0px rgba(0, 0, 0, 0.93);
@@ -31,8 +31,8 @@ export const Container = styled.div`
         object-fit: cover;
         padding: 20px 0;
         @media (min-width: 900px) {
-            width: 430px;
-            height: 550px;
+            width: 22vw;
+            height: 51vh;
             margin-bottom: 20px;
         }
         border: 1px solid #ffff;
