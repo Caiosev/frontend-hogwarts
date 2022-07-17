@@ -99,7 +99,8 @@ export const Section = styled.section`
         margin-top: 100px;
         height: 100%;
         display: block;
-        height: 1500px;
+        min-height: 1300px;
+}
     }
 
     hr {
@@ -112,30 +113,30 @@ export const Infos = styled.div`
     height: 60%;
     @media (min-width: 300px) and (max-width: 1200px) {
         background-color: ${Color.activeNav};
-        height: 1100px;
+        height: 600px;
         width: 100%;
         text-align: center;
     }
     form {
         display: flex;
         flex-direction: column;
-        align-content: space-between;
         height: 110%;
-        justify-content: space-around;
+        gap: 20px;
         @media (min-width: 300px) and (max-width: 1200px) {
-            align-items: center;
+            align-items: flex-start;
             padding-top: 20px;
-            height: 1100px;
+            height: 560px;
         }
         div {
             display: flex;
             @media (min-width: 300px) and (max-width: 1200px) {
                 flex-direction: row;
                 gap: 10px;
-                width: 100vw;
                 flex-wrap: wrap;
                 justify-content: center;
-                padding: 0 10px 0 10px;
+                width: 100vw;
+                justify-content: space-around;
+                padding-left: 10px;
             }
         }
         button {
@@ -154,6 +155,10 @@ export const Infos = styled.div`
             a {
                 color: black;
             }
+        }
+        .btn {
+            display: flex;
+            padding: 30px 0;
         }
     }
     input,

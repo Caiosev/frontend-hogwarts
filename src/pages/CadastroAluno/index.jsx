@@ -318,9 +318,11 @@ export default function CadastroAluno() {
                                 </select>
                             </label>
                         </div>
-                        <button type="submit" onClick={handleSubmit}>
-                            Atulizar
-                        </button>
+                        <div className="btn">
+                            <button type="submit" onClick={handleSubmit}>
+                                Atulizar
+                            </button>
+                        </div>
                     </form>
                 </S.Infos>
                 <S.Provas>
