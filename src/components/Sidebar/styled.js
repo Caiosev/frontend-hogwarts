@@ -69,7 +69,7 @@ export const Container = styled.div`
         font-family: 'SofiaPro', sans-serif;
         font-weight: bold;
         transition: all 0.3s ease-in-out;
-        width: 80%;
+        width: 100%;
         height: 40px;
         border-radius: 10px;
         padding: 1rem;

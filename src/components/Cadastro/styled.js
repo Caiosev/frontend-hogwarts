@@ -49,7 +49,7 @@ export const Header = styled.header`
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: ${(props) => props.color};
+    background-color: #1a1a1d;
     img {
         cursor: pointer;
         width: 50px;

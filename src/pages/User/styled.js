@@ -13,7 +13,7 @@ export const Header = styled.header`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #242633;
+    background-color: #1a1a1d;
     padding: 0 30px;
     img {
         width: 50px;

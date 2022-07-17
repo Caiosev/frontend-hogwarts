@@ -23,6 +23,7 @@ export const Container = styled.div`
             display: flex;
             flex-direction: column;
             height: 590px;
+            justify-content: center;
             flex-wrap: wrap;
         }
     }
@@ -31,7 +32,7 @@ export const Container = styled.div`
         height: 130px;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start
         justify-content: center;
         p {
             font-size: 22px;
