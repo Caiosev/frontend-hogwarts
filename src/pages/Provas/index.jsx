@@ -21,7 +21,7 @@ import Pocoes from '../../components/modals/Pocoes';
 import Runas from '../../components/modals/Runas';
 import Trans from '../../components/modals/Trans';
 import { Boletim } from '../../components/Boletim';
-
+import Loading from '../../components/Loading';
 import * as S from './styled';
 
 export default function Provas() {
@@ -108,9 +108,6 @@ export default function Provas() {
             console.log(error);
         }
     };
-    useEffect(() => {
-        getProvas();
-    }, [loading === true]);
 
     const handleLogout = () => {
         dispatch(actions.loginFailure());
@@ -133,22 +130,26 @@ export default function Provas() {
         });
     }, [provas]);
 
+    const submitProva = async (profId) => {
+        setLoading(true);
+        await axios.post(`/provas/`, {
+            valor,
+            prof_id: profId,
+            aluno_id: id,
+        });
+        getProvas();
+    };
+
     useEffect(() => {
         if (valor === undefined) return;
 
         const profId = idProf;
-
-        function submitProva() {
-            axios
-                .post(`/provas/`, {
-                    valor,
-                    prof_id: profId,
-                    aluno_id: id,
-                })
-                .then(setLoading(true));
-        }
-        submitProva();
+        submitProva(profId);
     }, [valor]);
+
+    useEffect(() => {
+        getProvas();
+    }, []);
 
     const handleOpenaritmancia = () => {
         setAritmanciaIsOpen(true);
@@ -1287,6 +1288,7 @@ export default function Provas() {
                     </S.Content>
                 </>
             )}
+            {loading && <Loading />}
         </S.Container>
     );
 }
