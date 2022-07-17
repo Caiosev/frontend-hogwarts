@@ -123,4 +123,16 @@ export const Container = styled.div`
         height: 16px;
         margin-right: 4px;
     }
+    .prox {
+        display: none;
+        @media (min-width: 900px) {
+            display: block;
+        }
+    }
+    .check {
+        display: block;
+        @media (min-width: 900px) {
+            display: none;
+        }
+    }
 `;
