@@ -10,7 +10,7 @@ export const Container = styled.div`
     flex-wrap: wrap;
     @media (min-width: 900px) {
         flex-direction: column;
-        height: 64vh;
+        height: 70vh;
         width: 78vw;
         background: #181928;
         border: 1px solid #353643;
@@ -31,7 +31,7 @@ export const Container = styled.div`
         object-fit: cover;
         padding: 20px 0;
         @media (min-width: 900px) {
-            width: 22vw;
+            width: 20vw;
             height: 51vh;
             margin-bottom: 20px;
         }
@@ -42,8 +42,9 @@ export const Container = styled.div`
         @media (min-width: 900px) {
             width: 530px;
             display: flex;
-            height: 350px;
+            height: 420px;
             flex-wrap: wrap;
+            flex-direction: column;
             gap: 10px;
             justify-content: center;
             align-content: center;
@@ -134,5 +135,9 @@ export const Container = styled.div`
         @media (min-width: 900px) {
             display: none;
         }
+    }
+    .buttons {
+        width: 530px;
+        align-items: center;
     }
 `;
