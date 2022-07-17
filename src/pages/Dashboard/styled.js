@@ -177,6 +177,18 @@ export const ListContainer = styled.div`
         flex-direction: column;
     }
     padding-top: 50px;
+    @media (min-width: 900px) and (max-width: 1199px) {
+        width: 800px;
+        height: auto;
+        flex-wrap: wrap;
+        margin: auto;
+        justify-content: center;
+    }
+    @media (min-width: 1200px) {
+        width: 90vw;
+        height: auto;
+        flex-wrap: wrap;
+    }
     .aluno {
         display: flex;
         flex-direction: column;
