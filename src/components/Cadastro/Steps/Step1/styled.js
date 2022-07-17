@@ -8,6 +8,7 @@ export const Container = styled.div`
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    padding-top:25px;
     @media (min-width: 900px) {
         flex-direction: row;
         justify-content: center;

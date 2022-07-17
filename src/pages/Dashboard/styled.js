@@ -23,7 +23,9 @@ export const Container = styled.div`
 export const Content = styled.div`
     width: 100vw;
     height: 100vh;
-    padding-left: 15vw;
+    @media (min-width: 900px) {
+        padding-left: 15vw;
+    }
 `;
 
 export const Header = styled.header`

@@ -127,6 +127,7 @@ export const Btn = styled.div`
     }
     display: flex;
     padding-top: 30px;
+    padding-bottom: 30px;
     align-items: center;
     justify-content: center;
 `;
