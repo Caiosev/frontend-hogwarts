@@ -1,5 +1,4 @@
 import React from 'react';
-import { FaSearch } from 'react-icons/fa';
 import Proptypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import * as S from './styled';
@@ -14,7 +13,6 @@ export default function Sidebar({
     return (
         <S.Container className={`sidebar ${menuMobile && 'active'}`}>
             <div className="desk">
-                <FaSearch />
                 <input
                     type="text"
                     value={nome}

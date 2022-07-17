@@ -110,6 +110,7 @@ export const Header = styled.header`
         }
         border-bottom: 1px solid ${Color.line};
         .options {
+            padding-right: 20px;
             display: flex;
             flex-direction: row;
             align-items: center;

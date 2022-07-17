@@ -27,7 +27,7 @@ export default function Dashboard() {
         switch (house) {
             case 'hogwarts':
                 setLogo('/images/logo.png');
-                setColor('#1a1a1d;');
+                setColor('#1a1a1d');
                 setAlunos(
                     todosalunos.filter((aluno) =>
                         aluno.nome.toLowerCase().includes(nome.toLowerCase())

@@ -33,8 +33,8 @@ export const Card = styled.div`
         position: relative;
         border: 1px solid #a85;
         .square {
-            background-color: #10141b;
-            border: 1px solid #a85;
+            background-color: #1a1a1d;
+            border: 3px solid #a85;
             width: 20px;
             height: 20px;
             position: absolute;
@@ -58,6 +58,10 @@ export const Card = styled.div`
         .grid-image img {
             width: 180px;
             height: 250px;
+            @media (min-width: 900px) {
+                width: 220px;
+                height: 300px;
+            }
         }
     }
 `;
@@ -83,28 +87,46 @@ export const Inputs = styled.div`
         }
 
         input {
-                    width: 200px;
+                    width: 180px;
                     height: 30px;
                     border: 1px solid #fff;
                     border-radius: 5px;
                     padding: 5px;
                     margin-top:5px;
+                    @media (min-width:900px) {
+                        width: 200px;
+                        height: 40px;
+                    }
                 }
         label{
             display: flex;
             flex-direction: column;
             margin-bottom:5px
+            font-family: 'BluuNext',sans-serif;
         }
     }
 `;
 
 export const Btn = styled.div`
-    padding-top: 20px;
-    margin: auto;
-    display: flex;
-    justify-content: center;
     button {
-        width: 180px;
+        width: 140px;
         height: 50px;
+        background-color: ${(props) => (props.env ? '#d1af5a' : '#fff')};
+        font-size: 15px;
+        font-weight: bold;
+        font-family: 'SofiaPro', sans-serif;
+        border-radius: 50px;
+        border: none;
+        &:hover {
+            background-color: #d1af5a;
+            cursor: pointer;
+        }
+        a {
+            color: black;
+        }
     }
+    display: flex;
+    padding-top: 30px;
+    align-items: center;
+    justify-content: center;
 `;
