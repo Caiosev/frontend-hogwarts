@@ -18,7 +18,9 @@ export const Container = styled.div`
         }
     }
     #foto {
-        width: 200px;
+        width: 230px;
+        height: 350px;
+        object-fit: cover;
         padding: 20px 0;
         @media (min-width: 900px) {
             width: 400px;

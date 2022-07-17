@@ -1,13 +1,13 @@
 import styled from 'styled-components';
-import * as Color from '../../config/colors';
 
 export const Container = styled.div`
     width: 100vw;
-    height: 100vh;
+    height: 90vh;
     background-color: #242633;
+    padding-top: 10px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
     .step {
         width: 80%;
@@ -26,7 +26,7 @@ export const Container = styled.div`
         justify-content: space-between;
         gap: 100px;
         img {
-            height: 45px;
+            height: 35px;
         }
         .voltar {
             transform: rotate(180deg);
@@ -47,7 +47,7 @@ export const Header = styled.header`
     img {
         width: 50px;
     }
-    border-bottom: 1px solid ${Color.line};
+    border-bottom: 1px solid #ffff;
     a {
         color: white;
         position: absolute;

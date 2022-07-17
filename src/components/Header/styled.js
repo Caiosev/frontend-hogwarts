@@ -79,6 +79,9 @@ export const Nav = styled.nav`
         &:hover {
             cursor: pointer;
         }
+        @media (min-width: 1800px) {
+            right: 20px;
+        }
     }
     #dashboard {
         position: absolute;
@@ -87,6 +90,9 @@ export const Nav = styled.nav`
         color: white;
         &:hover {
             cursor: pointer;
+        }
+        @media (min-width: 1800px) {
+            right: 70px;
         }
     }
     #login {

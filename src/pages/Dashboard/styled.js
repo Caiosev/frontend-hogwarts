@@ -35,6 +35,7 @@ export const Header = styled.header`
         background-color: ${(props) => props.color};
         padding: 0 20px;
         position: fixed;
+        z-index: 100;
         img {
             width: 50px;
             display: none;
@@ -182,9 +183,12 @@ export const ListContainer = styled.div`
         height: 270px;
         align-items: center;
         transition: all 0.3s ease-in-out;
-        &:hover {
-            transform: scale(1.1);
+        @media (min-width: 900) {
+            &:hover {
+                transform: scale(1.1);
+            }
         }
+
         cursor: pointer;
     }
     .grid-frame {

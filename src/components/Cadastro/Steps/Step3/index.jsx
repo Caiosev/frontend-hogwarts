@@ -40,13 +40,7 @@ export default function Step3({
 
     return (
         <S.Container>
-            {/* <div className="item" id="divfoto">
-
-
-                <input type="file" />
-            </div> */}
             <div className="file-input">
-                <p>Foto</p>
                 <img src={preview} alt="" id="foto" />
                 <input
                     type="file"
@@ -101,12 +95,6 @@ export default function Step3({
                 </div>
             </div>
             <div className="buttons">
-                {/* <button type="button" onClick={() => setStep(2)}>
-                    Voltar
-                </button>
-                <button type="button" onClick={handleSubmit}>
-                    Finalizar
-                </button> */}
                 <img
                     src="/images/right-arrow.png"
                     className="voltar"

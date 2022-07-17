@@ -5,7 +5,7 @@ export const Container = styled.div`
     height: 100px;
     align-items: center;
     justify-content: space-between;
-    padding: 150px 20px 50px 20px;
+    padding: 150px 25px 50px;
     #inDisplay {
         display: ${(props) => (props.isOpen ? 'none' : 'block')};
     }
