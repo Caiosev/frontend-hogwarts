@@ -9,17 +9,20 @@ export const Container = styled.div`
     justify-content: center;
     flex-wrap: wrap;
     @media (min-width: 900px) {
-        flex-direction: column;
-        height: 90vh;
-        justify-content: flex-start;
+        justify-content: center;
+        height: 680px;
+        width: 400px;
+        background: #181928;
+        border: 1px solid #353643;
+        box-shadow: -1px 7px 13px 0px rgba(0, 0, 0, 0.93);
     }
     .items {
         @media (min-width: 900px) {
-            width: 500px;
+            width: 250px;
             display: flex;
-            height: 400px;
+            flex-direction: column;
+            height: 590px;
             flex-wrap: wrap;
-            gap: 40px;
         }
     }
     .item {
@@ -58,5 +61,33 @@ export const Container = styled.div`
         a {
             color: black;
         }
+    }
+`;
+
+export const Content = styled.div`
+    @media (max-width: 899px) {
+        padding-top: 20px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        .buttons {
+            width: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    @media (min-width: 900px) {
+        display: flex;
+        align-items: center;
+        .buttons {
+            @media (min-width: 900px) {
+                width: 100px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+        justify-content: center;
     }
 `;

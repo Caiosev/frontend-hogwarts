@@ -24,47 +24,51 @@ export default function Step1({
     };
 
     return (
-        <S.Container>
-            <div className="items">
-                <div className="item">
-                    <p>Nome</p>
-                    <input
-                        type="text"
-                        id="nome"
-                        value={nome}
-                        onChange={(e) => setNome(e.target.value)}
-                    />
+        <S.Content className="content">
+            <S.Container>
+                <div className="items">
+                    <div className="item">
+                        <p>Nome</p>
+                        <input
+                            type="text"
+                            id="nome"
+                            value={nome}
+                            onChange={(e) => setNome(e.target.value)}
+                        />
+                    </div>
+                    <div className="item">
+                        <p>Sobrenome</p>
+                        <input
+                            type="text"
+                            value={sobrenome}
+                            onChange={(e) => setSobrenome(e.target.value)}
+                        />
+                    </div>
+                    <div className="item">
+                        <p>Idade</p>
+                        <input
+                            type="number"
+                            value={idade}
+                            onChange={(e) => setIdade(e.target.value)}
+                        />
+                    </div>
+                    <div className="item">
+                        <p>Sangue</p>
+                        <select
+                            name="sangue"
+                            id="sangue"
+                            onChange={(e) => setSangue(e.target.value)}
+                            value={sangue}
+                        >
+                            <option value="puro">Puro</option>
+                            <option value="Mestiço">Mestiço</option>
+                            <option value="Nascido Trouxa">
+                                Nascido Trouxa
+                            </option>
+                        </select>
+                    </div>
                 </div>
-                <div className="item">
-                    <p>Sobrenome</p>
-                    <input
-                        type="text"
-                        value={sobrenome}
-                        onChange={(e) => setSobrenome(e.target.value)}
-                    />
-                </div>
-                <div className="item">
-                    <p>Idade</p>
-                    <input
-                        type="number"
-                        value={idade}
-                        onChange={(e) => setIdade(e.target.value)}
-                    />
-                </div>
-                <div className="item">
-                    <p>Sangue</p>
-                    <select
-                        name="sangue"
-                        id="sangue"
-                        onChange={(e) => setSangue(e.target.value)}
-                        value={sangue}
-                    >
-                        <option value="puro">Puro</option>
-                        <option value="Mestiço">Mestiço</option>
-                        <option value="Nascido Trouxa">Nascido Trouxa</option>
-                    </select>
-                </div>
-            </div>
+            </S.Container>
             <div className="buttons">
                 <img
                     src="/images/right-arrow.png"
@@ -74,7 +78,7 @@ export default function Step1({
                     onKeyPress={() => setStep(2)}
                 />
             </div>
-        </S.Container>
+        </S.Content>
     );
 }
 

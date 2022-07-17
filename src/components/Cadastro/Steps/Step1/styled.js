@@ -13,7 +13,6 @@ export const Container = styled.div`
         justify-content: center;
         height: 680px;
         width: 400px;
-        margin: auto;
         background: #181928;
         border: 1px solid #353643;
         box-shadow: -1px 7px 13px 0px rgba(0, 0, 0, 0.93);
@@ -67,9 +66,29 @@ export const Container = styled.div`
     .prox {
         margin: auto;
     }
-    .buttons {
-        @media (min-width: 900px) {
+`;
+export const Content = styled.div`
+    @media (max-width: 899px) {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        .buttons {
             width: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
+    }
+
+    @media (min-width: 900px) {
+        display: flex;
+        align-items: center;
+        .buttons {
+            @media (min-width: 900px) {
+                width: 100px;
+                padding-left: 50px;
+            }
+        }
+        justify-content: center;
     }
 `;

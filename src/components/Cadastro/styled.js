@@ -41,8 +41,6 @@ export const Container = styled.div`
             font-size: 2.5rem;
         }
     }
-    @media (min-width: 900px) {
-    }
 `;
 
 export const Header = styled.header`
