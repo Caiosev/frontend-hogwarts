@@ -111,7 +111,7 @@ export const Btn = styled.div`
     button {
         width: 140px;
         height: 50px;
-        background-color: ${(props) => (props.env ? '#d1af5a' : '#fff')};
+        background-color: #fff;
         font-size: 15px;
         font-weight: bold;
         font-family: 'SofiaPro', sans-serif;

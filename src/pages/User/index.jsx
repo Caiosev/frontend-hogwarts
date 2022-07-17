@@ -123,7 +123,7 @@ export default function User() {
                     </S.Inputs>
                     <S.Btn className="">
                         <button type="button" onClick={handleSubmit}>
-                            Enviar
+                            Atulizar
                         </button>
                     </S.Btn>
                 </>
