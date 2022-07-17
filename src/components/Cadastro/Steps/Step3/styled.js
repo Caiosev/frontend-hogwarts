@@ -11,7 +11,12 @@ export const Container = styled.div`
     @media (min-width: 900px) {
         flex-direction: column;
         height: 700px;
-        justify-content: flex-start;
+        width: 1500px;
+        background: #181928;
+        border: 1px solid #353643;
+        box-shadow: -1px 7px 13px 0px rgba(0, 0, 0, 0.93);
+        align-content: center;
+        gap: 100px;
     }
     #divfoto {
         height: 370px;
@@ -28,6 +33,7 @@ export const Container = styled.div`
         @media (min-width: 900px) {
             width: 430px;
             height: 550px;
+            margin-bottom: 20px;
         }
         border: 1px solid #ffff;
         padding: 5px;
@@ -73,7 +79,6 @@ export const Container = styled.div`
         font-family: 'SofiaPro', sans-serif;
         border-radius: 50px;
         border: none;
-        margin: auto;
         &:hover {
             background-color: #d1af5a;
             cursor: pointer;
@@ -106,6 +111,10 @@ export const Container = styled.div`
         color: #fff;
         font-size: 14px;
         padding: 10px 12px;
+        @media (min-width: 900px) {
+            padding: 18px 20px;
+            font-size: 18px;
+        }
         background-color: #4245a8;
         box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
     }

@@ -102,13 +102,9 @@ export default function Step3({
                     onKeyPress={() => setStep(2)}
                     alt=""
                 />
-                <img
-                    src="/images/check.png"
-                    alt=""
-                    className="prox"
-                    onClick={handleSubmit}
-                    onKeyPress={handleSubmit}
-                />
+                <button type="button" onClick={handleSubmit} className="prox">
+                    Finalizar
+                </button>
             </div>
         </S.Container>
     );
