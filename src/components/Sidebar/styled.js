@@ -8,12 +8,15 @@ export const Container = styled.div`
         justify-content: center;
         gap: 30px;
         position: fixed;
-        border: 1px solid white;
         padding: 20px;
     }
-    width: 10vw;
+    width: 15vw;
     height: 100%;
     display: flex;
+    @media (min-width: 900px) {
+        background-color: #1a1a1d;
+        position: fixed;
+    }
     align-items: center;
     justify-content: center;
     gap: 1rem;
@@ -67,7 +70,6 @@ export const Container = styled.div`
         font-weight: bold;
         transition: all 0.3s ease-in-out;
         width: 80%;
-        opacity: 0;
         height: 40px;
         border-radius: 10px;
         padding: 1rem;
@@ -78,14 +80,6 @@ export const Container = styled.div`
         transition: all 0.3s ease-in-out;
         cursor: pointer;
         &:hover {
-            opacity: 1;
-        }
-    }
-    @media (min-width: 900px) {
-        &:hover {
-            width: 20vw;
-        }
-        &:hover input {
             opacity: 1;
         }
     }

@@ -21,8 +21,9 @@ export const Container = styled.div`
 `;
 
 export const Content = styled.div`
-    width: 100%;
+    width: 100vw;
     height: 100vh;
+    padding-left: 15vw;
 `;
 
 export const Header = styled.header`
@@ -185,7 +186,7 @@ export const ListContainer = styled.div`
         justify-content: center;
     }
     @media (min-width: 1200px) {
-        width: 90vw;
+        width: 95vw;
         height: auto;
         flex-wrap: wrap;
     }
