@@ -28,7 +28,7 @@ export const Container = styled.div`
 
         img {
             cursor: pointer;
-            height: 35px;
+            height: 30px;
         }
         .voltar {
             transform: rotate(180deg);

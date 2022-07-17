@@ -80,7 +80,7 @@ export const Nav = styled.nav`
             cursor: pointer;
         }
         @media (min-width: 1800px) {
-            right: 20px;
+            right: 40px;
         }
     }
     #dashboard {
@@ -92,7 +92,7 @@ export const Nav = styled.nav`
             cursor: pointer;
         }
         @media (min-width: 1800px) {
-            right: 70px;
+            right: 90px;
         }
     }
     #login {

@@ -180,10 +180,10 @@ export const ListContainer = styled.div`
     .aluno {
         display: flex;
         flex-direction: column;
-        height: 270px;
+        height: 350px;
         align-items: center;
         transition: all 0.3s ease-in-out;
-        @media (min-width: 900) {
+        @media (min-width: 900px) {
             &:hover {
                 transform: scale(1.1);
             }
@@ -194,8 +194,8 @@ export const ListContainer = styled.div`
     .grid-frame {
         position: relative;
         border: 2px solid #808080;
-        width: 180px;
-        height: 220px;
+        width: 200px;
+        height: 270px;
         .square {
             background-color: #10141b;
             border: 1px solid #808080;

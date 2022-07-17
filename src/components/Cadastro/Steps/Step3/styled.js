@@ -18,6 +18,7 @@ export const Container = styled.div`
         @media (min-width: 900px) {
             height: 700px;
         }
+        margin-bottom: 20px;
     }
     #foto {
         width: 230px;
@@ -28,6 +29,8 @@ export const Container = styled.div`
             width: 430px;
             height: 550px;
         }
+        border: 1px solid #ffff;
+        padding: 5px;
     }
     .items {
         @media (min-width: 900px) {
@@ -49,8 +52,9 @@ export const Container = styled.div`
         align-items: center;
         justify-content: center;
         p {
-            font-size: 25px;
+            font-size: 22px;
             padding-bottom: 10px;
+            text-align: center;
         }
         input,
         select {

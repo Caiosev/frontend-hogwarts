@@ -112,6 +112,7 @@ export const Sec = styled.section`
         .grid-image img {
             width: 150px;
             height: 270px;
+            object-fit: cover;
 
             @media (min-width: 900px) and (max-width: 1200px) {
                 width: 60px;
@@ -129,6 +130,7 @@ export const Sec = styled.section`
         .grid-image-dumbledore img {
             width: 200px;
             height: 270px;
+            object-fit: cover;
             @media (min-width: 900px) and (max-width: 1199px) {
                 width: 110px;
                 height: 180px;

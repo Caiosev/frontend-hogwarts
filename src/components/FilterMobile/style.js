@@ -29,13 +29,13 @@ export const Container = styled.div`
             transform: ${(props) =>
                 props.isOpen ? 'rotate(-180deg)' : 'none'};
             transition: all 0.5s ease-in-out;
-            width: 40px;
-            height: 40px;
+            width: 30px;
+            height: 30px;
         }
     }
     #search {
         display: ${(props) => (props.isOpen ? 'none' : 'block')};
-        height: 50px;
+        height: 40px;
         padding-left: 10px;
         font-size: 18px;
         border-radius: 10px;

@@ -30,7 +30,7 @@ export const Container = styled.div`
         align-items: center;
         justify-content: center;
         p {
-            font-size: 25px;
+            font-size: 22px;
             padding-bottom: 10px;
         }
         input,

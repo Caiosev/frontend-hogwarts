@@ -7,6 +7,7 @@ export const Container = styled.div`
         align-items: center;
         justify-content: center;
         gap: 30px;
+        position: fixed;
     }
     width: 10vw;
     height: 100vh;
