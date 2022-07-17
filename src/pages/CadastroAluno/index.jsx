@@ -26,6 +26,7 @@ export default function CadastroAluno() {
     const [imgLogo, setImgLogo] = useState('');
     const [foto, setFoto] = useState(undefined);
     const [provas, setProvas] = useState([]);
+    const [ativo, setAtivo] = useState('p');
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -180,7 +181,15 @@ export default function CadastroAluno() {
                     </div>
                 </S.Foto>
                 <hr />
-                <S.Infos className="infos">
+                <S.Abas ativo={ativo}>
+                    <button type="button" id="p" onClick={() => setAtivo('p')}>
+                        Provas
+                    </button>
+                    <button type="button" id="i" onClick={() => setAtivo('i')}>
+                        Infos
+                    </button>
+                </S.Abas>
+                <S.Infos className="infos" ativo={ativo}>
                     <form action="">
                         <div className="">
                             <label htmlFor="nome">
@@ -325,7 +334,7 @@ export default function CadastroAluno() {
                         </div>
                     </form>
                 </S.Infos>
-                <S.Provas>
+                <S.Provas ativo={ativo}>
                     <div className="env">
                         <h1>Provas Enviadas</h1>
                         <div className="provas">

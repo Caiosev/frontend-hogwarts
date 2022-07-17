@@ -99,8 +99,6 @@ export const Section = styled.section`
         margin-top: 100px;
         height: 100%;
         display: block;
-        min-height: 1300px;
-}
     }
 
     hr {
@@ -121,17 +119,16 @@ export const Infos = styled.div`
         display: flex;
         flex-direction: column;
         height: 110%;
-        gap: 20px;
         @media (min-width: 300px) and (max-width: 1200px) {
             align-items: flex-start;
             padding-top: 20px;
             height: 560px;
+            gap: 20px;
         }
         div {
             display: flex;
             @media (min-width: 300px) and (max-width: 1200px) {
                 flex-direction: row;
-                gap: 10px;
                 flex-wrap: wrap;
                 justify-content: center;
                 width: 100vw;
@@ -174,6 +171,7 @@ export const Infos = styled.div`
         border-bottom: 2px solid white;
         font-size: 18px;
         width: 135px;
+        padding-bottom: 5px;
     }
 
     label {
@@ -183,6 +181,8 @@ export const Infos = styled.div`
         width: 150px;
         font-size: 24px;
     }
+    padding-top: 50px;
+    display: ${(props) => (props.ativo === 'i' ? 'block' : 'none')}; ;
 `;
 
 export const Foto = styled.div`
@@ -222,5 +222,48 @@ export const Provas = styled.div`
         justify-content: center;
         cursor: pointer;
         width: 180px;
+    }
+    padding-top: 50px;
+    display: ${(props) => (props.ativo === 'p' ? 'block' : 'none')}; ;
+`;
+
+export const Abas = styled.div`
+    display: flex;
+    padding-top: 50px;
+    justify-content: center;
+
+    button {
+        width: 50%;
+        height: 50px;
+        background-color: #1d1e34;
+        font-size: 15px;
+        font-weight: bold;
+        font-family: 'SofiaPro', sans-serif;
+        border-style: solid;
+        border-color: #4245a8;
+        color: white;
+        &:hover {
+            background-color: #4245a8;
+            cursor: pointer;
+        }
+        a {
+            color: white;
+        }
+    }
+    #p {
+        margin-right: -1px;
+        background-color: ${(props) =>
+            props.ativo === 'p' ? '#242633' : '#1d1e34'};
+        border-width: ${(props) =>
+            props.ativo === 'p' ? '3px 5px 0px 0px;' : '3px 3px 3px 0px;'};
+        border-radius: 0 20px 0 0;
+    }
+    #i {
+        margin-left: -1px;
+        background-color: ${(props) =>
+            props.ativo === 'i' ? '#242633' : '#1d1e34'};
+        border-width: ${(props) =>
+            props.ativo === 'i' ? '3px 0px 0px 3px;' : '3px 0px 3px 3px;'};
+        border-radius: 20px 0 0 0;
     }
 `;
