@@ -37,11 +37,11 @@ export const Container = styled.div`
     h1 {
         margin-top: 15px;
         @media (min-width: 900px) {
-            margin: 0 auto 30px auto;
+            margin: 50px auto 30px auto;
+            font-size: 2.5rem;
         }
     }
     @media (min-width: 900px) {
-        justify-content: center;
     }
 `;
 

@@ -9,17 +9,22 @@ export const Container = styled.div`
     justify-content: center;
     flex-wrap: wrap;
     @media (min-width: 900px) {
-        flex-direction: column;
-        height: 90vh;
-        justify-content: flex-start;
+        flex-direction: row;
+        justify-content: center;
+        height: 680px;
+        width: 400px;
+        margin: auto;
+        background: #181928;
+        border: 1px solid #353643;
+        box-shadow: -1px 7px 13px 0px rgba(0, 0, 0, 0.93);
     }
     .items {
         @media (min-width: 900px) {
-            width: 500px;
+            width: 250px;
             display: flex;
-            height: 400px;
+            flex-direction: column;
+            height: 590px;
             flex-wrap: wrap;
-            gap: 40px;
         }
     }
     .item {
@@ -61,5 +66,10 @@ export const Container = styled.div`
     }
     .prox {
         margin: auto;
+    }
+    .buttons {
+        @media (min-width: 900px) {
+            width: 100px;
+        }
     }
 `;
