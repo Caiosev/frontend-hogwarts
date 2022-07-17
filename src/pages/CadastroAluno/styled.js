@@ -135,6 +135,7 @@ export const Infos = styled.div`
                 width: 100vw;
                 flex-wrap: wrap;
                 justify-content: center;
+                padding: 0 10px 0 10px;
             }
         }
         button {
@@ -167,14 +168,14 @@ export const Infos = styled.div`
         border: none;
         border-bottom: 2px solid white;
         font-size: 18px;
-        width: 150px;
+        width: 135px;
     }
 
     label {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        width: 170px;
+        width: 150px;
         font-size: 24px;
     }
 `;
