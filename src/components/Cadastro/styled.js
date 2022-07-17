@@ -25,7 +25,9 @@ export const Container = styled.div`
         flex-wrap: wrap;
         justify-content: space-between;
         gap: 100px;
+
         img {
+            cursor: pointer;
             height: 35px;
         }
         .voltar {
@@ -34,6 +36,12 @@ export const Container = styled.div`
     }
     h1 {
         margin-top: 15px;
+        @media (min-width: 900px) {
+            margin: 0 auto 30px auto;
+        }
+    }
+    @media (min-width: 900px) {
+        justify-content: center;
     }
 `;
 
@@ -45,6 +53,7 @@ export const Header = styled.header`
     justify-content: center;
     background-color: ${(props) => props.color};
     img {
+        cursor: pointer;
         width: 50px;
     }
     border-bottom: 1px solid #ffff;

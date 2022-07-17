@@ -10,14 +10,16 @@ export const Container = styled.div`
     flex-wrap: wrap;
     @media (min-width: 900px) {
         flex-direction: column;
+        height: 90vh;
+        justify-content: flex-start;
     }
     .items {
         @media (min-width: 900px) {
-            width: 600px;
+            width: 500px;
             display: flex;
             height: 400px;
             flex-wrap: wrap;
-            gap: 70px;
+            gap: 40px;
         }
     }
     .item {

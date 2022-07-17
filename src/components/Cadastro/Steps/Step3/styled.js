@@ -10,6 +10,8 @@ export const Container = styled.div`
     flex-wrap: wrap;
     @media (min-width: 900px) {
         flex-direction: column;
+        height: 700px;
+        justify-content: flex-start;
     }
     #divfoto {
         height: 370px;
@@ -23,16 +25,20 @@ export const Container = styled.div`
         object-fit: cover;
         padding: 20px 0;
         @media (min-width: 900px) {
-            width: 400px;
+            width: 430px;
+            height: 550px;
         }
     }
     .items {
         @media (min-width: 900px) {
-            width: 600px;
+            width: 530px;
             display: flex;
-            height: 400px;
+            height: 350px;
             flex-wrap: wrap;
-            gap: 70px;
+            gap: 10px;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
         }
     }
     .item {

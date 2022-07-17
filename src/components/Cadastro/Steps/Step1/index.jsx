@@ -66,12 +66,6 @@ export default function Step1({
                 </div>
             </div>
             <div className="buttons">
-                {/* <button type="button" onClick={() => setStep(1)}>
-                    Voltar
-                </button>
-                <button type="button" >
-                    Continuar
-                </button> */}
                 <img
                     src="/images/right-arrow.png"
                     alt=""
