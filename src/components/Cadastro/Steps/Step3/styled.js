@@ -62,6 +62,7 @@ export const Container = styled.div`
             font-size: 22px;
             padding-bottom: 10px;
             text-align: center;
+            padding-left: 10px;
         }
         input,
         select {
@@ -137,7 +138,7 @@ export const Container = styled.div`
         }
     }
     .buttons {
-        width: 530px;
+        width: 300px;
         align-items: center;
     }
 `;

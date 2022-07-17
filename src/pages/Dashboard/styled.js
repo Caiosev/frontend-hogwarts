@@ -55,6 +55,7 @@ export const Header = styled.header`
             }
         }
         .ham {
+            position: absolute;
             cursor: pointer;
             z-index: 100;
             -webkit-tap-highlight-color: transparent;

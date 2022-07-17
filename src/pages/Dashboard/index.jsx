@@ -171,6 +171,9 @@ export default function Dashboard() {
                     <Link to="/">
                         <img src={logo} alt="" />
                     </Link>
+                    <S.Points points={points} className="points">
+                        <h4>Pontos: {points}</h4>
+                    </S.Points>
                     <div className="options">
                         <Link to="/aluno">
                             <FaPlusCircle size={25} />
@@ -187,9 +190,6 @@ export default function Dashboard() {
                     setNome={setNome}
                     nome={nome}
                 />
-                <S.Points points={points} className="points">
-                    <h4>Pontos:{points}</h4>
-                </S.Points>
                 <S.ListContainer>
                     {alunos.map((aluno) => {
                         return (

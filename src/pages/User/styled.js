@@ -31,7 +31,7 @@ export const Card = styled.div`
     .grid-frame {
         padding: 20px;
         position: relative;
-        border: 1px solid #a85;
+        border: 3px solid #a85;
         .square {
             background-color: #1a1a1d;
             border: 3px solid #a85;
@@ -101,8 +101,8 @@ export const Inputs = styled.div`
         label{
             display: flex;
             flex-direction: column;
-            margin-bottom:5px
-            font-family: 'BluuNext',sans-serif;
+            margin-bottom:5px;
+            font-family: 'BluuNext' ,sans-serif;
         }
     }
 `;
