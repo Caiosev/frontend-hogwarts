@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 import PropTypes from 'prop-types';
 import { Form } from '@unform/web';
 import * as S from './styled';
 import Radio from '../../Form/radio';
 
-export default function Astronomia({ setValor, setIdProf, close }) {
+export default function Astronomia({ submitProva, setLoading }) {
     const [pontos, setPontos] = useState(undefined);
     const [nota, setNota] = useState(undefined);
     const res = ['96', '5', 'venus', '63', '4'];
@@ -23,11 +23,6 @@ export default function Astronomia({ setValor, setIdProf, close }) {
             }
         });
         setPontos(soma);
-        setIdProf(2);
-    };
-
-    useEffect(() => {
-        if (pontos === undefined) return;
         switch (pontos) {
             case 0:
                 setNota('Trasgo');
@@ -51,12 +46,12 @@ export default function Astronomia({ setValor, setIdProf, close }) {
             default:
                 break;
         }
-        close();
-        setValor(pontos);
         toast.success(
             'Prova realizada com Sucesso, acesse a aba de provas enviadas'
         );
-    }, [pontos]);
+        setLoading(true);
+        submitProva(soma, 2);
+    };
 
     const optionsQ1 = [
         {

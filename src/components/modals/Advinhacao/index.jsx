@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 import PropTypes from 'prop-types';
 import { Form } from '@unform/web';
 import * as S from './styled';
 import Radio from '../../Form/radio';
 
-export default function Advinhacao({ setValor, setIdProf, close }) {
-    const [pontos, setPontos] = useState(undefined);
-    const [nota, setNota] = useState(undefined);
+export default function Advinhacao({ submitProva, setLoading }) {
+    const [nota, setNota] = useState('');
     const res = ['3', '1', '4', '3', '1'];
+    const [pontos, setPontos] = useState();
 
     const handleSubmit = (data) => {
         const resAluno = Object.values(data);
@@ -23,12 +23,7 @@ export default function Advinhacao({ setValor, setIdProf, close }) {
             }
         });
         setPontos(soma);
-        setIdProf(6);
-    };
-
-    useEffect(() => {
-        if (pontos === undefined) return;
-        switch (pontos) {
+        switch (soma) {
             case 0:
                 setNota('Trasgo');
                 break;
@@ -51,12 +46,13 @@ export default function Advinhacao({ setValor, setIdProf, close }) {
             default:
                 break;
         }
-        close();
-        setValor(pontos);
+
         toast.success(
             'Prova realizada com Sucesso, acesse a aba de provas enviadas'
         );
-    }, [pontos]);
+        setLoading(true);
+        submitProva(soma, 6);
+    };
 
     const optionsQ1 = [
         {
@@ -210,7 +206,6 @@ export default function Advinhacao({ setValor, setIdProf, close }) {
 }
 
 Advinhacao.propTypes = {
-    setValor: PropTypes.func,
-    setIdProf: PropTypes.func,
+    submitProva: PropTypes.func,
     close: PropTypes.func,
 }.isRequired;

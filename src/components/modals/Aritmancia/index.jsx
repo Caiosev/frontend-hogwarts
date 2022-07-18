@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 import PropTypes from 'prop-types';
 import { Form } from '@unform/web';
 import * as S from './styled';
 import Radio from '../../Form/radio';
 
-export default function Aritmancia({ setValor, setIdProf, close }) {
+export default function Aritmancia({ submitProva, setLoading }) {
     const [pontos, setPontos] = useState(undefined);
     const [nota, setNota] = useState(undefined);
     const res = ['2', '19', 'dmv', 'ir', '58'];
@@ -23,12 +23,7 @@ export default function Aritmancia({ setValor, setIdProf, close }) {
             }
         });
         setPontos(soma);
-        setIdProf(1);
-    };
-
-    useEffect(() => {
-        if (pontos === undefined) return;
-        switch (pontos) {
+        switch (soma) {
             case 0:
                 setNota('Trasgo');
                 break;
@@ -51,12 +46,12 @@ export default function Aritmancia({ setValor, setIdProf, close }) {
             default:
                 break;
         }
-        close();
-        setValor(pontos);
         toast.success(
             'Prova realizada com Sucesso, acesse a aba de provas enviadas'
         );
-    }, [pontos]);
+        setLoading(true);
+        submitProva(soma, 1);
+    };
 
     const optionsQ1 = [
         {

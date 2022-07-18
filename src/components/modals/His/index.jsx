@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 import PropTypes from 'prop-types';
 import { Form } from '@unform/web';
 import * as S from './styled';
 import Radio from '../../Form/radio';
 
-export default function His({ setValor, setIdProf, close }) {
+export default function His({ submitProva, setLoading }) {
     const [pontos, setPontos] = useState(undefined);
     const [nota, setNota] = useState(undefined);
     const res = ['4', '1', '1', '2', '2'];
@@ -23,7 +23,35 @@ export default function His({ setValor, setIdProf, close }) {
             }
         });
         setPontos(soma);
-        setIdProf(9);
+        switch (soma) {
+            case 0:
+                setNota('Trasgo');
+                break;
+            case 1:
+                setNota('Deploravel');
+                break;
+            case 2:
+                setNota('Pessimo');
+                break;
+            case 3:
+                setNota('Aceitavel');
+                break;
+            case 4:
+                setNota('Excede Expectativas');
+                break;
+            case 5:
+                setNota('Otimo');
+                break;
+
+            default:
+                break;
+        }
+
+        toast.success(
+            'Prova realizada com Sucesso, acesse a aba de provas enviadas'
+        );
+        setLoading(true);
+        submitProva(soma, 9);
     };
 
     const optionsQ1 = [
@@ -139,38 +167,6 @@ export default function His({ setValor, setIdProf, close }) {
             label: 'Professores, Medicos e Guerreiros',
         },
     ];
-
-    useEffect(() => {
-        if (pontos === undefined) return;
-        switch (pontos) {
-            case 0:
-                setNota('Trasgo');
-                break;
-            case 1:
-                setNota('Deploravel');
-                break;
-            case 2:
-                setNota('Pessimo');
-                break;
-            case 3:
-                setNota('Aceitavel');
-                break;
-            case 4:
-                setNota('Excede Expectativas');
-                break;
-            case 5:
-                setNota('Otimo');
-                break;
-
-            default:
-                break;
-        }
-        close();
-        setValor(pontos);
-        toast.success(
-            'Prova realizada com Sucesso, acesse a aba de provas enviadas'
-        );
-    }, [pontos]);
 
     return (
         <S.Container>

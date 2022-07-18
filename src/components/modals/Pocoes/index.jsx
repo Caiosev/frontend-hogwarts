@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 import PropTypes from 'prop-types';
 import { Form } from '@unform/web';
 import * as S from './styled';
 import Radio from '../../Form/radio';
 
-export default function Pocoes({ setValor, setIdProf, close }) {
+export default function Pocoes({ submitProva, setLoading }) {
     const [pontos, setPontos] = useState(undefined);
     const [nota, setNota] = useState(undefined);
     const res = ['2', '1', '3', '2', '1'];
@@ -23,12 +23,7 @@ export default function Pocoes({ setValor, setIdProf, close }) {
             }
         });
         setPontos(soma);
-        setIdProf(11);
-    };
-
-    useEffect(() => {
-        if (pontos === undefined) return;
-        switch (pontos) {
+        switch (soma) {
             case 0:
                 setNota('Trasgo');
                 break;
@@ -51,12 +46,13 @@ export default function Pocoes({ setValor, setIdProf, close }) {
             default:
                 break;
         }
-        close();
-        setValor(pontos);
+
         toast.success(
             'Prova realizada com Sucesso, acesse a aba de provas enviadas'
         );
-    }, [pontos]);
+        setLoading(true);
+        submitProva(soma, 11);
+    };
 
     const optionsQ1 = [
         {
