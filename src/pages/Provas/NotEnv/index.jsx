@@ -136,19 +136,15 @@ export default function NotEnv({ provas, submitProva, setLoading }) {
     };
 
     useEffect(() => {
-        console.log('d');
         if (provas === undefined) return;
-        console.log('b');
         const newArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
         provas.forEach((e) => {
             const position = newArr.indexOf(e.prof_id);
             if (position !== -1) {
                 newArr.splice(position, 1);
             }
-            console.log(newArr);
         });
         setNotProvas([...newArr]);
-        console.log('c');
     }, [provas]);
 
     useEffect(() => {
