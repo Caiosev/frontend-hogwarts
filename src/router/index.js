@@ -11,6 +11,7 @@ import Cadastro from '../components/Cadastro/cadastro';
 import User from '../pages/User';
 import Provas from '../pages/Provas';
 import Spells from '../pages/Spells';
+import Materias from '../pages/Materias';
 
 function PrivateRoute({ children }) {
     const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
@@ -72,6 +73,14 @@ export default function MainRoutes() {
                 element={
                     <PrivateRoute>
                         <Spells />
+                    </PrivateRoute>
+                }
+            />
+            <Route
+                path="/materias/"
+                element={
+                    <PrivateRoute>
+                        <Materias />
                     </PrivateRoute>
                 }
             />
