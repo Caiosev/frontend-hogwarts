@@ -23,7 +23,13 @@ export const Container = styled.div`
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
     text-align: center;
     background-color: ${Color.activeNav};
-
+    a,
+    a:hover,
+    a:focus,
+    a:active {
+        text-decoration: none;
+        color: inherit;
+    }
     .trace-motion {
         stroke-dasharray: 650;
         stroke-dashoffset: 650;
@@ -60,6 +66,7 @@ export const Container = styled.div`
         margin: 2em;
         border-radius: 20px;
         box-shadow: 0 0 0 14px #333;
+        width: 270px;
         text-align: center;
         position: relative;
         &__inner {

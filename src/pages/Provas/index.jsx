@@ -126,6 +126,12 @@ export default function Provas() {
                     <S.SideBar menuMobile={menuMobile} className="sidebar">
                         <h1>Bem vindo {nome}</h1>
                         <div className="buttons">
+                            <Link to="/materias">
+                                <S.EnvBtn>Estudos</S.EnvBtn>
+                            </Link>
+                            <Link to="/feiticos">
+                                <S.EnvBtn>Feiticos</S.EnvBtn>
+                            </Link>
                             <S.NotEnvBtn
                                 type="button"
                                 onClick={() => {
@@ -146,9 +152,6 @@ export default function Provas() {
                             >
                                 Enviadas
                             </S.EnvBtn>
-                            <Link to="/feiticos">
-                                <S.EnvBtn>Feiticos</S.EnvBtn>
-                            </Link>
                         </div>
                     </S.SideBar>
                     <hr />
