@@ -69,19 +69,9 @@ export default function Provas() {
             prof_id: p,
             aluno_id: id,
         });
-        console.log('deu submit');
         getProvas();
         setLoading(false);
     };
-
-    // useEffect(() => {
-    //     setLoading(true);
-    //     console.log('valor unde');
-    //     if (valor === undefined) return;
-    //     console.log('valor mudado');
-    //     const profId = idProf;
-    //     submitProva(profId);
-    // }, [valor]);
 
     return (
         <S.Container>

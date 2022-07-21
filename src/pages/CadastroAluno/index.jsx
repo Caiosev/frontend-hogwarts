@@ -134,6 +134,20 @@ export default function CadastroAluno() {
         }
     };
 
+    const handleDelete = async (element) => {
+        element.preventDefault();
+
+        try {
+            await axios.delete(`/alunos/${id}`);
+            toast.success('Aluno deletado com sucesso');
+            navigate('/painel');
+        } catch (e) {
+            toast.error('Erro ao deletar aluno');
+            const errors = get(e, 'response.data.errors', []);
+            errors.map((error) => toast.error(error));
+        }
+    };
+
     const handleSelectFile = (e) => {
         setFoto(e.target.files[0]);
         setPreview(URL.createObjectURL(e.target.files[0]));
@@ -350,7 +364,12 @@ export default function CadastroAluno() {
                             </div>
                             <div className="btn">
                                 <button type="submit" onClick={handleSubmit}>
-                                    Atulizar
+                                    Atualizar
+                                </button>
+                            </div>
+                            <div className="btn">
+                                <button type="submit" onClick={handleDelete}>
+                                    Deletar
                                 </button>
                             </div>
                         </form>
@@ -734,13 +753,23 @@ export default function CadastroAluno() {
                                         </select>
                                     </label>
                                 </div>
-                                <div className="btn">
-                                    <button
-                                        type="submit"
-                                        onClick={handleSubmit}
-                                    >
-                                        Atulizar
-                                    </button>
+                                <div className="buttons">
+                                    <div className="btn">
+                                        <button
+                                            type="submit"
+                                            onClick={handleSubmit}
+                                        >
+                                            Atualizar
+                                        </button>
+                                    </div>
+                                    <div className="btn">
+                                        <button
+                                            type="submit"
+                                            onClick={handleDelete}
+                                        >
+                                            Deletar
+                                        </button>
+                                    </div>
                                 </div>
                             </form>
                         </S.Infos>

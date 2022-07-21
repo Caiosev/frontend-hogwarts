@@ -70,6 +70,7 @@ export const Container = styled.div`
         text-align: center;
         position: relative;
         &__inner {
+            padding-top: 15px;
             border-radius: 17px;
             overflow: hidden;
             background: #333;
@@ -137,10 +138,10 @@ export const Container = styled.div`
         display: flex;
         justify-content: center;
         align-items: flex-start;
-        padding-top: 50px;
+        padding-top: 20px;
         img {
-            width: 100px;
-            height: 100px;
+            width: 60px;
+            height: 60px;
         }
     }
 `;

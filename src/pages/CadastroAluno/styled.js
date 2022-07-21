@@ -168,7 +168,7 @@ export const Infos = styled.div`
         }
         .btn {
             display: flex;
-            padding: 30px 0;
+            padding: 15px 0;
         }
     }
     input,
@@ -224,6 +224,9 @@ export const Infos = styled.div`
             width: 250px;
             padding-bottom: 5px;
             font-size: 24px;
+        }
+        .buttons {
+            width: 580px;
         }
         button {
             width: 160px;
