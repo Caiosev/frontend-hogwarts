@@ -13,6 +13,7 @@ const initalState = {
 export default function (state = initalState, action) {
     switch (action.type) {
         case types.LOGIN_SUCCESS: {
+            console.log(action);
             const newState = { ...state };
             newState.isLoggedIn = true;
             newState.token = action.payload.token;
