@@ -80,22 +80,22 @@ export default function Voo({ submitProva, setLoading }) {
         {
             id: 5,
             value: '1',
-            label: 'Alvo dumbledore',
+            label: '955',
         },
         {
             id: 6,
             value: '2',
-            label: 'Elliot Smethwyck',
+            label: '962',
         },
         {
             id: 7,
             value: '3',
-            label: 'Bob Ollerton',
+            label: '402',
         },
         {
             id: 8,
             value: '4',
-            label: 'Rolanda Hooch',
+            label: '820',
         },
     ];
 
@@ -149,22 +149,22 @@ export default function Voo({ submitProva, setLoading }) {
         {
             id: 17,
             value: '1',
-            label: 'X',
+            label: '1000',
         },
         {
             id: 18,
             value: '2',
-            label: 'II',
+            label: '1100',
         },
         {
             id: 19,
             value: '3',
-            label: 'IX',
+            label: '1200',
         },
         {
             id: 20,
             value: '4',
-            label: 'XI',
+            label: '1050',
         },
     ];
 
@@ -180,7 +180,7 @@ export default function Voo({ submitProva, setLoading }) {
                 />
                 <Radio
                     name="q2"
-                    label="2 - Quantas letras existem no alfabeto de transfiguração?"
+                    label="2 - O primeiro uso registrado de uma vassoura destinada a voo foi em:"
                     options={optionsQ2}
                 />
                 <Radio
@@ -195,7 +195,7 @@ export default function Voo({ submitProva, setLoading }) {
                 />
                 <Radio
                     name="q5"
-                    label="5 - Em que seculo surgiu o Quadribol?"
+                    label="5 - Em que ano surgiu o Quadribol?"
                     options={optionsQ5}
                 />
                 {nota}

@@ -57,22 +57,22 @@ export default function Astronomia({ submitProva, setLoading }) {
         {
             id: 1,
             value: '90',
-            label: '90%',
+            label: 'Planetas Gasossos e Planetas Terrosos',
         },
         {
             id: 2,
             value: '85',
-            label: '85%',
+            label: 'Planetas Gasossos e Planetas Telúricos',
         },
         {
             id: 3,
             value: '82',
-            label: '82%',
+            label: 'Planetas Jovens e Planetas Terrosos',
         },
         {
             id: 4,
             value: '96',
-            label: '96%',
+            label: 'Planetas Jovianos e Planetas Telúricos',
         },
     ];
     const optionsQ2 = [
@@ -174,7 +174,7 @@ export default function Astronomia({ submitProva, setLoading }) {
             <Form onSubmit={handleSubmit}>
                 <Radio
                     name="q1"
-                    label=" 1 - Energia e matéria escuras representam ___ do universo?"
+                    label=" 1 - Os planetas dos sitema solar são divididos em dois principais tipos, quais são eles?"
                     options={optionsQ1}
                 />
                 <Radio

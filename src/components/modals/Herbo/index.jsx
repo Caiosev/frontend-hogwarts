@@ -80,22 +80,22 @@ export default function Herbo({ submitProva, setLoading }) {
         {
             id: 5,
             value: '1',
-            label: 'Sanguinária',
+            label: 'Carne',
         },
         {
             id: 6,
             value: '2',
-            label: 'Bubotúbera',
+            label: 'Apenas Agua',
         },
         {
             id: 7,
             value: '3',
-            label: 'Tentáculo Venenoso',
+            label: 'Luz do Sol',
         },
         {
             id: 8,
             value: '4',
-            label: 'Hortelã-pimenta',
+            label: 'Sementes',
         },
     ];
 
@@ -149,22 +149,22 @@ export default function Herbo({ submitProva, setLoading }) {
         {
             id: 17,
             value: '1',
-            label: 'das Varinhas',
+            label: 'Claro e Umido',
         },
         {
             id: 18,
             value: '2',
-            label: 'das Roupas',
+            label: 'Claro e Seco',
         },
         {
             id: 19,
             value: '3',
-            label: 'dos Fertilizantes',
+            label: 'Escuro e Seco',
         },
         {
             id: 20,
             value: '4',
-            label: 'dos Antidotos',
+            label: 'Escuro e Umido',
         },
     ];
 
@@ -180,7 +180,7 @@ export default function Herbo({ submitProva, setLoading }) {
                 />
                 <Radio
                     name="q2"
-                    label="2 - Poção Polissuco é uma poção que permite ao bebedor assumir a forma de outra pessoa. Com qual planta essa poção é feita?"
+                    label="2 - O arbusto autofetilizante se alimenta de:"
                     options={optionsQ2}
                 />
                 <Radio
@@ -195,7 +195,7 @@ export default function Herbo({ submitProva, setLoading }) {
                 />
                 <Radio
                     name="q5"
-                    label="5 - Qual o significado do nome Wingardium Leviosa?"
+                    label="5 - Qual o ambiente que deve ser cultivado o Visgo do Diabo?"
                     options={optionsQ5}
                 />
                 {nota}

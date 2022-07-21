@@ -174,7 +174,7 @@ export default function Advinhacao({ submitProva, setLoading }) {
             <Form onSubmit={handleSubmit}>
                 <Radio
                     name="q1"
-                    label=" 1 - O metedo de advinhação Ictimancia envolve qual animal?"
+                    label=" 1 - O metedo de advinhação Ictiomancia envolve qual animal?"
                     options={optionsQ1}
                 />
                 <Radio

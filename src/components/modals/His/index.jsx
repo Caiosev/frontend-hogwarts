@@ -58,44 +58,44 @@ export default function His({ submitProva, setLoading }) {
         {
             id: 1,
             value: '1',
-            label: 'Egípcios e Incas',
+            label: '1901',
         },
         {
             id: 2,
             value: '2',
-            label: 'Indios e Vikings',
+            label: '1910',
         },
         {
             id: 3,
             value: '3',
-            label: 'Romanos e Gregos',
+            label: '1912',
         },
         {
             id: 4,
             value: '4',
-            label: 'Egípcios e Celtas',
+            label: '1911',
         },
     ];
     const optionsQ2 = [
         {
             id: 5,
             value: '1',
-            label: 'Circe, Medéia e Samanta',
+            label: '1637',
         },
         {
             id: 6,
             value: '2',
-            label: 'Cercei, Meedila e Samanta',
+            label: '1547',
         },
         {
             id: 7,
             value: '3',
-            label: 'Circe, Medála e Semante',
+            label: '1324',
         },
         {
             id: 8,
             value: '4',
-            label: 'Cercei, Madalena e Samanta',
+            label: '1527',
         },
     ];
 
@@ -175,12 +175,12 @@ export default function His({ submitProva, setLoading }) {
             <Form onSubmit={handleSubmit}>
                 <Radio
                     name="q1"
-                    label="1 - Duas das mais antigas sociedades mágicas que conhecemos, vem a ser os:"
+                    label="1 - O Protesto dos Gargulas aconteceu em:"
                     options={optionsQ1}
                 />
                 <Radio
                     name="q2"
-                    label="2 - É na Grécia Antiga que encontramos os primeiros relatos a respeito de grandes e poderosas feiticeiras como:"
+                    label="2 - O codico de conduta dos Lobisomens foi feito em:"
                     options={optionsQ2}
                 />
                 <Radio

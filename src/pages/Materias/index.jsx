@@ -44,7 +44,7 @@ export default function Materias() {
                         </div>
                     </a>
                     <a
-                        href="https://pt.wikipedia.org/wiki/Universo"
+                        href="https://pt.wikipedia.org/wiki/Planeta"
                         target="_blank"
                         rel="noreferrer"
                     >
@@ -96,7 +96,7 @@ export default function Materias() {
                         </div>
                     </a>
                     <a
-                        href="https://harrypotter.fandom.com/wiki/Charms_(class)"
+                        href="https://harrypotter.fandom.com/wiki/Category:Charms"
                         target="_blank"
                         rel="noreferrer"
                     >
@@ -148,7 +148,7 @@ export default function Materias() {
                         </div>
                     </a>
                     <a
-                        href="https://harrypotter.fandom.com/wiki/Divination_(class)"
+                        href="https://harrypotter.fandom.com/pt-br/wiki/Categoria:Adivinhação"
                         target="_blank"
                         rel="noreferrer"
                     >
@@ -214,7 +214,7 @@ export default function Materias() {
                                         />
                                         <div className="icon">
                                             <img
-                                                src="/images/materias/serumBlack.png"
+                                                src="/images/materias/saplingBlack.png"
                                                 alt=""
                                             />
                                         </div>

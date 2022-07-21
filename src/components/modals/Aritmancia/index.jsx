@@ -198,7 +198,7 @@ export default function Aritmancia({ submitProva, setLoading }) {
                 <Radio
                     name="q5"
                     label="5 - Qual valor se resulta da conversão escansiva do nome
-                    Nicholas Flames?"
+                    Nicholas Flamel?"
                     options={optionsQ5}
                 />
                 {nota}
