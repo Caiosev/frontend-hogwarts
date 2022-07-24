@@ -8,7 +8,7 @@ import Radio from '../../Form/radio';
 export default function Runas({ submitProva, setLoading }) {
     const [pontos, setPontos] = useState(undefined);
     const [nota, setNota] = useState(undefined);
-    const res = ['3', '1', '1', '1', '2'];
+    const res = ['3', '1', '1', '3', '2'];
 
     const handleSubmit = (data) => {
         const resAluno = Object.values(data);
@@ -190,7 +190,7 @@ export default function Runas({ submitProva, setLoading }) {
                 />
                 <Radio
                     name="q4"
-                    label=" A runa ᛖ do alfabeto runico represental qual letra no latim?"
+                    label="4 - A runa ᛖ do alfabeto runico represental qual letra no latim?"
                     options={optionsQ4}
                 />
                 <Radio

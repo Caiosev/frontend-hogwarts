@@ -229,7 +229,7 @@ export const HomeBg = styled.section`
     width: 100%;
     height: 90vh;
     @media (min-width: 1800px) {
-        height: 95vh;
+        height: 100vh;
     }
     background-image: url('/images/bg-hogwarts.jpg');
     background-position: center;
@@ -243,17 +243,17 @@ export const HomeBg = styled.section`
         from(rgba(0, 0, 0, 1)),
         to(rgba(0, 0, 0, 0.1))
     );
-    mask-image: linear-gradient(
+    -webkit-mask-image: linear-gradient(
         to bottom,
         rgba(0, 0, 0, 1),
         rgba(0, 0, 0, 0.1)
     );
-    @keyframes zoom {
+    /* @keyframes zoom {
         to {
             transform: scale(1.3);
         }
     }
-    animation: zoom 1s 2s ease-in forwards;
+    animation: zoom 1s 2s ease-in forwards; */
 `;
 
 export const HomeText = styled.div`

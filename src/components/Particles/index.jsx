@@ -15,7 +15,7 @@ export default function ParticleElement() {
                         value: '#10141B',
                     },
                 },
-                fpsLimit: 120,
+                fpsLimit: 60,
                 fullScreen: false,
                 interactivity: {
                     events: {
@@ -31,7 +31,7 @@ export default function ParticleElement() {
                     },
                     modes: {
                         push: {
-                            quantity: 4,
+                            quantity: 1,
                         },
                         repulse: {
                             distance: 200,
@@ -60,9 +60,9 @@ export default function ParticleElement() {
                     number: {
                         density: {
                             enable: true,
-                            area: 800,
+                            area: 50,
                         },
-                        value: 40,
+                        value: 2,
                     },
                     opacity: {
                         value: 0.5,
@@ -71,7 +71,7 @@ export default function ParticleElement() {
                         type: 'circle',
                     },
                     size: {
-                        value: { min: 1, max: 3 },
+                        value: { min: 1, max: 2 },
                     },
                 },
                 detectRetina: false,

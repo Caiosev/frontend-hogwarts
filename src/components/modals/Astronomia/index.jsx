@@ -8,7 +8,7 @@ import Radio from '../../Form/radio';
 export default function Astronomia({ submitProva, setLoading }) {
     const [pontos, setPontos] = useState(undefined);
     const [nota, setNota] = useState(undefined);
-    const res = ['96', '5', 'venus', '63', '4'];
+    const res = ['96', '5', 'venus', '79', '4'];
 
     const handleSubmit = (data) => {
         const resAluno = Object.values(data);
@@ -62,7 +62,7 @@ export default function Astronomia({ submitProva, setLoading }) {
         {
             id: 2,
             value: '85',
-            label: 'Planetas Gasossos e Planetas Telúricos',
+            label: 'Planetas Rochosos e Planetas Telúricos',
         },
         {
             id: 3,
@@ -134,8 +134,8 @@ export default function Astronomia({ submitProva, setLoading }) {
         },
         {
             id: 15,
-            value: '63',
-            label: '63',
+            value: '79',
+            label: '79',
         },
         {
             id: 16,

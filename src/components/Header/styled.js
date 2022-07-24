@@ -115,7 +115,7 @@ export const Menu = styled.div`
     padding: 0 120px;
     align-items: center;
     justify-content: space-between;
-    transition: all 0.3s ease-in;
+    transition: all 0.1s ease-in;
     opacity: 0;
     z-index: 2;
     font-family: 'SofiaPro';

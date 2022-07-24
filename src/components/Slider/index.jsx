@@ -86,23 +86,24 @@ export default function SliderElement({ setNews }) {
                 <div className="news3">
                     <div className="img-titulo">
                         <div className="foto" />
-                        <h2>3Boas vindas a todos nossos novos estudantes!</h2>
+                        <h2>Tentativa de roubo em Gringotes</h2>
                     </div>
                     <div className="texto">
-                        <h3>Lorem ipsum dolor, sit amet consectetur</h3>
+                        <h3>
+                            As investigações continuam sobre a invasão de
+                            Gringotes em 31 de julho, que se acredita ser obra
+                            de bruxos das trevas ou bruxas desconhecidas. Os
+                            goblins de Gringotes hoje insistiram que nada havia
+                            sido levado. O cofre que foi vasculhado foi de fato
+                            esvaziado no mesmo dia.
+                        </h3>
                         <hr />
-                        <h3>Lorem ipsum dolor, sit amet consectetur</h3>
-                    </div>
-                </div>
-                <div className="news4">
-                    <div className="img-titulo">
-                        <div className="foto" />
-                        <h2>4Boas vindas a todos nossos novos estudantes!</h2>
-                    </div>
-                    <div className="texto">
-                        <h3>Lorem ipsum dolor, sit amet consectetur</h3>
-                        <hr />
-                        <h3>Lorem ipsum dolor, sit amet consectetur</h3>
+                        <h3>
+                            &quot;Mas não estamos dizendo a você o que estava
+                            lá, então mantenha seus narizes para fora se você
+                            sabe o que é bom para você&quot;, disse um porta-voz
+                            de Gringotes esta tarde.
+                        </h3>
                     </div>
                 </div>
             </Slider>
