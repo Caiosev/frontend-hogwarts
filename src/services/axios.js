@@ -1,21 +1,6 @@
 /* eslint-disable no-param-reassign */
 import axios from 'axios';
 
-// const token = () => {
-//     try {
-//         return `Bearer ${
-//             JSON.parse(
-//                 JSON.parse(localStorage.getItem('persist:hogwarts')).auth
-//             ).token
-//         }`;
-//     } catch (error) {
-//         console.log(error);
-//         return undefined;
-//     }
-// };
-
-// token();
-
 const instance = axios.create({
     baseURL: 'https://hogwarts-api.seventerprise.tech',
 });

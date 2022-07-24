@@ -58,44 +58,44 @@ export default function HisT({ submitProva, setLoading }) {
         {
             id: 1,
             value: '1',
-            label: 'Benjamin franklin',
+            label: 'Plantar / Criação de ferramentas',
         },
         {
             id: 2,
             value: '2',
-            label: 'Abraham lincoln',
+            label: 'Fabricar armas / Descoberta do adubo',
         },
         {
             id: 3,
             value: '3',
-            label: 'Thomas Édison',
+            label: 'Controlar o fogo / Revolução Neolítica',
         },
         {
             id: 4,
             value: '4',
-            label: 'Nikola tesla',
+            label: 'Apagar o fogo / Revolução Política',
         },
     ];
     const optionsQ2 = [
         {
             id: 5,
             value: '1',
-            label: 'René Descartes',
+            label: 'Roda',
         },
         {
             id: 6,
             value: '2',
-            label: 'Immanuel Kant',
+            label: 'Fogo',
         },
         {
             id: 7,
             value: '3',
-            label: 'John Locke',
+            label: 'Fogueira',
         },
         {
             id: 8,
             value: '4',
-            label: 'Francis Bacon',
+            label: 'Vassoura',
         },
     ];
 
@@ -103,22 +103,22 @@ export default function HisT({ submitProva, setLoading }) {
         {
             id: 9,
             value: '1',
-            label: 'Controlador de carga eletrica',
+            label: 'Eletricidade e Ciência',
         },
         {
             id: 10,
             value: '2',
-            label: 'Interruptor',
+            label: 'Ciência e Engenharia',
         },
         {
             id: 11,
             value: '3',
-            label: 'Estabilizador',
+            label: 'Engenharia e Eletricidade',
         },
         {
             id: 12,
             value: '4',
-            label: 'Controle Remoto',
+            label: 'História e Ciência',
         },
     ];
 
@@ -126,22 +126,22 @@ export default function HisT({ submitProva, setLoading }) {
         {
             id: 13,
             value: '1',
-            label: 'Japão',
+            label: 'Utilidade, Usabilidade e Segurança',
         },
         {
             id: 14,
             value: '2',
-            label: 'China',
+            label: 'Inovação, Usabilidade e Segurança',
         },
         {
             id: 15,
             value: '3',
-            label: 'Tailandia',
+            label: 'Utilidade, Segurança e Inovação',
         },
         {
             id: 16,
             value: '4',
-            label: 'Russia',
+            label: 'Utilidade e Inovação',
         },
     ];
 
@@ -149,22 +149,22 @@ export default function HisT({ submitProva, setLoading }) {
         {
             id: 17,
             value: '1',
-            label: 'Fred Mercury',
+            label: 'homo sapiens',
         },
         {
             id: 18,
             value: '2',
-            label: 'Alan Turing',
+            label: 'Homo sapiens sapiens',
         },
         {
             id: 19,
             value: '3',
-            label: 'Charles Darwin',
+            label: 'Homo erectus',
         },
         {
             id: 20,
             value: '4',
-            label: 'Tom Cruise',
+            label: 'Homo Habilis',
         },
     ];
 
@@ -175,27 +175,27 @@ export default function HisT({ submitProva, setLoading }) {
             <Form onSubmit={handleSubmit}>
                 <Radio
                     name="q1"
-                    label="1 - A Lampada é um objeto utilizado por trouxas para iluminar o ambiente, qual o nome de seu criador?"
+                    label="1 -  A descoberta pré-histórica de como ___________ e a subsequente ___________ aumentaram a disponibilidade de fontes de alimento"
                     options={optionsQ1}
                 />
                 <Radio
                     name="q2"
-                    label="2 - O método científico é um conjunto de regras para a obtenção do conhecimento durante a investigação científica. Quem foi o primeiro a definir o metodo cientifico?"
+                    label="2 - A invenção da _____ auxiliou humanos a viajar, transportar cargas e controlar seu ambiente."
                     options={optionsQ2}
                 />
                 <Radio
                     name="q3"
-                    label="3 - O _____ é um objeto colocado na parede em casas de Trouxas, ele controla a passagem de corrente eletrica, na maioria das vezes é utilizado para acender a luz"
+                    label="3 - A tecnologia é frequentemente uma consequência da:"
                     options={optionsQ3}
                 />
                 <Radio
                     name="q4"
-                    label="4 - O jogo Pedra, papel e tesoura tem sua origem em qual país?"
+                    label="4 - As tecnologias geralmente não são exclusivamente produtos da ciência, porque precisam satisfazer requisitos como:"
                     options={optionsQ4}
                 />
                 <Radio
                     name="q5"
-                    label="5 - Quem é responsavel pela teoria da evolução?"
+                    label="5 - A data exata da descoberta do fogo pelos trouxas não é conhecida, evidências de ossos de animais queimados no Berço da humanidade sugerem que a domesticação do fogo ocorreu antes de 1 Ma, o consenso acadêmico indica que o __________ controlou o fogo entre 500 e 400 ka.["
                     options={optionsQ5}
                 />
                 {nota}
