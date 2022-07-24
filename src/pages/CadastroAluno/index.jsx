@@ -138,6 +138,7 @@ export default function CadastroAluno() {
         element.preventDefault();
 
         try {
+            await axios.delete(`/provas/${id}`);
             await axios.delete(`/alunos/${id}`);
             toast.success('Aluno deletado com sucesso');
             navigate('/painel');
