@@ -80,4 +80,4 @@ Aqui estão todos os logins para professor, todos tem a senha: 123456
              
 </details>
 
-fronthogwarts.herokuapp.com
+<https://fronthogwarts.herokuapp.com>
