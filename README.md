@@ -1,70 +1,81 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Bem Vindo a Hogwarts! 🧙
 
-## Available Scripts
+Este é o repositorio Front-End do Projeto Hogwarts, [clique aqui para ir para a versão Back-end](https://github.com/Caiosev/api-hogwarts)
 
-In the project directory, you can run:
 
-### `npm start`
+## Objetivo do Projeto
+A ideia surgiu apartir da necessidade que senti de ter um projeto aonde eu faria desde conceito de telas até o deploy, entendendo por completo como todas as partes de uma aplicação Web se comunicão.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## O Projeto
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<details>
+  <summary><strong>💻 Tecnologias Utilizadas</strong></summary><br />
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Front-end:** Axios, GSAP, React, React-Modal, Redux, Redux Saga, SaSS
 
-### `npm run build`
+**Back-end:** Node, Express, BCrypt, JWT, Multer, Sequelize, Maria DB, Google Cloud, Docker
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+</details>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<details>
+  <summary><strong>👨‍🎓 Rota de Aluno</strong></summary><br />
+  
+  Como Aluno você é capaz de:
 
-### `npm run eject`
+* Realizar provas
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+* Visualizar todas provas enviadas e suas notas
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* Gerar um boletim de suas notas em pdf
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+* Aprender o movimentod de alguns feitiços
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+* Estudar o que irá cair na prova em cada matéria
 
-## Learn More
+</details>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<details>
+  <summary><strong>👨‍🏫 Rota de Professor</strong></summary><br />
+  
+  Como Professor você é capaz de:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* Ver o filtrar todos os alunos registrados
 
-### Code Splitting
+* Ver a nota de cada casa (resultado da somatoria de provas de todos alunos de certa casa)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+* Cadastrar novos alunos
 
-### Analyzing the Bundle Size
+* Editar e deletar alunos já cadastrados 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+* Ver todas provas feitas por certo aluno
 
-### Making a Progressive Web App
+* Editar suas Informações cadastradas
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+</details>
 
-### Advanced Configuration
+<details>
+  <summary><strong>🗣 Me envie um feedback</strong></summary><br />
+  
+    Gostou de projeto? Alguma sugestão? Encontrou algum bug? 
+[Me chame no Linkedin para conversarmos](https://www.linkedin.com/in/caio-severino/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Aqui estão todos os logins para professor, todos tem a senha: 123456
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+ `septima_vector`
+  `aurora_sinistra`
+   `silvanus_kettleburn`
+    `filius_flitwick`
+     `quirinus_quirrell`
+      `sybill_trelawney`
+       `rolanda_hooch`
+        `pomona_sprout`
+         `cuthbert_binns`
+          `charity_burbage`
+           `severus_snape`
+            `bathsheda_babbling`
+             `minerva_mcgonagall`
+             
+</details>
