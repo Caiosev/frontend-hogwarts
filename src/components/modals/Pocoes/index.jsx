@@ -80,22 +80,22 @@ export default function Pocoes({ submitProva, setLoading }) {
         {
             id: 5,
             value: '1',
-            label: 'Ovos de Cinzal',
+            label: 'Braço',
         },
         {
             id: 6,
             value: '2',
-            label: 'Ovos de Unicornio',
+            label: 'Perna',
         },
         {
             id: 7,
             value: '3',
-            label: 'Ovos de Dodo',
+            label: 'Dedos',
         },
         {
             id: 8,
             value: '4',
-            label: 'Ovos de Galinha',
+            label: 'Torax',
         },
     ];
 
@@ -103,22 +103,22 @@ export default function Pocoes({ submitProva, setLoading }) {
         {
             id: 9,
             value: '1',
-            label: 'Animais',
+            label: 'Força',
         },
         {
             id: 10,
             value: '2',
-            label: 'Galego',
+            label: 'Agilidade',
         },
         {
             id: 11,
             value: '3',
-            label: 'Português',
+            label: 'Sorte',
         },
         {
             id: 12,
             value: '4',
-            label: 'Russo',
+            label: 'Clareza',
         },
     ];
 
@@ -131,7 +131,7 @@ export default function Pocoes({ submitProva, setLoading }) {
         {
             id: 14,
             value: '2',
-            label: 'Revela os piores traços e hábitos de uma pessoa em particular para o bebedor',
+            label: 'Faz com que o bebedor responde qualquer pergunta com honestidade',
         },
         {
             id: 15,
@@ -149,22 +149,22 @@ export default function Pocoes({ submitProva, setLoading }) {
         {
             id: 17,
             value: '1',
-            label: 'Bolhas multicolor',
+            label: 'Azul/Verde',
         },
         {
             id: 18,
             value: '2',
-            label: 'Um brilho intenso na cor amarela',
+            label: 'Azul/Roxo',
         },
         {
             id: 19,
             value: '3',
-            label: 'Um brilho intenso na cor azul',
+            label: 'Azul/Amarelo',
         },
         {
             id: 20,
             value: '4',
-            label: 'Um cheiro insuportavel',
+            label: 'Amarelo/Verde',
         },
     ];
 
@@ -180,22 +180,22 @@ export default function Pocoes({ submitProva, setLoading }) {
                 />
                 <Radio
                     name="q2"
-                    label="2 - Existem varios tipos de poções do amor, dentre eles, qual é o ingrediente mais utilizado?"
+                    label="2 - O ossso de qual parte do corpo é usado para fazer a poção de força?"
                     options={optionsQ2}
                 />
                 <Radio
                     name="q3"
-                    label="3 - A Poção Ellayse é uma poção usada, entre outros meios, para fazer quem a beba entender fluentemente:"
+                    label="3 - Qual o efeito da poção Felix Felicis?"
                     options={optionsQ3}
                 />
                 <Radio
                     name="q4"
-                    label="4 - A Poção do ódio é uma poção que:"
+                    label="4 - Qual efeito da poção Veritaserum?"
                     options={optionsQ4}
                 />
                 <Radio
                     name="q5"
-                    label="5 - A poção emebelezadora se caracteriza por emitir:"
+                    label="5 - A poção Wideye se caracteriza pela cor:"
                     options={optionsQ5}
                 />
                 {nota}
