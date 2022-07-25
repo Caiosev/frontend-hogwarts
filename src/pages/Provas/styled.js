@@ -55,6 +55,7 @@ export const SideBar = styled.div`
         padding: 40px 20px;
         text-align: center;
         display: flex;
+        background-color: #1a1a1d;
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -138,6 +139,9 @@ export const Content = styled.div`
         }
         height: 90vh;
     }
+    h2:first-letter {
+        text-transform: capitalize;
+    }
 `;
 
 export const Header = styled.header`
@@ -218,7 +222,7 @@ export const Header = styled.header`
         display: flex;
         align-items: center;
         justify-content: space-between;
-        background-color: ${(props) => props.color};
+        background-color: #1a1a1d;
         padding: 0 30px;
         img {
             width: 50px;

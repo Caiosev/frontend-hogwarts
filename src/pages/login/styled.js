@@ -65,7 +65,7 @@ export const Container = styled.section`
                     }
                 }
                 p {
-                    margin-top: 10px;
+                    margin-top: 20px;
                     font-size: 28px;
                 }
             }

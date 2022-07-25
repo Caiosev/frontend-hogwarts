@@ -114,7 +114,9 @@ export default function Provas() {
                 </S.Header>
                 <S.Content>
                     <S.SideBar menuMobile={menuMobile} className="sidebar">
-                        <h1>Bem vindo {nome}</h1>
+                        <h2>Bem Vindo</h2>
+                        <br />
+                        <h2>{nome}</h2>
                         <div className="buttons">
                             <Link to="/materias">
                                 <S.EnvBtn>Estudos</S.EnvBtn>

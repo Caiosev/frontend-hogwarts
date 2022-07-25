@@ -46,7 +46,7 @@ export default function NotEnv({ provas, submitProva, setLoading }) {
     const modalStyle = {
         content: {
             width: '40vw',
-            height: '70vh',
+            height: '80vh',
             padding: '40px',
             backgroundColor: '#0A181F',
             margin: 'auto',
