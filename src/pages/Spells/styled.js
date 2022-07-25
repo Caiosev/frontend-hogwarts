@@ -43,6 +43,7 @@ export const Container = styled.div`
 
     h3 {
         font: 24px 'BluuNext';
+        margin-bottom: 5px;
     }
 
     main {
