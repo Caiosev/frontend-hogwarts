@@ -80,22 +80,22 @@ export default function Defesa({ submitProva, setLoading }) {
         {
             id: 5,
             value: '1',
-            label: 'Movimento Circular',
+            label: 'Amortais, que assume a forma do observador',
         },
         {
             id: 6,
             value: '2',
-            label: 'Movimento Oval',
+            label: 'Mortais, que assume a forma do observador',
         },
         {
             id: 7,
             value: '3',
-            label: 'Movimento de Aceno',
+            label: 'Mortais, que assume a forma do maior medo do observador',
         },
         {
             id: 8,
             value: '4',
-            label: 'Movimento em U',
+            label: 'Amortais, que assume a forma do maior medo do observador',
         },
     ];
 
@@ -180,7 +180,7 @@ export default function Defesa({ submitProva, setLoading }) {
                 />
                 <Radio
                     name="q2"
-                    label="2 - Qual o movimento utilizado para executar o Flipendo?"
+                    label="2 - Os Boggarts são:"
                     options={optionsQ2}
                 />
                 <Radio
