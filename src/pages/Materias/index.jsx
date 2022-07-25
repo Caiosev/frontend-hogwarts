@@ -96,7 +96,7 @@ export default function Materias() {
                         </div>
                     </a>
                     <a
-                        href="https://harrypotter.fandom.com/wiki/Category:Charms"
+                        href="https://harrypotter.fandom.com/wiki/Charm"
                         target="_blank"
                         rel="noreferrer"
                     >

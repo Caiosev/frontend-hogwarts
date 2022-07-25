@@ -8,7 +8,7 @@ import Radio from '../../Form/radio';
 export default function Feiticos({ submitProva, setLoading }) {
     const [pontos, setPontos] = useState(undefined);
     const [nota, setNota] = useState(undefined);
-    const res = ['1', '4', '3', '3', '4'];
+    const res = ['1', '4', '3', '3', '1'];
 
     const handleSubmit = (data) => {
         const resAluno = Object.values(data);
@@ -126,22 +126,22 @@ export default function Feiticos({ submitProva, setLoading }) {
         {
             id: 13,
             value: '1',
-            label: 'Priori Incantatem',
+            label: 'Verde',
         },
         {
             id: 14,
             value: '2',
-            label: 'Cave Inimicum',
+            label: 'Vermelho',
         },
         {
             id: 15,
             value: '3',
-            label: 'Prior Incantato',
+            label: 'Azul',
         },
         {
             id: 16,
             value: '4',
-            label: 'Piertotum Locomotor',
+            label: 'Preto',
         },
     ];
 
@@ -149,22 +149,22 @@ export default function Feiticos({ submitProva, setLoading }) {
         {
             id: 17,
             value: '1',
-            label: 'Levitar',
+            label: 'Apagar memorias especificas do alvo',
         },
         {
             id: 18,
             value: '2',
-            label: 'Levitar Alto',
+            label: 'Trazer memorias do subconsiente do alvo',
         },
         {
             id: 19,
             value: '3',
-            label: 'Levantar',
+            label: 'Crair uma defesa contra o feitiço de falsa memorias',
         },
         {
             id: 20,
             value: '4',
-            label: 'Levantar Alto',
+            label: 'Apaga totalmente a memoria do alvo',
         },
     ];
 
@@ -190,12 +190,12 @@ export default function Feiticos({ submitProva, setLoading }) {
                 />
                 <Radio
                     name="q4"
-                    label="4 - Existe um encantamento utilizado para descobrir todos feitiços conjurados por uma varinha, qual seu nome?"
+                    label="4 - Qual a luz emitida pelo feitiço Descendo?"
                     options={optionsQ4}
                 />
                 <Radio
                     name="q5"
-                    label="5 - Qual o significado do nome Wingardium Leviosa?"
+                    label="5 - O Feitiço da Memoria(Obliviate) tem o efeito de:?"
                     options={optionsQ5}
                 />
                 {nota}
