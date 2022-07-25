@@ -126,22 +126,22 @@ export default function Voo({ submitProva, setLoading }) {
         {
             id: 13,
             value: '1',
-            label: 'Pomorim',
+            label: 'Suécia',
         },
         {
             id: 14,
             value: '2',
-            label: 'Podrorim',
+            label: 'Suíça',
         },
         {
             id: 15,
             value: '3',
-            label: 'Prolorim',
+            label: 'Finlândia',
         },
         {
             id: 16,
             value: '4',
-            label: 'Promirim',
+            label: 'Inglaterra',
         },
     ];
 
@@ -149,22 +149,22 @@ export default function Voo({ submitProva, setLoading }) {
         {
             id: 17,
             value: '1',
-            label: '1000',
+            label: 'JogaBol (Playpot)',
         },
         {
             id: 18,
             value: '2',
-            label: '1100',
+            label: 'Agilbola (Quickpot)',
         },
         {
             id: 19,
             value: '3',
-            label: '1200',
+            label: 'Esquvabola (Dodgepot)',
         },
         {
             id: 20,
             value: '4',
-            label: '1050',
+            label: 'Trancabola (Quodpot)',
         },
     ];
 
@@ -190,12 +190,12 @@ export default function Voo({ submitProva, setLoading }) {
                 />
                 <Radio
                     name="q4"
-                    label="4 - O pomo de ouro é baseado em uma criatura, qual é seu nome?"
+                    label="4 - Aonde acontece a corrida anual de vassouras?"
                     options={optionsQ4}
                 />
                 <Radio
                     name="q5"
-                    label="5 - Em que ano surgiu o Quadribol?"
+                    label="5 - Qual o nome do jogo similar com Quadribol que é jogado nos EUA?"
                     options={optionsQ5}
                 />
                 {nota}
