@@ -103,22 +103,22 @@ export default function Herbo({ submitProva, setLoading }) {
         {
             id: 9,
             value: '1',
-            label: 'Descurainia',
+            label: 'Rosa e Roxa',
         },
         {
             id: 10,
             value: '2',
-            label: 'Hortelã-pimenta',
+            label: 'Rosa e Verde',
         },
         {
             id: 11,
             value: '3',
-            label: 'Ditamno',
+            label: 'Verde e Roxa',
         },
         {
             id: 12,
             value: '4',
-            label: 'Nabo tibetano',
+            label: 'Verde e Azul',
         },
     ];
 
@@ -126,22 +126,22 @@ export default function Herbo({ submitProva, setLoading }) {
         {
             id: 13,
             value: '1',
-            label: 'Inglaterra',
+            label: 'Branca e Preta',
         },
         {
             id: 14,
             value: '2',
-            label: 'Escócia',
+            label: 'Preta e Verde',
         },
         {
             id: 15,
             value: '3',
-            label: 'Suécia',
+            label: 'Verde e Branca',
         },
         {
             id: 16,
             value: '4',
-            label: 'Nepal',
+            label: 'Preta e Branca',
         },
     ];
 
@@ -185,12 +185,12 @@ export default function Herbo({ submitProva, setLoading }) {
                 />
                 <Radio
                     name="q3"
-                    label="3 - A planta ______ quando colhido em noite de lua cheia, tambem pode ser utilizada para fazer a poção de Poção Polissuco."
+                    label="3 - Qual a cor da planta PuffaPod"
                     options={optionsQ3}
                 />
                 <Radio
                     name="q4"
-                    label="4 - Em que país é cultivado as Árvores resistentes à gravidade?"
+                    label="4 - A Moly tem folhas _____ e flores ______"
                     options={optionsQ4}
                 />
                 <Radio
