@@ -80,22 +80,22 @@ export default function Runas({ submitProva, setLoading }) {
         {
             id: 5,
             value: '1',
-            label: '0',
+            label: 'f',
         },
         {
             id: 6,
             value: '2',
-            label: '1',
+            label: 'p',
         },
         {
             id: 7,
             value: '3',
-            label: '2',
+            label: 'y',
         },
         {
             id: 8,
             value: '4',
-            label: '3',
+            label: 'k',
         },
     ];
 
@@ -103,22 +103,22 @@ export default function Runas({ submitProva, setLoading }) {
         {
             id: 9,
             value: '1',
-            label: '9',
+            label: 'z',
         },
         {
             id: 10,
             value: '2',
-            label: '8',
+            label: 'f',
         },
         {
             id: 11,
             value: '3',
-            label: '7',
+            label: 'v',
         },
         {
             id: 12,
             value: '4',
-            label: '5',
+            label: 'y',
         },
     ];
 
@@ -180,22 +180,22 @@ export default function Runas({ submitProva, setLoading }) {
                 />
                 <Radio
                     name="q2"
-                    label="2 - A Runa de Demiguise representa qual numero?"
+                    label="2 - A runa ᚠ do alfabeto runico representa qual letra no latim?"
                     options={optionsQ2}
                 />
                 <Radio
                     name="q3"
-                    label="3 - A Runa da Hydra representa qual numero?"
+                    label="3 - A runa ᛉ do alfabeto runico representa qual letra no latim?"
                     options={optionsQ3}
                 />
                 <Radio
                     name="q4"
-                    label="4 - A runa ᛖ do alfabeto runico represental qual letra no latim?"
+                    label="4 - A runa ᛖ do alfabeto runico representa qual letra no latim?"
                     options={optionsQ4}
                 />
                 <Radio
                     name="q5"
-                    label="5 - A runa ᚢ do alfabeto runico represental qual letra no latim?"
+                    label="5 - A runa ᚢ do alfabeto runico representa qual letra no latim?"
                     options={optionsQ5}
                 />
                 {nota}
