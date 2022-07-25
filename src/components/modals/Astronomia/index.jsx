@@ -57,7 +57,7 @@ export default function Astronomia({ submitProva, setLoading }) {
         {
             id: 1,
             value: '90',
-            label: 'Planetas Gasossos e Planetas Terrosos',
+            label: 'Planetas Rochosos e Planetas Terrosos',
         },
         {
             id: 2,

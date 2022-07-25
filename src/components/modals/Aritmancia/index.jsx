@@ -179,7 +179,7 @@ export default function Aritmancia({ submitProva, setLoading }) {
                 />
                 <Radio
                     name="q2"
-                    label="2 - Numeros de _ a _ possuem importancia vital para a
+                    label="2 - Números de _ a _ possuem importância vital para a
                     Aritmancia."
                     options={optionsQ2}
                 />

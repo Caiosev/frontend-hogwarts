@@ -70,7 +70,7 @@ export default function Materias() {
                         </div>
                     </a>
                     <a
-                        href="https://www.magazine-hd.com/apps/wp/curiosidades-criaturas-harry-potter/"
+                        href="https://harrypotter.fandom.com/wiki/List_of_creatures"
                         target="_blank"
                         rel="noreferrer"
                     >

@@ -8,7 +8,7 @@ import Radio from '../../Form/radio';
 export default function CriaturasMagicas({ submitProva, setLoading }) {
     const [pontos, setPontos] = useState(undefined);
     const [nota, setNota] = useState(undefined);
-    const res = ['t', '3', 'aco', '4', '3'];
+    const res = ['210', '1', '2', '4', '3'];
 
     const handleSubmit = (data) => {
         const resAluno = Object.values(data);
@@ -57,68 +57,68 @@ export default function CriaturasMagicas({ submitProva, setLoading }) {
     const optionsQ1 = [
         {
             id: 1,
-            value: 'v',
-            label: 'Vampiro',
+            value: '180',
+            label: '1,80m',
         },
         {
             id: 2,
-            value: 't',
-            label: 'Thestral',
+            value: '190',
+            label: '1,90m',
         },
         {
             id: 3,
-            value: 'h',
-            label: 'Hipógrifo',
+            value: '200',
+            label: '2,00m',
         },
         {
             id: 4,
-            value: 'troll',
-            label: 'Troll',
+            value: '210',
+            label: '2,10m',
         },
     ];
     const optionsQ2 = [
         {
             id: 5,
             value: '1',
-            label: 'Se aproximiar devagar e pular em suas costas',
+            label: 'Impossível de treinar ou domesticar',
         },
         {
             id: 6,
             value: '2',
-            label: 'Oferecer comida e se andar em sua direção lentamente',
+            label: 'Treináveis',
         },
         {
             id: 7,
             value: '3',
-            label: 'Pedir permissao, esperar ela ser retribuida e se aproximar mantendo contato visual',
+            label: 'Domesticáveis',
         },
         {
             id: 8,
             value: '4',
-            label: 'Nunca devemos nos aproximar de um grifo',
+            label: 'Possível de treinar ou domesticar',
         },
     ];
 
     const optionsQ3 = [
         {
-            id: 9,
-            value: 'lobe',
-            label: 'Lobelia erinus',
+            id: 5,
+            value: '1',
+            label: 'Impossível de treinar ou domesticar',
         },
         {
-            id: 10,
-            value: 'dada',
-            label: 'Dadaleira',
+            id: 6,
+            value: '2',
+            label: 'Perigosas, apenas magos treinados devem lidar com eles',
         },
         {
-            id: 11,
-            value: 'ver',
-            label: 'Verbena',
+            id: 7,
+            value: '3',
+            label: 'Impossível de serem capturadas',
         },
         {
-            id: 12,
-            value: 'aco',
-            label: 'Aconito',
+            id: 8,
+            value: '4',
+            label: 'Doceis, apenas magos treinados devem lidar com eles',
         },
     ];
 
@@ -126,22 +126,22 @@ export default function CriaturasMagicas({ submitProva, setLoading }) {
         {
             id: 13,
             value: '1',
-            label: 'Pisar ou esbarrar em suas arvores',
+            label: 'Cabelo',
         },
         {
             id: 14,
             value: '2',
-            label: 'Pisá-los',
+            label: 'Nuca',
         },
         {
             id: 15,
             value: '3',
-            label: 'Acorda-los com som muito alto',
+            label: 'Pescoço',
         },
         {
             id: 16,
             value: '4',
-            label: 'Ameaçar de qualquer maneira a integridade de suas arvores',
+            label: 'Orelha',
         },
     ];
 
@@ -175,22 +175,22 @@ export default function CriaturasMagicas({ submitProva, setLoading }) {
             <Form onSubmit={handleSubmit}>
                 <Radio
                     name="q1"
-                    label="1 - O _______ mata suas vitimas ao olhá-las diretamente nos olhos"
+                    label="1 - Qual a altura minima de um Centauro"
                     options={optionsQ1}
                 />
                 <Radio
                     name="q2"
-                    label="2 - Quais passos devem ser seguidos para se aproximar de um grifo em segurança?"
+                    label="2 - Os dragões são classificados pelo Ministério como: "
                     options={optionsQ2}
                 />
                 <Radio
                     name="q3"
-                    label="3 - Qual a planta utilizada para fazer a poção que impede um lobisomen de se tranformar?"
+                    label="3 - Os Grifos são classificados pelo Ministério como:"
                     options={optionsQ3}
                 />
                 <Radio
                     name="q4"
-                    label="4 - Qual situação deixa os Tronquilhos agressivos?"
+                    label="4 - Os Diabretes (Pixies) gostam de levantar as pessoas por qual parte do corpo?"
                     options={optionsQ4}
                 />
                 <Radio
