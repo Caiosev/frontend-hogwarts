@@ -7,7 +7,7 @@ export const Header = styled.header`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #242633;
+    background-color: #1a1a1d;
     padding: 0 30px;
     img {
         width: 50px;
@@ -66,14 +66,19 @@ export const Container = styled.div`
         margin: 2em;
         border-radius: 20px;
         box-shadow: 0 0 0 14px #333;
-        width: 270px;
+        width: 230px;
         text-align: center;
         position: relative;
         &__inner {
-            padding-top: 15px;
             border-radius: 17px;
             overflow: hidden;
             background: #333;
+            margin: auto;
+            height: 280px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding: 10px;
         }
         h5 {
             font-family: 'BluuNext';
