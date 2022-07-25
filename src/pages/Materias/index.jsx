@@ -226,7 +226,7 @@ export default function Materias() {
                         </div>
                     </a>
                     <a
-                        href="https://harrypotter.fandom.com/wiki/History_of_Magic_Classroom"
+                        href="https://harrypotter.fandom.com/wiki/History_of_Magic"
                         target="_blank"
                         rel="noreferrer"
                     >

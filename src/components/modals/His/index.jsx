@@ -103,22 +103,22 @@ export default function His({ submitProva, setLoading }) {
         {
             id: 9,
             value: '1',
-            label: 'um caldeirão de chumbo a qual constitui um dos mais enigmáticos vestígios do mundo celta.',
+            label: 'Mago',
         },
         {
             id: 10,
             value: '2',
-            label: 'uma vasilha de ouro a qual constitui um dos mais enigmáticos vestígios do mundo inca.',
+            label: 'Dragão',
         },
         {
             id: 11,
             value: '3',
-            label: 'uma vasilha de prata a qual constitui um dos mais enigmáticos vestígios do mundo celta.',
+            label: 'Rei',
         },
         {
             id: 12,
             value: '4',
-            label: 'uma vasilha de prata a qual constitui um dos mais enigmáticos vestígios do mundo egipcio.',
+            label: 'Hydra',
         },
     ];
 
@@ -126,22 +126,22 @@ export default function His({ submitProva, setLoading }) {
         {
             id: 13,
             value: '1',
-            label: 'Romana',
+            label: 'Uma cabeça de urso',
         },
         {
             id: 14,
             value: '2',
-            label: 'Grega',
+            label: 'Uma água-viva',
         },
         {
             id: 15,
             value: '3',
-            label: 'Nordica',
+            label: 'Um saco de batata',
         },
         {
             id: 16,
             value: '4',
-            label: 'Egipcia',
+            label: 'Um caldeirão',
         },
     ];
 
@@ -149,22 +149,22 @@ export default function His({ submitProva, setLoading }) {
         {
             id: 17,
             value: '1',
-            label: 'Padres, Medicos e Cozinheiros',
+            label: 'Tom Riddle',
         },
         {
             id: 18,
             value: '2',
-            label: 'Bardos, Ovados e Druidas',
+            label: 'Gaspard Shingleton',
         },
         {
             id: 19,
             value: '3',
-            label: 'Curandeiros, Padres e Guerreiros',
+            label: 'Gellert Grindelwald',
         },
         {
             id: 20,
             value: '4',
-            label: 'Professores, Medicos e Guerreiros',
+            label: 'St Mungo',
         },
     ];
 
@@ -175,27 +175,27 @@ export default function His({ submitProva, setLoading }) {
             <Form onSubmit={handleSubmit}>
                 <Radio
                     name="q1"
-                    label="1 - O Protesto dos Gargulas aconteceu em:"
+                    label="1 - O Protesto dos Gárgulas aconteceu em:"
                     options={optionsQ1}
                 />
                 <Radio
                     name="q2"
-                    label="2 - O codico de conduta dos Lobisomens foi feito em:"
+                    label="2 - O código de conduta dos Lobisomens foi feito em:"
                     options={optionsQ2}
                 />
                 <Radio
                     name="q3"
-                    label="3 - O Caldeirão Gundestrup é:"
+                    label="3 - Emerico o Mal, foi um:"
                     options={optionsQ3}
                 />
                 <Radio
                     name="q4"
-                    label=" 4 - O Palladium trata-se de uma estátua de madeira que segundo a mitologia ______ veio a cair do céu."
+                    label=" 4 - Urico, o  Esquisitão, ficou conhecido por usar _____ como chapéu"
                     options={optionsQ4}
                 />
                 <Radio
                     name="q5"
-                    label="5 - Exitiam tres categorias de druidas durante o apogeu celta, as quais eram:"
+                    label="5 - Quem foi o inventor do caldeirão que se mexe sozinho?"
                     options={optionsQ5}
                 />
                 {nota}
