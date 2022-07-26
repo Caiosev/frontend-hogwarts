@@ -13,7 +13,6 @@ export const Container = styled.div`
         height: 70vh;
         width: 78vw;
         background: #181928;
-        border: 1px solid #353643;
         box-shadow: -1px 7px 13px 0px rgba(0, 0, 0, 0.93);
         align-content: center;
         gap: 100px;
