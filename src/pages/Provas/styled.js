@@ -53,20 +53,23 @@ export const SideBar = styled.div`
     @media (min-width: 900px) {
         width: 30vw;
         padding: 40px 20px;
+        height: 100vh;
         text-align: center;
+        position: fixed;
         display: flex;
         background-color: #1a1a1d;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        top: 10vh;
         .buttons {
             padding-top: 100px;
             display: flex;
             flex-direction: column;
             gap: 50px;
-            button {
-            }
         }
+        border-bottom: 1px solid white;
+        border-right: 1px solid white;
     }
 `;
 export const Content = styled.div`
@@ -112,10 +115,15 @@ export const Content = styled.div`
 
     @media (min-width: 900px) {
         display: flex;
+        hr {
+            display: none;
+        }
         .sec-provas {
             text-align: center;
-            padding: 30px;
-            width: 80vw;
+            padding-top: 13vh;
+            padding-left: 30vw;
+            width: 100%;
+            height: 100%;
             .provas {
                 display: flex;
                 flex-wrap: wrap;
@@ -134,7 +142,7 @@ export const Content = styled.div`
                 justify-content: flex-start;
                 cursor: pointer;
                 width: 150px;
-                height: 160px;
+                height: 230px;
             }
         }
         height: 90vh;
@@ -224,6 +232,7 @@ export const Header = styled.header`
         justify-content: space-between;
         background-color: #1a1a1d;
         padding: 0 30px;
+        position: fixed;
         img {
             width: 50px;
         }
@@ -234,6 +243,7 @@ export const Header = styled.header`
             align-items: center;
             justify-content: space-between;
             gap: 20px;
+            padding-right: 10px;
             svg {
                 cursor: pointer;
             }

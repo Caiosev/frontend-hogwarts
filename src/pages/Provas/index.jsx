@@ -336,7 +336,7 @@ export default function Provas() {
                                 <S.EnvBtn
                                     type="button"
                                     onClick={handlePrint}
-                                    style={{ marginTop: '100px' }}
+                                    style={{ margin: '80px auto' }}
                                 >
                                     Gerar Boletim
                                 </S.EnvBtn>
