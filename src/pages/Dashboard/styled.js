@@ -261,4 +261,6 @@ export const Points = styled.div`
     justify-content: center;
     align-items: center;
     height: 50px;
+    font-family: 'BluuNext', sans-serif;
+    font-size: 20px;
 `;
