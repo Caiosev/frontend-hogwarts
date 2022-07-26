@@ -226,6 +226,7 @@ export const Infos = styled.div`
                 display: flex;
                 width: 100%;
                 justify-content: center;
+                gap: 60px;
             }
         }
         label {
@@ -250,7 +251,7 @@ export const Infos = styled.div`
 
 export const Foto = styled.div`
     width: 350px;
-
+    padding-left: 80px;
     img {
         width: 100%;
         height: 400px;
@@ -307,7 +308,7 @@ export const Provas = styled.div`
             height: 80vh;
             text-align: center;
             .provas {
-                width: 100%;
+                width: 68%;
                 margin: auto;
                 flex-wrap: wrap;
                 flex-direction: row;

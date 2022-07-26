@@ -119,7 +119,7 @@ export default function Header() {
                         to="staff"
                         spy
                         smooth
-                        offset={-100}
+                        offset={-180}
                         duration={500}
                     >
                         Staff
