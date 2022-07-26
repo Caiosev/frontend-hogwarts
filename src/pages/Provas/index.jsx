@@ -1,5 +1,6 @@
+/* eslint-disable no-unused-expressions */
 /* eslint-disable react/no-unstable-nested-components */
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { FaSignOutAlt } from 'react-icons/fa';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
@@ -19,14 +20,11 @@ export default function Provas() {
     const [loading, setLoading] = useState(true);
     const [notenv, setNotEnv] = useState(true);
     const [provas, setProvas] = useState(undefined);
-
-    // const [valor, setValor] = useState(undefined);
-    // const [idProf, setIdProf] = useState(undefined);
     const [menuMobile, setMenuMobile] = useState();
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const componentRef = useRef();
-    const [provasFeitas] = useState([
+    const [provasFeitas, setProvasFeitas] = useState([
         'NA',
         'NA',
         'NA',
@@ -44,18 +42,32 @@ export default function Provas() {
     const handlePrint = useReactToPrint({
         content: () => componentRef.current,
     });
-    const getProvas = async () => {
+    const getProvas = useCallback(async () => {
         try {
             const res = await axios.get(`/provas/${id}`);
             setProvas(res.data);
-            console.log(provas);
+            return;
         } catch (error) {
             console.log(error);
         }
-    };
+    }, []);
+
+    const setProvasFeitasFunc = useCallback(() => {
+        if (provas === undefined) return;
+        const arr = [...provasFeitas];
+        provas.forEach((e) => {
+            arr[e.prof_id - 1] = e.valor;
+        });
+        setProvasFeitas([...arr]);
+    }, [provas]);
+
     useEffect(() => {
         getProvas();
     }, []);
+
+    useEffect(() => {
+        setProvasFeitasFunc();
+    }, [provas, setProvasFeitasFunc]);
 
     const handleLogout = () => {
         dispatch(actions.loginFailure());
@@ -63,7 +75,6 @@ export default function Provas() {
     };
 
     const submitProva = async (v, p) => {
-        console.log('submit');
         await axios.post(`/provas/`, {
             valor: v,
             prof_id: p,

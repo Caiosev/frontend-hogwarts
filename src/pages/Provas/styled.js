@@ -130,7 +130,7 @@ export const Content = styled.div`
                 display: flex;
                 align-items: center;
                 flex-direction: column;
-                gap: 15px;
+                gap: 5px;
                 justify-content: flex-start;
                 cursor: pointer;
                 width: 150px;
