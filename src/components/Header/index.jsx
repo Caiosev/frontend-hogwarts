@@ -111,6 +111,7 @@ export default function Header() {
                         smooth
                         offset={-70}
                         duration={500}
+                        onClick={() => setMenuMobile(!menuMobile)}
                     >
                         Nossa História
                     </Scroll>
@@ -121,6 +122,7 @@ export default function Header() {
                         smooth
                         offset={-180}
                         duration={500}
+                        onClick={() => setMenuMobile(!menuMobile)}
                     >
                         Staff
                     </Scroll>
@@ -131,6 +133,7 @@ export default function Header() {
                         smooth
                         offset={-70}
                         duration={500}
+                        onClick={() => setMenuMobile(!menuMobile)}
                     >
                         Materiais
                     </Scroll>
@@ -141,6 +144,7 @@ export default function Header() {
                         smooth
                         offset={-70}
                         duration={500}
+                        onClick={() => setMenuMobile(!menuMobile)}
                     >
                         Como Chegar
                     </Scroll>
@@ -158,7 +162,14 @@ export default function Header() {
                     offset={-70}
                     duration={500}
                 >
-                    Nossa História
+                    <span
+                        onClick={() => setMenuMobile(!menuMobile)}
+                        onKeyPress={() => setMenuMobile(!menuMobile)}
+                        role="button"
+                        tabIndex="0"
+                    >
+                        Nossa História
+                    </span>
                 </Scroll>
                 <Scroll
                     activeClass="active"
@@ -168,7 +179,14 @@ export default function Header() {
                     offset={-70}
                     duration={500}
                 >
-                    Staff
+                    <span
+                        onClick={() => setMenuMobile(!menuMobile)}
+                        onKeyPress={() => setMenuMobile(!menuMobile)}
+                        role="button"
+                        tabIndex="0"
+                    >
+                        Staff
+                    </span>
                 </Scroll>
                 <Scroll
                     activeClass="active"
@@ -178,7 +196,14 @@ export default function Header() {
                     offset={-70}
                     duration={500}
                 >
-                    Materiais
+                    <span
+                        onClick={() => setMenuMobile(!menuMobile)}
+                        onKeyPress={() => setMenuMobile(!menuMobile)}
+                        role="button"
+                        tabIndex="0"
+                    >
+                        Materiais
+                    </span>
                 </Scroll>
                 <Scroll
                     activeClass="active"
@@ -188,7 +213,14 @@ export default function Header() {
                     offset={-70}
                     duration={500}
                 >
-                    Como Chegar
+                    <span
+                        onClick={() => setMenuMobile(!menuMobile)}
+                        onKeyPress={() => setMenuMobile(!menuMobile)}
+                        role="button"
+                        tabIndex="0"
+                    >
+                        Como Chegar
+                    </span>
                 </Scroll>
             </S.MobileMenu>
         </S.Header>
