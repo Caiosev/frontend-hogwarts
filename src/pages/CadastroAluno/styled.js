@@ -251,7 +251,7 @@ export const Infos = styled.div`
 
 export const Foto = styled.div`
     width: 350px;
-    padding-left: 80px;
+
     img {
         width: 100%;
         height: 400px;
@@ -264,6 +264,7 @@ export const Foto = styled.div`
     }
     @media (min-width: 900px) {
         width: 500px;
+        padding-left: 80px;
         .file-input {
             width: 400px;
             height: 550px;
