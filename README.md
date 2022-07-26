@@ -61,6 +61,21 @@ Estava em busca de uma ideia de sistema onde eu poderia fazer CRUD e utilizar si
 </details>
 
 <details>
+  <summary><strong>📷 Screenshots</strong></summary><br />
+  
+<div align="center">
+
+![Screenshot_1](https://user-images.githubusercontent.com/79454480/181123823-0677e491-3ead-4dd5-b50a-a15553ef214f.png)
+![Screenshot_2](https://user-images.githubusercontent.com/79454480/181123827-8d528ac3-2eb8-4943-a16f-2d8ed6b31b95.png)
+![Screenshot_5](https://user-images.githubusercontent.com/79454480/181123830-9f79e959-1798-49da-b9cd-3f9fb759fce7.png)
+![Screenshot_7](https://user-images.githubusercontent.com/79454480/181123834-019262e0-8b60-47c1-a1e6-6c425757de2a.png)
+![Screenshot_8](https://user-images.githubusercontent.com/79454480/181123821-7ee3224c-8c0f-40e9-9997-fdf7787420b8.png)
+
+<img src="https://user-images.githubusercontent.com/79454480/181122308-5a8fcc3b-e6d7-4e26-9122-e1c1e0237d00.jpeg" alt="drawing" width="300"/>
+<img src="https://user-images.githubusercontent.com/79454480/181122310-c425a57e-0049-447f-acc8-e3138ba1b9ef.jpeg" alt="drawing" width="200"/>
+</details>
+
+<details>
   <summary><strong>🗣 Me envie um feedback</strong></summary><br />
   
     Gostou de projeto? Alguma sugestão? Encontrou algum bug? 
