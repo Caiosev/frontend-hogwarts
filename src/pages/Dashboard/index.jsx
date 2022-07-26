@@ -30,8 +30,14 @@ export default function Dashboard() {
                 setLogo('/images/logo.png');
                 setColor('#1a1a1d');
                 setAlunos(
-                    todosalunos.filter((aluno) =>
-                        aluno.nome.toLowerCase().includes(nome.toLowerCase())
+                    todosalunos.filter(
+                        (aluno) =>
+                            aluno.nome
+                                .toLowerCase()
+                                .includes(nome.toLowerCase()) ||
+                            aluno.sobrenome
+                                .toLowerCase()
+                                .includes(nome.toLowerCase())
                     )
                 );
                 setPoints(allPoints[0]);
@@ -46,7 +52,8 @@ export default function Dashboard() {
                     todosalunos.filter(
                         (aluno) =>
                             aluno['aluno-casa'].nome === 'Grifinória' &&
-                            aluno.nome.includes(nome)
+                            (aluno.nome.includes(nome) ||
+                                aluno.sobrenome.includes(nome))
                     )
                 );
                 setPoints(allPoints[1]);
@@ -61,7 +68,8 @@ export default function Dashboard() {
                     todosalunos.filter(
                         (aluno) =>
                             aluno['aluno-casa'].nome === 'Corvinal' &&
-                            aluno.nome.includes(nome)
+                            (aluno.nome.includes(nome) ||
+                                aluno.sobrenome.includes(nome))
                     )
                 );
                 setPoints(allPoints[4]);
@@ -76,7 +84,8 @@ export default function Dashboard() {
                     todosalunos.filter(
                         (aluno) =>
                             aluno['aluno-casa'].nome === 'Lufa-lufa' &&
-                            aluno.nome.includes(nome)
+                            (aluno.nome.includes(nome) ||
+                                aluno.sobrenome.includes(nome))
                     )
                 );
                 setPoints(allPoints[3]);
@@ -91,7 +100,8 @@ export default function Dashboard() {
                     todosalunos.filter(
                         (aluno) =>
                             aluno['aluno-casa'].nome === 'Sonserina' &&
-                            aluno.nome.includes(nome)
+                            (aluno.nome.includes(nome) ||
+                                aluno.sobrenome.includes(nome))
                     )
                 );
                 setPoints(allPoints[2]);
@@ -124,15 +134,6 @@ export default function Dashboard() {
         dispatch(actions.loginFailure());
         navigate('/');
     };
-
-    // const deleteData = async (e, id) => {
-    //     try {
-    //         await axios.delete(`/alunos/${id}`);
-    //         e.parentElement.parentElement.remove();
-    //     } catch (error) {
-    //         console.log(error);
-    //     }
-    // };
 
     const handleClickAluno = (id) => {
         navigate(`/aluno/${id}`);
