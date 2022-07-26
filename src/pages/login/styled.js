@@ -90,7 +90,7 @@ export const Container = styled.section`
         justify-content: flex-start;
         padding-top: 50px;
         #logo {
-            width: 250px;
+            width: 180px;
         }
         gap: 50px;
         display: ${(props) => (props.options === false ? 'none' : 'flex')};

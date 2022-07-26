@@ -33,11 +33,12 @@ export default function NotEnv({ provas, submitProva, setLoading }) {
     const [notprovas, setNotProvas] = useState();
     const modalMobileStyle = {
         content: {
-            width: '80vw',
-            height: '90vh',
+            width: '100vw',
+            height: '100vh',
             padding: '40px',
             backgroundColor: '#0A181F',
             border: '0',
+            inset: '0',
         },
         overlay: {
             backgroundColor: '#132d3a',
@@ -843,7 +844,9 @@ export default function NotEnv({ provas, submitProva, setLoading }) {
                 </>
             )}
             {notprovas && notprovas.length === 0 && (
-                <p>Voce enviou todas as provas</p>
+                <p style={{ marginTop: '-25px' }}>
+                    Voce enviou todas as provas
+                </p>
             )}
         </div>
     );
