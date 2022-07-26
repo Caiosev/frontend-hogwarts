@@ -33,6 +33,12 @@ export const Container = styled.div`
 `;
 export const SideBar = styled.div`
     @media (min-width: 300px) and (max-width: 899px) {
+        br {
+            display: none;
+        }
+
+        padding-top: 50px;
+
         position: fixed;
         left: ${(props) => (props.menuMobile ? '0' : '-200%')};
         width: 100vw;
@@ -41,7 +47,7 @@ export const SideBar = styled.div`
         background-color: #1a1a1d;
         top: 10vh;
         .buttons {
-            padding-top: 100px;
+            padding-top: 50px;
             display: flex;
             flex-direction: column;
             gap: 50px;
@@ -256,7 +262,7 @@ export const Header = styled.header`
 
 export const EnvBtn = styled.button`
     width: 200px;
-    height: 60px;
+    height: 50px;
     background-color: ${(props) => (props.env ? '#d1af5a' : '#fff')};
     font-size: 15px;
     font-weight: bold;
@@ -275,7 +281,7 @@ export const EnvBtn = styled.button`
 
 export const NotEnvBtn = styled.button`
     width: 200px;
-    height: 60px;
+    height: 50px;
     background-color: ${(props) => (props.notenv ? '#d1af5a' : '#fff ')};
     font-size: 15px;
     font-weight: bold;

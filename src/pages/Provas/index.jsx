@@ -140,6 +140,7 @@ export default function Provas() {
                                 onClick={() => {
                                     setEnv(false);
                                     setNotEnv(true);
+                                    setMenuMobile(!menuMobile);
                                 }}
                                 notenv={notenv}
                             >
@@ -150,6 +151,7 @@ export default function Provas() {
                                 onClick={() => {
                                     setEnv(true);
                                     setNotEnv(false);
+                                    setMenuMobile(!menuMobile);
                                 }}
                                 env={env}
                             >

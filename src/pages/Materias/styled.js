@@ -45,10 +45,16 @@ export const Container = styled.div`
     h1 {
         font: 60px 'BluuNext';
         padding-top: 10px;
+        @media (max-width: 600px) {
+            font: 45px 'BluuNext';
+        }
     }
 
     h3 {
         font: 24px 'BluuNext';
+        @media (max-width: 600px) {
+            font: 18px 'BluuNext';
+        }
     }
 
     main {
@@ -69,6 +75,9 @@ export const Container = styled.div`
         width: 230px;
         text-align: center;
         position: relative;
+        @media (max-width: 600px) {
+            width: 190px;
+        }
         &__inner {
             border-radius: 17px;
             overflow: hidden;
@@ -79,6 +88,9 @@ export const Container = styled.div`
             align-items: flex-end;
             justify-content: center;
             padding: 10px;
+            @media (max-width: 600px) {
+                height: 240px;
+            }
         }
         h5 {
             font-family: 'BluuNext';
@@ -90,6 +102,9 @@ export const Container = styled.div`
             align-items: center;
             justify-content: center;
             width: 100%;
+            @media (max-width: 600px) {
+                font-size: 22px;
+            }
         }
         p {
             font-family: 'SofiaPro';
