@@ -48,6 +48,13 @@ export default createGlobalStyle`
     ul{
         list-style:none;
     }
+    select option {
+    margin:40px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+    padding:5px;
+    }
 
 `;
 

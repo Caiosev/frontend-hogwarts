@@ -98,6 +98,9 @@ export const Header = styled.header`
         position: absolute;
         left: 20px;
     }
+    @media (min-width: 900px) {
+        position: fixed;
+    }
 `;
 
 export const Section = styled.section`
@@ -117,6 +120,10 @@ export const Section = styled.section`
     hr {
         width: 1px;
         height: 80%;
+    }
+    @media (min-width: 900px) {
+        height: auto;
+        padding-bottom: 50px;
     }
 `;
 
@@ -169,6 +176,12 @@ export const Infos = styled.div`
         .btn {
             display: flex;
             padding: 15px 0;
+            .del {
+                &:hover {
+                    background-color: #ff1206;
+                    cursor: pointer;
+                }
+            }
         }
     }
     input,
@@ -243,6 +256,7 @@ export const Foto = styled.div`
         height: 400px;
         padding: 15px 40px;
         object-fit: cover;
+        border: 1px solid white;
     }
     @media (min-width: 300px) and (max-width: 1200px) {
         margin: auto;
@@ -251,7 +265,8 @@ export const Foto = styled.div`
         width: 500px;
         .file-input {
             width: 400px;
-            height: 500px;
+            height: 550px;
+            gap: 30px;
             img {
                 width: 100%;
                 height: 100%;
@@ -381,11 +396,31 @@ export const SideBar = styled.div`
         #p {
             background-color: ${(props) =>
                 props.ativo === 'p' ? '#d1af5a' : '#fff'};
+            &:hover {
+                background-color: #d1af5a;
+                cursor: pointer;
+            }
+        }
+        #i {
+            background-color: ${(props) =>
+                props.ativo === 'i' ? '#d1af5a' : '#fff'};
+            &:hover {
+                background-color: #d1af5a;
+                cursor: pointer;
+            }
         }
         #info {
             background-color: ${(props) =>
                 props.ativo === 'i' ? '#d1af5a' : '#fff'};
         }
+    }
+    h1::first-letter,
+    h2:first-letter {
+        text-transform: capitalize;
+    }
+    @media (min-width: 900px) {
+        position: fixed;
+        top: 100px;
     }
 `;
 
@@ -393,7 +428,8 @@ export const Content = styled.div`
     width: 100%;
     display: flex;
     height: 100%;
-    padding-left: 20vw;
+    padding-left: 22vw;
+    padding-top: 150px;
     flex-direction: row;
     justify-content: center;
     align-items: center;

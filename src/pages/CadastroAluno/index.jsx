@@ -112,6 +112,7 @@ export default function CadastroAluno() {
                 login,
                 senha,
             });
+            toast.success('Aluno atualizado com sucesso');
             const idA = data.data.id;
             const formData = new FormData();
             formData.append('aluno_id', idA);
@@ -123,7 +124,7 @@ export default function CadastroAluno() {
                     },
                 });
             } catch (error) {
-                toast.error('Erro ao cadastrar foto');
+                navigate('/painel');
                 console.log(error);
             }
             navigate('/painel');
@@ -767,6 +768,7 @@ export default function CadastroAluno() {
                                         <button
                                             type="submit"
                                             onClick={handleDelete}
+                                            className="del"
                                         >
                                             Deletar
                                         </button>
