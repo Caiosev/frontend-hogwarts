@@ -27,7 +27,7 @@ export const Container = styled.div`
     }
     .item {
         width: 230px;
-        height: 130px;
+        height: 110px;
         display: flex;
         flex-direction: column;
         align-items: flex-start
